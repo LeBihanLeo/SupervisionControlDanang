@@ -10,7 +10,6 @@ services:
   openhab:
     image: openhab/openhab:latest
     container_name: openhab
-    restart: always
     ports:
       - 8080:8080
       - 8443:8443
