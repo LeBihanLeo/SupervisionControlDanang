@@ -2,11 +2,15 @@ version: '3'
 services:
   node:
     image: node
+    ports:
+      - "80:8000"
     # Add additional configuration options for the Node container if needed
     # ...
 
   openhab:
     image: openhab/openhab
+    ports:
+      - "81:8100"
     # Add additional configuration options for the OpenHab container if needed
     # ...
 
