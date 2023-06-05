@@ -1,0 +1,15 @@
+{
+  "name": "supervision-control-danang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "back/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./back/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "5.0"
+  }
+}

@@ -1,7 +1,7 @@
 version: '3'
 services:
   node:
-    image: node
+    image: scd-server
     ports:
       - "80:8000"
     # Add additional configuration options for the Node container if needed
