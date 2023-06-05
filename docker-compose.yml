@@ -1,0 +1,16 @@
+version: '3'
+services:
+  node:
+    image: node
+    # Add additional configuration options for the Node container if needed
+    # ...
+
+  openhab:
+    image: openhab/openhab
+    # Add additional configuration options for the OpenHab container if needed
+    # ...
+
+  mongodb:
+    image: mongo
+    # Add additional configuration options for the MongoDB container if needed
+    # ...
