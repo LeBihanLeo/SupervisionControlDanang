@@ -1,7 +1,9 @@
 FROM node
 
+LABEL creator="Benoit Gaudet <benoit.gaudet@etu.unice.fr>"
+
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -13,7 +15,7 @@ RUN npm install
 # RUN npm ci --omit=dev
 
 # Bundle app source
-COPY . .
+COPY backend backend
 
 EXPOSE 8080
 CMD [ "node", "server.js" ]
