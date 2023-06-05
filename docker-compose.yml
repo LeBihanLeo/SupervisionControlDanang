@@ -16,5 +16,9 @@ services:
 
   mongodb:
     image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb:/data/db
     # Add additional configuration options for the MongoDB container if needed
     # ...
