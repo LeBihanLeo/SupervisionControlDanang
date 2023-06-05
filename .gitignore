@@ -133,3 +133,5 @@ dist
 .idea/**
 openhab_userdata/cache/**
 openhab_userdata/tmp/**
+
+node_modules/**
