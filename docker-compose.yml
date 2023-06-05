@@ -8,11 +8,16 @@ services:
     # ...
 
   openhab:
-    image: openhab/openhab
+    image: openhab/openhab:latest
+    container_name: openhab
+    restart: always
     ports:
-      - "81:8100"
-    # Add additional configuration options for the OpenHab container if needed
-    # ...
+      - 8080:8080
+      - 8443:8443
+    volumes:
+      - ./openhab_addons:/openhab/addons 
+      - ./openhab_conf:/openhab/conf
+      - ./openhab_userdata:/openhab/userdata
 
   mongodb:
     image: mongo
