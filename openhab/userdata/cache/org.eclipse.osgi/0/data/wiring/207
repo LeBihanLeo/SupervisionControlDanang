@@ -1,0 +1,66 @@
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.thing.type)(&(version>=3.1.0)(!(version>=4.0.0))))
+213; version=3.1.0
+osgi.wiring.package; (osgi.wiring.package=org.apache.log4j)
+5; version=1.2.17
+osgi.ee; (&(osgi.ee=JavaSE)(version=11))
+0; version=[1.0.0, 1.1.0, 1.2.0, 1.3.0, 1.4.0, 1.5.0, 1.6.0, 1.7.0, 1.8.0, 9.0.0, 10.0.0, 11.0.0]
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.model.core.valueconverter)(&(version>=3.1.0)(!(version>=4.0.0))))
+190; version=3.1.0
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.emf.common)
+103
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.emf.ecore)
+104
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.thing.link)(&(version>=3.1.0)(!(version>=4.0.0))))
+213; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.eclipse.xtext.xbase.lib)(&(version>=2.25.0)(!(version>=3.0.0))))
+146; version=2.25.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.common.registry)(&(version>=3.1.0)(!(version>=4.0.0))))
+154; version=3.1.0
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.xtext.util)
+143
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.items)(&(version>=3.1.0)(!(version>=4.0.0))))
+154; version=3.1.0
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.xtext.xbase)
+144
+osgi.wiring.package; (&(osgi.wiring.package=javax.measure)(&(version>=2.1.0)(!(version>=3.0.0))))
+57; version=2.1.2
+osgi.wiring.package; (&(osgi.wiring.package=org.slf4j)(&(version>=1.7.0)(!(version>=2.0.0))))
+5; version=1.7.30
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.model.item)(&(version>=3.1.0)(!(version>=4.0.0))))
+191; version=3.1.0
+osgi.wiring.bundle; (&(osgi.wiring.bundle=org.eclipse.xtext.xbase.lib)(bundle-version>=2.23.0))
+146
+osgi.wiring.bundle; (osgi.wiring.bundle=org.antlr.runtime)
+60
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.service.component)(&(version>=1.4.0)(!(version>=2.0.0))))
+72; version=1.4.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.config.core)(&(version>=3.1.0)(!(version>=4.0.0))))
+164; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.types.util)(&(version>=3.1.0)(!(version>=4.0.0))))
+154; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.thing.binding.builder)(&(version>=3.1.0)(!(version>=4.0.0))))
+213; version=3.1.0
+osgi.extender; (&(osgi.extender=osgi.component)(version>=1.4.0)(!(version>=2.0.0)))
+72; version=1.4.0
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.xtend.lib)
+138
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.model.core)(&(version>=3.1.0)(!(version>=4.0.0))))
+190; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.thing.binding)(&(version>=3.1.0)(!(version>=4.0.0))))
+213; version=3.1.0
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.xtext.common.types)
+141
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.thing)(&(version>=3.1.0)(!(version>=4.0.0))))
+213; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.i18n)(&(version>=3.1.0)(!(version>=4.0.0))))
+154; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.thing.util)(&(version>=3.1.0)(!(version>=4.0.0))))
+213; version=3.1.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.service)(&(version>=3.1.0)(!(version>=4.0.0))))
+154; version=3.1.0
+osgi.wiring.bundle; (osgi.wiring.bundle=org.eclipse.xtext)
+140
+osgi.wiring.package; (&(osgi.wiring.package=org.osgi.framework)(&(version>=1.9.0)(!(version>=2.0.0))))
+0; version=1.10.0
+osgi.wiring.package; (&(osgi.wiring.package=org.openhab.core.util)(&(version>=3.1.0)(!(version>=4.0.0))))
+154; version=3.1.0
