@@ -24,18 +24,7 @@ services:
       dockerfile: scd-parser.Dockerfile
     ports:
       - "8001:8000"
-
-  openhab:
-    image: openhab/openhab:3.1.0
-    restart: unless-stopped
-    ports:
-      - 8080:8080
-      - 8443:8443
-    volumes:
-      - ./openhab/conf:/openhab/conf
-      - ./openhab/userdata:/openhab/userdata
-      - ./openhab/addons:/openhab/addons
-
+      
   # test network
   network-test:
     image: scd-network-test
