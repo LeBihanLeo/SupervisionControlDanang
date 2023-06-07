@@ -17,7 +17,7 @@ services:
     ports:
       - 3001:3001
 
-# Backend containers
+  # Backend containers
   parser:
     image: scd-parser
     build:
@@ -35,8 +35,8 @@ services:
       - ./openhab/conf:/openhab/conf
       - ./openhab/userdata:/openhab/userdata
       - ./openhab/addons:/openhab/addons
-      
-# test network
+
+  # test network
   network-test:
     image: scd-network-test
     build:
@@ -49,4 +49,3 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-      
