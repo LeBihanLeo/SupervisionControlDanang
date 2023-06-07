@@ -9,7 +9,10 @@ COPY server ./
 COPY package*.json ./
 
 # Installez les dépendances de l'application
-RUN npm install
+RUN cd backend && npm install
+
+RUN cd frontend && npm install
+
 
 # Exposez le port que votre application utilisera pour écouter les connexions
 EXPOSE 8000
