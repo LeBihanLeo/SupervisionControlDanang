@@ -133,8 +133,9 @@ dist
 .idea/**
 
 # OpenHAB files
-openhab_userdata/**
-openhab_conf/**
+openhab/userdata/tmp/**
+openhab/userdata/cache/**
+
 
 # NodeJS files
 node_modules/**
