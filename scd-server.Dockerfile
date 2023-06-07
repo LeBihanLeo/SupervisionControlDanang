@@ -11,7 +11,7 @@ COPY package*.json ./
 # Installez les dépendances de l'application
 RUN cd backend && npm install
 
-RUN cd frontend && npm install
+RUN cd /app/frontend && npm install
 
 
 # Exposez le port que votre application utilisera pour écouter les connexions

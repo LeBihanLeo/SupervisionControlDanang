@@ -1,42 +1,26 @@
 version: '3'
 services:
+
   frontend:
     build:
-      context: frontend
-      target: development
+      context: ./server/client
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
-    stdin_open: true
-    volumes:
-      - ./server/frontend:/usr/src/app
-      - /usr/src/app/node_modules
-    restart: always
-    networks:
-      - react-express
     depends_on:
       - backend
 
   backend:
-    restart: always
     build:
-      context: backend
-      target: development
-    volumes:
-      - ./server/backend:/usr/src/app
-      - /usr/src/app/node_modules
-    depends_on:
-      - mongodb
-    networks:
-      - express-mongo
-      - react-express
-    expose: 
-      - 3000
+      context: ./server/backend
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
 
 # Backend containers
   parser:
     image: scd-parser
     build:
-      context: .
       dockerfile: scd-parser.Dockerfile
     ports:
       - "8001:8000"
@@ -61,16 +45,8 @@ services:
     command: tail -f /dev/null
     network_mode: host
 
-  node:
-    image: scd-server
-    ports:
-      - "80:8000"
-
   mongodb:
     image: mongo
     ports:
       - "27017:27017"
       
-networks:
-  react-express:
-  express-mongo:
