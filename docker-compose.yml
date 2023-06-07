@@ -12,6 +12,8 @@ services:
   openhab:
     image: openhab/openhab:latest
     container_name: openhab
+    ports:
+      - "8080:8080"
     volumes:
       - ./openhab_addons:/openhab/addons 
       - ./openhab_conf:/openhab/conf
