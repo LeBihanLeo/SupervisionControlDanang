@@ -135,6 +135,7 @@ dist
 # OpenHAB files
 openhab/userdata/tmp/**
 openhab/userdata/cache/**
+openhab/conf/**
 
 
 # NodeJS files
