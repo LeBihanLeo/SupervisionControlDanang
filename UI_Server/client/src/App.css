@@ -1,5 +1,6 @@
 .centered-view {
-    margin: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,9 +9,39 @@
 
 .menu-item-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.menu-item-box-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1vh;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: white;
+    height: 1vh;
+    width: 1vh;
+}
+
+.menu-item-box:hover {
+    cursor: pointer;
+}
+
+.menu-item-box:hover .menu-item-box-data {
+    color: #0047FF;
+}
+
+.menu-item-box:hover .circle {
+    background-color: #0047FF;
 }
 
 .menu-bar {
@@ -19,6 +50,7 @@
     justify-content: space-evenly;
     background-color: white;
     width: 90vw;
+    height: 12vh;
     margin-bottom: 2vh;
 }
 
@@ -44,15 +76,14 @@
 }
 
 #big-center-card{
-    height: 60vh;
-    width: 70vw;
+    height: 70vh;
+    width: 90vw;
     background-color: rgb(255,255,255,0.8);
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap:wrap;
-    margin: 5vw;
 }
 
 .container {
@@ -79,11 +110,6 @@
     border-style: solid;
 }
   
-#horizontal-page{
-    display: inline-flex;
-    justify-content: center;
-}
-  
 #general-data-home{
     width: 10vw;
   
@@ -95,7 +121,7 @@
 }
   
 #general-chart-home{
-    width: 40vw;
+    width: 60vw;
     margin-right: 5vw;
     display: flex;
     align-items: center;
@@ -105,3 +131,4 @@
 .numero-home{
     color: #2e99c4; font-family: 'Lato', sans-serif; font-size: 25px; font-weight: 300; line-height: 58px; margin: 0 0 58px;
   }
+
