@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeView from './views/HomeView';
+import DashboardView from './views/DashboardView';
+
 import './App.css';
 
 
@@ -18,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeView />} />
           <Route path="*" element={<NoMatch />} />
+          <Route path="/Dashboard" element={<DashboardView />} />
         </Routes>
       </Router>
   );
