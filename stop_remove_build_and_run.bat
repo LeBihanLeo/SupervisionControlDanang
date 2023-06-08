@@ -25,4 +25,4 @@ for /r %%f in (*.Dockerfile) do (
   popd
 )
 
-docker-compose up --build
+docker-compose up --build -d
