@@ -3,6 +3,7 @@
 import React from "react";
 import Chart from "chart.js/auto";
 import { Line } from "react-chartjs-2";
+import '../ViewCSS/Chart.css';
 
 const labels = ["January", "February", "March", "April", "May", "June"];
 
@@ -24,12 +25,13 @@ const data = {
 };
 
 const options= {
+    responsive: true,
     maintainAspectRatio: false,
 };
 
 const LineChart = () => {
     return (
-        <div>
+        <div className={"chart-item"}>
             <Line data={data} options={options} />
         </div>
     );
