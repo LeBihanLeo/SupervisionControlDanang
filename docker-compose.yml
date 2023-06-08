@@ -1,6 +1,5 @@
 version: '3'
-services:
-
+services: # UI_Server
   frontend:
     build:
       context: ./UI_Server/client
