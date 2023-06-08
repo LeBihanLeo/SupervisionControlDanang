@@ -5,7 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F0F0F0;
+  background: #F0EFEF url("./ressources/background_geometric.svg") no-repeat fixed center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 code {
@@ -17,8 +24,53 @@ code {
   background-color: white;
   min-width: 5vh;
   min-height: 5vh;
+  height: 50vh;
+  width: fit-content;
   display: flex;
   flex-direction:row;
   justify-content: space-evenly;
+  padding: 1vw;
 }
 
+#big-center-card{
+  height: 60vh;
+  width: 50vw;
+  background-color: rgb(255,255,255,0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  margin-right: 5vw;
+}
+
+.white-card:hover {
+  border: #b4b4b4;
+  border-style: solid;
+}
+
+#horizontal-page{
+  display: inline-flex;
+}
+
+#general-data-home{
+  width: 10vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+#general-chart-home{
+  width: 40vw;
+  margin-right: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.numero-home{
+  color: #2e99c4; font-family: 'Lato', sans-serif; font-size: 25px; font-weight: 300; line-height: 58px; margin: 0 0 58px;
+}
