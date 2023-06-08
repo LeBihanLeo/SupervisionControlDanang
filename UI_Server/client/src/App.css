@@ -36,13 +36,14 @@
 
 #big-center-card{
     height: 60vh;
-    width: 90vw;
+    width: 70vw;
     background-color: rgb(255,255,255,0.8);
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 5vw;
 }
 
 .container {
@@ -62,4 +63,31 @@
     .item {
         flex-basis: 50%; /* Adjust this value to change the number of items per row on smaller screens */
     }
+}
+  
+.white-card:hover {
+    border: #b4b4b4;
+    border-style: solid;
+}
+  
+#horizontal-page{
+    display: inline-flex;
+}
+  
+#general-data-home{
+    width: 10vw;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+}
+  
+#general-chart-home{
+    width: 40vw;
+    margin-right: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
