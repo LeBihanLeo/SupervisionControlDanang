@@ -16,7 +16,7 @@ function HomeView() {
             </div>
             <div className={"white-card"} id={"general-data-home"}>
             <div>
-              Total energie produced:
+              Total energie produced
               <div className = "numero-home">
                 456 W
               </div>

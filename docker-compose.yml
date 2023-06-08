@@ -20,6 +20,7 @@ services: # UI_Server
 
   # Computing_Server
   computing:
+    container_name: computing_server
     build:
       context: ./Computing_Server
       dockerfile: Dockerfile
@@ -30,6 +31,7 @@ services: # UI_Server
 
   # DB
   mongodb:
+    container_name: mongodb
     image: mongo:latest
     env_file:
       - ./env/mongodb.env
