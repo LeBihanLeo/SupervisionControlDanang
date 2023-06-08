@@ -1,25 +1,21 @@
-// client/src/App.js help
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+function Home() {
+  return (
+      <div style={{ padding: 20 }}>
+        <h2>Home View</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
+      </div>
+  );
+}
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
   );
 }
 
