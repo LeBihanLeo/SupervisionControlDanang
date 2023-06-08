@@ -1,13 +1,13 @@
+import MenuBarComponent from "../components/MenuBarComponent";
 import LineChart from "../components/AreaChartComponent";
 
 function HomeView() {
     return (
-        <div style={{ padding: 20 }}>
-           <div id={"big-center-card"}>
-               <div className={"white-card"}>
-                   <LineChart></LineChart>
-               </div>
-           </div>
+        <div className={"centered-view"}>
+            <MenuBarComponent />
+            <div className={"white-card"}>
+                <LineChart></LineChart>
+            </div>
         </div>
     );
   }
