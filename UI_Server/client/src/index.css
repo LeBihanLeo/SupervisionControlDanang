@@ -30,6 +30,8 @@ code {
   flex-direction:row;
   justify-content: space-evenly;
   padding: 1vw;
+  width: 0;
+  height: auto;
 }
 
 #big-center-card{
