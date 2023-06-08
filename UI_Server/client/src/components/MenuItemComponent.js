@@ -3,8 +3,8 @@ const MenuItemComponent = ({icon, text}) => {
 
     return (
         <div className="menu-item-box" >
-            <DiplayedIcon />
-            <h3>{text}</h3>
+            <DiplayedIcon className="menu-item-icon" />
+            <div className="menu-item-box-text">{text}</div>
         </div>
     );
 }

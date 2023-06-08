@@ -11,15 +11,24 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-inline: 50px;
 }
 
 .menu-bar {
     display:flex;
     flex-direction: row;
+    justify-content: space-evenly;
     background-color: white;
-    
+    width: 90vw;
     margin-bottom: 2vh;
+}
+
+.menu-item-icon {
+    margin-right: 1vw;
+}
+
+.menu-item-box-text {
+    text-align: center;
+    size: 50vw;
 }
 
 .white-card{
