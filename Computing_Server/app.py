@@ -1,7 +1,16 @@
+from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, jsonify
 import random
 
 app = Flask(__name__)
+data = ""
+def make_request():
+    #url = 'https://api.example.com'  # Replace with your server URL
+    #response = requests.get(url)
+    #data = response.json()
+    global data
+    data += "some data"
+    print(data)  # Display the result in the console
 
 @app.route('/api/example', methods=['GET'])
 def get_value():
@@ -17,7 +26,11 @@ def get_value():
 
 @app.route('/')
 def index():
-    return "<h1>Hello World!</h1>"
+    return "<h1>Hello World!</h1>" + data
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(func=make_request, trigger='interval', seconds=3)
+    scheduler.start()
+    # http://localhost:5000 or http://localhost:8000 on docker
+    app.run(debug=False)

@@ -15,6 +15,9 @@ services: # UI_Server
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
+    depends_on:
+      - mongodb
+
   # Computing_Server
   computing:
     build:
@@ -22,8 +25,17 @@ services: # UI_Server
       dockerfile: Dockerfile
     ports:
       - "5000:8000"
+    depends_on:
+      - mongodb
 
+  # DB
   mongodb:
-    image: mongo
+    image: mongo:latest
+    env_file:
+      - ./env/mongodb.env
     ports:
       - "27017:27017"
+    volumes:
+      - database:/data/db
+volumes:
+  database: { }
