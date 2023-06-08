@@ -6,7 +6,7 @@ services:
       context: ./UI_Server/client
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - "3000:3000"
     depends_on:
       - backend
 
@@ -15,7 +15,7 @@ services:
       context: ./UI_Server/backend
       dockerfile: Dockerfile
     ports:
-      - 3001:3001
+      - "3001:3001"
 
   mongodb:
     image: mongo
