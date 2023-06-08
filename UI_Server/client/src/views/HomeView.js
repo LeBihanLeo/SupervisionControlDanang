@@ -5,11 +5,21 @@ function HomeView() {
     return (
         <div style={{ padding: 20 }}>
           <MenuBarComponent></MenuBarComponent>
-          <h2>Home View</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-        <div className={"white-card"}>
 
-        </div>
+          <div className={"white-card"}>
+            Total energie produce :
+            <div>
+              Numéro
+            </div>
+            Energie needed
+            <div>
+              4
+            </div>
+            Connected devices
+            <div>
+              5
+            </div>
+          </div>
         </div>
     );
   }
