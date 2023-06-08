@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeView from './views/HomeView';
+import './App.css';
 
 function NoMatch() {
   return (
