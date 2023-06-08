@@ -3,7 +3,7 @@ services:
 
   frontend:
     build:
-      context: ./server/client
+      context: ./UI_Server/client
       dockerfile: Dockerfile
     ports:
       - 3000:3000
@@ -12,27 +12,10 @@ services:
 
   backend:
     build:
-      context: ./server/backend
+      context: ./UI_Server/backend
       dockerfile: Dockerfile
     ports:
       - 3001:3001
-
-  # Backend containers
-  parser:
-    image: scd-parser
-    build:
-      dockerfile: scd-parser.Dockerfile
-    ports:
-      - "8001:8000"
-      
-  # test network
-  network-test:
-    image: scd-network-test
-    build:
-      context: .
-      dockerfile: scd-network-test.Dockerfile
-    command: tail -f /dev/null
-    network_mode: host
 
   mongodb:
     image: mongo

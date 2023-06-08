@@ -7,8 +7,10 @@ function HomeView() {
           <MenuBarComponent></MenuBarComponent>
           <h2>Home View</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adip.</p>
-        </div>
+        <div className={"white-card"}>
 
+        </div>
+        </div>
     );
   }
 
