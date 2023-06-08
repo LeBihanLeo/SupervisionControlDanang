@@ -23,10 +23,14 @@ const data = {
     ],
 };
 
+const options= {
+    maintainAspectRatio: false,
+};
+
 const LineChart = () => {
     return (
         <div>
-            <Line data={data} />
+            <Line data={data} options={options} />
         </div>
     );
 };
