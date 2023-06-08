@@ -15,8 +15,8 @@ function App() {
   return (
       <Router>
         <Routes>
-          <Route path="/" element={<HomeView />} />
-          <Route path="*" element={<NoMatch />} />
+            <Route path="/" element={<HomeView />} />
+            <Route path="*" element={<NoMatch />} />
         </Routes>
       </Router>
   );
