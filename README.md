@@ -16,6 +16,14 @@ Docker and docker-compose are required to run this project.
 
 #### Run in dev mode
 
-```cmd
+On Windows to clean then run the project
+
+```bash
 stop_remove_build_and_run.bat
+```
+
+On Linux to run the project
+
+```bash
+docker-compose up
 ```
