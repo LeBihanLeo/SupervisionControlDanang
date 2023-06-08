@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeView from './views/HomeView';
-import DashboardView from './views/DashboardView';
 import './App.css';
 
 
