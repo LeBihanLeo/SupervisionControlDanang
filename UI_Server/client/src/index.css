@@ -5,7 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F0F0F0;
+  background: #F0EFEF url("./ressources/background_geometric.svg") no-repeat fixed center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 code {
@@ -17,8 +24,20 @@ code {
   background-color: white;
   min-width: 5vh;
   min-height: 5vh;
+  height: fit-content;
+  width: fit-content;
   display: flex;
   flex-direction:row;
   justify-content: space-evenly;
+  padding: 1vw;
 }
 
+#big-center-card{
+  height: 60vh;
+  width: 70vw;
+  background-color: rgb(255,255,255,0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
