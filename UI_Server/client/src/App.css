@@ -1,12 +1,3 @@
-.white-card {
-    background-color: white;
-    min-width: 5vh;
-    min-height: 5vh;
-    display: flex;
-    flex-direction:row;
-    justify-content: space-evenly;
-  }
-  
 .centered-view {
     margin: 10vh;
     display: flex;
@@ -29,4 +20,46 @@
     background-color: white;
     
     margin-bottom: 2vh;
+}
+
+.white-card{
+    background-color: white;
+    min-width: 5vh;
+    min-height: 5vh;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    padding: 1vw;
+}
+
+#big-center-card{
+    height: 60vh;
+    width: 70vw;
+    background-color: rgb(255,255,255,0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 0 25%; /* Adjust this value to control the number of items per row */
+    background-color: lightgray;
+    border: 1px solid gray;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .item {
+        flex-basis: 50%; /* Adjust this value to change the number of items per row on smaller screens */
+    }
 }

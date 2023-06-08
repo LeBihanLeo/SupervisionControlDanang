@@ -21,7 +21,7 @@ code {
   background-color: white;
   min-width: 5vh;
   min-height: 5vh;
-  height: fit-content;
+  height: 50vh;
   width: fit-content;
   display: flex;
   flex-direction:row;
@@ -31,13 +31,45 @@ code {
 
 #big-center-card{
   height: 60vh;
-  width: 70vw;
-  background-color: rgb(255,255,255,0.8);
+  width: 50vw;
+  background-color: rgb(255,255,255,0.6);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  padding: 1vw;
+  margin-right: 5vw;
+}
+
+.white-card:hover {
+  border: #b4b4b4;
+  border-style: solid;
+}
+
+#horizontal-page{
+  display: inline-flex;
+}
+
+#general-data-home{
+  width: 10vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+#general-chart-home{
+  width: 40vw;
+  margin-right: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.numero-home{
+  color: #2e99c4; font-family: 'Lato', sans-serif; font-size: 25px; font-weight: 300; line-height: 58px; margin: 0 0 58px;
 }
 
 .container {
