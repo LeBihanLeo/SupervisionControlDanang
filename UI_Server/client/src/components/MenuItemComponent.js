@@ -1,15 +1,27 @@
-const MenuItemComponent = ({icon, text}) => {
+const MenuItemComponent = ({icon, text, isActivated}) => {
     const DiplayedIcon = icon;
 
-    return (
-        <div className="menu-item-box" >
-            <div className="menu-item-box-data">
-                <DiplayedIcon className="menu-item-icon" color="#0047FF" />
-                <div className="menu-item-box-text">{text}</div>
+    if (isActivated) {
+        return (
+            <div className="menu-item-box-activated" >
+                <div className="menu-item-box-data">
+                    <DiplayedIcon className="menu-item-icon" />
+                    <div className="menu-item-box-text">{text}</div>
+                </div>
+                <div className="circle-activated" />
             </div>
-            <div className="circle" />
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className="menu-item-box" >
+                <div className="menu-item-box-data">
+                    <DiplayedIcon className="menu-item-icon" />
+                    <div className="menu-item-box-text">{text}</div>
+                </div>
+                <div className="circle" />
+            </div>
+        );
+    }
 }
 
 export default MenuItemComponent;
