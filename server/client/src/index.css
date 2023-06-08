@@ -13,3 +13,12 @@ code {
     monospace;
 }
 
+.white-card{
+  background-color: white;
+  min-width: 5vh;
+  min-height: 5vh;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+}
+
