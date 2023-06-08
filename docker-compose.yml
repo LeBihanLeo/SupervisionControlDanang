@@ -15,6 +15,13 @@ services: # UI_Server
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
+  # Computing_Server
+  computing:
+    build:
+      context: ./Computing_Server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8000"
 
   mongodb:
     image: mongo
