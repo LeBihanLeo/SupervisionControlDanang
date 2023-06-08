@@ -1,11 +1,20 @@
-docker compose down
+@echo off
+setlocal enabledelayedexpansion
 
-docker image rm scd-parser
-docker image rm scd-network-test
-docker image rm scd-server
+docker-compose down
 
-docker build -f .\scd-parser.Dockerfile -t scd-parser .
-docker build -f .\scd-network-test.Dockerfile -t scd-network-test .
-docker build -f .\scd-server.Dockerfile -t scd-server .
+Rem docker-compose rm -f
 
-docker compose up
+for %%f in (*.Dockerfile) do (
+  set "filename=%%~nf"
+  docker-compose rm -f !filename!
+)
+
+docker-compose pull
+
+for %%f in (*.Dockerfile) do (
+  set "filename=%%~nf"
+  docker build -f "%%f" -t !filename! .
+)
+
+docker-compose up
