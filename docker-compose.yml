@@ -1,40 +1,41 @@
 version: '3'
-services:
-
+services: # UI_Server
   frontend:
     build:
-      context: ./server/client
+      context: ./UI_Server/client
       dockerfile: Dockerfile
     ports:
-      - 3000:3000
+      - "3000:3000"
     depends_on:
       - backend
 
   backend:
     build:
-      context: ./server/backend
+      context: ./UI_Server/backend
       dockerfile: Dockerfile
     ports:
-      - 3001:3001
+      - "3001:3001"
+    depends_on:
+      - mongodb
 
-  # Backend containers
-  parser:
-    image: scd-parser
+  # Computing_Server
+  computing:
     build:
-      dockerfile: scd-parser.Dockerfile
+      context: ./Computing_Server
+      dockerfile: Dockerfile
     ports:
-      - "8001:8000"
-      
-  # test network
-  network-test:
-    image: scd-network-test
-    build:
-      context: .
-      dockerfile: scd-network-test.Dockerfile
-    command: tail -f /dev/null
-    network_mode: host
+      - "5000:8000"
+    depends_on:
+      - mongodb
 
+  # DB
   mongodb:
-    image: mongo
+    image: mongo:latest
+    env_file:
+      - ./env/mongodb.env
     ports:
       - "27017:27017"
+    volumes:
+      - database:/data/db
+volumes:
+  database: { }
