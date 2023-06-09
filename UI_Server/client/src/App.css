@@ -14,7 +14,16 @@
     justify-content: center;
     flex-grow: 1;
     flex-basis: 0;
+      text-decoration: none;
 }
+
+  Link {
+      text-decoration: none;
+  }
+
+  a {
+      text-decoration: none;
+  }
 
 .menu-item-box-activated {
     color: #0047FF;
@@ -170,4 +179,8 @@
 .image-container img {
     max-width: 100%;
     height: auto;
+}
+
+Link {
+    color: black;
 }

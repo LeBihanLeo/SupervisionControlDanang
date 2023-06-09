@@ -19,8 +19,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomeView />} />
+          <Route path="/dashboard" element={<DashboardView />} />
           <Route path="*" element={<NoMatch />} />
-          <Route path="/Dashboard" element={<DashboardView />} />
         </Routes>
       </Router>
   );
