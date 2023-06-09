@@ -77,8 +77,9 @@
     justify-content: space-evenly;
     background-color: white;
     width: 90vw;
-    height: 12vh;
+    height: fit-content;
     margin-bottom: 2vh;
+    padding-block: 1vw;
 }
 
 .menu-item-icon {
