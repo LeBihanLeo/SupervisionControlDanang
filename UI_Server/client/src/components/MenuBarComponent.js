@@ -4,6 +4,9 @@ import DashboardIcon from '../ressources/icon/dashboard.png';
 import ViewInArIcon from '../ressources/icon/visualize.png';
 import CloseIcon from '../ressources/icon/cross.png';
 
+
+import '../ViewCSS/MenuBar.css'
+
 const MenuBarComponent = ({ indexCurrentView }) => {
     return (
         <div className='menu-bar' >
