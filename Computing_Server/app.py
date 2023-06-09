@@ -2,6 +2,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, jsonify
 import random
 import pymongo
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -29,12 +30,18 @@ def get_and_compute_sensor_data():
     total_demand = data["demand"]["voltage"]
     if total_production >= total_demand:
         res = f"We have a surplus of energy! (prod = {total_production}, demand = {data['demand']['voltage']})"
-        print(res)
-        console += res + "\n"
     else:
         res = f"We have a deficit of energy! (prod = {total_production}, demand = {data['demand']['voltage']})"
-        print(res)
-        console += res + "\n"
+
+    client = pymongo.MongoClient("mongodb://mongodb:27017")
+    db = client["mydb"]
+    collection = db["data"]
+    data = {"time": datetime.now(), "production": total_production, "demand": total_demand, "delta": total_production - total_demand}
+    collection.insert_one(data)
+    client.close()
+
+    print(res)
+    console += res + "\n"
 
 # Routes and web pages
 
@@ -54,14 +61,6 @@ def index():
 # Main
 def main():
     # setup
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
-    db = client["example"]
-    collection = db["test_collection"]
-    data = {"name": "John", "age": 30}
-    collection.insert_one(data)
-    #client.close()
-    print("c'est ajouté !")
-
     scheduler = BackgroundScheduler()
     scheduler.add_job(func=get_and_compute_sensor_data, trigger='interval', seconds=3)
 
