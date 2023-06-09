@@ -24,6 +24,7 @@ services: # UI_Server
     build:
       context: ./Computing_Server
       dockerfile: Dockerfile
+    network_mode: host
     ports:
       - "5000:8000"
     depends_on:

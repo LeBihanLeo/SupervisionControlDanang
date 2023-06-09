@@ -1,10 +1,13 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import Flask, jsonify
 import random
+import pymongo
 
 app = Flask(__name__)
 
 console = ""
+
+# backend functions
 
 def get_sensor_data():
     return {
@@ -13,6 +16,7 @@ def get_sensor_data():
         },
         "demand": {"voltage": 100},
     }
+
 
 def get_and_compute_sensor_data():
     global console
@@ -32,6 +36,8 @@ def get_and_compute_sensor_data():
         print(res)
         console += res + "\n"
 
+# Routes and web pages
+
 @app.route('/api/example', methods=['GET'])
 def get_value():
     data = {
@@ -45,16 +51,25 @@ def index():
     return "<h1>Hello World!</h1>" + "<p>Console:<p><p>" + console.replace("\n", "<br/>") + "</p>"
 
 
-def run_scheduler():
+# Main
+def main():
+    # setup
+    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    db = client["example"]
+    collection = db["test_collection"]
+    data = {"name": "John", "age": 30}
+    collection.insert_one(data)
+    #client.close()
+    print("c'est ajouté !")
+
     scheduler = BackgroundScheduler()
     scheduler.add_job(func=get_and_compute_sensor_data, trigger='interval', seconds=3)
-    scheduler.start()
 
+    # run
+    scheduler.start()
 
 if __name__ == '__main__':
     # http://localhost:5000 or http://localhost:8000 on docker via docker port forwarding
     app.run(debug=False, host='0.0.0.0', port=5000)
 
-# Main
-print("hello i'm running !")
-run_scheduler()
+main()
