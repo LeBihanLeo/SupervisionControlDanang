@@ -12,8 +12,8 @@ function HomeView() {
               <LineChart></LineChart>
             </div>
             <div className={"white-card"} id={"general-data-home"}>
-              <HomeDataElement name={"Total energie produced"} value={"456 W"}></HomeDataElement>
-              <HomeDataElement name={"Energie needed"} value={"4 W"}></HomeDataElement>
+              <HomeDataElement name={"Total energy produced"} value={"456 W"}></HomeDataElement>
+              <HomeDataElement name={"Energy needed"} value={"4 W"}></HomeDataElement>
               <HomeDataElement name={"Connected devices"} value={"5"}></HomeDataElement>
           </div>
         </div>
