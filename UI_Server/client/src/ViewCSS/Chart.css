@@ -38,6 +38,14 @@ body{
     justify-content: center;
 }
 
+.card-01:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-03:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width:800px){
     .card-01{
         flex: 100%;
