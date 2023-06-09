@@ -1,3 +1,15 @@
+.menu-bar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 90vw;
+    height: fit-content;
+    margin-bottom: 2vh;
+    padding-block: 1vw;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 .menu-item-box {
     display: flex;
     flex-direction: column;
@@ -55,23 +67,8 @@
     color: #0047FF;
 }
 
-.menu-item-box:hover .circle {
-    background-color: #0047FF;
-}
-
 .menu-item-box:hover .image-container {
     filter: invert(17%) sepia(82%) saturate(3961%) hue-rotate(224deg) brightness(102%) contrast(117%)
-}
-
-.menu-bar {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: white;
-    width: 90vw;
-    height: fit-content;
-    margin-bottom: 2vh;
-    padding-block: 1vw;
 }
 
 .menu-item-icon {
