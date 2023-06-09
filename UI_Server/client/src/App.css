@@ -1,6 +1,5 @@
 .centered-view {
     margin-top: 5vh;
-    margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,8 +45,8 @@
 .circle {
     border-radius: 50%;
     background-color: white;
-    height: 1vh;
-    width: 1vh;
+    height: 0.5vw;
+    width: 0.5vw;
 }
 
 .circle-activated {
@@ -106,7 +105,7 @@
 #big-center-card{
     height: fit-content;
     width: 90vw;
-    min-height: 60vh;
+    min-height: 75vh;
     background-color: rgb(255,255,255,0.8);
 
     display: flex;
@@ -141,15 +140,6 @@
     border-style: solid;
 }
 
-#general-data-home{
-    width: 10vw;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-}
 
 #general-chart-home{
     width: 60vw;
@@ -160,7 +150,12 @@
 }
 
 .numero-home{
-    color: #2e99c4; font-family: 'Lato', sans-serif; font-size: 25px; font-weight: 300; line-height: 58px; margin: 0 0 58px;
+    color: #2e99c4;
+    font-family: 'Lato', sans-serif;
+    font-size: 2vw;
+    font-weight: 300;
+    line-height: 4vw;
+    margin: 0 0 2vw;
   }
 
 .image-container {

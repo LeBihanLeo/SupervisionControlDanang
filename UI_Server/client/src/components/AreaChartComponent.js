@@ -12,12 +12,12 @@ const data = {
     datasets: [
         {
             label: "My First dataset",
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "rgb(255, 99, 132)",
+            backgroundColor: "rgb(0, 153, 255)",
+            borderColor: "rgb(102, 204, 255)",
             data: [0, 10, 5, 2, 20, 30, 45],
             fill: {
                 target: 'origin',
-                above: 'rgb(255, 0, 0)',   // Area will be red above the origin
+                above: 'rgb(0, 153, 255)',   // Area will be red above the origin
                 below: 'rgb(0, 0, 255)'    // And blue below the origin
             }
         },

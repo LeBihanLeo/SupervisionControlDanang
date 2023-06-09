@@ -5,7 +5,7 @@ import MenuBarComponent from "../components/MenuBarComponent";
 function DashboardView() {
     return (
     <div className={"centered-view"}>
-        <MenuBarComponent />
+        <MenuBarComponent indexCurrentView={1}/>
         <div id="big-center-card">
             <div className="container">
                 <div className="row">

@@ -1,10 +1,7 @@
-import {useState} from "react";
-import {Data} from "../utils/Data";
-import Chart from "chart.js/auto";
-import { CategoryScale } from "chart.js";
-
 import MenuBarComponent from "../components/MenuBarComponent";
 import LineChart from "../components/AreaChartComponent";
+import '../ViewCSS/HomeMainData.css';
+import HomeDataElement from "../components/HomeDataElement";
 
 function HomeView() {
     return (
@@ -15,20 +12,9 @@ function HomeView() {
               <LineChart></LineChart>
             </div>
             <div className={"white-card"} id={"general-data-home"}>
-            <div>
-              Total energie produced
-              <div className = "numero-home">
-                456 W
-              </div>
-              Energie needed
-              <div className = "numero-home">
-                4 W
-              </div>
-              Connected devices
-              <div className = "numero-home">
-                5 devices
-              </div>
-            </div>
+              <HomeDataElement name={"Total energie produced"} value={"456 W"}></HomeDataElement>
+              <HomeDataElement name={"Energie needed"} value={"4 W"}></HomeDataElement>
+              <HomeDataElement name={"Connected devices"} value={"5"}></HomeDataElement>
           </div>
         </div>
     </div>
