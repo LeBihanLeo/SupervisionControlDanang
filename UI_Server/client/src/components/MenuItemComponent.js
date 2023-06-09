@@ -1,14 +1,20 @@
-const MenuItemComponent = ({icon, text}) => {
-    const DiplayedIcon = icon;
+import {Link} from "react-router-dom";
+
+
+const MenuItemComponent = ({icon, text, isActivated, link}) => {
 
     return (
-        <div className="menu-item-box" >
-            <div className="menu-item-box-data">
-                <DiplayedIcon className="menu-item-icon" color="#0047FF" />
-                <div className="menu-item-box-text">{text}</div>
+        <Link to={link} className={'menu-link'}>
+            <div className={"menu-item-box" + (isActivated ? " menu-item-box-activated" : "")} >
+                <div className="menu-item-box-data">
+                    <div className={"image-container" + (isActivated ? " image-container-activated" : "")}>
+                        <img src={icon}/>
+                    </div>
+                    <div className="menu-item-box-text">{text}</div>
+                </div>
+                <div className={"circle" + (isActivated ? " circle-activated" : "")} />
             </div>
-            <div className="circle" />
-        </div>
+        </Link>
     );
 }
 
