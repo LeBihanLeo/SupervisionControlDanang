@@ -17,12 +17,6 @@
 }
 
 .menu-item-box-activated {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    flex-basis: 0;
     color: #0047FF;
 }
 
@@ -32,7 +26,7 @@
     align-items: center;
     margin-bottom: 1vh;
     margin-top: 2vh;
-    font-size: 4vh;
+    font-size: 2vw;
     font-weight: bold;
 }
 
@@ -48,10 +42,7 @@
 }
 
 .circle-activated {
-    border-radius: 50%;
     background-color: #0047FF;
-    height: 1vh;
-    width: 1vh;
 }
 
 .menu-item-box:hover {
@@ -64,6 +55,10 @@
 
 .menu-item-box:hover .circle {
     background-color: #0047FF;
+}
+
+.menu-item-box:hover .image-container {
+    filter: invert(17%) sepia(82%) saturate(3961%) hue-rotate(224deg) brightness(102%) contrast(117%)
 }
 
 .menu-bar {
@@ -162,6 +157,11 @@
 .image-container {
     max-width: 100%;
     height: auto;
+    width: 2vw;
+}
+
+.image-container-selected{
+    filter: invert(17%) sepia(82%) saturate(3961%) hue-rotate(224deg) brightness(102%) contrast(117%)
 }
 
 .image-container img {
