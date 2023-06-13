@@ -1,43 +1,15 @@
 version: '3'
-services: # UI_Server
-  frontend:
-    build:
-      context: ./UI_Server/client
-      dockerfile: Dockerfile
+services:
+  influxdb:
+    image: influxdb
+    container_name: my-influxdb
     ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-
-  backend:
-    build:
-      context: ./UI_Server/backend
-      dockerfile: Dockerfile
-    ports:
-      - "3001:3001"
-    depends_on:
-      - mongodb
-
-  # Computing_Server
-  computing:
-    container_name: computing_server
-    build:
-      context: ./Computing_Server
-      dockerfile: Dockerfile
-    ports:
-      - "5000:8000"
-    depends_on:
-      - mongodb
-
-  # DB
-  mongodb:
-    container_name: mongodb
-    image: mongo:latest
-    env_file:
-      - ./env/mongodb.env
-    ports:
-      - "27017:27017"
+      - '8086:8086'
     volumes:
-      - database:/data/db
-volumes:
-  database: { }
+      - ./influxdb/data:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=mydatabase
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=password
+      - INFLUXDB_TOKEN=DYcSnm8TvuZ-rPDAPHJvNCuJZf87Um0cvqHxzVWjve32S7Xh-euMgqmdCDRMduGoOExmIuHfvt_quX7-uvkQUw==
+
