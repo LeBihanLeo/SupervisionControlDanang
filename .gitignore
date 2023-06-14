@@ -135,8 +135,7 @@ dist
 **/.idea/**
 
 # OpenHAB files
-openhab/userdata/tmp/**
-openhab/userdata/cache/**
+openhab/userdata/**
 openhab/conf/**
 
 
