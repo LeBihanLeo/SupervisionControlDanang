@@ -1,4 +1,6 @@
-# Code names
+# File name format
+
+regex : `^f?.+\.py$`
 
 | Code name | Meaning      |
 |-----------|--------------|
