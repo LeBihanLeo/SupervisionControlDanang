@@ -1,3 +1,7 @@
-f -> fake
-s -> solar pannel
-e -> eolien
+# Code names
+
+| Code name | Meaning      |
+|-----------|--------------|
+| f         | Fake device  |
+| s         | Solar panel  |
+| w         | Wind turbine |
