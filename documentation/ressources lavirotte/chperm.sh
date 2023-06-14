@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export BASEDIR=/home/gtb/openhab
+export BASEDIR=/mnt/c/projets/SupervisionControlDanang/openhab
 
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
