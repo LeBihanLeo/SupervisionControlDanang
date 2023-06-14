@@ -5,11 +5,9 @@ services:
     container_name: my-influxdb
     ports:
       - '8086:8086'
+    env_file:
+      - .env
     volumes:
       - ./influxdb/data:/var/lib/influxdb
-    environment:
-      - INFLUXDB_DB=mydatabase
-      - INFLUXDB_ADMIN_USER=admin
-      - INFLUXDB_ADMIN_PASSWORD=password
-      - INFLUXDB_TOKEN=DYcSnm8TvuZ-rPDAPHJvNCuJZf87Um0cvqHxzVWjve32S7Xh-euMgqmdCDRMduGoOExmIuHfvt_quX7-uvkQUw==
+    entrypoint: ["./entrypoint.sh"]
 
