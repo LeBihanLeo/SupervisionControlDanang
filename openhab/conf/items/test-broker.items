@@ -1,2 +1,2 @@
-String TestChannel1 "Test Channel 1" { channel="mqtt:broker:mosquitto:topic_test:test1" }
-String TestChannel2 "Test Channel 2" { channel="mqtt:broker:mosquitto:topic_test:test2" }
+String TestChannel1 "Test Channel 1" { channel="mqtt:topic:mosquitto:topic_test:test1" }
+String TestChannel2 "Test Channel 2" { channel="mqtt:topic:mosquitto:topic_test:test2" }
