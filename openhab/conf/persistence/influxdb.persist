@@ -1,0 +1,10 @@
+Strategies {
+    everyMinute: "0 * * * * ?"
+    everyChange: "0 * * * * ?"
+    default = everyChange
+}
+
+Items {
+    TestChannel1 : strategy = everyChange, everyMinute
+    TestChannel2 : strategy = everyChange, everyMinute
+}
