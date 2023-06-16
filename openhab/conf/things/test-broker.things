@@ -1,0 +1,7 @@
+Bridge mqtt:broker:mosquitto [ host="mqtt", port=1883, secure=false ] {
+    Thing topic topic_test "Topic Test 123" (mqtt:broker:mosquitto) @ "A4" {
+        Channels:
+			Type string : test1 "Test Channel 1" [ stateTopic="topic_test/test1" ]
+			Type string : test2 "Test Channel 2" [ stateTopic="topic_test/test2" ]
+    }
+}
