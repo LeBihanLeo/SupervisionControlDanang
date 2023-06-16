@@ -7,4 +7,5 @@ Strategies {
 Items {
     TestChannel1 : strategy = everyChange, everyMinute
     TestChannel2 : strategy = everyChange, everyMinute
+    SolarPanel_1 : strategy = everyChange, everyMinute
 }
