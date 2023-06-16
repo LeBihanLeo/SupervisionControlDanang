@@ -1,2 +1,11 @@
-String      TestChannel1        "Test Channel 1"        { channel="mqtt:topic:mosquitto:topic_test:test1", persistence="influxdb" }
-String      TestChannel2        "Test Channel 2"        { channel="mqtt:topic:mosquitto:topic_test:test2", persistence="influxdb"}
+Number      Windmill_1        "windmill 1"        { channel="mqtt:topic:mosquitto:topic_test:test1", persistence="influxdb" }
+Number      SolarPanel_1        "solar panel 1"        { channel="mqtt:topic:mosquitto:topic_test:test2", persistence="influxdb" }
+Number      Windmill_2        "windmill 2"        { channel="mqtt:topic:mosquitto:topic_test:test3", persistence="influxdb" }
+Number      SolarPanel_2        "solar panel 2"        { channel="mqtt:topic:mosquitto:topic_test:test4", persistence="influxdb" }
+Number      Windmill_3        "windmill 3"        { channel="mqtt:topic:mosquitto:topic_test:test5", persistence="influxdb" }
+Number      SolarPanel_3        "solar panel 3"        { channel="mqtt:topic:mosquitto:topic_test:test6", persistence="influxdb" }
+Number      Windmill_4        "windmill 4"        { channel="mqtt:topic:mosquitto:topic_test:test7", persistence="influxdb" }
+Number      SolarPanel_4        "solar panel 4"        { channel="mqtt:topic:mosquitto:topic_test:test8", persistence="influxdb" }
+Number      Windmill_5        "windmill 5"        { channel="mqtt:topic:mosquitto:topic_test:test9", persistence="influxdb" }
+Number      SolarPanel_5        "solar panel 5"        { channel="mqtt:topic:mosquitto:topic_test:test10", persistence="influxdb" }
+
