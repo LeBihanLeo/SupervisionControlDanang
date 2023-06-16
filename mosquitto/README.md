@@ -1,11 +1,25 @@
-# Mosquitto MQTT Broker tutorial and documentation 
+# Utilisation du broker MQTT
 
-## Why do we need a MQTT Broker when we have OpenHAB?
+## Current test users
 
-[MQTT - Bindings | openHAB](https://www.openhab.org/addons/bindings/mqtt/) tells us : "MQTT is a server/client architecture.
+ - test:test
+ - admin:admin123
 
-A server, also called broker is not provided within this binding. You can use any of the freely available MQTT Brokers like [Mosquitto](https://mosquitto.org/)."
+## Create a new user password in password.txt
 
-## Tutorial 
+```shell
+cd /mosquitto/config
+mosquitto_passwd password.supersecurity user
+```
 
-[What is MQTT and How It Works by Rui Santos - YouTube](https://www.youtube.com/watch?v=L26JY2NH-Ys)
+## Test MQTT configuration
+
+For testing this broker, the following documentation was used: [Mosquitto pub  and sub clients](http://www.steves-internet-guide.com/mosquitto_pub-sub-clients/)
+
+To send a message to the broker with an authenticated user:
+
+`mosquitto_pub -h localhost -m "test message" -t todel/test -u user -P "passwd" -d`
+
+To receive the sent message:
+
+`mosquitto_sub -v -h localhost -u user -P passwd -t \#`
