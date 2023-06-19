@@ -27,3 +27,5 @@ On Linux to run the project
 ```bash
 docker-compose up
 ```
+## Setup influxdb
+When you docker compose up for the first time, influxdb will not be completely setup. You will need to add the Openhab bucket to store data from Openhab. To setup it first run "docker compose up", then when influxdb is launched run the following script "influxdb/init-influxdb.sh"
