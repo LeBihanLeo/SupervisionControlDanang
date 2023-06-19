@@ -1,7 +1,6 @@
 import subprocess
 from threading import Thread
 import random
-import json
 
 commandStart = 'mosquitto_pub -h localhost -p 1883 -m "' 
 commandEnd = '" -u test -P test'
@@ -23,4 +22,4 @@ for i in range(numberOfThreads):
 for i in range(numberOfThreads*2):  
     mon_thread.join()
 
-print("threads finis.")
+print("threads terminés.")
