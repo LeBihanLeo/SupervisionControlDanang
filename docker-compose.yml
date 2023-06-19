@@ -13,6 +13,7 @@ services:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
 
   telegraf:
+    container_name: telegraf
     image: telegraf:1.19
     volumes:
       - ${TELEGRAF_CFG_PATH}:/etc/telegraf/telegraf.conf:rw
@@ -22,6 +23,7 @@ services:
       - influxdb
 
   grafana:
+    container_name: grafana
     image: grafana/grafana-oss:8.4.3
     volumes:
       - grafana-storage:/var/lib/grafana:rw
@@ -32,7 +34,7 @@ services:
 
   openhab:
     image: "openhab/openhab:3.4.4"
-    container_name: my-openhab
+    container_name: openhab
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"
