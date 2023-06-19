@@ -14,7 +14,7 @@ numberOfThreads = 10
 
 def device(i, name):
     print(name + " device " + str(i) + " start")
-    for j in range (999999):
+    for j in range (3600):
         command = commandStart + str(random.randint(1, 100)) + commandEnd + ' -t ' + name +str(i+1)+'/prod'
         subprocess.call(command, shell=True)
         time.sleep(1)
