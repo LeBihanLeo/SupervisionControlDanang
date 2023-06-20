@@ -1,3 +1,5 @@
+setlocal enabledelayedexpansion
+
 call stop_remove.bat
 
 docker-compose pull

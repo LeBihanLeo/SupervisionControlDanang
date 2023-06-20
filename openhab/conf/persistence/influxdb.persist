@@ -5,7 +5,14 @@ Strategies {
 }
 
 Items {
-    TestChannel1 : strategy = everyChange, everyMinute
-    TestChannel2 : strategy = everyChange, everyMinute
     SolarPanel_1 : strategy = everyChange, everyMinute
+    SolarPanel_2 : strategy = everyChange, everyMinute
+    SolarPanel_3 : strategy = everyChange, everyMinute
+    SolarPanel_4 : strategy = everyChange, everyMinute
+    SolarPanel_5 : strategy = everyChange, everyMinute
+    Windmill_1 : strategy = everyChange, everyMinute
+    Windmill_2 : strategy = everyChange, everyMinute
+    Windmill_3 : strategy = everyChange, everyMinute
+    Windmill_4 : strategy = everyChange, everyMinute
+    Windmill_5 : strategy = everyChange, everyMinute
 }
