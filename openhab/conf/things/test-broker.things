@@ -1,15 +1,15 @@
 Bridge mqtt:broker:mosquitto [ host="mqtt", port=8883,  secure=false, username="admin", password="admin123" ] {
     Thing topic topic_test "Topic Test 123" (mqtt:broker:mosquitto) {
         Channels:
-			Type string : test1 "windmill 1" [ stateTopic="wm1/prod" ]
-			Type string : test2 "solar panel 1" [ stateTopic="sp1/prod" ]
-			Type string : test3 "windmill 2" [ stateTopic="wm2/prod" ]
-			Type string : test4 "solar panel 2" [ stateTopic="sp2/prod" ]
-			Type string : test5 "windmill 3" [ stateTopic="wm3/prod" ]
-			Type string : test6 "solar panel 3" [ stateTopic="sp3/prod" ]
-			Type string : test7 "windmill 4" [ stateTopic="wm4/prod" ]
-			Type string : test8 "solar panel 4" [ stateTopic="sp4/prod" ]
-			Type string : test9 "windmill 5" [ stateTopic="wm5/prod" ]
-			Type string : test10 "solar panel 5" [ stateTopic="sp5/prod" ]
+			Type number : test1 "windmill 1" [ stateTopic="sp1/prod" ]
+			Type number : test2 "solar panel 1" [ stateTopic="wm2/prod" ]
+			Type number : test3 "windmill 2" [ stateTopic="sp3/prod" ]
+			Type number : test4 "solar panel 2" [ stateTopic="wm4/prod" ]
+			Type number : test5 "windmill 3" [ stateTopic="sp5/prod" ]
+			Type number : test6 "solar panel 3" [ stateTopic="wm6/prod" ]
+			Type number : test7 "windmill 4" [ stateTopic="sp7/prod" ]
+			Type number : test8 "solar panel 4" [ stateTopic="wm8/prod" ]
+			Type number : test9 "windmill 5" [ stateTopic="sp9/prod" ]
+			Type number : test10 "solar panel 5" [ stateTopic="wm10/prod" ]
     }
 }
