@@ -11,11 +11,20 @@ names = ["sp", "wm"]
 
 numberOfThreads = 10
 
+def newValue(value):
+    value = value + random.randint(-10, 10)
+    if(value<0):
+        value = 0
+    elif(value > 100):
+        value = 100
+    return value
 
 def device(i, name):
     print(name + " device " + str(i) + " start")
-    for j in range (999999):
-        command = commandStart + str(random.randint(1, 100)) + commandEnd + ' -t ' + name +str(i+1)+'/prod'
+    value = 50
+    for j in range (3600):
+        value = newValue(value)
+        command = commandStart + str(value) + commandEnd + ' -t ' + name +str(i+1)+'/prod'
         subprocess.call(command, shell=True)
         time.sleep(1)
 
