@@ -1,8 +1,10 @@
 version: '3'
 services:
   influxdb:
-    image: influxdb:2.1.1
-    container_name: influxdb
+    build:
+      context: influxdb
+      dockerfile: my_influxdb.Dockerfile
+    container_name: my_influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
     env_file:
@@ -33,7 +35,7 @@ services:
       - ${GRAFANA_PORT}:3000
 
   openhab:
-    image: "openhab/openhab:3.4.4"
+    image: openhab/openhab:3.4.4
     container_name: openhab
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
