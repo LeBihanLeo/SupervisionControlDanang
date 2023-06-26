@@ -395,7 +395,15 @@ function main () {
     exec influxd "${@}" &
     # add openhab bucket
     sleep 5
-    influx bucket create -n openhab -o dniit -r 72h
+    # if "/ok.txt" does not exist
+    if [ -f "/home/influxdb/ok.txt" ]; then
+        echo "openhab bucket already exist, ready"
+    else
+      echo "creating openhab bucket"
+      touch /home/influxdb/ok.txt
+      influx bucket create -n openhab -o dniit -r 72h
+    fi
+
     #influx bucket create -n $DOCKER_INFLUXDB_OPENHAB_BUCKET -o $DOCKER_INFLUXDB_INIT_HOST -r 72h
 
     # keep running influxd in background
