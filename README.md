@@ -4,13 +4,17 @@ This project aims to create a system to control and supervise the energy product
 
 ## Physical Architecture
 
-![Physical Architecture](./documentation/HRES%20schema.png)
+![Physical Architecture](./documentation/HRES%20schema.drawio.png)
+
+Other documentation can be found in the [documentation](./documentation) folder.
 
 ## Getting Started
 
 ### Prerequisites
 
 Docker and docker-compose are required to run this project.
+
+If you are using Windows, you will need to install WSL.
 
 ### Usage
 
@@ -27,12 +31,7 @@ On Linux to run the project
 ```bash
 docker-compose up
 ```
-## Setting up InfluxDB
 
-When running the Docker Compose for the first time, InfluxDB may not be fully set up, requiring you to add the `openhab` bucket for storing data from OpenHab. 
+## Naming conventions
 
-Follow these steps to set it up:
-
-1. Start the project by running the command specified in the [usage](#usage) section.
-2. Once InfluxDB has started successfully,
-3. Open Git Bash or WSL and execute the script located at `influxdb/init-influxdb.sh`
+- Git submodules: snake_case
