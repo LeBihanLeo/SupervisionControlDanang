@@ -9,3 +9,10 @@ Number      SolarPanel_4        "solar panel 4"        { channel="mqtt:topic:mos
 Number      Windmill_5        "windmill 5"        { channel="mqtt:topic:mosquitto:topic_test:test9", persistence="influxdb" }
 Number      SolarPanel_5        "solar panel 5"        { channel="mqtt:topic:mosquitto:topic_test:test10", persistence="influxdb" }
 
+Number sp_l1_1_power "sp 1 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_power_channel", persistence="influxdb" }
+String sp_l1_1_location "sp 1 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_location_channel", persistence="influxdb" }
+Number sp_l1_1_timestamp "sp 1 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_timestamp_channel", persistence="influxdb" }
+
+Number sp_l1_2_power "sp 2 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_2_power_channel", persistence="influxdb" }
+String sp_l1_2_location "sp 2 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_2_location_channel", persistence="influxdb" }
+Number sp_l1_2_timestamp "sp 2 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_2_timestamp_channel", persistence="influxdb" }

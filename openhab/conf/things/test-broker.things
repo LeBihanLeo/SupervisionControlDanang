@@ -12,4 +12,15 @@ Bridge mqtt:broker:mosquitto [ host="mqtt", port=8883,  secure=false, username="
 			Type number : test9 "windmill 5" [ stateTopic="sp9/prod" ]
 			Type number : test10 "solar panel 5" [ stateTopic="wm10/prod" ]
     }
+    
+    Thing topic topic_json_test "Topic JSON test" (mqtt:broker:mosquitto) {
+        Channels:
+            Type number : sp_l1_1_power_channel "solar panel 1 power channel" [ stateTopic="l1/sp1", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l1_1_location_channel "solar panel 1 location channel" [ stateTopic="l1/sp1", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l1_1_timestamp_channel "solar panel 1 timestamp channel" [ stateTopic="l1/sp1", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : sp_l1_2_power_channel "solar panel 2 power channel" [ stateTopic="l1/sp2", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l1_2_location_channel "solar panel 2 location channel" [ stateTopic="l1/sp2", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l1_2_timestamp_channel "solar panel 2 timestamp channel" [ stateTopic="l1/sp2", transformationPattern="JSONPATH:$.timestamp" ]
+    }
 }
