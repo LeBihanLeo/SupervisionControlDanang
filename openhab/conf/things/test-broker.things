@@ -1,26 +1,45 @@
 Bridge mqtt:broker:mosquitto [ host="mqtt", port=8883,  secure=false, username="admin", password="admin123" ] {
-    Thing topic topic_test "Topic Test 123" (mqtt:broker:mosquitto) {
-        Channels:
-			Type number : test1 "windmill 1" [ stateTopic="sp1/prod" ]
-			Type number : test2 "solar panel 1" [ stateTopic="wm2/prod" ]
-			Type number : test3 "windmill 2" [ stateTopic="sp3/prod" ]
-			Type number : test4 "solar panel 2" [ stateTopic="wm4/prod" ]
-			Type number : test5 "windmill 3" [ stateTopic="sp5/prod" ]
-			Type number : test6 "solar panel 3" [ stateTopic="wm6/prod" ]
-			Type number : test7 "windmill 4" [ stateTopic="sp7/prod" ]
-			Type number : test8 "solar panel 4" [ stateTopic="wm8/prod" ]
-			Type number : test9 "windmill 5" [ stateTopic="sp9/prod" ]
-			Type number : test10 "solar panel 5" [ stateTopic="wm10/prod" ]
-    }
-    
     Thing topic topic_json_test "Topic JSON test" (mqtt:broker:mosquitto) {
         Channels:
             Type number : sp_l1_1_power_channel "solar panel 1 power channel" [ stateTopic="l1/sp1", transformationPattern="JSONPATH:$.power" ]
             Type string : sp_l1_1_location_channel "solar panel 1 location channel" [ stateTopic="l1/sp1", transformationPattern="JSONPATH:$.location" ]
             Type number : sp_l1_1_timestamp_channel "solar panel 1 timestamp channel" [ stateTopic="l1/sp1", transformationPattern="JSONPATH:$.timestamp" ]
 
-            Type number : sp_l1_2_power_channel "solar panel 2 power channel" [ stateTopic="l1/sp2", transformationPattern="JSONPATH:$.power" ]
-            Type string : sp_l1_2_location_channel "solar panel 2 location channel" [ stateTopic="l1/sp2", transformationPattern="JSONPATH:$.location" ]
-            Type number : sp_l1_2_timestamp_channel "solar panel 2 timestamp channel" [ stateTopic="l1/sp2", transformationPattern="JSONPATH:$.timestamp" ]
+            Type number : sp_l1_3_power_channel "solar panel 3 power channel" [ stateTopic="l1/sp3", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l1_3_location_channel "solar panel 3 location channel" [ stateTopic="l1/sp3", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l1_3_timestamp_channel "solar panel 3 timestamp channel" [ stateTopic="l1/sp3", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : sp_l1_5_power_channel "solar panel 5 power channel" [ stateTopic="l1/sp5", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l1_5_location_channel "solar panel 5 location channel" [ stateTopic="l1/sp5", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l1_5_timestamp_channel "solar panel 5 timestamp channel" [ stateTopic="l1/sp5", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : sp_l1_7_power_channel "solar panel 7 power channel" [ stateTopic="l1/sp7", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l1_7_location_channel "solar panel 7 location channel" [ stateTopic="l1/sp7", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l1_7_timestamp_channel "solar panel 7 timestamp channel" [ stateTopic="l1/sp7", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : sp_l1_9_power_channel "solar panel 9 power channel" [ stateTopic="l1/sp9", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l1_9_location_channel "solar panel 9 location channel" [ stateTopic="l1/sp9", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l1_9_timestamp_channel "solar panel 9 timestamp channel" [ stateTopic="l1/sp9", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : wm_l2_2_power_channel "windmill 2 power channel" [ stateTopic="l2/wm2", transformationPattern="JSONPATH:$.power" ]
+            Type string : wm_l2_2_location_channel "windmill 2 location channel" [ stateTopic="l2/wm2", transformationPattern="JSONPATH:$.location" ]
+            Type number : wm_l2_2_timestamp_channel "windmill 2 timestamp channel" [ stateTopic="l2/wm2", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : wm_l2_4_power_channel "windmill 4 power channel" [ stateTopic="l2/wm4", transformationPattern="JSONPATH:$.power" ]
+            Type string : wm_l2_4_location_channel "windmill 4 location channel" [ stateTopic="l2/wm4", transformationPattern="JSONPATH:$.location" ]
+            Type number : wm_l2_4_timestamp_channel "windmill 4 timestamp channel" [ stateTopic="l2/wm4", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : wm_l2_6_power_channel "windmill 6 power channel" [ stateTopic="l2/wm6", transformationPattern="JSONPATH:$.power" ]
+            Type string : wm_l2_6_location_channel "windmill 6 location channel" [ stateTopic="l2/wm6", transformationPattern="JSONPATH:$.location" ]
+            Type number : wm_l2_6_timestamp_channel "windmill 6 timestamp channel" [ stateTopic="l2/wm6", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : wm_l2_8_power_channel "windmill 8 power channel" [ stateTopic="l2/wm8", transformationPattern="JSONPATH:$.power" ]
+            Type string : wm_l2_8_location_channel "windmill 8 location channel" [ stateTopic="l2/wm8", transformationPattern="JSONPATH:$.location" ]
+            Type number : wm_l2_8_timestamp_channel "windmill 8 timestamp channel" [ stateTopic="l2/wm8", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : wm_l2_10_power_channel "windmill 10 power channel" [ stateTopic="l2/wm10", transformationPattern="JSONPATH:$.power" ]
+            Type string : wm_l2_10_location_channel "windmill 10 location channel" [ stateTopic="l2/wm10", transformationPattern="JSONPATH:$.location" ]
+            Type number : wm_l2_10_timestamp_channel "windmill 10 timestamp channel" [ stateTopic="l2/wm10", transformationPattern="JSONPATH:$.timestamp" ]
+
     }
 }
