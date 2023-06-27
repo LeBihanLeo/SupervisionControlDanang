@@ -15,4 +15,12 @@ Items {
     Windmill_3 : strategy = everyChange, everyMinute
     Windmill_4 : strategy = everyChange, everyMinute
     Windmill_5 : strategy = everyChange, everyMinute
+	
+	sp_l1_1_power : strategy = everyChange, everyMinute
+	sp_l1_1_location : strategy = everyChange, everyMinute
+	sp_l1_1_timestamp : strategy = everyChange, everyMinute
+	
+	sp_l1_2_power : strategy = everyChange, everyMinute
+	sp_l1_2_location : strategy = everyChange, everyMinute
+	sp_l1_2_timestamp : strategy = everyChange, everyMinute
 }
