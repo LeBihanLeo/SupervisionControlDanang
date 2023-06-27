@@ -41,5 +41,8 @@ Bridge mqtt:broker:mosquitto [ host="mqtt", port=8883,  secure=false, username="
             Type string : wm_l2_10_location_channel "windmill 10 location channel" [ stateTopic="l2/wm10", transformationPattern="JSONPATH:$.location" ]
             Type number : wm_l2_10_timestamp_channel "windmill 10 timestamp channel" [ stateTopic="l2/wm10", transformationPattern="JSONPATH:$.timestamp" ]
 
+            Type number : sp_l6_10_power_channel "sp_l6_10 channel" [ stateTopic="l6/sp10", transformationPattern="JSONPATH:$.power" ]
+            Type string : sp_l6_10_location_channel "sp_l6_10 channel" [ stateTopic="l6/sp10", transformationPattern="JSONPATH:$.location" ]
+            Type number : sp_l6_10_timestamp_channel "sp_l6_10 channel" [ stateTopic="l6/sp10", transformationPattern="JSONPATH:$.timestamp" ]
     }
 }
