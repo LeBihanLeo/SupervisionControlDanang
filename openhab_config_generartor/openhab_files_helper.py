@@ -44,21 +44,13 @@ def add_new_item(device_name):
     write_in_file(ITEMS_FILE_PATH, data)
 
 
-def fetchItems():
+def fetch_existing_devices():
     f = open(THINGS_FILE_PATH, "r")
     data = f.read()
     f.close()
     # fetch data using regex
     found_device_channels = re.findall("\w+_power_channel", data)
-    found_devices = []
-    for device_channel in found_device_channels:
-        found_devices.append(str(device_channel).replace("_power_channel", ""))
-    # separate informations
-    info = []
-    for device in found_devices:
-        info.append(str(device).split("_"))
-    print(info)
-
-
-
-fetchItems()
+    found_devices = [str(device_channel).replace("_power_channel", "") for device_channel in found_device_channels]
+    # splited result
+    result = [str(device).split("_") for device in found_devices]
+    return result
