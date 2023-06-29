@@ -44,5 +44,9 @@ Bridge mqtt:broker:mosquitto [ host="mqtt", port=8883,  secure=false, username="
             Type number : sp_l6_10_power_channel "sp_l6_10 channel" [ stateTopic="l6/sp10", transformationPattern="JSONPATH:$.power" ]
             Type string : sp_l6_10_location_channel "sp_l6_10 channel" [ stateTopic="l6/sp10", transformationPattern="JSONPATH:$.location" ]
             Type number : sp_l6_10_timestamp_channel "sp_l6_10 channel" [ stateTopic="l6/sp10", transformationPattern="JSONPATH:$.timestamp" ]
+
+            Type number : h_l3_1_power_channel "h_l3_1 channel" [ stateTopic="l3/h1", transformationPattern="JSONPATH:$.power" ]
+            Type string : h_l3_1_location_channel "h_l3_1 channel" [ stateTopic="l3/h1", transformationPattern="JSONPATH:$.location" ]
+            Type number : h_l3_1_timestamp_channel "h_l3_1 channel" [ stateTopic="l3/h1", transformationPattern="JSONPATH:$.timestamp" ]
     }
 }

@@ -1,10 +1,8 @@
 version: '3'
 services:
   influxdb:
-    build:
-      context: influxdb
-      dockerfile: my_influxdb.Dockerfile
-    container_name: my_influxdb
+    image: influxdb:2.1.1
+    container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
     env_file:
@@ -29,6 +27,7 @@ services:
     image: grafana/grafana-oss:8.4.3
     volumes:
       - grafana-storage:/var/lib/grafana:rw
+      - "./grafana/config/:/etc/grafana/"
     depends_on:
       - influxdb
     ports:
