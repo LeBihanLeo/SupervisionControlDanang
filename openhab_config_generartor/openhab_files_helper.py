@@ -42,3 +42,23 @@ def add_new_item(device_name):
            + "String " + device_name + "_location \"" + device_name + " location\" { channel=\"mqtt:topic:mosquitto:topic_json_test:" + device_name + "_location_channel\", persistence=\"influxdb\" }\n" \
            + "Number " + device_name + "_timestamp \"" + device_name + " timestamp\" { channel=\"mqtt:topic:mosquitto:topic_json_test:" + device_name + "_timestamp_channel\", persistence=\"influxdb\" }"
     write_in_file(ITEMS_FILE_PATH, data)
+
+
+def fetchItems():
+    f = open(THINGS_FILE_PATH, "r")
+    data = f.read()
+    f.close()
+    # fetch data using regex
+    found_device_channels = re.findall("\w+_power_channel", data)
+    found_devices = []
+    for device_channel in found_device_channels:
+        found_devices.append(str(device_channel).replace("_power_channel", ""))
+    # separate informations
+    info = []
+    for device in found_devices:
+        info.append(str(device).split("_"))
+    print(info)
+
+
+
+fetchItems()
