@@ -11,6 +11,10 @@ names = ["sp", "wm"]
 
 numberOfThreads = 10
 
+def gen_str(i, value):
+    x =  '{"power":'+ str(newValue(value)) + ',"location":"l'+ str(i%2+1) +'","timestamp":'+ str(time.time()) +'}'
+    return x
+
 def newValue(value):
     value = value + random.randint(-10, 10)
     if(value<0):
@@ -24,7 +28,10 @@ def device(i, name):
     value = 50
     for j in range (3600):
         value = newValue(value)
-        command = commandStart + str(value) + commandEnd + ' -t ' + name +str(i+1)+'/prod'
+        x = gen_str(i, value)
+        y = json.loads(x)
+        command = commandStart + x + commandEnd + ' -t ' + y["location"] +'/' + name + str(i+1)
+        print(command)
         subprocess.call(command, shell=True)
         time.sleep(1)
 
