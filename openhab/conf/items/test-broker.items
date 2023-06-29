@@ -41,3 +41,7 @@ Number wm_l2_10_timestamp "wm 10 timestamp" { channel="mqtt:topic:mosquitto:topi
 Number sp_l6_10_power "sp_l6_10 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_power_channel", persistence="influxdb" }
 String sp_l6_10_location "sp_l6_10 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_location_channel", persistence="influxdb" }
 Number sp_l6_10_timestamp "sp_l6_10 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_timestamp_channel", persistence="influxdb" }
+
+Number h_l3_1_power "h_l3_1 power" { channel="mqtt:topic:mosquitto:topic_json_test:h_l3_1_power_channel", persistence="influxdb" }
+String h_l3_1_location "h_l3_1 location" { channel="mqtt:topic:mosquitto:topic_json_test:h_l3_1_location_channel", persistence="influxdb" }
+Number h_l3_1_timestamp "h_l3_1 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:h_l3_1_timestamp_channel", persistence="influxdb" }
