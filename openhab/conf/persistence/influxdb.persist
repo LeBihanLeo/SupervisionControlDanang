@@ -5,17 +5,6 @@ Strategies {
 }
 
 Items {
-    SolarPanel_1 : strategy = everyChange, everyMinute
-    SolarPanel_2 : strategy = everyChange, everyMinute
-    SolarPanel_3 : strategy = everyChange, everyMinute
-    SolarPanel_4 : strategy = everyChange, everyMinute
-    SolarPanel_5 : strategy = everyChange, everyMinute
-    Windmill_1 : strategy = everyChange, everyMinute
-    Windmill_2 : strategy = everyChange, everyMinute
-    Windmill_3 : strategy = everyChange, everyMinute
-    Windmill_4 : strategy = everyChange, everyMinute
-    Windmill_5 : strategy = everyChange, everyMinute
-	
 	sp_l1_1_power : strategy = everyChange, everyMinute
 	sp_l1_1_location : strategy = everyChange, everyMinute
 	sp_l1_1_timestamp : strategy = everyChange, everyMinute
