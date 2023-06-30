@@ -5,11 +5,5 @@ Strategies {
 }
 
 Items {
-	sp_l1_1_power : strategy = everyChange, everyMinute
-	sp_l1_1_location : strategy = everyChange, everyMinute
-	sp_l1_1_timestamp : strategy = everyChange, everyMinute
-	
-	sp_l1_2_power : strategy = everyChange, everyMinute
-	sp_l1_2_location : strategy = everyChange, everyMinute
-	sp_l1_2_timestamp : strategy = everyChange, everyMinute
+	* : strategy = everyChange, everyMinute
 }

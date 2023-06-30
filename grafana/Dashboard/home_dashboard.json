@@ -89,66 +89,20 @@
     {
       "id": 2,
       "gridPos": {
-        "h": 9,
-        "w": 12,
         "x": 0,
-        "y": 0
+        "y": 0,
+        "w": 12,
+        "h": 9
       },
       "type": "timeseries",
-      "title": "Solar Panel",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {
-            "drawStyle": "line",
-            "lineInterpolation": "linear",
-            "barAlignment": 0,
-            "lineWidth": 1,
-            "fillOpacity": 11,
-            "gradientMode": "none",
-            "spanNulls": false,
-            "showPoints": "auto",
-            "pointSize": 5,
-            "stacking": {
-              "mode": "none",
-              "group": "A"
-            },
-            "axisPlacement": "auto",
-            "axisLabel": "",
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "hideFrom": {
-              "tooltip": false,
-              "viz": false,
-              "legend": false
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            },
-            "lineStyle": {
-              "fill": "solid"
-            }
-          },
-          "color": {
-            "mode": "palette-classic"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
+      "title": "Solar panel energy production",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": "${DS_INFLUXDB}",
+          "query": "import \"regexp\"\r\n\r\nfrom(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^sp_[^_]+_[^_]+_power$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"item\"] =~ /^sp_[^_]+_[^_]+_power$/)\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")\r\n"
+        }
+      ],
       "options": {
         "tooltip": {
           "mode": "single",
@@ -160,26 +114,6 @@
           "calcs": []
         }
       },
-      "targets": [
-        {
-          "datasource": "${DS_INFLUXDB}",
-          "hide": false,
-          "query": "import \"regexp\"\r\n\r\nfrom(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /SolarPanel_.*/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"item\"] =~ /SolarPanel_.*/)\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")\r\n",
-          "refId": "A"
-        }
-      ],
-      "datasource": "${DS_INFLUXDB}"
-    },
-    {
-      "id": 2,
-      "gridPos": {
-        "h": 9,
-        "w": 12,
-        "x": 0,
-        "y": 0
-      },
-      "type": "timeseries",
-      "title": "Windwill",
       "fieldConfig": {
         "defaults": {
           "custom": {
@@ -218,18 +152,37 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "value": null,
+                "color": "green"
               },
               {
-                "color": "red",
-                "value": 80
+                "value": 80,
+                "color": "red"
               }
             ]
           }
         },
         "overrides": []
       },
+      "datasource": "${DS_INFLUXDB}"
+    },
+    {
+      "id": 4,
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "type": "timeseries",
+      "title": "Windmil energy production",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": "${DS_INFLUXDB}",
+          "query": "import \"regexp\"\r\n\r\nfrom(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^wm_[^_]+_[^_]+_power$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"item\"] =~ /^wm_[^_]+_[^_]+_power$/)\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")\r\n"
+        }
+      ],
       "options": {
         "tooltip": {
           "mode": "single",
@@ -241,15 +194,139 @@
           "calcs": []
         }
       },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "linear",
+            "barAlignment": 0,
+            "lineWidth": 1,
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "spanNulls": false,
+            "showPoints": "auto",
+            "pointSize": 5,
+            "stacking": {
+              "mode": "none",
+              "group": "A"
+            },
+            "axisPlacement": "auto",
+            "axisLabel": "",
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "hideFrom": {
+              "tooltip": false,
+              "viz": false,
+              "legend": false
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": null,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "description": "",
+      "datasource": "${DS_INFLUXDB}"
+    },
+    {
+      "id": 2,
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 9
+      },
+      "type": "timeseries",
+      "title": "House energy consumption",
       "targets": [
         {
+          "refId": "A",
           "datasource": "${DS_INFLUXDB}",
-          "query": "import \"regexp\"\r\n\r\nfrom(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /Windmill_.*/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> filter(fn: (r) => r[\"item\"] =~ /Windmill_.*/)\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")\r\n",
-          "refId": "A"
+          "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"h_l3_1_power\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")"
         }
       ],
+      "options": {
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "calcs": []
+        }
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "line",
+            "lineInterpolation": "linear",
+            "barAlignment": 0,
+            "lineWidth": 1,
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "spanNulls": false,
+            "showPoints": "auto",
+            "pointSize": 5,
+            "stacking": {
+              "mode": "none",
+              "group": "A"
+            },
+            "axisPlacement": "auto",
+            "axisLabel": "",
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "hideFrom": {
+              "tooltip": false,
+              "viz": false,
+              "legend": false
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "color": {
+            "mode": "palette-classic"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "value": null,
+                "color": "green"
+              },
+              {
+                "value": 80,
+                "color": "red"
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
       "datasource": "${DS_INFLUXDB}"
-    } 
+    }
   ],
   "refresh": false,
   "schemaVersion": 36,
