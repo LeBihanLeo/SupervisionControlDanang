@@ -2,11 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Connect to GitHub') {
-            steps {
-                git 'https://github.com/LeBihanLeo/SupervisionControlDanang.git'
-            }
-        }
+
 
         stage('Build') {
             steps {
