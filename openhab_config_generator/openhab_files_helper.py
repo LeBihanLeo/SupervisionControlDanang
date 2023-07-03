@@ -56,6 +56,6 @@ def fetch_existing_devices():
     # fetch data using regex
     found_device_channels = re.findall("\w+_power_channel", data)
     found_devices = [str(device_channel).replace("_power_channel", "") for device_channel in found_device_channels]
-    # splited result
+    # split result
     result = [str(device).split("_") for device in found_devices]
     return result

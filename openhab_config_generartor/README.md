@@ -1,1 +1,0 @@
-# openhab_config_generartor
