@@ -6,6 +6,10 @@ This project aims to create a system to control and supervise the energy product
 
 ![Physical Architecture](./documentation/HRES%20schema.drawio.png)
 
+## Software Architecture
+
+![Software Architecture](./documentation/Software%20Architecture.drawio.png)
+
 Other documentation can be found in the [documentation](./documentation) folder.
 
 ## Getting Started
