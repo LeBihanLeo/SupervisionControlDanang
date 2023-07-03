@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Connect to GitHub') {
-            steps {
-                git 'https://github.com/your-username/your-repo.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'echo "Building..."'
