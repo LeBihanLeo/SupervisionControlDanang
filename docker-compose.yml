@@ -1,7 +1,7 @@
 version: '3'
 services:
   influxdb:
-    image: influxdb:2.1.1
+    image: influxdb:2.7.1
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
