@@ -2,7 +2,7 @@ import openhab_files_helper as ofh
 
 
 # Check if the given device is already used in openhab files
-def check_redunduncie(device_type, device_location, device_id):
+def check_redundancy(device_type, device_location, device_id):
     existing_devices = ofh.fetch_existing_devices()
     for existing_device in existing_devices:
         existing_device_type = existing_device[0]
@@ -17,7 +17,7 @@ def user_input_add_device():
     device_type = input("Enter device type : ")
     device_location = input("Enter device location : ")
     device_id = input("Enter device id : ")
-    if check_redunduncie(device_type, device_location, device_id):
+    if check_redundancy(device_type, device_location, device_id):
         print("Error : Given device information already exists")
         return
     ofh.add_new_device(device_type, device_location, device_id)

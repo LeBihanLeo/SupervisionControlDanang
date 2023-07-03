@@ -2,6 +2,7 @@ import re
 
 THINGS_FILE_PATH = "../openhab/conf/things/test-broker.things"
 ITEMS_FILE_PATH = "../openhab/conf/items/test-broker.items"
+PERSISTENCE_FILE_PATH = "../openhab/conf/persistence/influxdb.persist"
 THING_NAME = "mqtt_thing_data"  # not used for the moment
 
 
@@ -44,6 +45,10 @@ def add_new_item(device_name):
     write_in_file(ITEMS_FILE_PATH, data)
 
 
+def add_device_persistence(device_name):
+    print()
+
+
 def fetch_existing_devices():
     f = open(THINGS_FILE_PATH, "r")
     data = f.read()
@@ -51,6 +56,6 @@ def fetch_existing_devices():
     # fetch data using regex
     found_device_channels = re.findall("\w+_power_channel", data)
     found_devices = [str(device_channel).replace("_power_channel", "") for device_channel in found_device_channels]
-    # splited result
+    # split result
     result = [str(device).split("_") for device in found_devices]
     return result
