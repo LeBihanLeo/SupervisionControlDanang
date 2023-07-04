@@ -2,7 +2,9 @@
 
 ## Import the home dashboard
 
-1. Open [Graphana (localhost:3000)](http://localhost:3000)
+Summary : import influxDB datasource then import the home dashboard
+
+1. Open [Grafana (localhost:3000)](http://localhost:3000)
 2. Add the InfluxDB datasource :
    1. Click on the gear icon on the left menu then click on `Data Sources`
    2. Click on `Add data source`
