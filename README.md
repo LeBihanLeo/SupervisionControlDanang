@@ -30,10 +30,10 @@ On Windows to clean then run the project
 stop_remove_build_and_run.bat
 ```
 
-On Linux to run the project
+On Linux to run the project (in background)
 
 ```bash
-docker-compose up
+docker-compose up -d
 ```
 
 ## Naming conventions
