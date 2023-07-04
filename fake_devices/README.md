@@ -6,7 +6,11 @@
 
 linux with packages : `python3`, `pip3`, `mosquitto-clients`
 
-Then install requirements with `pip3 install -r requirements.txt`
+Then install requirements with 
+
+```bash
+pip3 install -r requirements.txt
+```
 
 ### Usage
 
