@@ -36,6 +36,11 @@ On Linux to run the project (in background)
 docker-compose up -d
 ```
 
-## Naming conventions
+## submodules / different parts of the project
 
-- Git submodules: snake_case
+- Folder naming convention : `snake_case`
+
+| Folder name    | Description                                   | is running in docker | Language | is automatically set up                                  |
+|----------------|-----------------------------------------------|----------------------|----------|----------------------------------------------------------|
+| Documentation  | Contains all the documentation of the project | N/A                  | N/A      | N/A                                                      |
+| fake_devices   | Contains the code for the fake devices        | No                   | Python   | No, see [fake_devices/README.md](fake_devices/README.md) |
