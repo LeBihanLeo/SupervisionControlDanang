@@ -1,6 +1,6 @@
 # Fake devices
 
-## Running the fake devices
+## Running
 
 ### Prerequisites
 
@@ -18,6 +18,9 @@ python3 mqtt_device_simulator.py
 
 | Code name | Meaning      |
 |-----------|--------------|
-| f         | Fake device  |
-| s         | Solar panel  |
-| w         | Wind turbine |
+| sp        | Solar panel  |
+| wm        | Windmill     |
+
+## Sent data
+
+RegEx : `\{"power":\d+,"location":"\w+","timestamp":\d+\}`
