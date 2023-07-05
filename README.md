@@ -8,7 +8,7 @@ This project aims to create a system to control and supervise the energy product
 
 ## Software Architecture
 
-![Software Architecture](./documentation/Software%20Architecture.drawio.png)
+![Software Architecture](./documentation/Software%20architecture.drawio.png)
 
 Other documentation can be found in the [documentation](./documentation) folder.
 
