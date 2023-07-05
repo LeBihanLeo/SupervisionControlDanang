@@ -40,9 +40,11 @@ docker-compose up -d
 
 - Folder naming convention : `snake_case`
 
-| Folder name   | Description                                   | is running in docker                             | Language | is automatically set up                                  |
-|---------------|-----------------------------------------------|--------------------------------------------------|----------|----------------------------------------------------------|
-| Documentation | Contains all the documentation of the project | N/A                                              | N/A      | N/A                                                      |
-| fake_devices  | Contains the code for the fake devices        | No                                               | Python   | No, see [fake_devices/README.md](fake_devices/README.md) |
-| grafana       |                                               | Yes, launched with the root docker-compose file  | N/A      | No, see [grafana/README.md](grafana/README.md)           |
-| influxdb      |                                               | Yes, launched with the root docker-compose file  | N/A      | No, see [influxdb/README.md](influxdb/README.md)         |
+| Folder name                      | Is running in docker                            | Is automatically set up                                  |
+|----------------------------------|-------------------------------------------------|----------------------------------------------------------|
+| [documentation](./documentation) | N/A                                             | N/A                                                      |
+| [fake_devices](./fake_devices)   | No                                              | No, see [fake_devices/README.md](fake_devices/README.md) |
+| [grafana](./grafana)             | Yes, launched with the root docker-compose file | No, see [grafana/README.md](grafana/README.md)           |
+| [influxdb](./grafana)            | Yes, launched with the root docker-compose file | No, see [influxdb/README.md](influxdb/README.md)         |
+| [mosquitto](./mosquitto)         | Yes, launched with the root docker-compose file | Yes                                                      |
+
