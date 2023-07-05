@@ -17,6 +17,7 @@ Other documentation can be found in the [documentation](./documentation) folder.
 ### Prerequisites
 
 Docker and docker-compose are required to run this project.
+To change the configuration, see the individual readme files.
 
 If you are using Windows, you will need to install WSL.
 
@@ -36,15 +37,17 @@ On Linux to run the project (in background)
 docker-compose up -d
 ```
 
-## submodules / different parts of the project
+## Submodules / different parts of the project
 
 - Folder naming convention : `snake_case`
 
-| Folder name                      | Is running in docker                            | Is automatically set up                                  |
-|----------------------------------|-------------------------------------------------|----------------------------------------------------------|
-| [documentation](./documentation) | N/A                                             | N/A                                                      |
-| [fake_devices](./fake_devices)   | No                                              | No, see [fake_devices/README.md](fake_devices/README.md) |
-| [grafana](./grafana)             | Yes, launched with the root docker-compose file | No, see [grafana/README.md](grafana/README.md)           |
-| [influxdb](./grafana)            | Yes, launched with the root docker-compose file | No, see [influxdb/README.md](influxdb/README.md)         |
-| [mosquitto](./mosquitto)         | Yes, launched with the root docker-compose file | Yes                                                      |
+| Folder name                                            | Is running in docker                            | Is automatically set up                                                          |
+|--------------------------------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------|
+| [documentation](./documentation)                       | N/A                                             | N/A                                                                              |
+| [fake_devices](./fake_devices)                         | No                                              | No, see [fake_devices/README.md](fake_devices/README.md)                         |
+| [grafana](./grafana)                                   | Yes, launched with the root docker-compose file | No, see [grafana/README.md](grafana/README.md)                                   |
+| [influxdb](./grafana)                                  | Yes, launched with the root docker-compose file | No, see [influxdb/README.md](influxdb/README.md)                                 |
+| [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file | Yes                                                                              |
+| [openhab](./openhab)                                   | Yes, launched with the root docker-compose file | No, see [openhab/README.md](openhab/README.md)                                   |
+| [openhab_config_generator](./openhab_config_generator) | No                                              | No, see [openhab_config_generator/README.md](openhab_config_generator/README.md) |                         
 
