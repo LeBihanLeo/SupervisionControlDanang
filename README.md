@@ -41,13 +41,13 @@ docker-compose up -d
 
 - Folder naming convention : `snake_case`
 
-| Folder name                                            | Is running in docker                            | Is automatically set up                                                          |
-|--------------------------------------------------------|-------------------------------------------------|----------------------------------------------------------------------------------|
-| [documentation](./documentation)                       | N/A                                             | N/A                                                                              |
-| [fake_devices](./fake_devices)                         | No                                              | No, see [fake_devices/README.md](fake_devices/README.md)                         |
-| [grafana](./grafana)                                   | Yes, launched with the root docker-compose file | No, see [grafana/README.md](grafana/README.md)                                   |
-| [influxdb](./grafana)                                  | Yes, launched with the root docker-compose file | No, see [influxdb/README.md](influxdb/README.md)                                 |
-| [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file | Yes                                                                              |
-| [openhab](./openhab)                                   | Yes, launched with the root docker-compose file | No, see [openhab/README.md](openhab/README.md)                                   |
-| [openhab_config_generator](./openhab_config_generator) | No                                              | No, see [openhab_config_generator/README.md](openhab_config_generator/README.md) |                         
+| Folder name                                            | Is running in docker                                                    | Is automatically set up                                                          |
+|--------------------------------------------------------|-------------------------------------------------------------------------|----------------------------------------------------------------------------------|
+| [documentation](./documentation)                       | N/A                                                                     | N/A                                                                              |
+| [fake_devices](./fake_devices)                         | No, run it manually [see README.md](fake_devices/README.md)             | N/A                                                                              |
+| [grafana](./grafana)                                   | Yes, launched with the root docker-compose file                         | No, see [grafana/README.md](grafana/README.md)                                   |
+| [influxdb](./grafana)                                  | Yes, launched with the root docker-compose file                         | No, see [influxdb/README.md](influxdb/README.md)                                 |
+| [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file                         | Yes                                                                              |
+| [openhab](./openhab)                                   | Yes, launched with the root docker-compose file                         | No, see [openhab/README.md](openhab/README.md)                                   |
+| [openhab_config_generator](./openhab_config_generator) | No, run it manually [see README.md](openhab_config_generator/README.md) | No, see [openhab_config_generator/README.md](openhab_config_generator/README.md) |
 
