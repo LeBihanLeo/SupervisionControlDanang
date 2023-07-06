@@ -1,5 +1,9 @@
 # Grafana
 
+## Credentials 
+
+admin/admin
+
 ## Import the home dashboard
 
 Summary : import influxDB datasource then import the home dashboard

@@ -29,7 +29,9 @@ services:
     image: grafana/grafana-oss:8.4.3
     volumes:
       - grafana-storage:/var/lib/grafana:rw
-      - "./grafana/config/:/etc/grafana/"
+      - ./grafana/config:/etc/grafana
+      - ./influxdb/key/influxdb-selfsigned.crt:/etc/grafana/cert.crt
+      - ./influxdb/key/influxdb-selfsigned.key:/etc/grafana/cert.key
     depends_on:
       - influxdb
     ports:
@@ -48,7 +50,6 @@ services:
       OPENHAB_HTTP_PORT: "8080"
       OPENHAB_HTTPS_PORT: "8443"
       LANGUAGE: "en_US.UTF-8"
-      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: "e969c124fb2c28db5220efa8f6b2498f2e0ea2609c31c51ecde9f24cff6c47bd" 
     ports:
       - '8080:8080'
     env_file:
