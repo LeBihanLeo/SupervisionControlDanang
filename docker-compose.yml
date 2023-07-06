@@ -39,8 +39,6 @@ services:
     image: openhab/openhab:3.4.4
     container_name: openhab
     volumes:
-      - "/etc/localtime:/etc/localtime:ro"
-      - "/etc/timezone:/etc/timezone:ro"
       - "./openhab/addons:/openhab/addons"
       - "./openhab/conf:/openhab/conf"
       - "./openhab/userdata:/openhab/userdata"
@@ -70,6 +68,16 @@ services:
       - "1883:1883"
       - "8883:8883"
       - "9001:9001"
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+    depends_on:
+      - influxdb
 
 volumes:
   grafana-storage:

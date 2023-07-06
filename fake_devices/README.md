@@ -1,9 +1,30 @@
-# File name format
+# Fake devices
 
-regex : `^f?.+\.py$`
+## Running
+
+### Prerequisites
+
+linux with packages : `python3`, `pip3`, `mosquitto-clients`
+
+Then install requirements with 
+
+```bash
+pip3 install -r requirements.txt
+```
+
+### Usage
+
+```bash
+python3 mqtt_device_simulator.py
+```
+
+## Naming convention
 
 | Code name | Meaning      |
 |-----------|--------------|
-| f         | Fake device  |
-| s         | Solar panel  |
-| w         | Wind turbine |
+| sp        | Solar panel  |
+| wm        | Windmill     |
+
+## Sent data
+
+RegEx : `\{"power":\d+,"location":"\w+","timestamp":\d+\}`

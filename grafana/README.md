@@ -2,11 +2,13 @@
 
 ## Import the home dashboard
 
-1. Open [Graphana (localhost:3000)](http://localhost:3000)
+Summary : import influxDB datasource then import the home dashboard
+
+1. Open [Grafana (localhost:3000)](http://localhost:3000)
 2. Add the InfluxDB datasource :
-   1. Click on the gear icon on the left menu then click on `Data Sources`
-   2. Click on `Add data source`
-   3. Click on `InfluxDB`
+   - Click on the gear icon on the left menu then click on `Data Sources`
+   - Click on `Add data source`
+   - Click on `InfluxDB`
       - Query language: `Flux`
       - HTTP
         - URL: `http://influxdb:8086`
@@ -17,6 +19,13 @@
          - Organization: `dniit`
          - Token : `DOCKER_INFLUXDB_INIT_ADMIN_TOKEN` in `.env` file
          - Bucket: `openhab`
-       - Click on `Save & Test`
+       - Click on `Save & Test`  
+   - You should now see `✅ X buckets found`
+3. Import the home dashboard :
+   - Click on the four squares icon on the left menu then click on `Browse`
+   - Click on `Import`
+   - Click on `Upload JSON file`
+     - Choose the file `grafana/home_dashboard.json`
+   - Chose the influxDB datasource you just created
+   - Click on `Import`
 
-You should now see `✅ X buckets found`
