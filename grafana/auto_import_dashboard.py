@@ -3,7 +3,7 @@ import json
 import base64
 import random
 
-api_url = f'http://localhost:3000/api/dashboards/db'
+api_url = f'https://localhost:3000/api/dashboards/db'
 
 headers = {
     'Content-Type': 'application/json',
@@ -14,9 +14,11 @@ data = {
     "name":str(random.randint(1,100000)), # to generate random name everytime and prevent error
     "role": "Admin"
 }
-
-api_key = requests.post('http://localhost:3000/api/auth/keys', headers=headers, json=data).json().get("key")
-#print(api_key)
+api_response = requests.post('https://localhost:3000/api/auth/keys', headers=headers, json=data, verify=False)
+print("api_response", api_response)
+api_key = api_response.json().get("key")
+print(api_key)
+""""
 
 dashboard_path = "Panel_json/Windwill.json"
 
@@ -29,3 +31,4 @@ if response.status_code == 200:
     print('Dashboard imported successfully.')
 else:
     print('Failed to import dashboard. Response:', response.text)
+"""
