@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="init-influxdb.sh" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="wsl dos2unix influxdb/init-influxdb.sh .env; wsl bash influxdb/init-influxdb.sh" />
+  <configuration default="false" name="init_influxdb.sh" type="ShConfigurationType">
+    <option name="SCRIPT_TEXT" value="wsl dos2unix influxdb/init_influxdb.sh .env; wsl bash influxdb/init_influxdb.sh" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />
