@@ -22,7 +22,7 @@ docker-compose up -d
 
 ## Connect to logs
 
-To see the openhab logs, you can run the following command:
+To see the openHAB logs, you can run the following command:
 
 ```bash
 docker exec -it openhab /opanhab/runtime/bin/client -i habopen
