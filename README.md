@@ -2,6 +2,8 @@
 
 This project aims to create a system to control and supervise the energy production of renewable energy sources.
 
+hey
+
 ## Physical Architecture
 
 ![Physical Architecture](./documentation/HRES%20schema.drawio.png)
