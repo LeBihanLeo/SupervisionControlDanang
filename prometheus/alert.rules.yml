@@ -1,0 +1,11 @@
+groups:
+  - name: example_alert_rules
+    rules:
+      - alert: InsufficientInfluxDBBuckets
+        expr: influxdb_buckets_total < 4
+        for: 2s
+        labels:
+          severity: critical
+        annotations:
+          summary: Insufficient InfluxDB Buckets Detected
+          description: The number of InfluxDB buckets is below the threshold of 4.
