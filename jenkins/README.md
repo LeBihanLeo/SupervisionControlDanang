@@ -16,6 +16,10 @@ Dont change anything and click on "Save and done".
 
 ##5 Start to use Jenkins
 
+## Install more plugins
+Go to Dashboard -> Manage Jenkins -> Plugins -> Available plugins
+Search and install "Multibranch Scan Webhook Trigger"
+
 ## Setup credentials
 Dashboard -> Manage jenkins -> Credentials -> (global) -> add credentials
 - Kind : username with password
@@ -33,3 +37,4 @@ Dashboard -> New Item
 - Select "JenkinsDniit/******"
 - Repository HTTPS URL : https://github.com/LeBihanLeo/SupervisionControlDanang.git
 - Click on validate and the following message must apprear "Credentials ok. Connected to https://github.com/LeBihanLeo/SupervisionControlDanang."
+- Select scan by webhook
