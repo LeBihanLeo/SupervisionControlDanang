@@ -5,6 +5,8 @@ services:
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
+      - "./influxdb/conf:/etc/influxdb2:rw"
+      - "./influxdb/key:/etc/ssl"
     env_file:
       - .env
     entrypoint: [ "./entrypoint.sh" ]
