@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "4b4fa34f-2966-48a9-a2bb-63a1e8f3d9e7",
+		"name": "API vngalaxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19496154"
+	},
+	"item": [
+		{
+			"name": "Documentation example",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlNmY0Yjk1ZTc3N2JkYmRkIiwiYXBwSUQiOiI2IiwiaWF0IjoxNjg3MzM5ODYyfQ.7FZB7rF7rMBjLCnMBKtUKM-TgnEQfTZ5dNOo1ouRKdc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "api.vngalaxy.vn/api/uplink",
+					"host": [
+						"api",
+						"vngalaxy",
+						"vn"
+					],
+					"path": [
+						"api",
+						"uplink"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
