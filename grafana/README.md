@@ -4,7 +4,7 @@
 
 admin/admin
 
-## Import the home dashboard
+## Manual import of the home dashboard
 
 Summary : import influxDB datasource then import the home dashboard
 
@@ -24,12 +24,12 @@ Summary : import influxDB datasource then import the home dashboard
          - Token : `DOCKER_INFLUXDB_INIT_ADMIN_TOKEN` in `.env` file
          - Bucket: `openhab`
        - Click on `Save & Test`  
-   - You should now see `✅ X buckets found`
+   - You should now see `✅ 4 buckets found`
 3. Import the home dashboard :
    - Click on the four squares icon on the left menu then click on `Browse`
    - Click on `Import`
    - Click on `Upload JSON file`
-     - Choose the file `grafana/home_dashboard.json`
+     - Choose the file `grafana/dashboards_(manual_import)/home_dashboard.json`
    - Chose the influxDB datasource you just created
    - Click on `Import`
 
