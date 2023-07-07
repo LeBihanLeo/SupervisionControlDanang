@@ -10,7 +10,7 @@ services:
     env_file:
       - .env
     entrypoint: [ "./entrypoint.sh" ]
-    restart: on-failure:10
+    restart: always
     ports:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
 
@@ -32,6 +32,8 @@ services:
       - ./grafana/config:/etc/grafana
       - ./influxdb/key/influxdb-selfsigned.crt:/etc/grafana/cert.crt
       - ./influxdb/key/influxdb-selfsigned.key:/etc/grafana/cert.key
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/etc/grafana/dashboards
     depends_on:
       - influxdb
     ports:
