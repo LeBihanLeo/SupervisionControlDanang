@@ -2,9 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Start container') {
             steps {
-                sh 'echo "Building..."'
+                sh 'echo "Start container..."'
+				sh 'ls -l'
+				sh './jenkins-scripts/start-containers.sh'
             }
         }
 
