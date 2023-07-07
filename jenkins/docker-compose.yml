@@ -2,7 +2,9 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    image: custom_jenkins
+    build:
+      context: influxdb
+      dockerfile: Dockerfile
     ports:
       - 8084:8080
       - 50000:50000
