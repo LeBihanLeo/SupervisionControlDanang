@@ -1,3 +1,3 @@
 #!/bin/sh
 cd ../..
-docker-compose down
+docker compose down
