@@ -1,2 +1,3 @@
 #!/bin/sh
-cd ../ && docker compose down
+cd jenkins
+docker compose down
