@@ -1,0 +1,15 @@
+apiVersion: 1
+
+datasources:
+  - name: influxdb
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    basicAuth: false
+    database: openhab
+    jsonData:
+      organization: dniit
+      version: Flux
+    secureJsonData:
+      token: e969c124fb2c28db5220efa8f6b2498f2e0ea2609c31c51ecde9f24cff6c47bd
+    isDefault: true
