@@ -2,9 +2,7 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    build:
-      context: jenkins
-      dockerfile: Dockerfile
+    image: custom_jenkins
     ports:
       - 8084:8080
       - 50000:50000
