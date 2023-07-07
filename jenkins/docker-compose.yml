@@ -3,7 +3,7 @@ services:
   jenkins:
     container_name: jenkins
     build:
-      context: influxdb
+      context: jenkins
       dockerfile: Dockerfile
     ports:
       - 8084:8080
