@@ -1,7 +1,9 @@
-FROM influxdb:2.1.1
+FROM influxdb:2.7.1
 
-COPY ./new_entrypoint.sh /entrypoint.sh
+COPY .env /docker-entrypoint-initdb.d/.env
+COPY ./influxdb/init_influxdb.sh /docker-entrypoint-initdb.d/init_influxdb.sh
+
 RUN apt update && apt install -y dos2unix
-RUN dos2unix /entrypoint.sh
+RUN dos2unix /docker-entrypoint-initdb.d/init_influxdb.sh /docker-entrypoint-initdb.d/.env
 
-ENTRYPOINT ["/entrypoint.sh"]
+RUN chmod +x /docker-entrypoint-initdb.d/init_influxdb.sh
