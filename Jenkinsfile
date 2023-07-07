@@ -22,8 +22,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'echo "Testing..."'*
-				mosquitto_pub -h 45.117.83.209 -m "test message" -t mytest/test -u test -P "test" -d				
+                sh 'echo "Testing..."'				
             }
         }
     }

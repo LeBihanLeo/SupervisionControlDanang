@@ -4,8 +4,8 @@ USER root
 
 # Dependencies
 RUN apt-get update
+RUN apt-get upgrade -y
 RUN apt-get install -y curl tar gzip
-RUN apt-get install mosquitto-clients
 
 # Docker
 RUN curl -fsSL https://get.docker.com -o get-docker.sh
