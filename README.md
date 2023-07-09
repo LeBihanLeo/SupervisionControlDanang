@@ -53,5 +53,4 @@ docker-compose up -d
 | [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file                         | Yes                                                                              |
 | [openhab](./openhab)                                   | Yes, launched with the root docker-compose file                         | No, see [openhab/README.md](openhab/README.md)                                   |
 | [openhab_config_generator](./openhab_config_generator) | No, run it manually [see README.md](openhab_config_generator/README.md) | No, see [openhab_config_generator/README.md](openhab_config_generator/README.md) |
-| [prometheus](./prometheus)                             | Yes, launched with the root docker-compose file                         | Yes                                                                              |                                    
-
+| [prometheus](./prometheus)                             | Yes, launched with the root docker-compose file                         | Yes                                                                              |

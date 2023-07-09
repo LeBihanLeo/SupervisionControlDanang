@@ -1,19 +1,22 @@
 # LoRa Gateway API
 
-## Request 
+## Request
 
-- URL 
+- URL
 
   ````http
   http://api.vngalaxy.vn/api/uplink/
   ````
+
 - Method: `POST`
-- Headers: 
+- Headers:
   - Authorization:
     - Type: `Bearer Token`
+
     ```txt
     bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlNmY0Yjk1ZTc3N2JkYmRkIiwiYXBwSUQiOiI2IiwiaWF0IjoxNjg3MzM5ODYyfQ.7FZB7rF7rMBjLCnMBKtUKM-TgnEQfTZ5dNOo1ouRKdc
     ```
+
 - Body :
 
   | Name            | type   | is mandatory | Description                        |
