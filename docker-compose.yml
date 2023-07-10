@@ -1,18 +1,18 @@
 version: '3'
 services:
   influxdb:
-    #image: influxdb:2.7.1
-    build:
-      context: .
-      dockerfile: influxdb/my_influxdb.Dockerfile
+    image: influxdb:2.7.1
+    #build:
+     # context: .
+     # dockerfile: influxdb/my_influxdb.Dockerfile
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
-      - "./influxdb/conf:/etc/influxdb2:ro"
+      - "./influxdb/conf:/etc/influxdb2"
       - "./influxdb/key:/etc/ssl"
     env_file:
       - .env
-    restart: on-failure
+    restart: on-failure:10
     ports:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
 
@@ -21,6 +21,7 @@ services:
     image: telegraf:1.19
     volumes:
       - ${TELEGRAF_CFG_PATH}:/etc/telegraf/telegraf.conf:rw
+      - "./influxdb/key:/etc/telegraf"
     env_file:
       - .env
     depends_on:
