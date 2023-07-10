@@ -11,3 +11,7 @@ At the first launch of InfluxDB, openHAB bucket does not exist, we will add it w
 ```bash
 bash init_influxdb.sh
 ```
+
+## Credentials
+
+see `.env` file at the root of the project

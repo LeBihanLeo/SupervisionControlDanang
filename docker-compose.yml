@@ -1,18 +1,19 @@
 version: '3'
 services:
   influxdb:
-    #image: influxdb:2.7.1
-    build:
-      context: .
-      dockerfile: influxdb/my_influxdb.Dockerfile
+    image: influxdb:2.7.1
+#    build:
+#      context: .
+#      dockerfile: influxdb/my_influxdb.Dockerfile
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
-      - "./influxdb/conf:/etc/influxdb2:ro"
-      - "./influxdb/key:/etc/ssl"
+#      - ./influxdb/conf:/etc/influxdb2:r # creates an influx-configs file that crashes the container when restarted
+      - ./influxdb/key:/etc/ssl
     env_file:
       - .env
-    restart: on-failure
+    entrypoint: [ "./entrypoint.sh" ]
+    restart: always
     ports:
       - ${DOCKER_INFLUXDB_INIT_PORT}:8086
 
@@ -73,6 +74,16 @@ services:
       - "1883:1883"
       - "8883:8883"
       - "9001:9001"
+
+#  prometheus:
+#    container_name: prometheus
+#    image: prom/prometheus
+#    ports:
+#      - "9090:9090"
+#    volumes:
+#      - ./prometheus:/etc/prometheus
+#    depends_on:
+#      - influxdb
 
 volumes:
   grafana-storage:
