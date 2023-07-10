@@ -48,7 +48,7 @@ docker-compose up -d
 | [documentation](./documentation)                       | N/A                                                                     | N/A                                                                              |
 | [fake_devices](./fake_devices)                         | No, run it manually [see README.md](fake_devices/README.md)             | N/A                                                                              |
 | [grafana](./grafana)                                   | Yes, launched with the root docker-compose file                         | Yes                                                                              |
-| [influxdb](./grafana)                                  | Yes, launched with the root docker-compose file                         | No, see [influxdb/README.md](influxdb/README.md)                                 |
+| [influxdb](./influxdb)                                 | Yes, launched with the root docker-compose file                         | No, see [influxdb/README.md](influxdb/README.md)                                 |
 | [jenkins](./jenkins)                                   | Yes, in it's own docker-compose file                                    | No, see [jenkins/README.md](jenkins/README.md)                                   |
 | [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file                         | Yes                                                                              |
 | [openhab](./openhab)                                   | Yes, launched with the root docker-compose file                         | No, see [openhab/README.md](openhab/README.md)                                   |
