@@ -2,9 +2,9 @@
 
 ## Credentials 
 
-| Website                                                         | username               | password                                 |
-|-----------------------------------------------------------------|------------------------|------------------------------------------|
-| [http://ns.vngalaxy.vn/](http://ns.vngalaxy.vn/)                | jenkinsdniit@gmail.com | password123                              |
+| Website                                           | username               | password    |
+|---------------------------------------------------|------------------------|-------------|
+| [http://ns.vngalaxy.vn/](http://ns.vngalaxy.vn/)  | jenkinsdniit@gmail.com | password123 |
 
 ## How to get bearer token
 
