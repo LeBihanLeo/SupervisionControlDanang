@@ -16,6 +16,7 @@ pipeline {
 					}
 				}
 				
+				sh 'system docker start'
 				sh 'docker compose up -d'
             }
         }
