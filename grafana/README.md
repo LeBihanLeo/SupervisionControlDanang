@@ -1,6 +1,6 @@
 # Grafana
 
-## Credentials 
+## Credentials
 
 admin/admin
 
