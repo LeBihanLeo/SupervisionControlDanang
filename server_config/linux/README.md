@@ -2,23 +2,27 @@
 
 ## Install Mosquitto client
 
-Source : [How To Install and Secure the Mosquitto MQTT Messaging Broker on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-centos-7)
+Source: [How To Install and Secure the Mosquitto MQTT Messaging Broker on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-the-mosquitto-mqtt-messaging-broker-on-centos-7)
 
 ## Installed packages in the VM
 
+if you can `ping 1.1.1.1` but you cannot `ping mirrorlist.centos.org` then you need to configure a dns server in `/etc/resolv.conf`:
+
+```bash
+echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" >> /etc/resolv.conf
+```
+
 ```bash
 # Basic tools
-yum install git
-yum install nano
-yum install python3 #installs pip3 too
+yum install git -y 
+yum install nano -y 
+yum install python3 -y #installs pip3 too
 
-# Docker 
-yum install -y yum-utils device-mapper-persistent-data lvm2
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum install -y docker-ce
+yum -y install epel-release
+yum -y install htop
 
-# Eclipse mosquitto
-yum install epel-release # adds the EPEL repository
-yum install mosquitto
-yum install mosquitto-clients
+# docker 
+curl -fsSL https://get.docker.com | sh
+yum install docker-compose -y
+systemctl start docker
 ```
