@@ -6,16 +6,16 @@
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             const links = {
-                'home': 80,
-                'influxdb': 8086,
-                'grafana': 3000,
-                'openhab': 8080
+                'home': [80, 'http:'],
+                'influxdb': [8086, 'https:'],
+                'grafana': [3000, 'https:'],
+                'openhab': [8080, 'http:'],
             };
 
             for (const id in links) {
                 if (links.hasOwnProperty(id)) {
                     const link = document.createElement('a');
-                    link.href = `${window.location.protocol}//${window.location.hostname}:${links[id]}`;
+                    link.href = `${links[id][1]}//${window.location.hostname}:${links[id][0]}`;
                     link.innerText = id
                     document.body.appendChild(link);
                     document.body.appendChild(document.createElement('br'));
