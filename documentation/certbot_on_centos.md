@@ -34,3 +34,10 @@ Check that the port is open
 ```bash
 sudo firewall-cmd --list-all
 ```
+
+On our vm we have the following output :
+
+```bash
+Certificate is saved at: /etc/letsencrypt/live/apps.vngalaxy.vn/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/apps.vngalaxy.vn/privkey.pem
+```
