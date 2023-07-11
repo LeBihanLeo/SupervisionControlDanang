@@ -1,5 +1,8 @@
 import openhab_files_helper as ofh
 
+THINGS_FILE_PATH = "../openhab/conf/things/test-broker.things"
+ITEMS_FILE_PATH = "../openhab/conf/items/test-broker.items"
+PERSISTENCE_FILE_PATH = "../openhab/conf/persistence/influxdb.persist"
 
 # Check if the given device is already used in openhab files
 def check_redundancy(device_type, device_location, device_id):
