@@ -74,6 +74,16 @@ services:
       - "8883:8883"
       - "9001:9001"
 
+#  prometheus:
+#    container_name: prometheus
+#    image: prom/prometheus
+#    ports:
+#      - "9090:9090"
+#    volumes:
+#      - ./prometheus:/etc/prometheus
+#    depends_on:
+#      - influxdb
+
 volumes:
   grafana-storage:
   influxdb-storage:

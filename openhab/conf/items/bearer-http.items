@@ -1,0 +1,1 @@
+String bearer_test "test" { channel="http:url:foo:customChannel1", persistence="influxdb" }

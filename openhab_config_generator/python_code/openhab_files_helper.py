@@ -9,8 +9,8 @@ THING_NAME = "mqtt_thing_data"  # not used for the moment
 def add_new_device(device_type, device_location, device_id):
     device_name = f"{device_type}_{device_location}_{device_id}"
     device_topic = f"{device_location}/{device_type}{device_id}"
-    add_new_thing(device_name, device_topic)
-    add_new_item(device_name)
+    add_new_mqtt_thing(device_name, device_topic)
+    add_new_mqtt_item(device_name)
 
 
 def write_in_file(filepath, data):
@@ -19,7 +19,7 @@ def write_in_file(filepath, data):
     f.close()
 
 
-def add_new_thing(device_name, device_topic):
+def add_new_mqtt_thing(device_name, device_topic):
     f = open(THINGS_FILE_PATH, "r")
     data = f.read()
     f.close()
@@ -33,7 +33,7 @@ def add_new_thing(device_name, device_topic):
     write_in_file(THINGS_FILE_PATH, data)
 
 
-def add_new_item(device_name):
+def add_new_mqtt_item(device_name):
     f = open(ITEMS_FILE_PATH, "r")
     data = f.read()
     f.close()

@@ -1,0 +1,9 @@
+Thing http:url:foo [ 
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+    "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlNmY0Yjk1ZTc3N2JkYmRkIiwiYXBwSUQiOiI2IiwiaWF0IjoxNjg3MzM5ODYyfQ.7FZB7rF7rMBjLCnMBKtUKM-TgnEQfTZ5dNOo1ouRKdc",
+    refresh=15
+ ] {
+ Channels:
+  Type string : customChannel1 "My Custom Channel"
+}
