@@ -8,7 +8,6 @@ services:
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
-      - "./influxdb/conf:/etc/influxdb2"
       - "./influxdb/key:/etc/ssl"
     env_file:
       - .env
