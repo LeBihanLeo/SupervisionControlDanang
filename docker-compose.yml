@@ -74,6 +74,15 @@ services:
       - "8883:8883"
       - "9001:9001"
 
+
+  web:
+    container_name: nginx
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html
+
 #  prometheus:
 #    container_name: prometheus
 #    image: prom/prometheus

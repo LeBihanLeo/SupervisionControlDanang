@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SupervisionControlDanang</title>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            const links = {
+                'home': [80, 'http:'],
+                'influxdb': [8086, 'https:'],
+                'grafana': [3000, 'https:'],
+                'openhab': [8080, 'http:'],
+            };
+
+            for (const id in links) {
+                if (links.hasOwnProperty(id)) {
+                    const link = document.createElement('a');
+                    link.href = `${links[id][1]}//${window.location.hostname}:${links[id][0]}`;
+                    link.innerText = id
+                    document.body.appendChild(link);
+                    document.body.appendChild(document.createElement('br'));
+                }
+            }
+        });
+    </script>
+
+
+</head>
+<body>
+<h1>SupervisionControlDanang</h1>
+</body>
+</html>

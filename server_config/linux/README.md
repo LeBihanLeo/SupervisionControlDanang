@@ -25,4 +25,13 @@ yum -y install htop
 curl -fsSL https://get.docker.com | sh
 yum install docker-compose -y
 systemctl start docker
+
+# certbot for https
+sudo yum install epel-release
+sudo yum install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo systemctl start snapd
+sudo snap install core
+sudo snap refresh core
 ```
