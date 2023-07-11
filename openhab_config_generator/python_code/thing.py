@@ -13,4 +13,6 @@ class Thing:
         print("Thing initialization...")
 
 
-    def
+    def add_new_thing(self):
+        f = open(self.things_file_path, "r")
+        data = f.read()

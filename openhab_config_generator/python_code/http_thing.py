@@ -13,3 +13,4 @@ class HttpThing(Thing):
             device_location,
             device_id
         )
+
