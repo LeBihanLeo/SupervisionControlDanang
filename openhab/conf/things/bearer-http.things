@@ -1,10 +1,11 @@
-Thing http:url:device [ 
+Thing http:url:device [
     baseURL="http://api.vngalaxy.vn/api/uplink/",
     headers="WWW-Authenticate=Basic",
-    "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlNmY0Yjk1ZTc3N2JkYmRkIiwiYXBwSUQiOiI2IiwiaWF0IjoxNjg3MzM5ODYyfQ.7FZB7rF7rMBjLCnMBKtUKM-TgnEQfTZ5dNOo1ouRKdc",
+            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlNmY0Yjk1ZTc3N2JkYmRkIiwiYXBwSUQiOiI2IiwiaWF0IjoxNjg3MzM5ODYyfQ.7FZB7rF7rMBjLCnMBKtUKM-TgnEQfTZ5dNOo1ouRKdc",
     stateMethod="POST",
     refresh=15
- ] {
- Channels:
-  Type string : customChannel1 "My Custom Channel"
+] {
+    Channels:
+    Type string : sm_paris_1_all_json_channel_channel "sm_paris_1_all_json_channel_channel"
 }
+

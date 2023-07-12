@@ -6,11 +6,11 @@ import file_helper
 class Device:
     def __init__(self, thing_file_path, item_file_path, persistence_file_path, device_type, device_location,
                  device_id):
-        self.thing_file_path = thing_file_path,
-        self.item_file_path = item_file_path,
-        self.persistence_file_path = persistence_file_path,
-        self.device_type = device_type,
-        self.device_location = device_location,
+        self.thing_file_path = thing_file_path
+        self.item_file_path = item_file_path
+        self.persistence_file_path = persistence_file_path
+        self.device_type = device_type
+        self.device_location = device_location
         self.device_id = device_id
         print("Thing initialization...")
 
@@ -29,7 +29,7 @@ class Device:
 
     def add_new_item(self):
         data = file_helper.get_file_data(self.item_file_path)
-        result_data = self.transform_thing_file(data)
+        result_data = self.transform_item_file(data)
         file_helper.write_in_file(self.item_file_path, result_data)
 
     @abc.abstractmethod

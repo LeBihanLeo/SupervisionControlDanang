@@ -1,1 +1,2 @@
-String bearer_test "test" { channel="http:url:device:customChannel1", persistence="influxdb" }
+String sm_paris_1 "sm_paris_1" { channel="http:url:device:sm_paris_1_all_json_channel_channel", persistence="influxdb" }
+

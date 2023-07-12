@@ -1,4 +1,5 @@
 import openhab_files_helper as ofh
+import http_device
 
 THINGS_FILE_PATH = "../openhab/conf/things/test-broker.things"
 ITEMS_FILE_PATH = "../openhab/conf/items/test-broker.items"
@@ -41,13 +42,13 @@ def fetch_existing_data():
 def user_input():
     while True:
         print("Select your choice or write close\n"
-              " 1 - Add a new device\n"
+              " 1 - Add a new http bearer device\n"
               " 2 - List existing devices\n")
         choice = input("    > ")
         if choice == "close":
             return
         elif choice == "1":
-            user_input_add_device()
+            http_device.user_input_add_bearer_http_device()
         elif choice == "2":
             fetch_existing_data()
         else:
