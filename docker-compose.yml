@@ -8,7 +8,8 @@ services:
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
-      - "./influxdb/key:/etc/ssl"
+      - ./certificates/fullchain.pem:/etc/ssl/cert.crt
+      - ./certificates/privkey.pem:/etc/ssl/cert.key
     env_file:
       - .env
     restart: on-failure:10
@@ -32,10 +33,8 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana:rw
       - ./grafana/config:/etc/grafana
-      #- ./influxdb/key/influxdb-selfsigned.crt:/etc/grafana/cert.crt
-      #- ./influxdb/key/influxdb-selfsigned.key:/etc/grafana/cert.key
-      - ./grafana/fullchain.pem:/etc/grafana/cert.crt
-      - ./grafana/privkey.pem:/etc/grafana/cert.key
+      - ./certificates/fullchain.pem:/etc/grafana/cert.crt
+      - ./certificates/privkey.pem:/etc/grafana/cert.key
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/etc/grafana/dashboards
     depends_on:
