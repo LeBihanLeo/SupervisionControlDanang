@@ -32,8 +32,10 @@ services:
     volumes:
       - grafana-storage:/var/lib/grafana:rw
       - ./grafana/config:/etc/grafana
-      - ./influxdb/key/influxdb-selfsigned.crt:/etc/grafana/cert.crt
-      - ./influxdb/key/influxdb-selfsigned.key:/etc/grafana/cert.key
+      #- ./influxdb/key/influxdb-selfsigned.crt:/etc/grafana/cert.crt
+      #- ./influxdb/key/influxdb-selfsigned.key:/etc/grafana/cert.key
+      - ./grafana/fullchain.pem:/etc/grafana/cert.crt
+      - ./grafana/privkey.pem:/etc/grafana/cert.key
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/etc/grafana/dashboards
     depends_on:
