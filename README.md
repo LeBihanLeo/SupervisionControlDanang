@@ -39,6 +39,12 @@ On Linux to run the project (in background)
 docker-compose up -d
 ```
 
+or fresh restart (clean, build, run)
+
+```bash
+docker-compose down ; docker volume rm $(docker volume ls -q) ; docker compose up -d ; bash init.sh
+```
+
 ## Submodules / different parts of the project
 
 - Folder naming convention : `snake_case`

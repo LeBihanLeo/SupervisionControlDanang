@@ -49,12 +49,6 @@ services:
       - "./openhab/addons:/openhab/addons"
       - "./openhab/conf:/openhab/conf"
       - "./openhab/userdata:/openhab/userdata"
-    environment:
-      CRYPTO_POLICY: "unlimited"
-      EXTRA_JAVA_OPTS: "-Duser.timezone=Asia/Bangkok"
-      OPENHAB_HTTP_PORT: "8080"
-      OPENHAB_HTTPS_PORT: "8443"
-      LANGUAGE: "en_US.UTF-8"
     ports:
       - '8080:8080'
     env_file:
