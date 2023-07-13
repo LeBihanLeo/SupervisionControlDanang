@@ -1,0 +1,25 @@
+rule "Solar Energy Management"
+when
+    Item h_l3_1_power changed or
+    Item sp_l1_1_power changed
+then
+    val int houseConsumption = (h_l3_1_power.state as Number).intValue()
+    val int solarProduction = (sp_l1_1_power.state as Number).intValue()
+    
+    if (houseConsumption > solarProduction) {
+        // The house is consuming more energy than the solar production
+        // Perform the desired action here
+        // For example, turn on the virtual switch
+        
+        // Example action: Turn on the virtual switch
+        sendCommand(TestSwitch, ON)
+    }
+    else {
+        // The house consumption is less than or equal to the solar production
+        // Perform the desired action here
+        // For example, turn off the virtual switch
+        
+        // Example action: Turn off the virtual switch
+        sendCommand(TestSwitch, OFF)
+    }
+end
