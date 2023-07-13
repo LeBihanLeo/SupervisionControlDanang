@@ -22,3 +22,7 @@ XXXXXXXXXXXXXXXX        openhab infinite        XXXhXmXs                XXXXXXXX
 ## Credentials
 
 see `.env` file at the root of the project
+
+## Info 
+
+NOTE: Valid units are nanoseconds (ns), microseconds(us), milliseconds (ms), seconds (s), minutes (m), hours (h), days (d), and weeks (w).
