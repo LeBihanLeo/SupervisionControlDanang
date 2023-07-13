@@ -39,6 +39,7 @@ def fetch_existing_data():
         print("   Id : " + existing_device_id + "\n")
 
 
+# Ask user choice in command line
 def user_input():
     while True:
         print("Select your choice or write close\n"
