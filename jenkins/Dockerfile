@@ -10,6 +10,7 @@ RUN apt-get install -y curl tar gzip
 # Docker
 RUN curl -fsSL https://get.docker.com -o get-docker.sh
 RUN sh get-docker.sh
-RUN service docker start
+# RUN service docker start
 
+# USER jenkins
 USER jenkins
