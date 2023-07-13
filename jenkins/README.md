@@ -1,7 +1,9 @@
 # Jenkins
 
 ## 1. Unlock Jenkins
-password : ea32e95d275149b8878708e28eb14e68
+docker exec -it jenkins bash
+cat /var/jenkins_home/secrets/initialAdminPassword
+enter displayed password in jenkins web interface
 
 ## 2. Install plugins
 Install suggested plugins (wait until the end of the installation).
@@ -12,7 +14,7 @@ suggested information for testing
 - username : admin
 - password : admin
 - name : Dniit
-- email : random
+- email : jenkinsdniit@gmail.com
 
 ## 4 Instance configuration
 

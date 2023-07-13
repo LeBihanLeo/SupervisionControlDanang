@@ -1,13 +1,18 @@
 from device import Device
+import re
+
+THINGS_FILE_PATH = f"../../openhab/conf/things/bearer-http.things"
+ITEMS_FILE_PATH = f"../../openhab/conf/items/bearer-http.items"
+PERSISTENCE_FILE_PATH = "../../openhab/conf/persistence/influxdb.persist"
+
 
 class HttpDevice(Device):
-
     def __init__(self, device_type, device_location, device_id, bearer_token, channels_info):
         filename = "bearer-http"
         super().__init__(
-            f"../../openhab/conf/things/{filename}.things",
-            f"../../openhab/conf/items/{filename}.items",
-            "../../openhab/conf/persistence/influxdb.persist",
+            THINGS_FILE_PATH,
+            ITEMS_FILE_PATH,
+            PERSISTENCE_FILE_PATH,
             device_type,
             device_location,
             device_id
@@ -17,17 +22,17 @@ class HttpDevice(Device):
 
     def transform_thing_file(self, input_data):
         input_data += "Thing http:url:device [\n" \
-                     + "    baseURL=\"http://api.vngalaxy.vn/api/uplink/\",\n" \
-                     + "    headers=\"WWW-Authenticate=Basic\",\n" \
-                     + f"            \"Authorization=Bearer {self.bearer_token}\",\n" \
-                     + "    stateMethod=\"POST\",\n" \
-                     + "    refresh=15\n" \
-                     + "] {\n" \
-                     + "    Channels:\n"
+                      + "    baseURL=\"http://api.vngalaxy.vn/api/uplink/\",\n" \
+                      + "    headers=\"WWW-Authenticate=Basic\",\n" \
+                      + f"            \"Authorization=Bearer {self.bearer_token}\",\n" \
+                      + "    stateMethod=\"POST\",\n" \
+                      + "    refresh=15\n" \
+                      + "] {\n" \
+                      + "    Channels:\n"
         for channel_info in self.channels_info:
             channel_data_type = channel_info.get("data_type")
             channel_name = channel_info.get("name") + "_channel"
-            input_data += f"    Type {channel_data_type} : {channel_name} \"{channel_name}\"\n"
+            input_data += f"        Type {channel_data_type} : {channel_name} \"{channel_name}\"\n"
         input_data += "}\n\n"
         return input_data
 
@@ -38,13 +43,15 @@ class HttpDevice(Device):
         input_data += "\n"
         return input_data
 
+
 def user_input_channel_info(channels_info, device_type, device_location, device_id):
     channel_data_type = input("Enter channel data type [string / number] : ")
     if channel_data_type != "string" and channel_data_type != "number":
         print("Data type error...")
         return
     channel_data_name = input("Enter channel data name : ")
-    channel_info = {"data_type": channel_data_type, "name": f"{device_type}_{device_location}_{device_id}_{channel_data_name}_channel"}
+    channel_info = {"data_type": channel_data_type,
+                    "name": f"{device_type}_{device_location}_{device_id}_{channel_data_name}_channel"}
     channels_info.append(channel_info)
 
 
@@ -63,3 +70,25 @@ def user_input_add_bearer_http_device():
         http_device.generate_device()
     else:
         print("Cancel device creation")
+
+
+def fetch_existing_devices():
+    f = open(THINGS_FILE_PATH, "r")
+    data = f.read()
+    f.close()
+    # fetch data using regex
+    existing_devices = []
+    founded_things = re.findall("Thing[^}]+}", data)
+    for founded_thing in founded_things:
+        device_info = {}
+        thing_channels_type = re.findall("Type \w*", founded_thing)
+        thing_channels_type = [str(device_channel).replace("Type ", "") for device_channel in thing_channels_type]
+        thing_channels = re.findall("\w+_channel", founded_thing)
+        split_channels = [str(channel).split("_") for channel in thing_channels]
+        device_info["device_type"] = split_channels[0][0]
+        device_info["device_location"] = split_channels[0][1]
+        device_info["device_id"] = split_channels[0][2]
+        device_info["data"] = [{"data_type": thing_channels_type[i], "data_name": split_channels[i][3]} for i in
+                               range(len(thing_channels_type))]
+        existing_devices.append(device_info)
+    print(existing_devices)
