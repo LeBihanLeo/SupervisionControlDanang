@@ -79,16 +79,6 @@ services:
     volumes:
       - ./nginx/html:/usr/share/nginx/html
 
-#  prometheus:
-#    container_name: prometheus
-#    image: prom/prometheus
-#    ports:
-#      - "9090:9090"
-#    volumes:
-#      - ./prometheus:/etc/prometheus
-#    depends_on:
-#      - influxdb
-
 volumes:
   grafana-storage:
   influxdb-storage:
