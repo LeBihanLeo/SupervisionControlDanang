@@ -15,7 +15,7 @@ Summary : import influxDB datasource then import the home dashboard
    - Click on `InfluxDB`
       - Query language: `Flux`
       - HTTP
-        - URL: `http://influxdb:8086`
+        - URL: `http://influxdb:8086` ou `https://apps.vngalaxy.vn:8086`
         - Leave the rest as default
        - Auth
          - Uncheck `Basic Auth`
