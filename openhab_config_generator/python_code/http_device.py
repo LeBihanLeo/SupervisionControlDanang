@@ -31,14 +31,14 @@ class HttpDevice(Device):
                       + "    Channels:\n"
         for channel_info in self.channels_info:
             channel_data_type = channel_info.get("data_type")
-            channel_name = channel_info.get("name") + "_channel"
+            channel_name = channel_info.get("name")
             input_data += f"        Type {channel_data_type} : {channel_name} \"{channel_name}\"\n"
         input_data += "}\n\n"
         return input_data
 
     def transform_item_file(self, input_data):
         for channel_info in self.channels_info:
-            channel_name = channel_info.get("name") + "_channel"
+            channel_name = channel_info.get("name")
             input_data += f"String {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device:{channel_name}\", persistence=\"influxdb\" }}\n"
         input_data += "\n"
         return input_data
