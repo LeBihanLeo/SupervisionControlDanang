@@ -42,6 +42,7 @@ services:
       - influxdb
     ports:
       - ${GRAFANA_PORT}:3000
+      - "3001:3001"
 
   openhab:
     image: openhab/openhab:3.4.4
@@ -78,16 +79,6 @@ services:
       - "80:80"
     volumes:
       - ./nginx/html:/usr/share/nginx/html
-
-#  prometheus:
-#    container_name: prometheus
-#    image: prom/prometheus
-#    ports:
-#      - "9090:9090"
-#    volumes:
-#      - ./prometheus:/etc/prometheus
-#    depends_on:
-#      - influxdb
 
 volumes:
   grafana-storage:
