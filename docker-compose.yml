@@ -77,8 +77,11 @@ services:
     image: nginx
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./nginx/html:/usr/share/nginx/html
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/www:/usr/share/nginx/html:ro
+      - ./certificates/:/etc/ssl/certs/:ro
 
 volumes:
   grafana-storage:
