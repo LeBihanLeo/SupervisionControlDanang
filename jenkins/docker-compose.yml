@@ -3,6 +3,8 @@ services:
   jenkins:
     container_name: jenkins
     image: custom_jenkins
+    privileged: true
+    user: root
     ports:
       - "8084:8080"
       - "50000:50000"
@@ -12,3 +14,4 @@ services:
 
 volumes:
   jenkins_home:
+  jenkins_docker_stock:

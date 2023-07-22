@@ -27,7 +27,7 @@ If you are using Windows, you will need to install WSL.
 
 #### Run in dev mode
 
-On Windows to clean then run the project
+On Windows to clean then run the project (keep the volumes)
 
 ```bash
 stop_remove_build_and_run.bat
@@ -37,6 +37,12 @@ On Linux to run the project (in background)
 
 ```bash
 docker-compose up -d
+```
+
+or fresh restart (clean, build, run), with deletion of the volumes
+
+```bash
+docker-compose down ; docker volume rm $(docker volume ls -q) ; docker compose up -d ; bash init.sh
 ```
 
 ## Submodules / different parts of the project

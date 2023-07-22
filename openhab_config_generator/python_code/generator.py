@@ -39,6 +39,7 @@ def fetch_existing_data():
         print("   Id : " + existing_device_id + "\n")
 
 
+# Ask user choice in command line
 def user_input():
     while True:
         print("Select your choice or write close\n"
@@ -50,7 +51,7 @@ def user_input():
         elif choice == "1":
             http_device.user_input_add_bearer_http_device()
         elif choice == "2":
-            fetch_existing_data()
+            http_device.fetch_existing_devices()
         else:
             print("Input error, try again")
 
