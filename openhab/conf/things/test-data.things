@@ -1,0 +1,13 @@
+Thing http:url:device_sensorTienNg_smartbuilding_1 "TienNg Sensors" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJhMmU1ZmVlODk4Mjk5NGMxIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjg5NjU4NTMwfQ.BU5ttXSXwnH9ZmQUvfkqIGeowWcYu7uFQy89kc7BKPo",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : sensorTienNg_smartbuilding_1_humidity_channel "sensorTienNg_smartbuilding_1_humidity_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.humiditySensor.2" ]
+        Type number : sensorTienNg_smartbuilding_1_illuminance_channel "sensorTienNg_smartbuilding_1_illuminance_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.illuminanceSensor.4" ]
+        Type number : sensorTienNg_smartbuilding_1_temperature_channel "sensorTienNg_smartbuilding_1_temperature_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
+}
+

@@ -1,0 +1,4 @@
+Number sensorTienNg_smartbuilding_1_humidity "sensorTienNg_smartbuilding_1_humidity ttttt" { channel="http:url:device_sensorTienNg_smartbuilding_1:sensorTienNg_smartbuilding_1_humidity_channel", persistence="influxdb" }
+Number sensorTienNg_smartbuilding_1_illuminance "sensorTienNg_smartbuilding_1_illuminance tttttt" { channel="http:url:device_sensorTienNg_smartbuilding_1:sensorTienNg_smartbuilding_1_illuminance_channel", persistence="influxdb" }
+Number sensorTienNg_smartbuilding_1_temperature "sensorTienNg_smartbuilding_1_temperature ttttttt" { channel="http:url:device_sensorTienNg_smartbuilding_1:sensorTienNg_smartbuilding_1_temperature_channel", persistence="influxdb" }
+
