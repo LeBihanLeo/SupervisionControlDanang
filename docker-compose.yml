@@ -2,6 +2,9 @@ version: '3'
 services:
   influxdb:
     image: influxdb:2.7.1
+    #build:
+     # context: .
+     # dockerfile: influxdb/my_influxdb.Dockerfile
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
