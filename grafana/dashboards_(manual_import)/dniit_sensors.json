@@ -1,0 +1,583 @@
+{
+    "__inputs": [
+      {
+        "name": "DS_INFLUXDB",
+        "label": "InfluxDB",
+        "description": "",
+        "type": "datasource",
+        "pluginId": "influxdb",
+        "pluginName": "InfluxDB"
+      }
+    ],
+    "__elements": [],
+    "__requires": [
+      {
+        "type": "grafana",
+        "id": "grafana",
+        "name": "Grafana",
+        "version": "4.1.1"
+      },
+      {
+        "type": "panel",
+        "id": "gauge",
+        "name": "Gauge",
+        "version": ""
+      },
+      {
+        "type": "grafana",
+        "id": "grafana",
+        "name": "Grafana",
+        "version": "8.5.3"
+      },
+      {
+        "type": "panel",
+        "id": "graph",
+        "name": "Graph (old)",
+        "version": ""
+      },
+      {
+        "type": "panel",
+        "id": "stat",
+        "name": "Stat",
+        "version": ""
+      },
+      {
+        "type": "panel",
+        "id": "timeseries",
+        "name": "Time series",
+        "version": ""
+      },
+      {
+        "type": "datasource",
+        "id": "influxdb",
+        "name": "InfluxDB",
+        "version": "2.0.0"
+      }
+    ],
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "description": "dniit sensors",
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "gnetId": 17451,
+    "graphTooltip": 0,
+    "id": null,
+    "iteration": 1669026996957,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+        {
+            "datasource": "${DS_INFLUXDB}",
+            "fieldConfig": {
+              "defaults": {
+                "custom": {
+                  "drawStyle": "line",
+                  "lineInterpolation": "linear",
+                  "barAlignment": 0,
+                  "lineWidth": 1,
+                  "fillOpacity": 0,
+                  "gradientMode": "none",
+                  "spanNulls": false,
+                  "showPoints": "auto",
+                  "pointSize": 5,
+                  "stacking": {
+                    "mode": "none",
+                    "group": "A"
+                  },
+                  "axisPlacement": "auto",
+                  "axisLabel": "",
+                  "axisColorMode": "text",
+                  "scaleDistribution": {
+                    "type": "linear"
+                  },
+                  "axisCenteredZero": false,
+                  "hideFrom": {
+                    "tooltip": false,
+                    "viz": false,
+                    "legend": false
+                  },
+                  "thresholdsStyle": {
+                    "mode": "off"
+                  }
+                },
+                "color": {
+                  "mode": "palette-classic"
+                },
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 8,
+              "w": 12,
+              "x": 0,
+              "y": 0
+            },
+            "id": 4,
+            "options": {
+              "tooltip": {
+                "mode": "single",
+                "sort": "none"
+              },
+              "legend": {
+                "showLegend": true,
+                "displayMode": "list",
+                "placement": "bottom",
+                "calcs": []
+              }
+            },
+            "targets": [
+              {
+                "datasource": "${DS_INFLUXDB}",
+                "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"sensorTienNg_smartbuilding_1_temperature\" or r[\"_measurement\"] == \"sensorTienNg_smartbuilding_1_illuminance\" or r[\"_measurement\"] == \"sensorTienNg_smartbuilding_1_humidity\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+                "refId": "A"
+              }
+            ],
+            "title": "All sensor values",
+            "type": "timeseries"
+          },
+        {
+            "datasource": "${DS_INFLUXDB}",
+            "fieldConfig": {
+              "defaults": {
+                "mappings": [],
+                "thresholds": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": null
+                    },
+                    {
+                      "color": "red",
+                      "value": 80
+                    }
+                  ]
+                },
+                "color": {
+                  "mode": "thresholds"
+                }
+              },
+              "overrides": []
+            },
+            "gridPos": {
+              "h": 15,
+              "w": 12,
+              "x": 0,
+              "y": 8
+            },
+            "id": 2,
+            "options": {
+              "inlineEditing": true,
+              "showAdvancedTypes": false,
+              "root": {
+                "background": {
+                  "color": {
+                    "fixed": "transparent"
+                  },
+                  "image": {
+                    "fixed": "/img/bg/custom/plan_batiment_clean_white.jpg",
+                    "mode": "fixed"
+                  },
+                  "size": "cover"
+                },
+                "border": {
+                  "color": {
+                    "fixed": "dark-green"
+                  }
+                },
+                "elements": [
+                  {
+                    "background": {
+                      "color": {
+                        "field": "humidity",
+                        "fixed": "#D9D9D9"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "align": "center",
+                      "color": {
+                        "fixed": "#000000"
+                      },
+                      "size": 20,
+                      "text": {
+                        "field": "humidity",
+                        "fixed": "",
+                        "mode": "field"
+                      },
+                      "valign": "middle"
+                    },
+                    "connections": [],
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "name": "Element 1",
+                    "placement": {
+                      "top": 114,
+                      "height": 29,
+                      "left": 559,
+                      "width": 109
+                    },
+                    "type": "metric-value"
+                  },
+                  {
+                    "background": {
+                      "color": {
+                        "field": "lum",
+                        "fixed": "#D9D9D9"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "align": "center",
+                      "color": {
+                        "fixed": "#000000"
+                      },
+                      "size": 20,
+                      "text": {
+                        "field": "lum",
+                        "fixed": "",
+                        "mode": "field"
+                      },
+                      "valign": "middle"
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "name": "Element 2",
+                    "placement": {
+                      "top": 157,
+                      "height": 30,
+                      "left": 560,
+                      "width": 107
+                    },
+                    "type": "metric-value"
+                  },
+                  {
+                    "background": {
+                      "color": {
+                        "field": "temp",
+                        "fixed": "#D9D9D9"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "align": "center",
+                      "color": {
+                        "fixed": "#000000"
+                      },
+                      "size": 20,
+                      "text": {
+                        "field": "temp",
+                        "fixed": "",
+                        "mode": "field"
+                      },
+                      "valign": "middle"
+                    },
+                    "connections": [],
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "name": "temperature",
+                    "placement": {
+                      "top": 200,
+                      "height": 31,
+                      "left": 561,
+                      "width": 105
+                    },
+                    "type": "metric-value"
+                  },
+                  {
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "align": "center",
+                      "color": {
+                        "fixed": "rgb(204, 204, 220)"
+                      },
+                      "size": 16,
+                      "text": {
+                        "fixed": "%"
+                      },
+                      "valign": "middle"
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "name": "humidity_unit",
+                    "placement": {
+                      "top": 105,
+                      "height": 50,
+                      "left": 597,
+                      "width": 100
+                    },
+                    "type": "text"
+                  },
+                  {
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "align": "center",
+                      "color": {
+                        "fixed": "rgb(204, 204, 220)"
+                      },
+                      "size": 16,
+                      "text": {
+                        "fixed": "lx"
+                      },
+                      "valign": "middle"
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "name": "lum_unit",
+                    "placement": {
+                      "top": 148,
+                      "height": 50,
+                      "left": 597,
+                      "width": 100
+                    },
+                    "type": "text",
+                    "connections": []
+                  },
+                  {
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "config": {
+                      "align": "center",
+                      "color": {
+                        "fixed": "rgb(204, 204, 220)"
+                      },
+                      "size": 16,
+                      "text": {
+                        "fixed": "°C"
+                      },
+                      "valign": "middle"
+                    },
+                    "constraint": {
+                      "horizontal": "left",
+                      "vertical": "top"
+                    },
+                    "name": "temp_unit",
+                    "placement": {
+                      "top": 192,
+                      "height": 50,
+                      "left": 600,
+                      "width": 100
+                    },
+                    "type": "text"
+                  }
+                ],
+                "name": "Element 1689674000073",
+                "type": "frame"
+              }
+            },
+            "pluginVersion": "9.4.0",
+            "targets": [
+              {
+                "datasource": "${DS_INFLUXDB}",
+                "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"sensorTienNg_smartbuilding_1_humidity\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> rename(columns: { _value: \"humidity\"})\r\n",
+                "refId": "A"
+              },
+              {
+                "datasource": "${DS_INFLUXDB}",
+                "hide": false,
+                "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"sensorTienNg_smartbuilding_1_illuminance\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> rename(columns: { _value: \"lum\"})\r\n",
+                "refId": "B"
+              },
+              {
+                "datasource": "${DS_INFLUXDB}",
+                "hide": false,
+                "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"sensorTienNg_smartbuilding_1_temperature\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> rename(columns: { _value: \"temp\"})\r\n",
+                "refId": "C"
+              }
+            ],
+            "title": "Canvas view",
+            "type": "canvas"
+          }
+    ],
+    "refresh": false,
+    "schemaVersion": 36,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {},
+          "datasource": "${DS_INFLUXDB}",
+          "definition": "{\"find\": \"terms\", \"field\": \"beat.name\"}",
+          "hide": 0,
+          "includeAll": false,
+          "label": "",
+          "multi": false,
+          "name": "hostname",
+          "options": [],
+          "query": "{\"find\": \"terms\", \"field\": \"beat.name\"}",
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 3,
+          "tagValuesQuery": "",
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "auto": false,
+          "auto_count": 30,
+          "auto_min": "10s",
+          "current": {
+            "selected": false,
+            "text": "1m",
+            "value": "1m"
+          },
+          "hide": 0,
+          "name": "Interval",
+          "options": [
+            {
+              "selected": false,
+              "text": "5s",
+              "value": "5s"
+            },
+            {
+              "selected": false,
+              "text": "10s",
+              "value": "10s"
+            },
+            {
+              "selected": true,
+              "text": "1m",
+              "value": "1m"
+            },
+            {
+              "selected": false,
+              "text": "2m",
+              "value": "2m"
+            }
+          ],
+          "query": "5s,10s,1m,2m",
+          "queryValue": "",
+          "refresh": 2,
+          "skipUrlSync": false,
+          "type": "interval"
+        },
+        {
+          "datasource": "${DS_INFLUXDB}",
+          "filters": [],
+          "hide": 0,
+          "name": "Filter",
+          "skipUrlSync": false,
+          "type": "adhoc"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ]
+    },
+    "timezone": "browser",
+    "title": "dniit sensors",
+    "uid": "ubFKKpdV56465z3",
+    "version": 3,
+    "weekStart": ""
+  }
