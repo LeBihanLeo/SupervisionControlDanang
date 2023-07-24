@@ -8,7 +8,7 @@ admin/admin
 
 Summary : import influxDB datasource then import the home dashboard
 
-1. Open [Grafana (localhost:3000)](http://localhost:3000)
+1. Open [Grafana (localhost:3000)](http://localhost:3000) or [Grafana (apps.vngalaxy.vn)](https://apps.vngalaxy.vn:3000)
 2. Add the InfluxDB datasource :
    - Click on the gear icon on the left menu then click on `Data Sources`
    - Click on `Add data source`
@@ -33,3 +33,44 @@ Summary : import influxDB datasource then import the home dashboard
    - Chose the influxDB datasource you just created
    - Click on `Import`
 
+## Manual import of the alerts
+
+It is not possible to import automatically the alerts, so you have to do it manually : 
+
+1. Open [Grafana (localhost:3000)](http://localhost:3000) or [Grafana (apps.vngalaxy.vn)](https://apps.vngalaxy.vn:3000)
+2. Click on the bell icon on the left menu then click on `Alerting`
+3. Click on `Alert Rules`
+4. Click on `Create alert rule`
+   1. Set an alert rule name 
+      - Rule name: `Less than 1Go of free RAM`
+   2. Set a query and alert condition
+      - expression : 
+      - `A` : `infludb`, `now-10m to now`
+          ```
+          from(bucket: "openhab")
+              |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
+              |> filter(fn: (r) => r["_measurement"] == "system" and r["_field"] == "mem_free")
+              |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)
+              |> yield(name: "mean")
+          ```
+      - `B` : `Reduce`  
+        Function : `Last` Input : `A`  
+        Mode : `Strict`  
+      - `C` : `Math`  
+        Expression : `$B < 1000000000`
+   3. Alert evaluation behavior
+        - Folder : `Alerting`
+        - Evaluation group (interval) : `1m`
+        - For : `1m`
+        - Alert state if no data or all values are null : `Alerting`
+        - Alert state if execution error or timeout : `Alerting`
+   4. Add details for your alert rule : nothing to do
+   5. Notifications : nothing to do
+   - Click on `Save and exit`
+5. Go to the `Contact points` tab
+   - Click on `Add contact point`
+     - Name `Webhook alert`
+     - Integration : `Webhook`
+     - URL : `https://eombair37drklph.m.pipedream.net`
+     - Click on `Test` if you want to try
+   - Click on `Save contact point`

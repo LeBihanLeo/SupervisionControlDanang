@@ -35,6 +35,36 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Temperature sensor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJhMmU1ZmVlODk4Mjk5NGMxIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjg5NjU4NTMwfQ.BU5ttXSXwnH9ZmQUvfkqIGeowWcYu7uFQy89kc7BKPo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "api.vngalaxy.vn/api/uplink",
+					"host": [
+						"api",
+						"vngalaxy",
+						"vn"
+					],
+					"path": [
+						"api",
+						"uplink"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

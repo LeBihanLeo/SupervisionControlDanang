@@ -6,4 +6,5 @@
 | Jenkins/GitHub                                                                       | JenkinsDniit           | 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 |
 | DNIIT CentOS server (`45.117.83.209` or [apps.vngalaxy.vn](http://apps.vngalaxy.vn)) | dniit                  | !Dcv100s                                 |
 | [http://ns.vngalaxy.vn/](http://ns.vngalaxy.vn/)                                     | jenkinsdniit@gmail.com | password123                              |
-| [Compte Google](https://www.google.com/) jenkinsdniit@gmail.com                      | jenkinsdniit@gmail.com | lU?8a!2uG2/j$rGk                         |
+| [Compte Google](https://www.google.com/)                                             | jenkinsdniit@gmail.com | lU?8a!2uG2/j$rGk                         |
+| [RequestBin](https://requestbin.com/)                                                | jenkinsdniit@gmail.com | kVGZ10&Tk8x$                             |
