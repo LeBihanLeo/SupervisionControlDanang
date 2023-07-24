@@ -1,6 +1,6 @@
 # openHAB
 
-## myopenhab accounts
+## myopenHAB accounts
 
 URL : [myopenhab.org](https://myopenhab.org/)
 
@@ -19,7 +19,8 @@ Once you have created your username and password, openHAB is already configured,
 
 ## Floor plans location
 
-The floor plans are located in the [conf/html/ressources/](./conf/html/ressources/) directory.
+The floor plans are located in the container at [conf/html/ressources/](./conf/html/ressources/) directory 
+and in the project folder in the [resources/floor_plans](./resources/floor_plans) directory.
 
 ### How to add a floor plan
 
@@ -34,7 +35,7 @@ The floor plans are located in the [conf/html/ressources/](./conf/html/ressource
 5. Configure the floor plan
    - `Label` : give it a friendly name, example : `Building S: 4th floor plan`
    - `Sidebar & Visibility` : check `Show in sidebar`
-   - `Image URL` : put the path to the image, example : `/static/ressources/(your_image_name)`
+   - `Image URL` : put the path to the image, example : `/static/ressources/(your_image)`
    - `Image Width` : put the width of the image (mandatory, if not entered, the image will be stretched)
    - `Image Height` : put the height of the image (mandatory, if not entered, the image will be stretched)
    - Click on `Run mode (CTRL+R)` : (optional) to see the floor plan
