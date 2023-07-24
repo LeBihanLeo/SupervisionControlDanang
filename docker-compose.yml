@@ -57,6 +57,7 @@ services:
       - .env
     depends_on:
       - influxdb
+    network_mode: host
   
   mqtt:
     container_name: mqtt

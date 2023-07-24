@@ -41,7 +41,7 @@ On Linux to run the project (in background)
 docker-compose up -d
 ```
 
-or fresh restart (clean, build, run), with deletion of the volumes
+or fresh restart (clean, build, run)
 
 ```bash
 docker-compose down ; docker compose up -d ; bash init.sh
