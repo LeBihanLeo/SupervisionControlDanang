@@ -38,6 +38,7 @@ services:
       - ./certificates/privkey.pem:/etc/grafana/cert.key
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/etc/grafana/dashboards
+      - ./grafana/ressources:/usr/share/grafana/public/img/bg/custom
     depends_on:
       - influxdb
     ports:
@@ -57,6 +58,7 @@ services:
       - .env
     depends_on:
       - influxdb
+    network_mode: host
   
   mqtt:
     container_name: mqtt

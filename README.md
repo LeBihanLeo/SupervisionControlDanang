@@ -8,15 +8,15 @@ This project aims to create a system to control and supervise the energy product
 
 ## Physical Architecture
 
-![Physical Architecture](./documentation/HRES%20schema.drawio.png)
+![Physical Architecture](./documentation/schemas/HRES%20schema.drawio.png)
 
 ## Software Architecture
 
-![Software Architecture](./documentation/Software%20architecture.drawio.png)
-
-Other documentation can be found in the [documentation](./documentation) folder.
+![Software Architecture](./documentation/schemas/Software%20architecture.drawio.png)
 
 ## Getting Started
+
+[Documentation folder : documentation/](./documentation)
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ If you are using Windows, you will need to install WSL.
 
 ### Usage
 
-#### Run in dev mode
+#### How to run the project
 
 On Windows to clean then run the project (keep the volumes)
 
@@ -41,13 +41,13 @@ On Linux to run the project (in background)
 docker-compose up -d
 ```
 
-or fresh restart (clean, build, run), with deletion of the volumes
+or fresh restart (clean, build, run)
 
 ```bash
 docker-compose down ; docker compose up -d ; bash init.sh
 ```
 
-## Submodules / different parts of the project
+## Submodules and different parts of the project
 
 - Folder naming convention : `snake_case`
 
@@ -59,6 +59,5 @@ docker-compose down ; docker compose up -d ; bash init.sh
 | [influxdb](./influxdb)                                 | Yes, launched with the root docker-compose file                         | No, see [influxdb/README.md](influxdb/README.md)                                 |
 | [jenkins](./jenkins)                                   | Yes, in it's own docker-compose file                                    | No, see [jenkins/README.md](jenkins/README.md)                                   |
 | [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file                         | Yes                                                                              |
-| [openhab](./openhab)                                   | Yes, launched with the root docker-compose file                         | No, see [openhab/README.md](openhab/README.md)                                   |
+| [openhab](./openhab)                                   | Yes, launched with the root docker-compose file                         | Yes                                                                              |
 | [openhab_config_generator](./openhab_config_generator) | No, run it manually [see README.md](openhab_config_generator/README.md) | No, see [openhab_config_generator/README.md](openhab_config_generator/README.md) |
-| [prometheus](./prometheus)                             | Yes, launched with the root docker-compose file                         | Yes                                                                              |

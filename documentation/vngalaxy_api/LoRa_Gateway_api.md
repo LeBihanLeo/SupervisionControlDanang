@@ -1,5 +1,8 @@
 # LoRa Gateway API
 
+## Postman file 
+You can also use the [API vngalaxy.postman_collection.json](./API%20vngalaxy.postman_collection.json) file to import the API in Postman, this should work out of the box, if not contact the administrator
+
 ## Request
 
 - URL
