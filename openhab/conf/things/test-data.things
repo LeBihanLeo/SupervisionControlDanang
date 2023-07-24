@@ -1,7 +1,7 @@
 Thing http:url:device_sensorTienNg_smartbuilding_1 "TienNg Sensors" [
     baseURL="http://api.vngalaxy.vn/api/uplink/",
     headers="WWW-Authenticate=Basic",
-            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJhMmU1ZmVlODk4Mjk5NGMxIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjg5NjU4NTMwfQ.BU5ttXSXwnH9ZmQUvfkqIGeowWcYu7uFQy89kc7BKPo",
+            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiI2MjdkMmVjOWNhZDgxN2EyIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjkwMTY5NDQ1fQ.faqIF0W-5aWLBKUkBv7ZUnSTSDGLiZqAUijndKCs0E0",
     stateMethod="POST",
     refresh=15
 ] {
