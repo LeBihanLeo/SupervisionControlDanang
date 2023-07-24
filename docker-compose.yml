@@ -38,7 +38,7 @@ services:
       - ./certificates/privkey.pem:/etc/grafana/cert.key
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/etc/grafana/dashboards
-      - ./grafana/ressources:./public/img/bg/custom
+      - ./grafana/ressources:./home/public/img/bg/custom
     depends_on:
       - influxdb
     ports:
