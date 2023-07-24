@@ -1,6 +1,6 @@
 # Install et get Certbot HTTPS certification
 
-Source : [https://certbot.eff.org/instructions?ws=other&os=centosrhel7](https://certbot.eff.org/instructions?ws=other&os=centosrhel7)
+Source : [certbot.eff.org/instructions](https://certbot.eff.org/instructions?ws=other&os=centosrhel7)
 
 ## Install `snapd` and `certbot`
 
@@ -41,3 +41,5 @@ On our vm we have the following output :
 Certificate is saved at: /etc/letsencrypt/live/apps.vngalaxy.vn/fullchain.pem
 Key is saved at:         /etc/letsencrypt/live/apps.vngalaxy.vn/privkey.pem
 ```
+
+You now have to copy the content of the files `fullchain.pem` and `privkey.pem` to the `certificates` directory of the project.
