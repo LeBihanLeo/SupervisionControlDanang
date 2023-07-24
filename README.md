@@ -8,11 +8,11 @@ This project aims to create a system to control and supervise the energy product
 
 ## Physical Architecture
 
-![Physical Architecture](./documentation/HRES%20schema.drawio.png)
+![Physical Architecture](./documentation/schemas/HRES%20schema.drawio.png)
 
 ## Software Architecture
 
-![Software Architecture](./documentation/Software%20architecture.drawio.png)
+![Software Architecture](./documentation/schemas/Software%20architecture.drawio.png)
 
 ## Getting Started
 
