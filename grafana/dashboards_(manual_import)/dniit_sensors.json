@@ -471,7 +471,7 @@
             "type": "canvas"
           }
     ],
-    "refresh": false,
+    "refresh": "10s",
     "schemaVersion": 36,
     "style": "dark",
     "tags": [],
