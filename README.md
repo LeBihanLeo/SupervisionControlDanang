@@ -2,7 +2,9 @@
 
 This project aims to create a system to control and supervise the energy production of renewable energy sources.
 
-hey
+## Production URL
+
+[apps.vngalaxy.vn](https://apps.vngalaxy.vn)
 
 ## Physical Architecture
 
@@ -42,7 +44,7 @@ docker-compose up -d
 or fresh restart (clean, build, run), with deletion of the volumes
 
 ```bash
-docker-compose down ; docker volume rm $(docker volume ls -q) ; docker compose up -d ; bash init.sh
+docker-compose down ; docker compose up -d ; bash init.sh
 ```
 
 ## Submodules / different parts of the project
