@@ -19,8 +19,8 @@ Once you have created your username and password, openHAB is already configured,
 
 ## Floor plans location
 
-The floor plans are located in the container at [conf/html/ressources/](./conf/html/ressources/) directory 
-and in the project folder in the [resources/floor_plans](./resources/floor_plans) directory.
+The floor plans are located in the container at [conf/html/resources/](./conf/html/resources/) directory 
+and in the project folder in the [resources/floor_plans](../resources/floor_plans) directory.
 
 ### How to add a floor plan
 

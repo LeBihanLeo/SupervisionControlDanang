@@ -2,9 +2,6 @@ version: '3'
 services:
   influxdb:
     image: influxdb:2.7.1
-    #build:
-     # context: .
-     # dockerfile: influxdb/my_influxdb.Dockerfile
     container_name: influxdb
     volumes:
       - influxdb-storage:/var/lib/influxdb2:rw
@@ -38,7 +35,7 @@ services:
       - ./certificates/privkey.pem:/etc/grafana/cert.key
       - ./grafana/provisioning:/etc/grafana/provisioning
       - ./grafana/dashboards:/etc/grafana/dashboards
-      - ./grafana/ressources:/usr/share/grafana/public/img/bg/custom
+      - ./resources:/usr/share/grafana/public/img/bg/custom
     depends_on:
       - influxdb
     ports:
@@ -49,9 +46,10 @@ services:
     image: openhab/openhab:3.4.4
     container_name: openhab
     volumes:
-      - "./openhab/addons:/openhab/addons"
-      - "./openhab/conf:/openhab/conf"
-      - "./openhab/userdata:/openhab/userdata"
+      - ./openhab/addons:/openhab/addons
+      - ./openhab/conf:/openhab/conf
+      - ./openhab/userdata:/openhab/userdata
+      - ./resources:/openhab/conf/html/resources
     ports:
       - '8080:8080'
     env_file:
