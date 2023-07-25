@@ -33,6 +33,7 @@ class HttpDevice(Device):
             channel_data_type = channel_info.get("data_type")
             channel_name = channel_info.get("name")
             json_path = channel_info.get("json_path")
+            json_path.replace("\"", "\\\"")
             input_data += f"        Type {channel_data_type} : {channel_name} \"{channel_name}\" [ stateTransformation=\"JSONPATH:{json_path}\" ]\n"
         input_data += "}\n\n"
         return input_data
