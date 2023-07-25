@@ -51,13 +51,39 @@ docker-compose down ; docker compose up -d ; bash init.sh
 
 - Folder naming convention : `snake_case`
 
-| Folder name                                            | Is running in docker                                                    | Is automatically set up                                                          |
-|--------------------------------------------------------|-------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| [documentation](./documentation)                       | N/A                                                                     | N/A                                                                              |
-| [fake_devices](./fake_devices)                         | No, run it manually [see README.md](fake_devices/README.md)             | N/A                                                                              |
-| [grafana](./grafana)                                   | Yes, launched with the root docker-compose file                         | Yes                                                                              |
-| [influxdb](./influxdb)                                 | Yes, launched with the root docker-compose file                         | No, see [influxdb/README.md](influxdb/README.md)                                 |
-| [jenkins](./jenkins)                                   | Yes, in it's own docker-compose file                                    | No, see [jenkins/README.md](jenkins/README.md)                                   |
-| [mosquitto](./mosquitto)                               | Yes, launched with the root docker-compose file                         | Yes                                                                              |
-| [openhab](./openhab)                                   | Yes, launched with the root docker-compose file                         | Yes                                                                              |
-| [openhab_config_generator](./openhab_config_generator) | No, run it manually [see README.md](openhab_config_generator/README.md) | No, see [openhab_config_generator/README.md](openhab_config_generator/README.md) |
+### Main project 
+
+| Folder name                     | Is running in docker                                        | Is automatically set up                                                                               |
+|---------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| [fake_devices](./fake_devices)  | No, run it manually [see README.md](fake_devices/README.md) | N/A                                                                                                   |
+| [grafana](./grafana)            | Yes, launched with the root docker-compose file             | No, see [grafana/README.md](grafana/README.md)                                                        |
+| [influxdb](./influxdb)          | Yes, launched with the root docker-compose file             | No, see [influxdb/README.md](influxdb/README.md)                                                      |
+| [mosquitto](./mosquitto)        | Yes, launched with the root docker-compose file             | Yes                                                                                                   |
+| [nginx](./nginx)                | Yes, launched with the root docker-compose file             | Yes                                                                                                   |
+| [openhab](./openhab)            | Yes, launched with the root docker-compose file             | No, add the floor plans, devices are added automatically : see [openhab/README.md](openhab/README.md) |
+| [telegraf](./telegraf)          | Yes, launched with the root docker-compose file             | Yes                                                                                                   |
+
+### Device configuration generator
+
+Folder: [openhab_config_generator](./openhab_config_generator)
+
+| Part                                                         | Is running in docker                                                                | Is automatically set up    |
+|--------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------|
+| [backend](./openhab_config_generator/python_code)            | No, run it manually [see README.md](openhab_config_generator/python_code/README.md) | Yes if python is installed |
+| [frontend](./openhab_config_generator/front-react-generator) | Work In Progress                                                                    | Work In Progress           |                                
+
+### Continuous integration
+
+| Folder name          | Is running in docker                  | Is automatically set up                         |
+|----------------------|---------------------------------------|-------------------------------------------------|
+| [jenkins](./jenkins) | Yes, in it's own docker-compose file  | No, see [jenkins/README.md](jenkins/README.md)  |
+
+
+### Non runnable folders 
+
+| Folder name                      | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| [certificates](./certificates)   | Contains the certificates for the HTTPS connection                          |
+| [documentation](./documentation) | Contains all the documentation of the project                               |
+| [resources](./resources)         | Contains all the resources of the project                                   |
+| [server_config](./server_config) | Contains all the configuration files and documentation to set up the server |
