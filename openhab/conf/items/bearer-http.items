@@ -1,1 +1,2 @@
 String sm_paris_1 "sm_paris_1" { channel="http:url:device:sm_paris_1_allJson_channel", persistence="influxdb" }
+

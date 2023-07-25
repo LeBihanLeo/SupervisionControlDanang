@@ -8,3 +8,4 @@ Thing http:url:device [
     Channels:
         Type string : sm_paris_1_allJson_channel "sm_paris_1_all_json_channel_channel"
 }
+
