@@ -21,7 +21,7 @@ class HttpDevice(Device):
         self.channels_info = channels_info
 
     def transform_thing_file(self, input_data, device_name):
-        input_data += f"Thing http:url:device_{device_name} [\n" \
+        input_data += f"Thing http:url:device_{device_name} \"{device_name}\" [\n" \
                       + "    baseURL=\"http://api.vngalaxy.vn/api/uplink/\",\n" \
                       + "    headers=\"WWW-Authenticate=Basic\",\n" \
                       + f"            \"Authorization=Bearer {self.bearer_token}\",\n" \
