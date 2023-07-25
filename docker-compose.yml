@@ -49,7 +49,7 @@ services:
       - ./openhab/addons:/openhab/addons
       - ./openhab/conf:/openhab/conf
       - ./openhab/userdata:/openhab/userdata
-      - ./resources:/openhab/userdata/html/resources
+      - ./resources:/openhab/conf/html/resources
     ports:
       - '8080:8080'
     env_file:
