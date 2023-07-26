@@ -516,7 +516,6 @@ Data we need to input in openhab_config_gen:
 - group (or subgroups) ex : "building_S/4th_floor/room_404"
 - sensors
   - sensorType
-  - dataChannel
   - unit
 
 <details><summary>Data sent by API schema</summary>
@@ -541,35 +540,30 @@ Data we need to input in openhab_config_gen:
           "type":"string",
           "pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(.[0-9]{1,9})?Z$"
         },
-        "sensors":{
-          "type":"array",
-          "items":{
-            "type":"object",
-            "properties":{
-              "sensorType":{
-                "type":"string"
+        "sensors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "dataChannel": {
+                "type": "number"
               },
-              "dataChannel":{
-                "type":"number"
-              },
-              "value":{
-                "type":"number"
+              "value": {
+                "type": "number"
               }
             },
-            "required":[
-              "sensorType",
+            "required": [
               "dataChannel",
               "value"
             ]
           }
         }
+
       },
       "required":[
         "devEUI",
-        "deviceName",
         "time",
-        "sensors",
-        "groups"
+        "sensors"
       ]
     }
   },
@@ -580,4 +574,92 @@ Data we need to input in openhab_config_gen:
   ]
 }
 ```
+
+</details>
+
+<details><summary>Example API response JSON for Temperature, Humidity, Luminosity device</summary>
+
+```json
+{
+  "err":0,
+  "msg":"Get uplink data successfully",
+  "data":{
+    "_id":"64c09867600db3ad9ee288cd",
+    "appID":"3",
+    "devEUI":"627d2ec9cad817a2",
+    "time":"2023-07-26T03:51:42.832844Z",
+    "rxInfo":[
+      {
+        "gatewayID":"ac1f09fffe06fcf2",
+        "time":"2023-07-26T03:51:42.832844Z",
+        "rssi":-54,
+        "loRaSNR":10.5,
+        "location":{
+          "longitude":108.15388,
+          "latitude":16.07513,
+          "altitude":-33
+        },
+        "uplinkID":"0038a792-1e6b-4de1-b7df-7f44b8b07cff"
+      },
+      {
+        "gatewayID":"ac1f09fffe00ab0a",
+        "time":"2023-07-26T03:51:42.832844Z",
+        "rssi":-109,
+        "loRaSNR":-1,
+        "location":{
+          "longitude":108.15341,
+          "latitude":16.07524,
+          "altitude":66
+        },
+        "uplinkID":"d09715cc-4e10-4bcb-8031-7f3035eb660a"
+      },
+      {
+        "gatewayID":"a840411ef5b04150",
+        "time":"2023-07-26T03:51:42.839438Z",
+        "rssi":-48,
+        "loRaSNR":10,
+        "location":{
+          "longitude":108.15205,
+          "latitude":16.07482,
+          "altitude":10
+        },
+        "uplinkID":"d9d0dbfd-165b-4c5a-bc0a-c5768509069b"
+      }
+    ],
+    "txInfo":{
+      "frequency":923100000,
+      "loRaModulationInfo":{
+        "bandwidth":0,
+        "spreadingFactor":0,
+        "codeRate":"String"
+      }
+    },
+    "fCnt":11001,
+    "fPort":1,
+    "data":"AWcBLAJoeAMCAU8EZQNh",
+    "sensors":{
+      "Analog input":{
+        "dataChannel":3,
+        "value":3.35
+      },
+      "Humidity sensor":{
+        "dataChannel":2,
+        "value":60
+      },
+      "Illuminance sensor":{
+        "dataChannel":4,
+        "value":865
+      },
+      "Temperature sensor":{
+        "dataChannel":1,
+        "value":30
+      }
+    },
+    "devAddr":"String",
+    "confirmUplink":true,
+    "__v":0
+  }
+}
+```
+
 </details>
