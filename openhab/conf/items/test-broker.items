@@ -1,20 +1,22 @@
-Number sp_l1_1_power "sp 1 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_power_channel", persistence="influxdb" }
+Group SolarPanels
+
+Number sp_l1_1_power "sp 1 power" (SolarPanels) { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_power_channel", persistence="influxdb" }
 String sp_l1_1_location "sp 1 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_location_channel", persistence="influxdb" }
 Number sp_l1_1_timestamp "sp 1 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_1_timestamp_channel", persistence="influxdb" }
 
-Number sp_l1_3_power "sp 3 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_3_power_channel", persistence="influxdb" }
+Number sp_l1_3_power "sp 3 power" (SolarPanels) { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_3_power_channel", persistence="influxdb" }
 String sp_l1_3_location "sp 3 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_3_location_channel", persistence="influxdb" }
 Number sp_l1_3_timestamp "sp 3 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_3_timestamp_channel", persistence="influxdb" }
 
-Number sp_l1_5_power "sp 5 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_5_power_channel", persistence="influxdb" }
+Number sp_l1_5_power "sp 5 power" (SolarPanels) { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_5_power_channel", persistence="influxdb" }
 String sp_l1_5_location "sp 5 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_5_location_channel", persistence="influxdb" }
 Number sp_l1_5_timestamp "sp 5 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_5_timestamp_channel", persistence="influxdb" }
 
-Number sp_l1_7_power "sp 7 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_7_power_channel", persistence="influxdb" }
+Number sp_l1_7_power "sp 7 power" (SolarPanels) { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_7_power_channel", persistence="influxdb" }
 String sp_l1_7_location "sp 7 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_7_location_channel", persistence="influxdb" }
 Number sp_l1_7_timestamp "sp 7 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_7_timestamp_channel", persistence="influxdb" }
 
-Number sp_l1_9_power "sp 9 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_9_power_channel", persistence="influxdb" }
+Number sp_l1_9_power "sp 9 power" (SolarPanels) { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_9_power_channel", persistence="influxdb" }
 String sp_l1_9_location "sp 9 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_9_location_channel", persistence="influxdb" }
 Number sp_l1_9_timestamp "sp 9 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l1_9_timestamp_channel", persistence="influxdb" }
 
@@ -38,7 +40,7 @@ Number wm_l2_10_power "wm 10 power" { channel="mqtt:topic:mosquitto:topic_json_t
 String wm_l2_10_location "wm 10 location" { channel="mqtt:topic:mosquitto:topic_json_test:wm_l2_10_location_channel", persistence="influxdb" }
 Number wm_l2_10_timestamp "wm 10 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:wm_l2_10_timestamp_channel", persistence="influxdb" }
 
-Number sp_l6_10_power "sp_l6_10 power" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_power_channel", persistence="influxdb" }
+Number sp_l6_10_power "sp_l6_10 power" (SolarPanels) { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_power_channel", persistence="influxdb" }
 String sp_l6_10_location "sp_l6_10 location" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_location_channel", persistence="influxdb" }
 Number sp_l6_10_timestamp "sp_l6_10 timestamp" { channel="mqtt:topic:mosquitto:topic_json_test:sp_l6_10_timestamp_channel", persistence="influxdb" }
 
