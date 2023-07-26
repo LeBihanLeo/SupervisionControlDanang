@@ -20,8 +20,8 @@ class HttpDevice(Device):
         self.bearer_token = bearer_token
         self.channels_info = channels_info
 
-    def transform_thing_file(self, input_data):
-        input_data += "Thing http:url:device [\n" \
+    def transform_thing_file(self, input_data, device_name):
+        input_data += f"Thing http:url:device_{device_name} \"{device_name}\" [\n" \
                       + "    baseURL=\"http://api.vngalaxy.vn/api/uplink/\",\n" \
                       + "    headers=\"WWW-Authenticate=Basic\",\n" \
                       + f"            \"Authorization=Bearer {self.bearer_token}\",\n" \
@@ -30,28 +30,27 @@ class HttpDevice(Device):
                       + "] {\n" \
                       + "    Channels:\n"
         for channel_info in self.channels_info:
-            channel_data_type = channel_info.get("data_type")
             channel_name = channel_info.get("name")
-            input_data += f"        Type {channel_data_type} : {channel_name} \"{channel_name}\"\n"
+            json_path = channel_info.get("json_path")
+            json_path = json_path.replace("\"", "\\\"") # Avoid error
+            input_data += f"        Type number : {channel_name} \"{channel_name}\" [ stateTransformation=\"JSONPATH:{json_path}\" ]\n"
         input_data += "}\n\n"
         return input_data
 
-    def transform_item_file(self, input_data):
+    def transform_item_file(self, input_data, device_name):
         for channel_info in self.channels_info:
             channel_name = channel_info.get("name")
-            input_data += f"String {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device:{channel_name}\", persistence=\"influxdb\" }}\n"
-        input_data += "\n"
+            input_data += f"\nNumber {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}\n"
         return input_data
 
 
 def user_input_channel_info(channels_info, device_type, device_location, device_id):
-    channel_data_type = input("Enter channel data type [string / number] : ")
-    if channel_data_type != "string" and channel_data_type != "number":
-        print("Data type error...")
-        return
     channel_data_name = input("Enter channel data name : ")
-    channel_info = {"data_type": channel_data_type,
-                    "name": f"{device_type}_{device_location}_{device_id}_{channel_data_name}_channel"}
+    json_path = input("Enter json path : ")
+    channel_info = {
+        "name": f"{device_type}_{device_location}_{device_id}_{channel_data_name}_channel",
+        "json_path": json_path
+    }
     channels_info.append(channel_info)
 
 

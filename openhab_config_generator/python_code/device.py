@@ -24,18 +24,18 @@ class Device:
 
     def add_new_thing(self):
         data = file_helper.get_file_data(self.thing_file_path)
-        result_data = self.transform_thing_file(data)
+        result_data = self.transform_thing_file(data, self.get_device_name())
         file_helper.write_in_file(self.thing_file_path, result_data)
 
     def add_new_item(self):
         data = file_helper.get_file_data(self.item_file_path)
-        result_data = self.transform_item_file(data)
+        result_data = self.transform_item_file(data, self.get_device_name())
         file_helper.write_in_file(self.item_file_path, result_data)
 
     @abc.abstractmethod
-    def transform_thing_file(self, input_data):
+    def transform_thing_file(self, input_data, device_name):
         return input_data
 
     @abc.abstractmethod
-    def transform_item_file(self, input_data):
+    def transform_item_file(self, input_data, device_name):
         return input_data

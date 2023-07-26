@@ -11,3 +11,15 @@ Thing http:url:device_sensorTienNg_smartbuilding_1 "TienNg Sensors" [
         Type number : sensorTienNg_smartbuilding_1_temperature_channel "sensorTienNg_smartbuilding_1_temperature_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
 }
 
+Thing http:url:device_pmSensor_smartbuilding_1 "pm sensors" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlYzJiYjA4ZmMyYzI0NjBiIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjkwMjU0MzY2fQ.n-C1Nc77n8KN0yQeCN5eGusI8VyEkTCO86FXn-2uY-Y",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : pmSensor_smartbuilding_1_pm10_channel "pmSensor_smartbuilding_1_pm10_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"pm10_ug/m3\"]" ]
+        Type number : pmSensor_smartbuilding_1_pm1_channel "pmSensor_smartbuilding_1_pm1_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"pm1_ug/m3\"]" ]
+        Type number : pmSensor_smartbuilding_1_pm25_channel "pmSensor_smartbuilding_1_pm25_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"pm25_ug/m3\"]" ]
+}
