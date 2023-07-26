@@ -91,3 +91,4 @@ def fetch_existing_devices():
                                range(len(thing_channels_type))]
         existing_devices.append(device_info)
     print(existing_devices)
+    return existing_devices
