@@ -9,3 +9,7 @@ See this documentation: [LoRa_Gateway_api.md](./LoRa_Gateway_api.md)
 ## How to use the API administration website
 
 See this documentation: [LoRa_Gateway_website.md](./LoRa_Gateway_website.md)
+
+## Naming and conventions for the sensors
+
+See this documentation: [sensor_details.md](./sensor_details.md)
