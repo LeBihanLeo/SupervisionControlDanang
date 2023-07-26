@@ -201,7 +201,15 @@ device sensors has to follow the cayenne format
 
 </details>
 
-## Proposed data format (JSON)
+## Propositions for a new API data format
+
+- [I. No config, all data in every request](#i-no-config-all-data-in-every-request)
+- [II. Using a config file and a running file](#ii-using-a-config-file-and-a-running-file)
+
+### I. No config, all data in every request
+
+pros: simple to implement  
+cons: data redundancy, more data to send
 
 <details><summary>Minimal JSON schema for validating data.</summary>
 
@@ -218,12 +226,6 @@ device sensors has to follow the cayenne format
     "data":{
       "type":"object",
       "properties":{
-        "_id":{
-          "type":"string"
-        },
-        "appID":{
-          "type":"string"
-        },
         "devEUI":{
           "type":"string"
         },
@@ -266,8 +268,6 @@ device sensors has to follow the cayenne format
         }
       },
       "required":[
-        "_id",
-        "appID",
         "devEUI",
         "deviceName",
         "time",
@@ -382,3 +382,125 @@ device sensors has to follow the cayenne format
 ```
 </details>
 
+### II. Using a config file and a running file
+
+pros: fewer data to send  
+cons: more complex to implement because it needs huma intervention to ask for the config file first, but it is possible to generate this file with openhab_config_gen
+
+<details><summary>Config file schema</summary>
+
+```json
+{
+  "type":"object",
+  "properties":{
+    "deviceEUI":{
+      "type":"string"
+    },
+    "token":{
+      "type":"string"    
+    },
+    "deviceName":{
+      "type":"string"
+    },
+    "groups":{
+      "type":"string",
+      "pattern":"^(?!\\/)(?!.*\\/$)[\\w\\s\\/\\-]*$"
+    },
+    "sensors":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "properties":{
+          "sensorType":{
+            "type":"string"
+          },
+          "dataChannel":{
+            "type":"number"
+          },
+          "unit":{
+            "type":"string"
+          }
+        },
+        "required":[
+          "sensorType",
+          "dataChannel",
+          "value"
+        ]
+      }
+    }
+  },
+  "required":[
+    "deviceEUI",
+    "deviceName",
+    "token",
+    "sensors",
+    "groups"
+  ]
+}
+```
+
+</details>
+
+<details><summary>Data sent by API schema</summary>
+
+```json
+{
+  "type":"object",
+  "properties":{
+    "err":{
+      "type":"integer"
+    },
+    "msg":{
+      "type":"string"
+    },
+    "data":{
+      "type":"object",
+      "properties":{
+        "devEUI":{
+          "type":"string"
+        },
+        "time":{
+          "type":"string",
+          "pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(.[0-9]{1,9})?Z$"
+        },
+        "sensors":{
+          "type":"array",
+          "items":{
+            "type":"object",
+            "properties":{
+              "sensorType":{
+                "type":"string"
+              },
+              "dataChannel":{
+                "type":"number"
+              },
+              "value":{
+                "type":"number"
+              }
+            },
+            "required":[
+              "sensorType",
+              "dataChannel",
+              "value"
+            ]
+          }
+        }
+      },
+      "required":[
+        "devEUI",
+        "deviceName",
+        "time",
+        "sensors",
+        "groups"
+      ]
+    }
+  },
+  "required":[
+    "err",
+    "msg",
+    "data"
+  ]
+}
+```
+
+</details>
