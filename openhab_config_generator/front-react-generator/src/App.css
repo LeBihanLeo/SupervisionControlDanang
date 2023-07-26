@@ -12,3 +12,10 @@
   color: #333; /* Couleur du texte */
   line-height: 1.5; /* Hauteur de ligne pour un espacement agréable entre les lignes */
 }
+
+.device{
+  background-color: antiquewhite;
+  border: 2px solid #736fad;
+  border-radius: 8px;
+  padding: 20px;
+}
