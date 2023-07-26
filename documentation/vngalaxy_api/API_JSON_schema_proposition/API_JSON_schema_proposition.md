@@ -211,21 +211,21 @@ Data we will input manually in our software `openhab_config_gen` :
           "type":"string",
           "pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(.[0-9]{1,9})?Z$"
         },
-        "sensors": {
+        "objectJSON": {
           "type": "object",
           "additionalProperties": {
             "type": "object",
             "properties": {
-              "dataChannel": {
-                "type": "number"
-              },
               "value": {
                 "type": "number"
-              }
+              },
+              "unit":{
+                  "type": "string"
+                }
             },
             "required": [
-              "dataChannel",
-              "value"
+              "value",
+              "unit"
             ]
           }
         }
@@ -234,7 +234,7 @@ Data we will input manually in our software `openhab_config_gen` :
       "required":[
         "devEUI",
         "time",
-        "sensors"
+        "objectJSON"
       ]
     }
   },
@@ -311,22 +311,26 @@ This is an example of the response of the API we would expect for Temperature, H
     "fCnt":11001,
     "fPort":1,
     "data":"AWcBLAJoeAMCAU8EZQNh",
-    "sensors":{
+    "objectJSON":{
       "Analog input":{
         "dataChannel":3,
-        "value":3.35
+        "value":3.35,
+        "unit": "V"
       },
       "Humidity sensor":{
         "dataChannel":2,
-        "value":60
+        "value":60,
+        "unit": "%"
       },
       "Illuminance sensor":{
         "dataChannel":4,
-        "value":865
+        "value":865,
+        "unit": "lux"
       },
       "Temperature sensor":{
         "dataChannel":1,
-        "value":30
+        "value":30,
+        "unit": "°C"
       }
     },
     "devAddr":"String",
