@@ -239,7 +239,7 @@ cons: data redundancy, more data to send
         },
         "groups":{
           "type":"string",
-          "pattern":"^(?!\\/)(?!.*\\/$)[\\w\\s\\/\\-]*$"
+          "pattern":"^(?!\\/)(?!.*\\/$)[\\w_\\/\\-]*$"
         },
         "sensors":{
           "type":"array",
@@ -299,7 +299,7 @@ cons: data redundancy, more data to send
     "devEUI":"627d2ec9cad817a2",
     "deviceName":"analog input,humidity, illuminance, temperature",
     "time":"2023-07-26T03:51:42.832844Z",
-    "groups":"building s/4th floor/room 404",
+    "groups":"building_s/4th_floor/room_404",
     "rxInfo":[
       {
         "gatewayID":"ac1f09fffe06fcf2",
@@ -405,7 +405,7 @@ cons: more complex to implement because it needs huma intervention to ask for th
     },
     "groups":{
       "type":"string",
-      "pattern":"^(?!\\/)(?!.*\\/$)[\\w\\s\\/\\-]*$"
+      "pattern":"^(?!\\/)(?!.*\\/$)[\\w_\\/\\-]*$"
     },
     "sensors":{
       "type":"array",
@@ -513,7 +513,7 @@ Data we need to input in openhab_config_gen:
 - deviceEUI
 - JWT token
 - deviceName (optional ?)
-- group (or subgroups) ex : "building s/4th floor/room 404"
+- group (or subgroups) ex : "building_S/4th_floor/room_404"
 - sensors
   - sensorType
   - dataChannel
