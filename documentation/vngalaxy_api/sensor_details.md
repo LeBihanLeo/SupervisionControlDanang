@@ -205,6 +205,7 @@ device sensors has to follow the cayenne format
 
 - [I. No config, all data in every request](#i-no-config-all-data-in-every-request)
 - [II. Using a config file and a running file](#ii-using-a-config-file-and-a-running-file)
+- [III. No config, minimal data in every request](#iii-no-config-minimal-data-in-every-request)
 
 ### I. No config, all data in every request
 
@@ -503,4 +504,80 @@ cons: more complex to implement because it needs huma intervention to ask for th
 }
 ```
 
+</details>
+
+### III. No config, minimal data in every request
+
+Data we need to input in openhab_config_gen:
+
+- deviceEUI
+- JWT token
+- deviceName (optional ?)
+- group (or subgroups) ex : "building s/4th floor/room 404"
+- sensors
+  - sensorType
+  - dataChannel
+  - unit
+
+<details><summary>Data sent by API schema</summary>
+
+```json
+{
+  "type":"object",
+  "properties":{
+    "err":{
+      "type":"integer"
+    },
+    "msg":{
+      "type":"string"
+    },
+    "data":{
+      "type":"object",
+      "properties":{
+        "devEUI":{
+          "type":"string"
+        },
+        "time":{
+          "type":"string",
+          "pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(.[0-9]{1,9})?Z$"
+        },
+        "sensors":{
+          "type":"array",
+          "items":{
+            "type":"object",
+            "properties":{
+              "sensorType":{
+                "type":"string"
+              },
+              "dataChannel":{
+                "type":"number"
+              },
+              "value":{
+                "type":"number"
+              }
+            },
+            "required":[
+              "sensorType",
+              "dataChannel",
+              "value"
+            ]
+          }
+        }
+      },
+      "required":[
+        "devEUI",
+        "deviceName",
+        "time",
+        "sensors",
+        "groups"
+      ]
+    }
+  },
+  "required":[
+    "err",
+    "msg",
+    "data"
+  ]
+}
+```
 </details>
