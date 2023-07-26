@@ -72,7 +72,7 @@ def user_input_add_bearer_http_device():
 
 
 def fetch_existing_devices():
-    f = open(THINGS_FILE_PATH, "r")
+    f = open("../../openhab/conf/things/test-data.things", "r")
     data = f.read()
     f.close()
     # fetch data using regex
