@@ -169,7 +169,7 @@
             "title": "All sensor values",
             "type": "timeseries"
           },
-        {
+          {
             "datasource": "${DS_INFLUXDB}",
             "fieldConfig": {
               "defaults": {
@@ -209,7 +209,7 @@
                     "fixed": "transparent"
                   },
                   "image": {
-                    "fixed": "/img/bg/custom/plan_batiment_clean_white.jpg",
+                    "fixed": "/img/bg/custom/4th_floor.png",
                     "mode": "fixed"
                   },
                   "size": "cover"
@@ -252,10 +252,10 @@
                     },
                     "name": "Element 1",
                     "placement": {
-                      "top": 114,
-                      "height": 29,
-                      "left": 559,
-                      "width": 109
+                      "top": 160,
+                      "height": 27,
+                      "left": 322,
+                      "width": 78.03125
                     },
                     "type": "metric-value"
                   },
@@ -290,10 +290,10 @@
                     },
                     "name": "Element 2",
                     "placement": {
-                      "top": 157,
-                      "height": 30,
-                      "left": 560,
-                      "width": 107
+                      "top": 359,
+                      "height": 27,
+                      "left": 326,
+                      "width": 76.59375
                     },
                     "type": "metric-value"
                   },
@@ -329,10 +329,10 @@
                     },
                     "name": "temperature",
                     "placement": {
-                      "top": 200,
-                      "height": 31,
-                      "left": 561,
-                      "width": 105
+                      "top": 360,
+                      "height": 30,
+                      "left": 579,
+                      "width": 95
                     },
                     "type": "metric-value"
                   },
@@ -364,12 +364,13 @@
                     },
                     "name": "humidity_unit",
                     "placement": {
-                      "top": 105,
-                      "height": 50,
-                      "left": 597,
-                      "width": 100
+                      "top": 158,
+                      "height": 35.78125,
+                      "left": 352,
+                      "width": 71.578125
                     },
-                    "type": "text"
+                    "type": "text",
+                    "connections": []
                   },
                   {
                     "background": {
@@ -393,19 +394,19 @@
                       },
                       "valign": "middle"
                     },
+                    "connections": [],
                     "constraint": {
                       "horizontal": "left",
                       "vertical": "top"
                     },
                     "name": "lum_unit",
                     "placement": {
-                      "top": 148,
-                      "height": 50,
-                      "left": 597,
-                      "width": 100
+                      "top": 356,
+                      "height": 35.78125,
+                      "left": 359,
+                      "width": 71.578125
                     },
-                    "type": "text",
-                    "connections": []
+                    "type": "text"
                   },
                   {
                     "background": {
@@ -435,12 +436,115 @@
                     },
                     "name": "temp_unit",
                     "placement": {
-                      "top": 192,
-                      "height": 50,
-                      "left": 600,
-                      "width": 100
+                      "top": 359,
+                      "height": 35.78125,
+                      "left": 624,
+                      "width": 71.578125
                     },
-                    "type": "text"
+                    "type": "text",
+                    "connections": []
+                  },
+                  {
+                    "placement": {
+                      "top": 354,
+                      "height": 37.9375,
+                      "left": 537,
+                      "width": 37.9375
+                    },
+                    "config": {
+                      "path": {
+                        "mode": "fixed",
+                        "fixed": "https://pic.onlinewebfonts.com/thumbnails/icons_15880.svg"
+                      },
+                      "fill": {
+                        "fixed": "#D9D9D9"
+                      }
+                    },
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "type": "icon",
+                    "constraint": {
+                      "vertical": "top",
+                      "horizontal": "left"
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "name": "temp icon",
+                    "connections": []
+                  },
+                  {
+                    "placement": {
+                      "top": 146,
+                      "height": 50.109375,
+                      "left": 283,
+                      "width": 37.9375
+                    },
+                    "config": {
+                      "path": {
+                        "mode": "fixed",
+                        "fixed": "\thttps://pic.onlinewebfonts.com/thumbnails/icons_285841.svg"
+                      },
+                      "fill": {
+                        "fixed": "#D9D9D9"
+                      }
+                    },
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "type": "icon",
+                    "constraint": {
+                      "vertical": "top",
+                      "horizontal": "left"
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "name": "humidity icon",
+                    "connections": []
+                  },
+                  {
+                    "placement": {
+                      "top": 354,
+                      "height": 39,
+                      "left": 286,
+                      "width": 39
+                    },
+                    "config": {
+                      "path": {
+                        "mode": "fixed",
+                        "fixed": "https://pic.onlinewebfonts.com/thumbnails/icons_572177.svg"
+                      },
+                      "fill": {
+                        "fixed": "#D9D9D9"
+                      }
+                    },
+                    "background": {
+                      "color": {
+                        "fixed": "transparent"
+                      }
+                    },
+                    "type": "icon",
+                    "constraint": {
+                      "vertical": "top",
+                      "horizontal": "left"
+                    },
+                    "border": {
+                      "color": {
+                        "fixed": "dark-green"
+                      }
+                    },
+                    "name": "illuminance icon",
+                    "connections": []
                   }
                 ],
                 "name": "Element 1689674000073",
@@ -467,7 +571,7 @@
                 "refId": "C"
               }
             ],
-            "title": "4th floor plan",
+            "title": "Canvas view",
             "type": "canvas"
           },
           {
