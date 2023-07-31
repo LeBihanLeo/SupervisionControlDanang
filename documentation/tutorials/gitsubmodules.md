@@ -3,7 +3,7 @@
 ## Add a submodule to a repository
 
 - use an existing repository or create a new one
-- go to the parent folder of main repository and run `git submodule add <url>`  
+- go to the parent folder of the main repository and run `git submodule add <url>`  
   this will create a new folder with the name of the repository
 
 ## Clone a repository with submodules

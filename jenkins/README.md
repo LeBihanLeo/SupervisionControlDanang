@@ -18,7 +18,7 @@ suggested information for testing
 
 ## 4 Instance configuration
 
-Don't change anything and click on "Save and done".
+Don't change anything and click on "Save and done"
 
 ## 5 Start to use Jenkins
 
@@ -28,10 +28,10 @@ Search and install "Multibranch Scan Webhook Trigger"
 
 ### Setup credentials
 Dashboard -> Manage jenkins -> Credentials -> (global) -> add credentials
-- Kind : username with password
+- Kind: username with password
 - Scope : global
 - Username : JenkinsDniit
-- Password : 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
+- Password: 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
 
 ### Setup item
 Dashboard -> New Item
