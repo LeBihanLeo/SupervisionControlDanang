@@ -57,6 +57,7 @@ services:
     depends_on:
       - influxdb
     network_mode: host
+    restart: always
   
   mqtt:
     container_name: mqtt
