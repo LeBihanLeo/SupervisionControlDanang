@@ -51,7 +51,7 @@ services:
       - ./openhab/userdata:/openhab/userdata
       - ./resources:/openhab/conf/html/resources
     ports:
-      - '8080:8080'
+      - "127.0.0.1:8080:8080"
     env_file:
       - .env
     depends_on:
@@ -80,8 +80,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "7000:7000"
-      #- "7001:7001"
+      - "0.0.0.0:8443:7000"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/www:/usr/share/nginx/html:ro

@@ -34,4 +34,7 @@ sudo ln -s /var/lib/snapd/snap /snap
 sudo systemctl start snapd
 sudo snap install core
 sudo snap refresh core
+
+# nginx
+yum install httpd-tools -y
 ```
