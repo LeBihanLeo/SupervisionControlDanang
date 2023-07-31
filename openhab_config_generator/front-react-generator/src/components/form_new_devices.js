@@ -3,12 +3,11 @@ import APIService from './API_post'
 
 
 const Form = (props) => {
-    const [test, setTitle] = useState('')
-    //const [body, setBody] = useState('')
+    const [title, setTitle] = useState('')
+    const [body, setBody] = useState('')
 
     const insertArticle = () =>{
-      //APIService.InsertArticle({title,body})
-      APIService.InsertArticle({test})
+      APIService.InsertArticle({title,body})
       .then((response) => props.insertedArticle(response))
       .catch(error => console.log('error',error))
     }
@@ -17,7 +16,7 @@ const Form = (props) => {
       event.preventDefault()
       insertArticle()
       setTitle('')
-      //setBody('')
+      setBody('')
     }
 
   return (
@@ -30,12 +29,21 @@ const Form = (props) => {
           type="text"
           className="form-control" 
           placeholder ="Enter title"
-          value={test}
+          value={title}
           onChange={(e)=>setTitle(e.target.value)}
           required
           />
 
-          
+          <label htmlFor="body" className="form-label">Body</label>
+          <textarea 
+          className="form-control" 
+          placeholder ="Enter body" 
+          rows='6'
+          value={body}
+          onChange={(e)=>setBody(e.target.value)}
+          required
+          >
+          </textarea>
 
           <button 
           className="btn btn-primary mt-2"
