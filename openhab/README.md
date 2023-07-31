@@ -9,6 +9,14 @@ URL : [myopenhab.org](https://myopenhab.org/)
 | test01@gmail.com       | user1234         | user  |
 | jenkinsdniit@gmail.com | lU?8a!2uG2/j$rGk | admin |
 
+### myopenHAB.org informations
+
+[myopenhab.org/account](https://myopenhab.org/account)
+if the `userdata` is new or empty, the following files will be created :
+
+UUID : `./ userdata/uuid`
+Secret `./userdata/openhabcloud/secret`
+
 ## First start of openHAB
 
 You will be prompted to create an initial user/password combination.
