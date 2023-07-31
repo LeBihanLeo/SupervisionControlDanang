@@ -50,13 +50,13 @@ services:
       - ./openhab/conf:/openhab/conf
       - ./openhab/userdata:/openhab/userdata
       - ./resources:/openhab/conf/html/resources
-    ports:
-      - '8080:8080'
+    #ports:
+    #  - '8080:8080'
     env_file:
       - .env
     depends_on:
       - influxdb
-    #network_mode: host
+    network_mode: host
     restart: always
   
   mqtt:
