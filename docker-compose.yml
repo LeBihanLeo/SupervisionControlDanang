@@ -50,13 +50,13 @@ services:
       - ./openhab/conf:/openhab/conf
       - ./openhab/userdata:/openhab/userdata
       - ./resources:/openhab/conf/html/resources
-    #ports:
-    #  - '8080:8080'
+    ports:
+      - '8080:8080'
     env_file:
       - .env
     depends_on:
       - influxdb
-    network_mode: host
+    #network_mode: host
     restart: always
   
   mqtt:
@@ -79,9 +79,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "7000:7000"
+      - "7001:7001"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/www:/usr/share/nginx/html:ro
+      - ./nginx/.htpasswd:/etc/nginx/.htpasswd:ro
       - ./certificates/:/etc/ssl/certs/:ro
 
 volumes:
