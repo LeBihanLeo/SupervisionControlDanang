@@ -1,5 +1,5 @@
 import openhab_files_helper as ofh
-import http_device
+from devices import http_device
 
 THINGS_FILE_PATH = "../openhab/conf/things/test-broker.things"
 ITEMS_FILE_PATH = "../openhab/conf/items/test-broker.items"
