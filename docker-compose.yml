@@ -88,6 +88,15 @@ services:
       - ./certificates/:/etc/ssl/certs/:ro
     networks:
         - scd
+      
+  fakeapi:
+    build:
+      context: ./fake_devices/
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./fake_devices/http_fake_api.py:/app/http_fake_api.py
 
 volumes:
   grafana-storage:
