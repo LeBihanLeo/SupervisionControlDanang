@@ -56,8 +56,9 @@ services:
       - .env
     depends_on:
       - influxdb
-    #network_mode: host
     restart: always
+    networks:
+        - scd
   
   mqtt:
     container_name: mqtt
@@ -80,13 +81,19 @@ services:
       - "80:80"
       - "443:443"
       - "7000:7000"
-      - "7001:7001"
+      #- "7001:7001"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/www:/usr/share/nginx/html:ro
       - ./nginx/.htpasswd:/etc/nginx/.htpasswd:ro
       - ./certificates/:/etc/ssl/certs/:ro
+    networks:
+        - scd
 
 volumes:
   grafana-storage:
   influxdb-storage:
+
+networks:
+  scd:
+    driver: bridge
