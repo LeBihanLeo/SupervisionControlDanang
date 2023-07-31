@@ -90,11 +90,12 @@ services:
         - scd
       
   fakeapi:
+    container_name: myfakeapi
     build:
       context: ./fake_devices/
-      dockerfile: Dockerfile
+      dockerfile: Dockerfilesta
     ports:
-      - "8000:8000"
+      - "5000:5000"
     volumes:
       - ./fake_devices/http_fake_api.py:/app/http_fake_api.py
 
