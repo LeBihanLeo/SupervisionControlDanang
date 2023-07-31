@@ -4,7 +4,7 @@
 
 ### openHAB 
 
-openHAB is running on port 8443 thank to the reverse proxy, the reverse proxy adds security too with an aditionnal layer of authentication.
+openHAB is running on port 8443 thanks to the reverse proxy, the reverse proxy adds security too with an additional layer of authentication.
 
 | Username | Password |
 |----------|----------|

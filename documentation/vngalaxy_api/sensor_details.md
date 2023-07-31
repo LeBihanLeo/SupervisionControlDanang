@@ -31,7 +31,7 @@ Source : [GitHub:myDevicesIoT/cayenne-docs/docs/LORA.md](https://github.com/myDe
     - sensor unit
     - sensor value
 
-device sensors has to follow the cayenne format
+device sensors have to follow the cayenne format
 
 ## Previous data format (JSON)
 
@@ -385,7 +385,7 @@ cons: data redundancy, more data to send
 
 ### II. Using a config file and a running file
 
-pros: fewer data to send  
+pros: less data to send  
 cons: more complex to implement because it needs huma intervention to ask for the config file first, but it is possible to generate this file with openhab_config_gen
 
 <details><summary>Config file schema</summary>
@@ -513,7 +513,7 @@ Data we need to input in openhab_config_gen:
 - deviceEUI
 - JWT token
 - deviceName (optional ?)
-- group (or subgroups) ex : "building_S/4th_floor/room_404"
+- group (or subgroups) ex: "building_S/4th_floor/room_404"
 - sensors
   - sensorType
   - unit
