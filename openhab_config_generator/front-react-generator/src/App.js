@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Form from './components/form_new_devices';
+
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -20,19 +22,26 @@ function App() {
 
   return (
     <div className="App">
-      Hello
-      here is our devices
-
       <div className="Box">
+        <p>
+          List of devices
+        </p>
         <div>
           {posts.length > 0 && (
             <ul>
               {posts.map(post => (
-              <li className="device">{post.device_location}</li>
+              <li className="device">{post.device_type}
+                {post.data.map(d => (
+                <li className="data"> - {d.data_name}: {d.data_type}</li>
+                ))}
+              </li>
               ))}
             </ul>
           )}
         </div>
+      </div>
+      <div className='Box'>
+        <Form/>
       </div>
     </div>
   );
