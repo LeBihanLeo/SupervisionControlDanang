@@ -1,5 +1,6 @@
 from device import Device
 import re
+from registered_devices import generate_registered_device_channel_info
 
 THINGS_FILE_PATH = f"../../openhab/conf/things/bearer-http.things"
 ITEMS_FILE_PATH = f"../../openhab/conf/items/bearer-http.items"
@@ -30,7 +31,7 @@ class HttpDevice(Device):
                       + "] {\n" \
                       + "    Channels:\n"
         for channel_info in self.channels_info:
-            channel_name = channel_info.get("name")
+            channel_name = f"{self.device_type}_{self.device_location}_{self.device_id}_{channel_info.get('name')}_channel"
             json_path = channel_info.get("json_path")
             json_path = json_path.replace("\"", "\\\"") # Avoid error
             input_data += f"        Type number : {channel_name} \"{channel_name}\" [ stateTransformation=\"JSONPATH:{json_path}\" ]\n"
@@ -39,16 +40,15 @@ class HttpDevice(Device):
 
     def transform_item_file(self, input_data, device_name):
         for channel_info in self.channels_info:
-            channel_name = channel_info.get("name")
+            channel_name = f"{self.device_type}_{self.device_location}_{self.device_id}_{channel_info.get('name')}_channel"
             input_data += f"\nNumber {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}\n"
         return input_data
 
-
-def user_input_channel_info(channels_info, device_type, device_location, device_id):
+def user_input_channel_info(channels_info):
     channel_data_name = input("Enter channel data name : ")
     json_path = input("Enter json path : ")
     channel_info = {
-        "name": f"{device_type}_{device_location}_{device_id}_{channel_data_name}_channel",
+        "name": channel_data_name,
         "json_path": json_path
     }
     channels_info.append(channel_info)
@@ -60,9 +60,17 @@ def user_input_add_bearer_http_device():
     device_location = input("Enter device location : ")
     device_id = input("Enter device id : ")
     bearer_token = input("Enter bearer token : ")
+
+    # get device preconfig choice
     choice = "1"
+    device_config_choice = input("Custom device (1), temp hum lum device (2)")
+    if int(device_config_choice) == 2:
+        channels_info = generate_registered_device_channel_info("temp_lum_hum")
+        choice = "2"
+
+    # channels input for custom devices
     while choice == "1":
-        user_input_channel_info(channels_info, device_type, device_location, device_id)
+        user_input_channel_info(channels_info)
         choice = input("Add another channel (1), create device (2), cancel (0) : ")
     if choice == "2":
         http_device = HttpDevice(device_type, device_location, device_id, bearer_token, channels_info)

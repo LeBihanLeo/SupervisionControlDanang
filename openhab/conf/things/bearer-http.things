@@ -9,3 +9,16 @@ Thing http:url:device [
         Type string : sm_paris_1_allJson_channel "sm_paris_1_all_json_channel_channel"
 }
 
+Thing http:url:device_lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer ipjbqefivbeqzfpivbezqiu^fvb^qesufvb",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : lum_temp_hum_smartbuilding_2_humidity_channel "lum_temp_hum_smartbuilding_2_humidity_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.humiditySensor.2" ]
+        Type number : lum_temp_hum_smartbuilding_2_illuminance_channel "lum_temp_hum_smartbuilding_2_illuminance_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.illuminanceSensor.4" ]
+        Type number : lum_temp_hum_smartbuilding_2_temperature_channel "lum_temp_hum_smartbuilding_2_temperature_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
+}
+
