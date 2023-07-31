@@ -37,14 +37,17 @@ stop_remove_build_and_run.bat
 
 On Linux to run the project (in background)
 
+> **Warning**  
+> Launch the project with `docker compose` and not `docker-compose` this allows openHAB to start properly
+
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 or fresh restart (clean, build, run)
 
 ```bash
-docker-compose down ; docker compose up -d ; bash init.sh
+docker compose down ; docker compose up -d ; bash init.sh
 ```
 
 ## Submodules and different parts of the project
