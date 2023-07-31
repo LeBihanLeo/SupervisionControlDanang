@@ -1,6 +1,8 @@
-from device import Device
+from devices.device import Device
 import re
-from registered_devices import generate_registered_device_channel_info
+from registered_devices import REGISTERED_DEVICES_CHANNEL_LIST
+from devices.http_device_channel import HttpDeviceChannel
+from file_helper import get_file_data
 
 THINGS_FILE_PATH = f"../../openhab/conf/things/bearer-http.things"
 ITEMS_FILE_PATH = f"../../openhab/conf/items/bearer-http.items"
@@ -8,7 +10,7 @@ PERSISTENCE_FILE_PATH = "../../openhab/conf/persistence/influxdb.persist"
 
 
 class HttpDevice(Device):
-    def __init__(self, device_type, device_location, device_id, bearer_token, channels_info):
+    def __init__(self, device_type, device_location, device_id, bearer_token, device_channel_list):
         filename = "bearer-http"
         super().__init__(
             THINGS_FILE_PATH,
@@ -19,7 +21,7 @@ class HttpDevice(Device):
             device_id
         )
         self.bearer_token = bearer_token
-        self.channels_info = channels_info
+        self.device_channel_list = device_channel_list
 
     def transform_thing_file(self, input_data, device_name):
         input_data += f"Thing http:url:device_{device_name} \"{device_name}\" [\n" \
@@ -30,28 +32,25 @@ class HttpDevice(Device):
                       + "    refresh=15\n" \
                       + "] {\n" \
                       + "    Channels:\n"
-        for channel_info in self.channels_info:
-            channel_name = f"{self.device_type}_{self.device_location}_{self.device_id}_{channel_info.get('name')}_channel"
-            json_path = channel_info.get("json_path")
-            json_path = json_path.replace("\"", "\\\"") # Avoid error
+        for device_channel in self.device_channel_list:
+            channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_id, self.device_location)
+            json_path = device_channel.json_path
             input_data += f"        Type number : {channel_name} \"{channel_name}\" [ stateTransformation=\"JSONPATH:{json_path}\" ]\n"
         input_data += "}\n\n"
         return input_data
 
     def transform_item_file(self, input_data, device_name):
-        for channel_info in self.channels_info:
-            channel_name = f"{self.device_type}_{self.device_location}_{self.device_id}_{channel_info.get('name')}_channel"
-            input_data += f"\nNumber {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}\n"
+        for device_channel in self.device_channel_list:
+            channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_id, self.device_location)
+            input_data += f"\nNumber {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}"
+        input_data += "\n"
         return input_data
 
-def user_input_channel_info(channels_info):
+def user_input_device_channel(channels_info):
     channel_data_name = input("Enter channel data name : ")
     json_path = input("Enter json path : ")
-    channel_info = {
-        "name": channel_data_name,
-        "json_path": json_path
-    }
-    channels_info.append(channel_info)
+    device_channel = HttpDeviceChannel(channel_data_name, json_path)
+    channels_info.append(device_channel)
 
 
 def user_input_add_bearer_http_device():
@@ -63,14 +62,14 @@ def user_input_add_bearer_http_device():
 
     # get device preconfig choice
     choice = "1"
-    device_config_choice = input("Custom device (1), temp hum lum device (2)")
+    device_config_choice = input("Custom device (1), temp hum lum device (2) : ")
     if int(device_config_choice) == 2:
-        channels_info = generate_registered_device_channel_info("temp_lum_hum")
+        channels_info = REGISTERED_DEVICES_CHANNEL_LIST.get("temp_lum_hum")
         choice = "2"
 
     # channels input for custom devices
     while choice == "1":
-        user_input_channel_info(channels_info)
+        user_input_device_channel(channels_info)
         choice = input("Add another channel (1), create device (2), cancel (0) : ")
     if choice == "2":
         http_device = HttpDevice(device_type, device_location, device_id, bearer_token, channels_info)
@@ -78,11 +77,8 @@ def user_input_add_bearer_http_device():
     else:
         print("Cancel device creation")
 
-
 def fetch_existing_devices():
-    f = open("../../openhab/conf/things/test-data.things", "r")
-    data = f.read()
-    f.close()
+    data = get_file_data("../../openhab/conf/things/test-data.things")
     # fetch data using regex
     existing_devices = []
     founded_things = re.findall("Thing[^}]+}", data)
