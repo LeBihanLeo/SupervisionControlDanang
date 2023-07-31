@@ -6,24 +6,19 @@
     <script>
         window.addEventListener('DOMContentLoaded', function() {
             const links = {
-                //'Home (https)': [443, 'https:'],
                 'InfluxDB': [8086, 'https:'],
                 'Grafana': [3000, 'https:'],
-                'openHAB (HTTP)': [8080, 'http:'],
-                'openHAB (HTTPS)': [8443, 'https:'],
-                //'http:7000': [7000, 'https:'],
-                //'(test) http:7001': [7001, 'https:'],
+                //'openHAB (HTTP)': [8080, 'http:'],
+                'openHAB': [8443, 'https:'],
             };
 
             for (const id in links) {
-                if (links.hasOwnProperty(id)) {
-                    const link = document.createElement('a');
-                    link.href = `${links[id][1]}//${window.location.hostname}:${links[id][0]}`;
-                    link.innerText = id
-                    link.target = '_blank';
-                    document.body.appendChild(link);
-                    document.body.appendChild(document.createElement('br'));
-                }
+                const link = document.createElement('a');
+                link.href = `${links[id][1]}//${window.location.hostname}:${links[id][0]}`;
+                link.innerText = id
+                link.target = '_blank';
+                document.body.appendChild(link);
+                document.body.appendChild(document.createElement('br'));
             }
         });
     </script>
