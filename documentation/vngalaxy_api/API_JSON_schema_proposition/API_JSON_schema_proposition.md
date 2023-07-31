@@ -184,7 +184,7 @@ Data we will input manually in our software `openhab_config_gen` :
 - deviceEUI
 - JWT token
 - deviceName (optional ?)
-- group (or subgroups) ex : "building_S/4th_floor/room_404"
+- group (or subgroups) ex: "building_S/4th_floor/room_404"
 - sensors
   - sensorType
   - unit
@@ -251,7 +251,7 @@ the `objectJSON` field is renamed to `sensors` and is now an object containing t
 
 ### Example API response JSON 
 
-This is an example of the response of the API we would expect for Temperature, Humidity, Luminosity device
+This is an example of a response of the API we would expect for "Temperature, Humidity, Luminosity" device
 
 ```json
 {

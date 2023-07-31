@@ -21,7 +21,7 @@ mosquitto_passwd password.supersecurity user
 ## Test MQTT configuration
 
 For testing this broker, the following documentation was used:
-[Mosquitto pub  and sub clients](http://www.steves-internet-guide.com/mosquitto_pub-sub-clients/)
+[Mosquitto pub and sub clients](http://www.steves-internet-guide.com/mosquitto_pub-sub-clients/)
 
 To send a message to the broker with an authenticated user:
 

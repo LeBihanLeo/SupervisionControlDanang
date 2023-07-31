@@ -9,7 +9,7 @@
 - Enter the username and password of the remote machine
 - Click on `OK`
 
-You can download the new version of the [Remote Desktop Connection from here](https://www.microsoft.com/store/productId/9WZDNCRFJ3PS). This app allows to save the credentials of the remote machine easily.
+You can download the new version of the [Remote Desktop Connection from here](https://www.microsoft.com/store/productId/9WZDNCRFJ3PS). This app allows saving the credentials of the remote machine easily.
 
 ## SSH
 

@@ -2,11 +2,13 @@
 
 ## Credentials
 
-admin/admin
+| username | password |
+|----------|----------|
+| admin    | admin    |
 
 ## Manual import of the home dashboard
 
-Summary : import influxDB datasource then import the home dashboard
+Summary: import influxDB datasource then import the home dashboard
 
 1. Open [Grafana (localhost:3000)](http://localhost:3000) or [Grafana (apps.vngalaxy.vn)](https://apps.vngalaxy.vn:3000)
 2. Add the InfluxDB datasource :
@@ -26,7 +28,7 @@ Summary : import influxDB datasource then import the home dashboard
        - Click on `Save & Test`  
    - You should now see `✅ 4 buckets found`
 3. Import the home dashboard :
-   - Click on the four squares icon on the left menu then click on `Browse`
+   - Click on the four-squares icon on the left menu then click on `Browse`
    - Click on `Import`
    - Click on `Upload JSON file`
      - Choose the file `grafana/dashboards_(manual_import)/home_dashboard.json`
@@ -35,7 +37,7 @@ Summary : import influxDB datasource then import the home dashboard
 
 ## Manual import of the alerts
 
-It is not possible to import automatically the alerts, so you have to do it manually : 
+It is not possible to automatically import the alerts, so you have to do it manually : 
 
 1. Open [Grafana (localhost:3000)](http://localhost:3000) or [Grafana (apps.vngalaxy.vn)](https://apps.vngalaxy.vn:3000)
 2. Click on the bell icon on the left menu then click on `Alerting`
@@ -64,8 +66,8 @@ It is not possible to import automatically the alerts, so you have to do it manu
         - For : `1m`
         - Alert state if no data or all values are null : `Alerting`
         - Alert state if execution error or timeout : `Alerting`
-   4. Add details for your alert rule : nothing to do
-   5. Notifications : nothing to do
+   4. Add details for your alert rule: nothing to do
+   5. Notifications: nothing to do
    - Click on `Save and exit`
 5. Go to the `Contact points` tab
    - Click on `Add contact point`
