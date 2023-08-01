@@ -95,9 +95,7 @@ services:
       context: ./fake_devices/
       dockerfile: Dockerfile
     ports:
-      - "0.0.0.0:5000:5000"
-    volumes:
-      - ./fake_devices/api.py:/app/api.py
+      - "5000:5000"
 
 volumes:
   grafana-storage:
