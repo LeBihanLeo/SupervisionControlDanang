@@ -141,3 +141,5 @@ openhab/conf/sounds/**
 
 # NodeJS files
 node_modules/**
+
+**/__pycache__/**
