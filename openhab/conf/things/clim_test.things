@@ -4,6 +4,9 @@ Thing http:url:ac_f1_r1 "ac_f1_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f1_r1_consumption_channel "ac_f1_r1_consumption_channel" [ stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" [ stateTransformation="JSONPATH:$.temperature" ]
+        Type number : ac_f1_r1_consumption_channel "ac_f1_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+
+        Type number : light_f1_r1_consumption_channel "lights_f1_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f1_r1_state_channel "light_f1_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
 }
