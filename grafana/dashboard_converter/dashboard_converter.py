@@ -24,6 +24,11 @@ def convert_dashboard(json_object):
 
     return json_object
 
+def run(input_path, output_path):
+    input_data = utils.get_json_from_file(input_path)
+    converted_data = convert_dashboard(input_data)
+    utils.write_json_to_file(converted_data, output_path)
+
 
 if __name__ == "__main__":
     import argparse
@@ -49,6 +54,4 @@ if __name__ == "__main__":
         print(f"Error: Input file '{os.path.abspath(input_file_path)}' does not exist.")
         sys.exit(1)
 
-    input_data = utils.get_json_from_file(input_file_path)
-    converted_data = convert_dashboard(input_data)
-    utils.write_json_to_file(converted_data, output_file_path)
+    run(input_file_path, output_file_path)
