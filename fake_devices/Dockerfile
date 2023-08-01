@@ -8,3 +8,4 @@ COPY http_fake_api.py /app/http_fake_api.py
 RUN pip install flask
 
 CMD ["python", "./http_fake_api.py"]
+EXPOSE 5000
