@@ -1,15 +1,14 @@
 from flask import Flask, jsonify
+import random
 
 app = Flask(__name__)
 
 # Simulated data for lights and air conditioning
 def get_lights(etage, salle):
-    lights = []
-    for i in range(5):
-        light_id = f"light_f{etage}_r{salle}_{i + 1}"
-        consumption = 5 + 5 * i  # Simulated consumption in watts
-        light = {"id": light_id, "consumption": consumption}
-        lights.append(light)
+    lights_id = f"lights_f{etage}_r{salle}"
+    consumption = 25 + 10 * etage  # Simulated consumption in watts
+    state = random.randrange(2) # Simulated state ON/OFF
+    lights = {"id": lights_id, "consumption": consumption, "state": state}
     return lights
 
 def get_air_conditioning(etage, salle):
