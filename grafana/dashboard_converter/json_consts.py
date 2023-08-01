@@ -1,6 +1,5 @@
 import json
 
-import json
 
 def get_inputs():
     json_str = '''
@@ -20,5 +19,6 @@ def get_inputs():
 
     return json.loads(json_str)
 
+
 if __name__ == "__main__":
-  print(get_inputs())
+    print(get_inputs())

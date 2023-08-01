@@ -1,7 +1,6 @@
-import utils
 import json_consts
-import json
-DEBUG = False
+import utils
+
 
 def replace_datasource(json_object):
     for key, value in json_object.items():
@@ -27,23 +26,29 @@ def convert_dashboard(json_object):
 
 
 if __name__ == "__main__":
+    import argparse
     import sys
+    import os
 
-    input_file_path = ""
-    output_file_path = ""
+    parser = argparse.ArgumentParser(description="Convert dashboard data.")
+    parser.add_argument("input_file", metavar="input_file_path", type=str, nargs="?",
+                        help="Path to the input file.")
+    parser.add_argument("output_file", metavar="output_file_path", type=str, nargs="?",
+                        help="Path to the output file.")
+    args = parser.parse_args()
 
-    if len(sys.argv) < 3:
+    input_file_path = args.input_file
+    output_file_path = args.output_file
+
+    if not input_file_path or not output_file_path:
         input_file_path = input("Enter the file path: ")
         output_file_path = input("Enter the output file path: ")
-    else:
-        input_file_path = sys.argv[1]
-        output_file_path = sys.argv[2]
 
-    file_content = utils.get_json_from_file(input_file_path);
-    converted_json = convert_dashboard(file_content)
+    # Check if the input file exists before reading it
+    if not os.path.isfile(input_file_path):
+        print(f"Error: Input file '{os.path.abspath(input_file_path)}' does not exist.")
+        sys.exit(1)
 
-    if DEBUG:
-        print(json.dumps(converted_json, indent=4))
-
-    utils.write_json_to_file(converted_json, output_file_path)
-
+    input_data = utils.get_json_from_file(input_file_path)
+    converted_data = convert_dashboard(input_data)
+    utils.write_json_to_file(converted_data, output_file_path)
