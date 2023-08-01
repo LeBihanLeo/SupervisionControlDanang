@@ -73,13 +73,29 @@ services:
       - "8883:8883"
       - "9001:9001"
 
+
+  web:
+    container_name: nginx
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+      - "0.0.0.0:8443:7000"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/www:/usr/share/nginx/html:ro
+      - ./nginx/.htpasswd:/etc/nginx/.htpasswd:ro
+      - ./certificates/:/etc/ssl/certs/:ro
+    networks:
+        - scd
+      
   fakeapi:
     container_name: myfakeapi
     build:
       context: ./fake_devices/
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "0.0.0.0:5000:5000"
     volumes:
       - ./fake_devices/http_fake_api.py:/app/http_fake_api.py
 
