@@ -21,6 +21,7 @@ function App() {
    }, []);
 
   return (
+    <div className='Container'>
     <div className="App">
       <div className="Box">
         <p>
@@ -43,6 +44,7 @@ function App() {
       <div className='Box'>
         <Form/>
       </div>
+    </div>
     </div>
   );
 }
