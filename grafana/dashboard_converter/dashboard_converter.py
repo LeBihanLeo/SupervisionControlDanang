@@ -24,6 +24,7 @@ def convert_dashboard(json_object):
 
     return json_object
 
+
 def run(input_path, output_path):
     input_data = utils.get_json_from_file(input_path)
     converted_data = convert_dashboard(input_data)
