@@ -1,0 +1,9 @@
+Thing http:url:ac_f1_r1 "ac_f1_r1" [
+   baseURL="http://apps.vngalaxy.vn:5000",
+    stateMethod="GET",
+    refresh=30
+] {
+    Channels:
+        Type number : ac_f1_r1_consumption_channel "ac_f1_r1_consumption_channel" [ stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" [ stateTransformation="JSONPATH:$.temperature" ]
+}

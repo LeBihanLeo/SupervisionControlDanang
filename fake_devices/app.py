@@ -17,7 +17,7 @@ def get_air_conditioning(etage, salle):
     consumption = 500 + 100 * etage  # Simulated consumption in watts
     temperature = 25 + etage  # Simulated temperature in degrees
     ac = {"id": ac_id, "consumption": consumption, "temperature": temperature}
-    return [ac]
+    return ac
 
 # Route to handle GET requests for lights
 @app.route("/f<int:etage>/r<int:salle>/lights", methods=["GET"])

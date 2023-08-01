@@ -1,0 +1,4 @@
+Number ac_f1_r1_consumption "ac_f1_r1_consumption" { channel="http:url:ac_f1_r1:ac_f1_r1_consumption_channel", persistence="influxdb" }
+
+Number ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" { channel="http:url:ac_f1_r1:ac_f1_r1_temperature_channel", persistence="influxdb" }
+
