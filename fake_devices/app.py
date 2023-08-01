@@ -6,8 +6,8 @@ app = Flask(__name__)
 # Simulated data for lights and air conditioning
 def get_lights(etage, salle):
     lights_id = f"lights_f{etage}_r{salle}"
-    consumption = 25 + 10 * etage  # Simulated consumption in watts
     state = random.randrange(2) # Simulated state ON/OFF
+    consumption =  25 + 10 * etage if state else 0  # Simulated consumption in watts
     lights = {"id": lights_id, "consumption": consumption, "state": state}
     return lights
 
