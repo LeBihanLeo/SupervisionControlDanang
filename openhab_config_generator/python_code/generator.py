@@ -51,7 +51,7 @@ def user_input():
         elif choice == "1":
             http_device.user_input_add_bearer_http_device()
         elif choice == "2":
-            http_device.fetch_existing_devices()
+            print(http_device.fetch_all_existing_devices())
         else:
             print("Input error, try again")
 
