@@ -77,10 +77,9 @@ def user_input_add_bearer_http_device():
     else:
         print("Cancel device creation")
 
-def fetch_existing_devices():
-    data = get_file_data("../../openhab/conf/things/test-data.things")
+def fetch_existing_devices(filename, existing_device_list):
+    data = get_file_data(f"../../openhab/conf/things/{filename}.things")
     # fetch data using regex
-    existing_devices = []
     founded_things = re.findall("Thing[^}]+}", data)
     for founded_thing in founded_things:
         device_info = {}
@@ -93,6 +92,11 @@ def fetch_existing_devices():
         device_info["device_id"] = split_channels[0][2]
         device_info["data"] = [{"data_type": thing_channels_type[i], "data_name": split_channels[i][3]} for i in
                                range(len(thing_channels_type))]
-        existing_devices.append(device_info)
-    print(existing_devices)
-    return existing_devices
+        existing_device_list.append(device_info)
+
+def fetch_all_existing_devices():
+    existing_device_list = []
+    filenames = ["bearer-http", "test-data"]
+    for filename in filenames:
+        fetch_existing_devices(filename, existing_device_list)
+    return existing_device_list
