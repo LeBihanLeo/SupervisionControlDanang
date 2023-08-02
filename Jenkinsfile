@@ -12,11 +12,11 @@ pipeline {
 					try {
 						sh 'docker compose down'
 					} catch (Exception e) {
-						echo "no copntainer running"
+						echo "no container running"
 					}
 				}
 				
-				sh 'service docker start'
+				docker rm $(docker ps -aq)
 				sh 'docker compose up -d'
             }
         }
