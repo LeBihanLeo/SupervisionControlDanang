@@ -23,7 +23,6 @@ pipeline {
 						echo "no container running"
 					}
 				}
-				sh 'ls -l fake_devices"
 				sh 'docker compose up -d influxdb grafana openhab mqtt web fakeapi'
             }
         }
