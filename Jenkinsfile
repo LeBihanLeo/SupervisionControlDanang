@@ -16,7 +16,7 @@ pipeline {
 					}
 				}
 				
-				sh 'docker compose up -d influxdb grafana openhab mqtt nginx myfakeapi'
+				sh 'docker compose up -d influxdb grafana openhab mqtt web myfakeapi'
             }
         }
 
