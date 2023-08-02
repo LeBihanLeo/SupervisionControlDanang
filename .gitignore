@@ -143,3 +143,6 @@ openhab/conf/sounds/**
 node_modules/**
 
 **/__pycache__/**
+
+# Temporary word files
+**/~$w **

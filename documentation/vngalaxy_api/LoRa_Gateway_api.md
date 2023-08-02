@@ -1,5 +1,7 @@
 # LoRa Gateway API
 
+Source [API request.](./New%20Microsoft%20Word%20Document.docx)
+
 ## Postman file 
 You can also use the [API vngalaxy.postman_collection.json](./API%20vngalaxy.postman_collection.json) file to import the API in Postman, this should work out of the box, if not contact the administrator
 

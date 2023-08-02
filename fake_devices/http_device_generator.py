@@ -22,10 +22,10 @@ for file in files:
 """
             else:
                 content += """Number ac_f1_r1_consumption "ac_f1_r1_consumption" { channel="http:url:f1_r1:ac_f1_r1_consumption_channel", persistence="influxdb" }
-Number ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" { channel="http:url:f1_r1:ac_f1_r1_temperature_channel", persistence="influxdb" }
+Number ac_f1_r1_temperature "ac_f1_r1_temperature" { channel="http:url:f1_r1:ac_f1_r1_temperature_channel", persistence="influxdb" }
 
-Number lights_f1_r1_consumption_channel "lights_f1_r1_consumption_channel" { channel="http:url:f1_r1:light_f1_r1_consumption_channel", persistence="influxdb" }
-Number lights_f1_r1_state_channel "lights_f1_r1_state_channel" { channel="http:url:f1_r1:light_f1_r1_state_channel", persistence="influxdb" }
+Number lights_f1_r1_consumption "lights_f1_r1_consumption" { channel="http:url:f1_r1:light_f1_r1_consumption_channel", persistence="influxdb" }
+Number lights_f1_r1_state "lights_f1_r1_state" { channel="http:url:f1_r1:light_f1_r1_state_channel", persistence="influxdb" }
 """
             content = content.replace("f1_r1", location)
             with open("test/"+file, 'w', encoding='utf-8') as fichier:
