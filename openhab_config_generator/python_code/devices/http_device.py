@@ -2,16 +2,16 @@ from devices.device import Device
 import re
 from registered_devices import REGISTERED_DEVICES_CHANNEL_LIST
 from devices.http_device_channel import HttpDeviceChannel
-from file_helper import get_file_data
+from file_helper import get_file_data, write_in_file
 
 THINGS_FILE_PATH = f"../../openhab/conf/things/bearer-http.things"
 ITEMS_FILE_PATH = f"../../openhab/conf/items/bearer-http.items"
 PERSISTENCE_FILE_PATH = "../../openhab/conf/persistence/influxdb.persist"
+FILENAME = "bearer-http"
 
 
 class HttpDevice(Device):
     def __init__(self, device_type, device_location, device_id, bearer_token, device_channel_list):
-        filename = "bearer-http"
         super().__init__(
             THINGS_FILE_PATH,
             ITEMS_FILE_PATH,
@@ -45,6 +45,16 @@ class HttpDevice(Device):
             input_data += f"\nNumber {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}"
         input_data += "\n"
         return input_data
+
+def delete_http_device(device_type, device_location, device_id):
+    # delete in things file
+    things_data = get_file_data(THINGS_FILE_PATH)
+    things_result = re.sub(f"Thing http:url:device_{device_type}_{device_location}_{device_id} " + "[^}]+}\n", "", things_data)
+    write_in_file(THINGS_FILE_PATH, things_result)
+    #delete in items file
+    items_data = get_file_data(ITEMS_FILE_PATH)
+    items_result = re.sub(r"Number[^}]+" + f":device_{device_type}_{device_location}_{device_id}:" + r"[^}]+}\n", "", items_data)
+    write_in_file(ITEMS_FILE_PATH, items_result)
 
 def user_input_device_channel(channels_info):
     channel_data_name = input("Enter channel data name : ")
