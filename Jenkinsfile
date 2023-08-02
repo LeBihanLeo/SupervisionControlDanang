@@ -16,7 +16,13 @@ pipeline {
 					}
 				}
 				
-				sh 'docker rm influxdb grafana openhab mqtt web fakeapi'
+				script {
+					try {
+						sh 'docker rm influxdb grafana openhab mqtt web fakeapi'
+					} catch (Exception e) {
+						echo "no container running"
+					}
+				}
 				sh 'docker compose up -d influxdb grafana openhab mqtt web fakeapi'
             }
         }
