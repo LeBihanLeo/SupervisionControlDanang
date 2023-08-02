@@ -10,14 +10,20 @@ pipeline {
 				
 				script {
 					try {
-						sh 'docker compose down'
+						sh 'docker stop influxdb grafana openhab mqtt web fakeapi'
 					} catch (Exception e) {
 						echo "no container running"
 					}
 				}
 				
-				docker rm $(docker ps -aq)
-				sh 'docker compose up -d'
+				script {
+					try {
+						sh 'docker rm influxdb grafana openhab mqtt web fakeapi'
+					} catch (Exception e) {
+						echo "no container running"
+					}
+				}
+				sh 'docker compose up -d influxdb grafana openhab mqtt web fakeapi'
             }
         }
 

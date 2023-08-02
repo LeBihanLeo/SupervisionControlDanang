@@ -3,6 +3,7 @@ from flask import request
 from flask_cors import CORS
 
 from devices import http_device
+from devices import http_device_channel
 
 app = Flask(__name__)
 CORS(app)
@@ -13,14 +14,22 @@ def get_devices():
 
 @app.route("/add", methods=["POST"], strict_slashes=False)
 def add_articles():
-    print('type ' + request.json['type'])
-    print('id ' + request.json['id'])
-    print('location ' + request.json['location'])
-    print('token ' + request.json['bearer_token'])
-    print('channels ' + str(len(request.json['channels'])))
+    channels = []
     for x in request.json['channels']:
-        for y in x:
-            print(y)
+        channel = http_device_channel.HttpDeviceChannel(x[0], x[1])
+        channels.append(channel)
+    
+    device = http_device.HttpDevice(request.json['type'],request.json['location'],request.json['id'],request.json['bearer_token'],channels)
+    device.generate_device()
+
+    #print('type ' + request.json['type'])
+    #print('id ' + request.json['id'])
+    #print('location ' + request.json['location'])
+    #print('token ' + request.json['bearer_token'])
+    #print('channels ' + str(len(request.json['channels'])))
+    #for x in request.json['channels']:
+    #    for y in x:
+    #        print(y)
 
 
     return 'ok'
