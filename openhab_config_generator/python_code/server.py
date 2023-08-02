@@ -13,11 +13,17 @@ def get_devices():
 
 @app.route("/add", methods=["POST"], strict_slashes=False)
 def add_articles():
-    print('test')
-    la	= request.json['title']
-    print(str(la))
-    print('test')
-    return la
+    print('type ' + request.json['type'])
+    print('id ' + request.json['id'])
+    print('location ' + request.json['location'])
+    print('token ' + request.json['bearer_token'])
+    print('channels ' + str(len(request.json['channels'])))
+    for x in request.json['channels']:
+        for y in x:
+            print(y)
+
+
+    return 'ok'
 
 if __name__ == '__main__':
     app.run()
