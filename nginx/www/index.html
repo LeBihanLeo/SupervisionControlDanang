@@ -5,6 +5,10 @@
 
     <script>
         window.addEventListener('DOMContentLoaded', function() {
+            const text = document.createElement('p');
+            text.innerText = "Running on " + window.location.hostname + ":";
+            document.body.appendChild(text);
+
             const links = {
                 'InfluxDB': [8086, 'https:'],
                 'Grafana': [3000, 'https:'],
@@ -15,7 +19,7 @@
             for (const id in links) {
                 const link = document.createElement('a');
                 link.href = `${links[id][1]}//${window.location.hostname}:${links[id][0]}`;
-                link.innerText = id
+                link.innerText = id;
                 link.target = '_blank';
                 document.body.appendChild(link);
                 document.body.appendChild(document.createElement('br'));
