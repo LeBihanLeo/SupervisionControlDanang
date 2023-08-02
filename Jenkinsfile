@@ -16,8 +16,8 @@ pipeline {
 					}
 				}
 				
-				sh 'docker stop $(docker ps -aq)'
-				sh 'docker rm $(docker ps -aq)'
+				sh 'docker stop influxdb grafana openhab mqtt nginx myfakeapi'
+				sh 'docker influxdb grafana openhab mqtt nginx myfakeapi'
 				sh 'docker compose up -d'
             }
         }

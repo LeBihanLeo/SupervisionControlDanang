@@ -1,5 +1,5 @@
 # Dockerfile of the jenkins docker-image
-FROM jenkins/jenkins
+FROM jenkins/jenkins:2.60.3
 USER root
 
 # Dependencies
