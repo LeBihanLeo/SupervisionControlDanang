@@ -8,15 +8,15 @@ This project aims to create a system to control and supervise the energy product
 
 ## Physical Architecture
 
-![Physical Architecture](./documentation/schemas/HRES%20schema.drawio.png)
+![Physical Architecture](./documentation/schemas/HRES%20schema.drawio.svg)
 
 ## Software Architecture
 
-![Software Architecture](./documentation/schemas/Software%20architecture.drawio.png)
+![Software Architecture](./documentation/schemas/Software%20architecture-HRES%20software%20architecture.drawio.svg)
 
 ## Getting Started
 
-[Documentation folder : documentation/](./documentation)
+[Documentation folder : `documentation/`](./documentation/README.md)
 
 ### Prerequisites
 
@@ -54,7 +54,7 @@ docker compose down ; docker compose up -d ; bash init.sh
 
 - Folder naming convention : `snake_case`
 
-### Main project 
+### Main project
 
 | Folder name                     | Is running in docker                                        | Is automatically set up                                                                               |
 |---------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -73,7 +73,7 @@ Folder: [openhab_config_generator](./openhab_config_generator)
 | Part                                                         | Is running in docker                                                                | Is automatically set up    |
 |--------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------|
 | [backend](./openhab_config_generator/python_code)            | No, run it manually [see README.md](openhab_config_generator/python_code/README.md) | Yes if python is installed |
-| [frontend](./openhab_config_generator/front-react-generator) | Work In Progress                                                                    | Work In Progress           |                                
+| [frontend](./openhab_config_generator/front-react-generator) | Work In Progress                                                                    | Work In Progress           |
 
 ### Continuous integration
 
@@ -81,8 +81,7 @@ Folder: [openhab_config_generator](./openhab_config_generator)
 |----------------------|---------------------------------------|-------------------------------------------------|
 | [jenkins](./jenkins) | Yes, in it's own docker-compose file  | No, see [jenkins/README.md](jenkins/README.md)  |
 
-
-### Non runnable folders 
+### Non runnable folders
 
 | Folder name                      | Description                                                                 |
 |----------------------------------|-----------------------------------------------------------------------------|
