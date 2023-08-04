@@ -21,3 +21,27 @@ Thing http:url:device_lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2
         Type number : lum_temp_hum_smartbuilding_2_illuminance_channel "lum_temp_hum_smartbuilding_2_illuminance_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.illuminanceSensor.4" ]
         Type number : lum_temp_hum_smartbuilding_2_temperature_channel "lum_temp_hum_smartbuilding_2_temperature_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
 }
+Thing http:url:device_t_fdgi_bj "t_fdgi_bj" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer k",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : t_bj_fdgi_sdf_channel "t_bj_fdgi_sdf_channel" [ stateTransformation="JSONPATH:sdf" ]
+}
+
+Thing http:url:device_sqd_qsd_qsd "sqd_qsd_qsd" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer qsd",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : sqd_qsd_qsd_qsd_channel "sqd_qsd_qsd_qsd_channel" [ stateTransformation="JSONPATH:qsd" ]
+        Type number : sqd_qsd_qsd_qsd_channel "sqd_qsd_qsd_qsd_channel" [ stateTransformation="JSONPATH:qsd" ]
+        Type number : sqd_qsd_qsd_qsd_channel "sqd_qsd_qsd_qsd_channel" [ stateTransformation="JSONPATH:qsd" ]
+}
+

@@ -5,3 +5,9 @@ Number lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2" { channel="ht
 Number lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2" { channel="http:url:device_lum_temp_hum_smartbuilding_2:lum_temp_hum_smartbuilding_2_illuminance_channel", persistence="influxdb" }
 
 Number lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2" { channel="http:url:device_lum_temp_hum_smartbuilding_2:lum_temp_hum_smartbuilding_2_temperature_channel", persistence="influxdb" }
+
+Number t_fdgi_bj "t_fdgi_bj" { channel="http:url:device_t_fdgi_bj:t_bj_fdgi_sdf_channel", persistence="influxdb" }
+
+Number sqd_qsd_qsd "sqd_qsd_qsd" { channel="http:url:device_sqd_qsd_qsd:sqd_qsd_qsd_qsd_channel", persistence="influxdb" }
+Number sqd_qsd_qsd "sqd_qsd_qsd" { channel="http:url:device_sqd_qsd_qsd:sqd_qsd_qsd_qsd_channel", persistence="influxdb" }
+Number sqd_qsd_qsd "sqd_qsd_qsd" { channel="http:url:device_sqd_qsd_qsd:sqd_qsd_qsd_qsd_channel", persistence="influxdb" }

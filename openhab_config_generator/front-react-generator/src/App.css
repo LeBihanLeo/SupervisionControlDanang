@@ -1,17 +1,18 @@
 .App{
   display: inline-flex;
   justify-content: center;
-  background: linear-gradient(90deg, rgba(8,37,140,1) 44%, rgba(4,118,193,1) 70%, rgba(0,212,255,1) 100%);
+  background: rgb(254,248,161);
+  background: radial-gradient(circle, rgba(254,248,161,1) 27%, rgba(188,244,241,1) 70%, rgba(255,255,255,1) 100%);
   height: 100vh;
   width: 100vw;
 }
 
 .Box {
-  background: linear-gradient(90deg, rgba(4,193,185,1) 58%, rgba(4,193,185,1) 70%, rgba(0,212,255,1) 100%);
+  background: #f1faf9;
   border: 0.1vh solid #736fad; /* Bordure de 2 pixels avec couleur grise */
-  border-radius: 2vh; /* Coins arrondis */
+  border-radius: 1vh; /* Coins arrondis */
   padding: 2vh; /* Espacement interne autour du contenu */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce autour de la boîte */
+  box-shadow: 0 2px 4px rgb(173, 7, 7); /* Ombre douce autour de la boîte */
   margin: 3vh;
   min-width: fit-content;
 }
@@ -21,12 +22,21 @@
   color: #333; /* Couleur du texte */
 }
 
+#display{
+  width: 25%;
+}
+
+#form{
+  width: 75%;
+}
+
 .device{
-  background-color: antiquewhite;
-  border: 0.1vh solid #736fad;
-  border-radius: 4vh;
+  background-color: rgb(235, 235, 235);
+  border: 0.1vh solid #1d1b31;
+  border-radius: 0.5vh;
   padding: 2vh;
   list-style: none;
   margin: 1vh;
   min-width: fit-content;
 }
+
