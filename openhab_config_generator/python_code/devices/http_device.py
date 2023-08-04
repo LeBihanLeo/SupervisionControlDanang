@@ -2,16 +2,16 @@ from devices.device import Device
 import re
 from registered_devices import REGISTERED_DEVICES_CHANNEL_LIST
 from devices.http_device_channel import HttpDeviceChannel
-from file_helper import get_file_data
+from file_helper import get_file_data, write_in_file
 
 THINGS_FILE_PATH = f"../../openhab/conf/things/bearer-http.things"
 ITEMS_FILE_PATH = f"../../openhab/conf/items/bearer-http.items"
 PERSISTENCE_FILE_PATH = "../../openhab/conf/persistence/influxdb.persist"
+FILENAME = "bearer-http"
 
 
 class HttpDevice(Device):
     def __init__(self, device_type, device_location, device_id, bearer_token, device_channel_list):
-        filename = "bearer-http"
         super().__init__(
             THINGS_FILE_PATH,
             ITEMS_FILE_PATH,
@@ -46,6 +46,16 @@ class HttpDevice(Device):
         input_data += "\n"
         return input_data
 
+def delete_http_device(device_type, device_location, device_id):
+    # delete in things file
+    things_data = get_file_data(THINGS_FILE_PATH)
+    things_result = re.sub(f"Thing http:url:device_{device_type}_{device_location}_{device_id} " + "[^}]+}\n", "", things_data)
+    write_in_file(THINGS_FILE_PATH, things_result)
+    #delete in items file
+    items_data = get_file_data(ITEMS_FILE_PATH)
+    items_result = re.sub(r"Number[^}]+" + f":device_{device_type}_{device_location}_{device_id}:" + r"[^}]+}\n", "", items_data)
+    write_in_file(ITEMS_FILE_PATH, items_result)
+
 def user_input_device_channel(channels_info):
     channel_data_name = input("Enter channel data name : ")
     json_path = input("Enter json path : ")
@@ -77,10 +87,9 @@ def user_input_add_bearer_http_device():
     else:
         print("Cancel device creation")
 
-def fetch_existing_devices():
-    data = get_file_data("../../openhab/conf/things/test-data.things")
+def fetch_existing_devices(filename, existing_device_list):
+    data = get_file_data(f"../../openhab/conf/things/{filename}.things")
     # fetch data using regex
-    existing_devices = []
     founded_things = re.findall("Thing[^}]+}", data)
     for founded_thing in founded_things:
         device_info = {}
@@ -93,6 +102,11 @@ def fetch_existing_devices():
         device_info["device_id"] = split_channels[0][2]
         device_info["data"] = [{"data_type": thing_channels_type[i], "data_name": split_channels[i][3]} for i in
                                range(len(thing_channels_type))]
-        existing_devices.append(device_info)
-    print(existing_devices)
-    return existing_devices
+        existing_device_list.append(device_info)
+
+def fetch_all_existing_devices():
+    existing_device_list = []
+    filenames = ["bearer-http", "test-data"]
+    for filename in filenames:
+        fetch_existing_devices(filename, existing_device_list)
+    return existing_device_list

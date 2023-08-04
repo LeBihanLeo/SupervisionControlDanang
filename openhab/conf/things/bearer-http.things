@@ -21,3 +21,4 @@ Thing http:url:device_lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2
         Type number : lum_temp_hum_smartbuilding_2_illuminance_channel "lum_temp_hum_smartbuilding_2_illuminance_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.illuminanceSensor.4" ]
         Type number : lum_temp_hum_smartbuilding_2_temperature_channel "lum_temp_hum_smartbuilding_2_temperature_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
 }
+
