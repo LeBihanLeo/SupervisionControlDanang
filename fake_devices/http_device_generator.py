@@ -15,6 +15,7 @@ for file in files:
     Channels:
         Type number : ac_f1_r1_consumption_channel "ac_f1_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
         Type number : ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : ac_f1_r1_state_channel "ac_f1_r1_state_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.state" ]
         Type number : light_f1_r1_consumption_channel "lights_f1_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
         Type number : light_f1_r1_state_channel "light_f1_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
@@ -23,6 +24,7 @@ for file in files:
             else:
                 content = """Number ac_f1_r1_consumption "ac_f1_r1_consumption" { channel="http:url:f1_r1:ac_f1_r1_consumption_channel", persistence="influxdb" }
 Number ac_f1_r1_temperature "ac_f1_r1_temperature" { channel="http:url:f1_r1:ac_f1_r1_temperature_channel", persistence="influxdb" }
+Number ac_f1_r1_state "ac_f1_r1_state" { channel="http:url:f1_r1:ac_f1_r1_state_channel", persistence="influxdb" }
 Number lights_f1_r1_consumption "lights_f1_r1_consumption" { channel="http:url:f1_r1:light_f1_r1_consumption_channel", persistence="influxdb" }
 Number lights_f1_r1_state "lights_f1_r1_state" { channel="http:url:f1_r1:light_f1_r1_state_channel", persistence="influxdb" }
 

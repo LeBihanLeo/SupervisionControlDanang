@@ -1,180 +1,216 @@
 Number ac_f1_r1_consumption "ac_f1_r1_consumption" { channel="http:url:f1_r1:ac_f1_r1_consumption_channel", persistence="influxdb" }
 Number ac_f1_r1_temperature "ac_f1_r1_temperature" { channel="http:url:f1_r1:ac_f1_r1_temperature_channel", persistence="influxdb" }
+Number ac_f1_r1_state "ac_f1_r1_state" { channel="http:url:f1_r1:ac_f1_r1_state_channel", persistence="influxdb" }
 Number lights_f1_r1_consumption "lights_f1_r1_consumption" { channel="http:url:f1_r1:light_f1_r1_consumption_channel", persistence="influxdb" }
 Number lights_f1_r1_state "lights_f1_r1_state" { channel="http:url:f1_r1:light_f1_r1_state_channel", persistence="influxdb" }
 
 Number ac_f1_r2_consumption "ac_f1_r2_consumption" { channel="http:url:f1_r2:ac_f1_r2_consumption_channel", persistence="influxdb" }
 Number ac_f1_r2_temperature "ac_f1_r2_temperature" { channel="http:url:f1_r2:ac_f1_r2_temperature_channel", persistence="influxdb" }
+Number ac_f1_r2_state "ac_f1_r2_state" { channel="http:url:f1_r2:ac_f1_r2_state_channel", persistence="influxdb" }
 Number lights_f1_r2_consumption "lights_f1_r2_consumption" { channel="http:url:f1_r2:light_f1_r2_consumption_channel", persistence="influxdb" }
 Number lights_f1_r2_state "lights_f1_r2_state" { channel="http:url:f1_r2:light_f1_r2_state_channel", persistence="influxdb" }
 
 Number ac_f1_r3_consumption "ac_f1_r3_consumption" { channel="http:url:f1_r3:ac_f1_r3_consumption_channel", persistence="influxdb" }
 Number ac_f1_r3_temperature "ac_f1_r3_temperature" { channel="http:url:f1_r3:ac_f1_r3_temperature_channel", persistence="influxdb" }
+Number ac_f1_r3_state "ac_f1_r3_state" { channel="http:url:f1_r3:ac_f1_r3_state_channel", persistence="influxdb" }
 Number lights_f1_r3_consumption "lights_f1_r3_consumption" { channel="http:url:f1_r3:light_f1_r3_consumption_channel", persistence="influxdb" }
 Number lights_f1_r3_state "lights_f1_r3_state" { channel="http:url:f1_r3:light_f1_r3_state_channel", persistence="influxdb" }
 
 Number ac_f1_r4_consumption "ac_f1_r4_consumption" { channel="http:url:f1_r4:ac_f1_r4_consumption_channel", persistence="influxdb" }
 Number ac_f1_r4_temperature "ac_f1_r4_temperature" { channel="http:url:f1_r4:ac_f1_r4_temperature_channel", persistence="influxdb" }
+Number ac_f1_r4_state "ac_f1_r4_state" { channel="http:url:f1_r4:ac_f1_r4_state_channel", persistence="influxdb" }
 Number lights_f1_r4_consumption "lights_f1_r4_consumption" { channel="http:url:f1_r4:light_f1_r4_consumption_channel", persistence="influxdb" }
 Number lights_f1_r4_state "lights_f1_r4_state" { channel="http:url:f1_r4:light_f1_r4_state_channel", persistence="influxdb" }
 
 Number ac_f2_r1_consumption "ac_f2_r1_consumption" { channel="http:url:f2_r1:ac_f2_r1_consumption_channel", persistence="influxdb" }
 Number ac_f2_r1_temperature "ac_f2_r1_temperature" { channel="http:url:f2_r1:ac_f2_r1_temperature_channel", persistence="influxdb" }
+Number ac_f2_r1_state "ac_f2_r1_state" { channel="http:url:f2_r1:ac_f2_r1_state_channel", persistence="influxdb" }
 Number lights_f2_r1_consumption "lights_f2_r1_consumption" { channel="http:url:f2_r1:light_f2_r1_consumption_channel", persistence="influxdb" }
 Number lights_f2_r1_state "lights_f2_r1_state" { channel="http:url:f2_r1:light_f2_r1_state_channel", persistence="influxdb" }
 
 Number ac_f2_r2_consumption "ac_f2_r2_consumption" { channel="http:url:f2_r2:ac_f2_r2_consumption_channel", persistence="influxdb" }
 Number ac_f2_r2_temperature "ac_f2_r2_temperature" { channel="http:url:f2_r2:ac_f2_r2_temperature_channel", persistence="influxdb" }
+Number ac_f2_r2_state "ac_f2_r2_state" { channel="http:url:f2_r2:ac_f2_r2_state_channel", persistence="influxdb" }
 Number lights_f2_r2_consumption "lights_f2_r2_consumption" { channel="http:url:f2_r2:light_f2_r2_consumption_channel", persistence="influxdb" }
 Number lights_f2_r2_state "lights_f2_r2_state" { channel="http:url:f2_r2:light_f2_r2_state_channel", persistence="influxdb" }
 
 Number ac_f2_r3_consumption "ac_f2_r3_consumption" { channel="http:url:f2_r3:ac_f2_r3_consumption_channel", persistence="influxdb" }
 Number ac_f2_r3_temperature "ac_f2_r3_temperature" { channel="http:url:f2_r3:ac_f2_r3_temperature_channel", persistence="influxdb" }
+Number ac_f2_r3_state "ac_f2_r3_state" { channel="http:url:f2_r3:ac_f2_r3_state_channel", persistence="influxdb" }
 Number lights_f2_r3_consumption "lights_f2_r3_consumption" { channel="http:url:f2_r3:light_f2_r3_consumption_channel", persistence="influxdb" }
 Number lights_f2_r3_state "lights_f2_r3_state" { channel="http:url:f2_r3:light_f2_r3_state_channel", persistence="influxdb" }
 
 Number ac_f2_r4_consumption "ac_f2_r4_consumption" { channel="http:url:f2_r4:ac_f2_r4_consumption_channel", persistence="influxdb" }
 Number ac_f2_r4_temperature "ac_f2_r4_temperature" { channel="http:url:f2_r4:ac_f2_r4_temperature_channel", persistence="influxdb" }
+Number ac_f2_r4_state "ac_f2_r4_state" { channel="http:url:f2_r4:ac_f2_r4_state_channel", persistence="influxdb" }
 Number lights_f2_r4_consumption "lights_f2_r4_consumption" { channel="http:url:f2_r4:light_f2_r4_consumption_channel", persistence="influxdb" }
 Number lights_f2_r4_state "lights_f2_r4_state" { channel="http:url:f2_r4:light_f2_r4_state_channel", persistence="influxdb" }
 
 Number ac_f3_r1_consumption "ac_f3_r1_consumption" { channel="http:url:f3_r1:ac_f3_r1_consumption_channel", persistence="influxdb" }
 Number ac_f3_r1_temperature "ac_f3_r1_temperature" { channel="http:url:f3_r1:ac_f3_r1_temperature_channel", persistence="influxdb" }
+Number ac_f3_r1_state "ac_f3_r1_state" { channel="http:url:f3_r1:ac_f3_r1_state_channel", persistence="influxdb" }
 Number lights_f3_r1_consumption "lights_f3_r1_consumption" { channel="http:url:f3_r1:light_f3_r1_consumption_channel", persistence="influxdb" }
 Number lights_f3_r1_state "lights_f3_r1_state" { channel="http:url:f3_r1:light_f3_r1_state_channel", persistence="influxdb" }
 
 Number ac_f3_r2_consumption "ac_f3_r2_consumption" { channel="http:url:f3_r2:ac_f3_r2_consumption_channel", persistence="influxdb" }
 Number ac_f3_r2_temperature "ac_f3_r2_temperature" { channel="http:url:f3_r2:ac_f3_r2_temperature_channel", persistence="influxdb" }
+Number ac_f3_r2_state "ac_f3_r2_state" { channel="http:url:f3_r2:ac_f3_r2_state_channel", persistence="influxdb" }
 Number lights_f3_r2_consumption "lights_f3_r2_consumption" { channel="http:url:f3_r2:light_f3_r2_consumption_channel", persistence="influxdb" }
 Number lights_f3_r2_state "lights_f3_r2_state" { channel="http:url:f3_r2:light_f3_r2_state_channel", persistence="influxdb" }
 
 Number ac_f3_r3_consumption "ac_f3_r3_consumption" { channel="http:url:f3_r3:ac_f3_r3_consumption_channel", persistence="influxdb" }
 Number ac_f3_r3_temperature "ac_f3_r3_temperature" { channel="http:url:f3_r3:ac_f3_r3_temperature_channel", persistence="influxdb" }
+Number ac_f3_r3_state "ac_f3_r3_state" { channel="http:url:f3_r3:ac_f3_r3_state_channel", persistence="influxdb" }
 Number lights_f3_r3_consumption "lights_f3_r3_consumption" { channel="http:url:f3_r3:light_f3_r3_consumption_channel", persistence="influxdb" }
 Number lights_f3_r3_state "lights_f3_r3_state" { channel="http:url:f3_r3:light_f3_r3_state_channel", persistence="influxdb" }
 
 Number ac_f3_r4_consumption "ac_f3_r4_consumption" { channel="http:url:f3_r4:ac_f3_r4_consumption_channel", persistence="influxdb" }
 Number ac_f3_r4_temperature "ac_f3_r4_temperature" { channel="http:url:f3_r4:ac_f3_r4_temperature_channel", persistence="influxdb" }
+Number ac_f3_r4_state "ac_f3_r4_state" { channel="http:url:f3_r4:ac_f3_r4_state_channel", persistence="influxdb" }
 Number lights_f3_r4_consumption "lights_f3_r4_consumption" { channel="http:url:f3_r4:light_f3_r4_consumption_channel", persistence="influxdb" }
 Number lights_f3_r4_state "lights_f3_r4_state" { channel="http:url:f3_r4:light_f3_r4_state_channel", persistence="influxdb" }
 
 Number ac_f4_r1_consumption "ac_f4_r1_consumption" { channel="http:url:f4_r1:ac_f4_r1_consumption_channel", persistence="influxdb" }
 Number ac_f4_r1_temperature "ac_f4_r1_temperature" { channel="http:url:f4_r1:ac_f4_r1_temperature_channel", persistence="influxdb" }
+Number ac_f4_r1_state "ac_f4_r1_state" { channel="http:url:f4_r1:ac_f4_r1_state_channel", persistence="influxdb" }
 Number lights_f4_r1_consumption "lights_f4_r1_consumption" { channel="http:url:f4_r1:light_f4_r1_consumption_channel", persistence="influxdb" }
 Number lights_f4_r1_state "lights_f4_r1_state" { channel="http:url:f4_r1:light_f4_r1_state_channel", persistence="influxdb" }
 
 Number ac_f4_r2_consumption "ac_f4_r2_consumption" { channel="http:url:f4_r2:ac_f4_r2_consumption_channel", persistence="influxdb" }
 Number ac_f4_r2_temperature "ac_f4_r2_temperature" { channel="http:url:f4_r2:ac_f4_r2_temperature_channel", persistence="influxdb" }
+Number ac_f4_r2_state "ac_f4_r2_state" { channel="http:url:f4_r2:ac_f4_r2_state_channel", persistence="influxdb" }
 Number lights_f4_r2_consumption "lights_f4_r2_consumption" { channel="http:url:f4_r2:light_f4_r2_consumption_channel", persistence="influxdb" }
 Number lights_f4_r2_state "lights_f4_r2_state" { channel="http:url:f4_r2:light_f4_r2_state_channel", persistence="influxdb" }
 
 Number ac_f4_r3_consumption "ac_f4_r3_consumption" { channel="http:url:f4_r3:ac_f4_r3_consumption_channel", persistence="influxdb" }
 Number ac_f4_r3_temperature "ac_f4_r3_temperature" { channel="http:url:f4_r3:ac_f4_r3_temperature_channel", persistence="influxdb" }
+Number ac_f4_r3_state "ac_f4_r3_state" { channel="http:url:f4_r3:ac_f4_r3_state_channel", persistence="influxdb" }
 Number lights_f4_r3_consumption "lights_f4_r3_consumption" { channel="http:url:f4_r3:light_f4_r3_consumption_channel", persistence="influxdb" }
 Number lights_f4_r3_state "lights_f4_r3_state" { channel="http:url:f4_r3:light_f4_r3_state_channel", persistence="influxdb" }
 
 Number ac_f4_r4_consumption "ac_f4_r4_consumption" { channel="http:url:f4_r4:ac_f4_r4_consumption_channel", persistence="influxdb" }
 Number ac_f4_r4_temperature "ac_f4_r4_temperature" { channel="http:url:f4_r4:ac_f4_r4_temperature_channel", persistence="influxdb" }
+Number ac_f4_r4_state "ac_f4_r4_state" { channel="http:url:f4_r4:ac_f4_r4_state_channel", persistence="influxdb" }
 Number lights_f4_r4_consumption "lights_f4_r4_consumption" { channel="http:url:f4_r4:light_f4_r4_consumption_channel", persistence="influxdb" }
 Number lights_f4_r4_state "lights_f4_r4_state" { channel="http:url:f4_r4:light_f4_r4_state_channel", persistence="influxdb" }
 
 Number ac_f5_r1_consumption "ac_f5_r1_consumption" { channel="http:url:f5_r1:ac_f5_r1_consumption_channel", persistence="influxdb" }
 Number ac_f5_r1_temperature "ac_f5_r1_temperature" { channel="http:url:f5_r1:ac_f5_r1_temperature_channel", persistence="influxdb" }
+Number ac_f5_r1_state "ac_f5_r1_state" { channel="http:url:f5_r1:ac_f5_r1_state_channel", persistence="influxdb" }
 Number lights_f5_r1_consumption "lights_f5_r1_consumption" { channel="http:url:f5_r1:light_f5_r1_consumption_channel", persistence="influxdb" }
 Number lights_f5_r1_state "lights_f5_r1_state" { channel="http:url:f5_r1:light_f5_r1_state_channel", persistence="influxdb" }
 
 Number ac_f5_r2_consumption "ac_f5_r2_consumption" { channel="http:url:f5_r2:ac_f5_r2_consumption_channel", persistence="influxdb" }
 Number ac_f5_r2_temperature "ac_f5_r2_temperature" { channel="http:url:f5_r2:ac_f5_r2_temperature_channel", persistence="influxdb" }
+Number ac_f5_r2_state "ac_f5_r2_state" { channel="http:url:f5_r2:ac_f5_r2_state_channel", persistence="influxdb" }
 Number lights_f5_r2_consumption "lights_f5_r2_consumption" { channel="http:url:f5_r2:light_f5_r2_consumption_channel", persistence="influxdb" }
 Number lights_f5_r2_state "lights_f5_r2_state" { channel="http:url:f5_r2:light_f5_r2_state_channel", persistence="influxdb" }
 
 Number ac_f5_r3_consumption "ac_f5_r3_consumption" { channel="http:url:f5_r3:ac_f5_r3_consumption_channel", persistence="influxdb" }
 Number ac_f5_r3_temperature "ac_f5_r3_temperature" { channel="http:url:f5_r3:ac_f5_r3_temperature_channel", persistence="influxdb" }
+Number ac_f5_r3_state "ac_f5_r3_state" { channel="http:url:f5_r3:ac_f5_r3_state_channel", persistence="influxdb" }
 Number lights_f5_r3_consumption "lights_f5_r3_consumption" { channel="http:url:f5_r3:light_f5_r3_consumption_channel", persistence="influxdb" }
 Number lights_f5_r3_state "lights_f5_r3_state" { channel="http:url:f5_r3:light_f5_r3_state_channel", persistence="influxdb" }
 
 Number ac_f5_r4_consumption "ac_f5_r4_consumption" { channel="http:url:f5_r4:ac_f5_r4_consumption_channel", persistence="influxdb" }
 Number ac_f5_r4_temperature "ac_f5_r4_temperature" { channel="http:url:f5_r4:ac_f5_r4_temperature_channel", persistence="influxdb" }
+Number ac_f5_r4_state "ac_f5_r4_state" { channel="http:url:f5_r4:ac_f5_r4_state_channel", persistence="influxdb" }
 Number lights_f5_r4_consumption "lights_f5_r4_consumption" { channel="http:url:f5_r4:light_f5_r4_consumption_channel", persistence="influxdb" }
 Number lights_f5_r4_state "lights_f5_r4_state" { channel="http:url:f5_r4:light_f5_r4_state_channel", persistence="influxdb" }
 
 Number ac_f6_r1_consumption "ac_f6_r1_consumption" { channel="http:url:f6_r1:ac_f6_r1_consumption_channel", persistence="influxdb" }
 Number ac_f6_r1_temperature "ac_f6_r1_temperature" { channel="http:url:f6_r1:ac_f6_r1_temperature_channel", persistence="influxdb" }
+Number ac_f6_r1_state "ac_f6_r1_state" { channel="http:url:f6_r1:ac_f6_r1_state_channel", persistence="influxdb" }
 Number lights_f6_r1_consumption "lights_f6_r1_consumption" { channel="http:url:f6_r1:light_f6_r1_consumption_channel", persistence="influxdb" }
 Number lights_f6_r1_state "lights_f6_r1_state" { channel="http:url:f6_r1:light_f6_r1_state_channel", persistence="influxdb" }
 
 Number ac_f6_r2_consumption "ac_f6_r2_consumption" { channel="http:url:f6_r2:ac_f6_r2_consumption_channel", persistence="influxdb" }
 Number ac_f6_r2_temperature "ac_f6_r2_temperature" { channel="http:url:f6_r2:ac_f6_r2_temperature_channel", persistence="influxdb" }
+Number ac_f6_r2_state "ac_f6_r2_state" { channel="http:url:f6_r2:ac_f6_r2_state_channel", persistence="influxdb" }
 Number lights_f6_r2_consumption "lights_f6_r2_consumption" { channel="http:url:f6_r2:light_f6_r2_consumption_channel", persistence="influxdb" }
 Number lights_f6_r2_state "lights_f6_r2_state" { channel="http:url:f6_r2:light_f6_r2_state_channel", persistence="influxdb" }
 
 Number ac_f6_r3_consumption "ac_f6_r3_consumption" { channel="http:url:f6_r3:ac_f6_r3_consumption_channel", persistence="influxdb" }
 Number ac_f6_r3_temperature "ac_f6_r3_temperature" { channel="http:url:f6_r3:ac_f6_r3_temperature_channel", persistence="influxdb" }
+Number ac_f6_r3_state "ac_f6_r3_state" { channel="http:url:f6_r3:ac_f6_r3_state_channel", persistence="influxdb" }
 Number lights_f6_r3_consumption "lights_f6_r3_consumption" { channel="http:url:f6_r3:light_f6_r3_consumption_channel", persistence="influxdb" }
 Number lights_f6_r3_state "lights_f6_r3_state" { channel="http:url:f6_r3:light_f6_r3_state_channel", persistence="influxdb" }
 
 Number ac_f6_r4_consumption "ac_f6_r4_consumption" { channel="http:url:f6_r4:ac_f6_r4_consumption_channel", persistence="influxdb" }
 Number ac_f6_r4_temperature "ac_f6_r4_temperature" { channel="http:url:f6_r4:ac_f6_r4_temperature_channel", persistence="influxdb" }
+Number ac_f6_r4_state "ac_f6_r4_state" { channel="http:url:f6_r4:ac_f6_r4_state_channel", persistence="influxdb" }
 Number lights_f6_r4_consumption "lights_f6_r4_consumption" { channel="http:url:f6_r4:light_f6_r4_consumption_channel", persistence="influxdb" }
 Number lights_f6_r4_state "lights_f6_r4_state" { channel="http:url:f6_r4:light_f6_r4_state_channel", persistence="influxdb" }
 
 Number ac_f7_r1_consumption "ac_f7_r1_consumption" { channel="http:url:f7_r1:ac_f7_r1_consumption_channel", persistence="influxdb" }
 Number ac_f7_r1_temperature "ac_f7_r1_temperature" { channel="http:url:f7_r1:ac_f7_r1_temperature_channel", persistence="influxdb" }
+Number ac_f7_r1_state "ac_f7_r1_state" { channel="http:url:f7_r1:ac_f7_r1_state_channel", persistence="influxdb" }
 Number lights_f7_r1_consumption "lights_f7_r1_consumption" { channel="http:url:f7_r1:light_f7_r1_consumption_channel", persistence="influxdb" }
 Number lights_f7_r1_state "lights_f7_r1_state" { channel="http:url:f7_r1:light_f7_r1_state_channel", persistence="influxdb" }
 
 Number ac_f7_r2_consumption "ac_f7_r2_consumption" { channel="http:url:f7_r2:ac_f7_r2_consumption_channel", persistence="influxdb" }
 Number ac_f7_r2_temperature "ac_f7_r2_temperature" { channel="http:url:f7_r2:ac_f7_r2_temperature_channel", persistence="influxdb" }
+Number ac_f7_r2_state "ac_f7_r2_state" { channel="http:url:f7_r2:ac_f7_r2_state_channel", persistence="influxdb" }
 Number lights_f7_r2_consumption "lights_f7_r2_consumption" { channel="http:url:f7_r2:light_f7_r2_consumption_channel", persistence="influxdb" }
 Number lights_f7_r2_state "lights_f7_r2_state" { channel="http:url:f7_r2:light_f7_r2_state_channel", persistence="influxdb" }
 
 Number ac_f7_r3_consumption "ac_f7_r3_consumption" { channel="http:url:f7_r3:ac_f7_r3_consumption_channel", persistence="influxdb" }
 Number ac_f7_r3_temperature "ac_f7_r3_temperature" { channel="http:url:f7_r3:ac_f7_r3_temperature_channel", persistence="influxdb" }
+Number ac_f7_r3_state "ac_f7_r3_state" { channel="http:url:f7_r3:ac_f7_r3_state_channel", persistence="influxdb" }
 Number lights_f7_r3_consumption "lights_f7_r3_consumption" { channel="http:url:f7_r3:light_f7_r3_consumption_channel", persistence="influxdb" }
 Number lights_f7_r3_state "lights_f7_r3_state" { channel="http:url:f7_r3:light_f7_r3_state_channel", persistence="influxdb" }
 
 Number ac_f7_r4_consumption "ac_f7_r4_consumption" { channel="http:url:f7_r4:ac_f7_r4_consumption_channel", persistence="influxdb" }
 Number ac_f7_r4_temperature "ac_f7_r4_temperature" { channel="http:url:f7_r4:ac_f7_r4_temperature_channel", persistence="influxdb" }
+Number ac_f7_r4_state "ac_f7_r4_state" { channel="http:url:f7_r4:ac_f7_r4_state_channel", persistence="influxdb" }
 Number lights_f7_r4_consumption "lights_f7_r4_consumption" { channel="http:url:f7_r4:light_f7_r4_consumption_channel", persistence="influxdb" }
 Number lights_f7_r4_state "lights_f7_r4_state" { channel="http:url:f7_r4:light_f7_r4_state_channel", persistence="influxdb" }
 
 Number ac_f8_r1_consumption "ac_f8_r1_consumption" { channel="http:url:f8_r1:ac_f8_r1_consumption_channel", persistence="influxdb" }
 Number ac_f8_r1_temperature "ac_f8_r1_temperature" { channel="http:url:f8_r1:ac_f8_r1_temperature_channel", persistence="influxdb" }
+Number ac_f8_r1_state "ac_f8_r1_state" { channel="http:url:f8_r1:ac_f8_r1_state_channel", persistence="influxdb" }
 Number lights_f8_r1_consumption "lights_f8_r1_consumption" { channel="http:url:f8_r1:light_f8_r1_consumption_channel", persistence="influxdb" }
 Number lights_f8_r1_state "lights_f8_r1_state" { channel="http:url:f8_r1:light_f8_r1_state_channel", persistence="influxdb" }
 
 Number ac_f8_r2_consumption "ac_f8_r2_consumption" { channel="http:url:f8_r2:ac_f8_r2_consumption_channel", persistence="influxdb" }
 Number ac_f8_r2_temperature "ac_f8_r2_temperature" { channel="http:url:f8_r2:ac_f8_r2_temperature_channel", persistence="influxdb" }
+Number ac_f8_r2_state "ac_f8_r2_state" { channel="http:url:f8_r2:ac_f8_r2_state_channel", persistence="influxdb" }
 Number lights_f8_r2_consumption "lights_f8_r2_consumption" { channel="http:url:f8_r2:light_f8_r2_consumption_channel", persistence="influxdb" }
 Number lights_f8_r2_state "lights_f8_r2_state" { channel="http:url:f8_r2:light_f8_r2_state_channel", persistence="influxdb" }
 
 Number ac_f8_r3_consumption "ac_f8_r3_consumption" { channel="http:url:f8_r3:ac_f8_r3_consumption_channel", persistence="influxdb" }
 Number ac_f8_r3_temperature "ac_f8_r3_temperature" { channel="http:url:f8_r3:ac_f8_r3_temperature_channel", persistence="influxdb" }
+Number ac_f8_r3_state "ac_f8_r3_state" { channel="http:url:f8_r3:ac_f8_r3_state_channel", persistence="influxdb" }
 Number lights_f8_r3_consumption "lights_f8_r3_consumption" { channel="http:url:f8_r3:light_f8_r3_consumption_channel", persistence="influxdb" }
 Number lights_f8_r3_state "lights_f8_r3_state" { channel="http:url:f8_r3:light_f8_r3_state_channel", persistence="influxdb" }
 
 Number ac_f8_r4_consumption "ac_f8_r4_consumption" { channel="http:url:f8_r4:ac_f8_r4_consumption_channel", persistence="influxdb" }
 Number ac_f8_r4_temperature "ac_f8_r4_temperature" { channel="http:url:f8_r4:ac_f8_r4_temperature_channel", persistence="influxdb" }
+Number ac_f8_r4_state "ac_f8_r4_state" { channel="http:url:f8_r4:ac_f8_r4_state_channel", persistence="influxdb" }
 Number lights_f8_r4_consumption "lights_f8_r4_consumption" { channel="http:url:f8_r4:light_f8_r4_consumption_channel", persistence="influxdb" }
 Number lights_f8_r4_state "lights_f8_r4_state" { channel="http:url:f8_r4:light_f8_r4_state_channel", persistence="influxdb" }
 
 Number ac_f9_r1_consumption "ac_f9_r1_consumption" { channel="http:url:f9_r1:ac_f9_r1_consumption_channel", persistence="influxdb" }
 Number ac_f9_r1_temperature "ac_f9_r1_temperature" { channel="http:url:f9_r1:ac_f9_r1_temperature_channel", persistence="influxdb" }
+Number ac_f9_r1_state "ac_f9_r1_state" { channel="http:url:f9_r1:ac_f9_r1_state_channel", persistence="influxdb" }
 Number lights_f9_r1_consumption "lights_f9_r1_consumption" { channel="http:url:f9_r1:light_f9_r1_consumption_channel", persistence="influxdb" }
 Number lights_f9_r1_state "lights_f9_r1_state" { channel="http:url:f9_r1:light_f9_r1_state_channel", persistence="influxdb" }
 
 Number ac_f9_r2_consumption "ac_f9_r2_consumption" { channel="http:url:f9_r2:ac_f9_r2_consumption_channel", persistence="influxdb" }
 Number ac_f9_r2_temperature "ac_f9_r2_temperature" { channel="http:url:f9_r2:ac_f9_r2_temperature_channel", persistence="influxdb" }
+Number ac_f9_r2_state "ac_f9_r2_state" { channel="http:url:f9_r2:ac_f9_r2_state_channel", persistence="influxdb" }
 Number lights_f9_r2_consumption "lights_f9_r2_consumption" { channel="http:url:f9_r2:light_f9_r2_consumption_channel", persistence="influxdb" }
 Number lights_f9_r2_state "lights_f9_r2_state" { channel="http:url:f9_r2:light_f9_r2_state_channel", persistence="influxdb" }
 
 Number ac_f9_r3_consumption "ac_f9_r3_consumption" { channel="http:url:f9_r3:ac_f9_r3_consumption_channel", persistence="influxdb" }
 Number ac_f9_r3_temperature "ac_f9_r3_temperature" { channel="http:url:f9_r3:ac_f9_r3_temperature_channel", persistence="influxdb" }
+Number ac_f9_r3_state "ac_f9_r3_state" { channel="http:url:f9_r3:ac_f9_r3_state_channel", persistence="influxdb" }
 Number lights_f9_r3_consumption "lights_f9_r3_consumption" { channel="http:url:f9_r3:light_f9_r3_consumption_channel", persistence="influxdb" }
 Number lights_f9_r3_state "lights_f9_r3_state" { channel="http:url:f9_r3:light_f9_r3_state_channel", persistence="influxdb" }
 
 Number ac_f9_r4_consumption "ac_f9_r4_consumption" { channel="http:url:f9_r4:ac_f9_r4_consumption_channel", persistence="influxdb" }
 Number ac_f9_r4_temperature "ac_f9_r4_temperature" { channel="http:url:f9_r4:ac_f9_r4_temperature_channel", persistence="influxdb" }
+Number ac_f9_r4_state "ac_f9_r4_state" { channel="http:url:f9_r4:ac_f9_r4_state_channel", persistence="influxdb" }
 Number lights_f9_r4_consumption "lights_f9_r4_consumption" { channel="http:url:f9_r4:light_f9_r4_consumption_channel", persistence="influxdb" }
 Number lights_f9_r4_state "lights_f9_r4_state" { channel="http:url:f9_r4:light_f9_r4_state_channel", persistence="influxdb" }
 
