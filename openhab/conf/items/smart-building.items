@@ -1,7 +1,7 @@
-Number ac_f1_r2_consumption "ac_f1_r2_consumption" { channel="http:url:f1_r2:ac_f1_r2_consumption_channel", persistence="influxdb" }
-Number ac_f1_r2_temperature "ac_f1_r2_temperature" { channel="http:url:f1_r2:ac_f1_r2_temperature_channel", persistence="influxdb" }
-Number lights_f1_r2_consumption "lights_f1_r2_consumption" { channel="http:url:f1_r2:light_f1_r2_consumption_channel", persistence="influxdb" }
-Number lights_f1_r2_state "lights_f1_r2_state" { channel="http:url:f1_r2:light_f1_r2_state_channel", persistence="influxdb" }
+Number ac_f1_r1_consumption "ac_f1_r1_consumption" { channel="http:url:f1_r1:ac_f1_r1_consumption_channel", persistence="influxdb" }
+Number ac_f1_r1_temperature "ac_f1_r1_temperature" { channel="http:url:f1_r1:ac_f1_r1_temperature_channel", persistence="influxdb" }
+Number lights_f1_r1_consumption "lights_f1_r1_consumption" { channel="http:url:f1_r1:light_f1_r1_consumption_channel", persistence="influxdb" }
+Number lights_f1_r1_state "lights_f1_r1_state" { channel="http:url:f1_r1:light_f1_r1_state_channel", persistence="influxdb" }
 
 Number ac_f1_r2_consumption "ac_f1_r2_consumption" { channel="http:url:f1_r2:ac_f1_r2_consumption_channel", persistence="influxdb" }
 Number ac_f1_r2_temperature "ac_f1_r2_temperature" { channel="http:url:f1_r2:ac_f1_r2_temperature_channel", persistence="influxdb" }

@@ -1,13 +1,13 @@
-Thing http:url:f1_r2 "f1_r2" [
+Thing http:url:f1_r1 "f1_r1" [
    baseURL="http://apps.vngalaxy.vn:5000",
     stateMethod="GET",
     refresh=30
 ] {
     Channels:
-        Type number : ac_f1_r2_consumption_channel "ac_f1_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f1_r2_temperature_channel "ac_f1_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f1_r2_consumption_channel "lights_f1_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f1_r2_state_channel "light_f1_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f1_r1_consumption_channel "ac_f1_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f1_r1_temperature_channel "ac_f1_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f1_r1_consumption_channel "lights_f1_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f1_r1_state_channel "light_f1_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f1_r2 "f1_r2" [
@@ -16,10 +16,10 @@ Thing http:url:f1_r2 "f1_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f1_r2_consumption_channel "ac_f1_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f1_r2_temperature_channel "ac_f1_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f1_r2_consumption_channel "lights_f1_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f1_r2_state_channel "light_f1_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f1_r2_consumption_channel "ac_f1_r2_consumption_channel" [ stateExtension="/f1/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f1_r2_temperature_channel "ac_f1_r2_temperature_channel" [ stateExtension="/f1/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f1_r2_consumption_channel "lights_f1_r2_consumption_channel" [ stateExtension="/f1/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f1_r2_state_channel "light_f1_r2_state_channel" [ stateExtension="/f1/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f1_r3 "f1_r3" [
@@ -28,10 +28,10 @@ Thing http:url:f1_r3 "f1_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f1_r3_consumption_channel "ac_f1_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f1_r3_temperature_channel "ac_f1_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f1_r3_consumption_channel "lights_f1_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f1_r3_state_channel "light_f1_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f1_r3_consumption_channel "ac_f1_r3_consumption_channel" [ stateExtension="/f1/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f1_r3_temperature_channel "ac_f1_r3_temperature_channel" [ stateExtension="/f1/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f1_r3_consumption_channel "lights_f1_r3_consumption_channel" [ stateExtension="/f1/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f1_r3_state_channel "light_f1_r3_state_channel" [ stateExtension="/f1/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f1_r4 "f1_r4" [
@@ -40,10 +40,10 @@ Thing http:url:f1_r4 "f1_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f1_r4_consumption_channel "ac_f1_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f1_r4_temperature_channel "ac_f1_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f1_r4_consumption_channel "lights_f1_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f1_r4_state_channel "light_f1_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f1_r4_consumption_channel "ac_f1_r4_consumption_channel" [ stateExtension="/f1/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f1_r4_temperature_channel "ac_f1_r4_temperature_channel" [ stateExtension="/f1/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f1_r4_consumption_channel "lights_f1_r4_consumption_channel" [ stateExtension="/f1/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f1_r4_state_channel "light_f1_r4_state_channel" [ stateExtension="/f1/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f2_r1 "f2_r1" [
@@ -52,10 +52,10 @@ Thing http:url:f2_r1 "f2_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f2_r1_consumption_channel "ac_f2_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f2_r1_temperature_channel "ac_f2_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f2_r1_consumption_channel "lights_f2_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f2_r1_state_channel "light_f2_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f2_r1_consumption_channel "ac_f2_r1_consumption_channel" [ stateExtension="/f2/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f2_r1_temperature_channel "ac_f2_r1_temperature_channel" [ stateExtension="/f2/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f2_r1_consumption_channel "lights_f2_r1_consumption_channel" [ stateExtension="/f2/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f2_r1_state_channel "light_f2_r1_state_channel" [ stateExtension="/f2/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f2_r2 "f2_r2" [
@@ -64,10 +64,10 @@ Thing http:url:f2_r2 "f2_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f2_r2_consumption_channel "ac_f2_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f2_r2_temperature_channel "ac_f2_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f2_r2_consumption_channel "lights_f2_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f2_r2_state_channel "light_f2_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f2_r2_consumption_channel "ac_f2_r2_consumption_channel" [ stateExtension="/f2/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f2_r2_temperature_channel "ac_f2_r2_temperature_channel" [ stateExtension="/f2/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f2_r2_consumption_channel "lights_f2_r2_consumption_channel" [ stateExtension="/f2/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f2_r2_state_channel "light_f2_r2_state_channel" [ stateExtension="/f2/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f2_r3 "f2_r3" [
@@ -76,10 +76,10 @@ Thing http:url:f2_r3 "f2_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f2_r3_consumption_channel "ac_f2_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f2_r3_temperature_channel "ac_f2_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f2_r3_consumption_channel "lights_f2_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f2_r3_state_channel "light_f2_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f2_r3_consumption_channel "ac_f2_r3_consumption_channel" [ stateExtension="/f2/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f2_r3_temperature_channel "ac_f2_r3_temperature_channel" [ stateExtension="/f2/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f2_r3_consumption_channel "lights_f2_r3_consumption_channel" [ stateExtension="/f2/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f2_r3_state_channel "light_f2_r3_state_channel" [ stateExtension="/f2/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f2_r4 "f2_r4" [
@@ -88,10 +88,10 @@ Thing http:url:f2_r4 "f2_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f2_r4_consumption_channel "ac_f2_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f2_r4_temperature_channel "ac_f2_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f2_r4_consumption_channel "lights_f2_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f2_r4_state_channel "light_f2_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f2_r4_consumption_channel "ac_f2_r4_consumption_channel" [ stateExtension="/f2/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f2_r4_temperature_channel "ac_f2_r4_temperature_channel" [ stateExtension="/f2/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f2_r4_consumption_channel "lights_f2_r4_consumption_channel" [ stateExtension="/f2/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f2_r4_state_channel "light_f2_r4_state_channel" [ stateExtension="/f2/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f3_r1 "f3_r1" [
@@ -100,10 +100,10 @@ Thing http:url:f3_r1 "f3_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f3_r1_consumption_channel "ac_f3_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f3_r1_temperature_channel "ac_f3_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f3_r1_consumption_channel "lights_f3_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f3_r1_state_channel "light_f3_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f3_r1_consumption_channel "ac_f3_r1_consumption_channel" [ stateExtension="/f3/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f3_r1_temperature_channel "ac_f3_r1_temperature_channel" [ stateExtension="/f3/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f3_r1_consumption_channel "lights_f3_r1_consumption_channel" [ stateExtension="/f3/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f3_r1_state_channel "light_f3_r1_state_channel" [ stateExtension="/f3/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f3_r2 "f3_r2" [
@@ -112,10 +112,10 @@ Thing http:url:f3_r2 "f3_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f3_r2_consumption_channel "ac_f3_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f3_r2_temperature_channel "ac_f3_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f3_r2_consumption_channel "lights_f3_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f3_r2_state_channel "light_f3_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f3_r2_consumption_channel "ac_f3_r2_consumption_channel" [ stateExtension="/f3/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f3_r2_temperature_channel "ac_f3_r2_temperature_channel" [ stateExtension="/f3/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f3_r2_consumption_channel "lights_f3_r2_consumption_channel" [ stateExtension="/f3/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f3_r2_state_channel "light_f3_r2_state_channel" [ stateExtension="/f3/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f3_r3 "f3_r3" [
@@ -124,10 +124,10 @@ Thing http:url:f3_r3 "f3_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f3_r3_consumption_channel "ac_f3_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f3_r3_temperature_channel "ac_f3_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f3_r3_consumption_channel "lights_f3_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f3_r3_state_channel "light_f3_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f3_r3_consumption_channel "ac_f3_r3_consumption_channel" [ stateExtension="/f3/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f3_r3_temperature_channel "ac_f3_r3_temperature_channel" [ stateExtension="/f3/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f3_r3_consumption_channel "lights_f3_r3_consumption_channel" [ stateExtension="/f3/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f3_r3_state_channel "light_f3_r3_state_channel" [ stateExtension="/f3/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f3_r4 "f3_r4" [
@@ -136,10 +136,10 @@ Thing http:url:f3_r4 "f3_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f3_r4_consumption_channel "ac_f3_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f3_r4_temperature_channel "ac_f3_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f3_r4_consumption_channel "lights_f3_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f3_r4_state_channel "light_f3_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f3_r4_consumption_channel "ac_f3_r4_consumption_channel" [ stateExtension="/f3/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f3_r4_temperature_channel "ac_f3_r4_temperature_channel" [ stateExtension="/f3/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f3_r4_consumption_channel "lights_f3_r4_consumption_channel" [ stateExtension="/f3/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f3_r4_state_channel "light_f3_r4_state_channel" [ stateExtension="/f3/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f4_r1 "f4_r1" [
@@ -148,10 +148,10 @@ Thing http:url:f4_r1 "f4_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f4_r1_consumption_channel "ac_f4_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f4_r1_temperature_channel "ac_f4_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f4_r1_consumption_channel "lights_f4_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f4_r1_state_channel "light_f4_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f4_r1_consumption_channel "ac_f4_r1_consumption_channel" [ stateExtension="/f4/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f4_r1_temperature_channel "ac_f4_r1_temperature_channel" [ stateExtension="/f4/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f4_r1_consumption_channel "lights_f4_r1_consumption_channel" [ stateExtension="/f4/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f4_r1_state_channel "light_f4_r1_state_channel" [ stateExtension="/f4/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f4_r2 "f4_r2" [
@@ -160,10 +160,10 @@ Thing http:url:f4_r2 "f4_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f4_r2_consumption_channel "ac_f4_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f4_r2_temperature_channel "ac_f4_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f4_r2_consumption_channel "lights_f4_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f4_r2_state_channel "light_f4_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f4_r2_consumption_channel "ac_f4_r2_consumption_channel" [ stateExtension="/f4/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f4_r2_temperature_channel "ac_f4_r2_temperature_channel" [ stateExtension="/f4/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f4_r2_consumption_channel "lights_f4_r2_consumption_channel" [ stateExtension="/f4/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f4_r2_state_channel "light_f4_r2_state_channel" [ stateExtension="/f4/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f4_r3 "f4_r3" [
@@ -172,10 +172,10 @@ Thing http:url:f4_r3 "f4_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f4_r3_consumption_channel "ac_f4_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f4_r3_temperature_channel "ac_f4_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f4_r3_consumption_channel "lights_f4_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f4_r3_state_channel "light_f4_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f4_r3_consumption_channel "ac_f4_r3_consumption_channel" [ stateExtension="/f4/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f4_r3_temperature_channel "ac_f4_r3_temperature_channel" [ stateExtension="/f4/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f4_r3_consumption_channel "lights_f4_r3_consumption_channel" [ stateExtension="/f4/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f4_r3_state_channel "light_f4_r3_state_channel" [ stateExtension="/f4/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f4_r4 "f4_r4" [
@@ -184,10 +184,10 @@ Thing http:url:f4_r4 "f4_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f4_r4_consumption_channel "ac_f4_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f4_r4_temperature_channel "ac_f4_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f4_r4_consumption_channel "lights_f4_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f4_r4_state_channel "light_f4_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f4_r4_consumption_channel "ac_f4_r4_consumption_channel" [ stateExtension="/f4/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f4_r4_temperature_channel "ac_f4_r4_temperature_channel" [ stateExtension="/f4/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f4_r4_consumption_channel "lights_f4_r4_consumption_channel" [ stateExtension="/f4/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f4_r4_state_channel "light_f4_r4_state_channel" [ stateExtension="/f4/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f5_r1 "f5_r1" [
@@ -196,10 +196,10 @@ Thing http:url:f5_r1 "f5_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f5_r1_consumption_channel "ac_f5_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f5_r1_temperature_channel "ac_f5_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f5_r1_consumption_channel "lights_f5_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f5_r1_state_channel "light_f5_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f5_r1_consumption_channel "ac_f5_r1_consumption_channel" [ stateExtension="/f5/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f5_r1_temperature_channel "ac_f5_r1_temperature_channel" [ stateExtension="/f5/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f5_r1_consumption_channel "lights_f5_r1_consumption_channel" [ stateExtension="/f5/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f5_r1_state_channel "light_f5_r1_state_channel" [ stateExtension="/f5/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f5_r2 "f5_r2" [
@@ -208,10 +208,10 @@ Thing http:url:f5_r2 "f5_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f5_r2_consumption_channel "ac_f5_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f5_r2_temperature_channel "ac_f5_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f5_r2_consumption_channel "lights_f5_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f5_r2_state_channel "light_f5_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f5_r2_consumption_channel "ac_f5_r2_consumption_channel" [ stateExtension="/f5/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f5_r2_temperature_channel "ac_f5_r2_temperature_channel" [ stateExtension="/f5/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f5_r2_consumption_channel "lights_f5_r2_consumption_channel" [ stateExtension="/f5/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f5_r2_state_channel "light_f5_r2_state_channel" [ stateExtension="/f5/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f5_r3 "f5_r3" [
@@ -220,10 +220,10 @@ Thing http:url:f5_r3 "f5_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f5_r3_consumption_channel "ac_f5_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f5_r3_temperature_channel "ac_f5_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f5_r3_consumption_channel "lights_f5_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f5_r3_state_channel "light_f5_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f5_r3_consumption_channel "ac_f5_r3_consumption_channel" [ stateExtension="/f5/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f5_r3_temperature_channel "ac_f5_r3_temperature_channel" [ stateExtension="/f5/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f5_r3_consumption_channel "lights_f5_r3_consumption_channel" [ stateExtension="/f5/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f5_r3_state_channel "light_f5_r3_state_channel" [ stateExtension="/f5/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f5_r4 "f5_r4" [
@@ -232,10 +232,10 @@ Thing http:url:f5_r4 "f5_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f5_r4_consumption_channel "ac_f5_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f5_r4_temperature_channel "ac_f5_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f5_r4_consumption_channel "lights_f5_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f5_r4_state_channel "light_f5_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f5_r4_consumption_channel "ac_f5_r4_consumption_channel" [ stateExtension="/f5/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f5_r4_temperature_channel "ac_f5_r4_temperature_channel" [ stateExtension="/f5/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f5_r4_consumption_channel "lights_f5_r4_consumption_channel" [ stateExtension="/f5/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f5_r4_state_channel "light_f5_r4_state_channel" [ stateExtension="/f5/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f6_r1 "f6_r1" [
@@ -244,10 +244,10 @@ Thing http:url:f6_r1 "f6_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f6_r1_consumption_channel "ac_f6_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f6_r1_temperature_channel "ac_f6_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f6_r1_consumption_channel "lights_f6_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f6_r1_state_channel "light_f6_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f6_r1_consumption_channel "ac_f6_r1_consumption_channel" [ stateExtension="/f6/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f6_r1_temperature_channel "ac_f6_r1_temperature_channel" [ stateExtension="/f6/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f6_r1_consumption_channel "lights_f6_r1_consumption_channel" [ stateExtension="/f6/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f6_r1_state_channel "light_f6_r1_state_channel" [ stateExtension="/f6/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f6_r2 "f6_r2" [
@@ -256,10 +256,10 @@ Thing http:url:f6_r2 "f6_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f6_r2_consumption_channel "ac_f6_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f6_r2_temperature_channel "ac_f6_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f6_r2_consumption_channel "lights_f6_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f6_r2_state_channel "light_f6_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f6_r2_consumption_channel "ac_f6_r2_consumption_channel" [ stateExtension="/f6/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f6_r2_temperature_channel "ac_f6_r2_temperature_channel" [ stateExtension="/f6/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f6_r2_consumption_channel "lights_f6_r2_consumption_channel" [ stateExtension="/f6/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f6_r2_state_channel "light_f6_r2_state_channel" [ stateExtension="/f6/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f6_r3 "f6_r3" [
@@ -268,10 +268,10 @@ Thing http:url:f6_r3 "f6_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f6_r3_consumption_channel "ac_f6_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f6_r3_temperature_channel "ac_f6_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f6_r3_consumption_channel "lights_f6_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f6_r3_state_channel "light_f6_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f6_r3_consumption_channel "ac_f6_r3_consumption_channel" [ stateExtension="/f6/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f6_r3_temperature_channel "ac_f6_r3_temperature_channel" [ stateExtension="/f6/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f6_r3_consumption_channel "lights_f6_r3_consumption_channel" [ stateExtension="/f6/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f6_r3_state_channel "light_f6_r3_state_channel" [ stateExtension="/f6/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f6_r4 "f6_r4" [
@@ -280,10 +280,10 @@ Thing http:url:f6_r4 "f6_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f6_r4_consumption_channel "ac_f6_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f6_r4_temperature_channel "ac_f6_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f6_r4_consumption_channel "lights_f6_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f6_r4_state_channel "light_f6_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f6_r4_consumption_channel "ac_f6_r4_consumption_channel" [ stateExtension="/f6/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f6_r4_temperature_channel "ac_f6_r4_temperature_channel" [ stateExtension="/f6/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f6_r4_consumption_channel "lights_f6_r4_consumption_channel" [ stateExtension="/f6/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f6_r4_state_channel "light_f6_r4_state_channel" [ stateExtension="/f6/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f7_r1 "f7_r1" [
@@ -292,10 +292,10 @@ Thing http:url:f7_r1 "f7_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f7_r1_consumption_channel "ac_f7_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f7_r1_temperature_channel "ac_f7_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f7_r1_consumption_channel "lights_f7_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f7_r1_state_channel "light_f7_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f7_r1_consumption_channel "ac_f7_r1_consumption_channel" [ stateExtension="/f7/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f7_r1_temperature_channel "ac_f7_r1_temperature_channel" [ stateExtension="/f7/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f7_r1_consumption_channel "lights_f7_r1_consumption_channel" [ stateExtension="/f7/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f7_r1_state_channel "light_f7_r1_state_channel" [ stateExtension="/f7/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f7_r2 "f7_r2" [
@@ -304,10 +304,10 @@ Thing http:url:f7_r2 "f7_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f7_r2_consumption_channel "ac_f7_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f7_r2_temperature_channel "ac_f7_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f7_r2_consumption_channel "lights_f7_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f7_r2_state_channel "light_f7_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f7_r2_consumption_channel "ac_f7_r2_consumption_channel" [ stateExtension="/f7/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f7_r2_temperature_channel "ac_f7_r2_temperature_channel" [ stateExtension="/f7/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f7_r2_consumption_channel "lights_f7_r2_consumption_channel" [ stateExtension="/f7/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f7_r2_state_channel "light_f7_r2_state_channel" [ stateExtension="/f7/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f7_r3 "f7_r3" [
@@ -316,10 +316,10 @@ Thing http:url:f7_r3 "f7_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f7_r3_consumption_channel "ac_f7_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f7_r3_temperature_channel "ac_f7_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f7_r3_consumption_channel "lights_f7_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f7_r3_state_channel "light_f7_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f7_r3_consumption_channel "ac_f7_r3_consumption_channel" [ stateExtension="/f7/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f7_r3_temperature_channel "ac_f7_r3_temperature_channel" [ stateExtension="/f7/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f7_r3_consumption_channel "lights_f7_r3_consumption_channel" [ stateExtension="/f7/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f7_r3_state_channel "light_f7_r3_state_channel" [ stateExtension="/f7/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f7_r4 "f7_r4" [
@@ -328,10 +328,10 @@ Thing http:url:f7_r4 "f7_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f7_r4_consumption_channel "ac_f7_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f7_r4_temperature_channel "ac_f7_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f7_r4_consumption_channel "lights_f7_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f7_r4_state_channel "light_f7_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f7_r4_consumption_channel "ac_f7_r4_consumption_channel" [ stateExtension="/f7/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f7_r4_temperature_channel "ac_f7_r4_temperature_channel" [ stateExtension="/f7/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f7_r4_consumption_channel "lights_f7_r4_consumption_channel" [ stateExtension="/f7/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f7_r4_state_channel "light_f7_r4_state_channel" [ stateExtension="/f7/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f8_r1 "f8_r1" [
@@ -340,10 +340,10 @@ Thing http:url:f8_r1 "f8_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f8_r1_consumption_channel "ac_f8_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f8_r1_temperature_channel "ac_f8_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f8_r1_consumption_channel "lights_f8_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f8_r1_state_channel "light_f8_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f8_r1_consumption_channel "ac_f8_r1_consumption_channel" [ stateExtension="/f8/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f8_r1_temperature_channel "ac_f8_r1_temperature_channel" [ stateExtension="/f8/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f8_r1_consumption_channel "lights_f8_r1_consumption_channel" [ stateExtension="/f8/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f8_r1_state_channel "light_f8_r1_state_channel" [ stateExtension="/f8/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f8_r2 "f8_r2" [
@@ -352,10 +352,10 @@ Thing http:url:f8_r2 "f8_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f8_r2_consumption_channel "ac_f8_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f8_r2_temperature_channel "ac_f8_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f8_r2_consumption_channel "lights_f8_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f8_r2_state_channel "light_f8_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f8_r2_consumption_channel "ac_f8_r2_consumption_channel" [ stateExtension="/f8/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f8_r2_temperature_channel "ac_f8_r2_temperature_channel" [ stateExtension="/f8/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f8_r2_consumption_channel "lights_f8_r2_consumption_channel" [ stateExtension="/f8/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f8_r2_state_channel "light_f8_r2_state_channel" [ stateExtension="/f8/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f8_r3 "f8_r3" [
@@ -364,10 +364,10 @@ Thing http:url:f8_r3 "f8_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f8_r3_consumption_channel "ac_f8_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f8_r3_temperature_channel "ac_f8_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f8_r3_consumption_channel "lights_f8_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f8_r3_state_channel "light_f8_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f8_r3_consumption_channel "ac_f8_r3_consumption_channel" [ stateExtension="/f8/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f8_r3_temperature_channel "ac_f8_r3_temperature_channel" [ stateExtension="/f8/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f8_r3_consumption_channel "lights_f8_r3_consumption_channel" [ stateExtension="/f8/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f8_r3_state_channel "light_f8_r3_state_channel" [ stateExtension="/f8/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f8_r4 "f8_r4" [
@@ -376,10 +376,10 @@ Thing http:url:f8_r4 "f8_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f8_r4_consumption_channel "ac_f8_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f8_r4_temperature_channel "ac_f8_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f8_r4_consumption_channel "lights_f8_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f8_r4_state_channel "light_f8_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f8_r4_consumption_channel "ac_f8_r4_consumption_channel" [ stateExtension="/f8/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f8_r4_temperature_channel "ac_f8_r4_temperature_channel" [ stateExtension="/f8/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f8_r4_consumption_channel "lights_f8_r4_consumption_channel" [ stateExtension="/f8/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f8_r4_state_channel "light_f8_r4_state_channel" [ stateExtension="/f8/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f9_r1 "f9_r1" [
@@ -388,10 +388,10 @@ Thing http:url:f9_r1 "f9_r1" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f9_r1_consumption_channel "ac_f9_r1_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f9_r1_temperature_channel "ac_f9_r1_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f9_r1_consumption_channel "lights_f9_r1_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f9_r1_state_channel "light_f9_r1_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f9_r1_consumption_channel "ac_f9_r1_consumption_channel" [ stateExtension="/f9/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f9_r1_temperature_channel "ac_f9_r1_temperature_channel" [ stateExtension="/f9/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f9_r1_consumption_channel "lights_f9_r1_consumption_channel" [ stateExtension="/f9/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f9_r1_state_channel "light_f9_r1_state_channel" [ stateExtension="/f9/r1/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f9_r2 "f9_r2" [
@@ -400,10 +400,10 @@ Thing http:url:f9_r2 "f9_r2" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f9_r2_consumption_channel "ac_f9_r2_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f9_r2_temperature_channel "ac_f9_r2_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f9_r2_consumption_channel "lights_f9_r2_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f9_r2_state_channel "light_f9_r2_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f9_r2_consumption_channel "ac_f9_r2_consumption_channel" [ stateExtension="/f9/r2/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f9_r2_temperature_channel "ac_f9_r2_temperature_channel" [ stateExtension="/f9/r2/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f9_r2_consumption_channel "lights_f9_r2_consumption_channel" [ stateExtension="/f9/r2/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f9_r2_state_channel "light_f9_r2_state_channel" [ stateExtension="/f9/r2/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f9_r3 "f9_r3" [
@@ -412,10 +412,10 @@ Thing http:url:f9_r3 "f9_r3" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f9_r3_consumption_channel "ac_f9_r3_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f9_r3_temperature_channel "ac_f9_r3_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f9_r3_consumption_channel "lights_f9_r3_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f9_r3_state_channel "light_f9_r3_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f9_r3_consumption_channel "ac_f9_r3_consumption_channel" [ stateExtension="/f9/r3/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f9_r3_temperature_channel "ac_f9_r3_temperature_channel" [ stateExtension="/f9/r3/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f9_r3_consumption_channel "lights_f9_r3_consumption_channel" [ stateExtension="/f9/r3/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f9_r3_state_channel "light_f9_r3_state_channel" [ stateExtension="/f9/r3/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
 Thing http:url:f9_r4 "f9_r4" [
@@ -424,9 +424,9 @@ Thing http:url:f9_r4 "f9_r4" [
     refresh=30
 ] {
     Channels:
-        Type number : ac_f9_r4_consumption_channel "ac_f9_r4_consumption_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : ac_f9_r4_temperature_channel "ac_f9_r4_temperature_channel" [ stateExtension="/f1/r1/ac", stateTransformation="JSONPATH:$.temperature" ]
-        Type number : light_f9_r4_consumption_channel "lights_f9_r4_consumption_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.consumption" ]
-        Type number : light_f9_r4_state_channel "light_f9_r4_state_channel" [ stateExtension="/f1/r1/lights", stateTransformation="JSONPATH:$.state" ]
+        Type number : ac_f9_r4_consumption_channel "ac_f9_r4_consumption_channel" [ stateExtension="/f9/r4/ac", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : ac_f9_r4_temperature_channel "ac_f9_r4_temperature_channel" [ stateExtension="/f9/r4/ac", stateTransformation="JSONPATH:$.temperature" ]
+        Type number : light_f9_r4_consumption_channel "lights_f9_r4_consumption_channel" [ stateExtension="/f9/r4/lights", stateTransformation="JSONPATH:$.consumption" ]
+        Type number : light_f9_r4_state_channel "light_f9_r4_state_channel" [ stateExtension="/f9/r4/lights", stateTransformation="JSONPATH:$.state" ]
 
 }
