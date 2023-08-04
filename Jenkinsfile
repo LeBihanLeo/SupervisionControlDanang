@@ -10,14 +10,20 @@ pipeline {
 				
 				script {
 					try {
-						sh 'docker stop influxdb grafana openhab mqtt nginx myfakeapi'
+						sh 'docker stop influxdb grafana openhab mqtt web fakeapi'
 					} catch (Exception e) {
 						echo "no container running"
 					}
 				}
 				
-				sh 'docker influxdb grafana openhab mqtt nginx myfakeapi'
-				sh 'docker compose up -d'
+				script {
+					try {
+						sh 'docker rm influxdb grafana openhab mqtt web fakeapi'
+					} catch (Exception e) {
+						echo "no container running"
+					}
+				}
+				sh 'docker compose up -d influxdb grafana openhab mqtt web fakeapi'
             }
         }
 
