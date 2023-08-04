@@ -96,7 +96,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
-
+    volumes:
+      - ./fake_devices/app.py:/app/app.py
 
 volumes:
   grafana-storage:
