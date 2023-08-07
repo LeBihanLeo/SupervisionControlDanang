@@ -2,6 +2,7 @@ apiVersion: 1
 
 providers:
   - name: 'My Dashboards'
+    uid: 'P3C6603E967DC8568'
     orgId: 1
     folder: ''
     type: file
