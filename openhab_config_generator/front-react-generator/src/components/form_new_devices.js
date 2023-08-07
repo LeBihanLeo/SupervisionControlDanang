@@ -39,6 +39,7 @@ const Form = (props) => {
       channelsHTML = []
       channels = []
       nb_channel = 0
+      window.location.reload(false)
     }
 
     function myInput(){

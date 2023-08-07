@@ -1,25 +1,41 @@
-.App{
-  display: inline-flex;
-  justify-content: center;
-  background: rgb(254,248,161);
-  background: radial-gradient(circle, rgba(254,248,161,1) 27%, rgba(188,244,241,1) 70%, rgba(255,255,255,1) 100%);
+.Main{
+  background-image: url("./assets/back-image.jpg");
+  background-size: cover; 
   height: 100vh;
   width: 100vw;
 }
 
-.Box {
-  background: #f1faf9;
-  border: 0.1vh solid #736fad; /* Bordure de 2 pixels avec couleur grise */
-  border-radius: 1vh; /* Coins arrondis */
-  padding: 2vh; /* Espacement interne autour du contenu */
-  box-shadow: 0 2px 4px rgb(173, 7, 7); /* Ombre douce autour de la boîte */
-  margin: 3vh;
-  min-width: fit-content;
+.TopBar p{
+  text-align: center;
+  margin: auto;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  color: blue;
+  font-weight: bold;
+  font-size: large;
+  width: 4vw;
+  height: 2vh;
+}
+
+.TopBar p:hover{
+  font-size: larger;
+}
+
+.App{
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  min-height: 70vh;
+  height: fit-content;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 2vw;
 }
 
 /* Styles pour le texte à l'intérieur de la boîte */
 .Box p {
-  color: #333; /* Couleur du texte */
+  color: #000000; /* Couleur du texte */
 }
 
 #display{
@@ -40,3 +56,14 @@
   min-width: fit-content;
 }
 
+.TopBar{
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  height: 10vh;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+}
