@@ -1,0 +1,644 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 24,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "influxdb",
+        "uid": "P3C6603E967DC8568"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green"
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r1_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "Show details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f8_r1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r2_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "Show details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f8_r2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r3_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "Show details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f8_r3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r4_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
+                  {
+                    "title": "Show details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f8_r4"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 20,
+        "w": 18,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "inlineEditing": false,
+        "root": {
+          "background": {
+            "color": {
+              "fixed": "#00000000"
+            },
+            "image": {
+              "fixed": "/img/bg/custom/4th_floor.png"
+            }
+          },
+          "border": {
+            "color": {
+              "fixed": "dark-green"
+            }
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
+          },
+          "elements": [
+            {
+              "background": {
+                "color": {
+                  "fixed": "light-blue"
+                },
+                "image": {
+                  "fixed": "img/bg/p6.png",
+                  "mode": "field"
+                },
+                "size": "cover"
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 24,
+                "text": {
+                  "fixed": "Floor 8"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "FLOOR",
+              "placement": {
+                "height": 61,
+                "left": -2,
+                "top": -3,
+                "width": 100
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 24,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Text_total_floor",
+              "placement": {
+                "height": 53,
+                "left": -3,
+                "top": 47,
+                "width": 105
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "field": "total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "TOTAL",
+              "placement": {
+                "height": 53,
+                "left": 98,
+                "top": 47,
+                "width": 108
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r1_total_label",
+              "placement": {
+                "height": 38,
+                "left": 397,
+                "top": 487,
+                "width": 82
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "r1_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "field": "r1_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r1_total_value",
+              "placement": {
+                "height": 38,
+                "left": 479,
+                "top": 487,
+                "width": 84
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r2_total_label",
+              "placement": {
+                "height": 37,
+                "left": 745,
+                "top": 486,
+                "width": 82
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "r2_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "field": "r2_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r2_total_value",
+              "placement": {
+                "height": 37,
+                "left": 827,
+                "top": 486,
+                "width": 84
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#151515"
+                },
+                "size": 20,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r3_total_label",
+              "placement": {
+                "height": 37,
+                "left": 746,
+                "top": 216,
+                "width": 82
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "r3_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "field": "r3_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r3_total_value",
+              "placement": {
+                "height": 37,
+                "left": 828,
+                "top": 216,
+                "width": 84
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#3e4043"
+                },
+                "size": 20,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r4_total_label",
+              "placement": {
+                "height": 37,
+                "left": 396,
+                "top": 216,
+                "width": 82
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "r4_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 20,
+                "text": {
+                  "field": "r4_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "r4_total_value",
+              "placement": {
+                "height": 37,
+                "left": 478,
+                "top": 216,
+                "width": 84
+              },
+              "type": "metric-value"
+            }
+          ],
+          "name": "Element 1690881326719",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "top": 0,
+            "width": 100
+          },
+          "type": "frame"
+        },
+        "showAdvancedTypes": false
+      },
+      "pluginVersion": "9.4.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P3C6603E967DC8568"
+          },
+          "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^[^_]+_f8_+[^_]+_consumption$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> cumulativeSum(columns: [\"_value\"])\r\n  |> last()\r\n  |> rename(columns: { _value: \"total\"})\r\n",
+          "refId": "F1"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P3C6603E967DC8568"
+          },
+          "hide": false,
+          "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^[^_]+_f8_r1_consumption$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> cumulativeSum(columns: [\"_value\"])\r\n  |> last()\r\n  |> rename(columns: { _value: \"r1_total\"})\r\n",
+          "refId": "R1"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P3C6603E967DC8568"
+          },
+          "hide": false,
+          "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^[^_]+_f8_r2_consumption$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> cumulativeSum(columns: [\"_value\"])\r\n  |> last()\r\n  |> rename(columns: { _value: \"r2_total\"})\r\n",
+          "refId": "R2"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P3C6603E967DC8568"
+          },
+          "hide": false,
+          "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^[^_]+_f8_r3_consumption$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> cumulativeSum(columns: [\"_value\"])\r\n  |> last()\r\n  |> rename(columns: { _value: \"r3_total\"})\r\n",
+          "refId": "R3"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "P3C6603E967DC8568"
+          },
+          "hide": false,
+          "query": "from(bucket: \"openhab\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] =~ /^[^_]+_f8_r4_consumption$/)\r\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\r\n  |> last()\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> cumulativeSum(columns: [\"_value\"])\r\n  |> last()\r\n  |> rename(columns: { _value: \"r4_total\"})\r\n",
+          "refId": "R4"
+        }
+      ],
+      "title": "Floor 8",
+      "type": "canvas"
+    }
+  ],
+  "refresh": "",
+  "revision": 1,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Floor plan 8",
+  "uid": "f8",
+  "version": 16,
+  "weekStart": ""
+}

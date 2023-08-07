@@ -22,11 +22,10 @@
     ]
   },
   "description": "dniit sensors",
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "gnetId": 17451,
   "graphTooltip": 0,
-  "id": 11,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -345,7 +344,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 15,
+        "h": 17,
         "w": 12,
         "x": 0,
         "y": 16
@@ -368,10 +367,6 @@
             "color": {
               "fixed": "dark-green"
             }
-          },
-          "constraint": {
-            "horizontal": "left",
-            "vertical": "top"
           },
           "elements": [
             {
@@ -407,9 +402,9 @@
               "name": "Element 1",
               "placement": {
                 "height": 27,
-                "left": 322,
-                "top": 160,
-                "width": 78.03125
+                "left": 412,
+                "top": 175,
+                "width": 78.02083587646484
               },
               "type": "metric-value"
             },
@@ -445,9 +440,9 @@
               "name": "Element 2",
               "placement": {
                 "height": 27,
-                "left": 326,
-                "top": 359,
-                "width": 76.59375
+                "left": 406,
+                "top": 421,
+                "width": 76.58333587646484
               },
               "type": "metric-value"
             },
@@ -484,8 +479,8 @@
               "name": "temperature",
               "placement": {
                 "height": 30,
-                "left": 579,
-                "top": 360,
+                "left": 721,
+                "top": 430,
                 "width": 95
               },
               "type": "metric-value"
@@ -519,10 +514,10 @@
               },
               "name": "humidity_unit",
               "placement": {
-                "height": 35.78125,
-                "left": 352,
-                "top": 158,
-                "width": 71.578125
+                "height": 35.770835876464844,
+                "left": 442,
+                "top": 173,
+                "width": 71.5625
               },
               "type": "text"
             },
@@ -555,10 +550,10 @@
               },
               "name": "lum_unit",
               "placement": {
-                "height": 35.78125,
-                "left": 359,
-                "top": 356,
-                "width": 71.578125
+                "height": 35.770835876464844,
+                "left": 439,
+                "top": 418,
+                "width": 71.5625
               },
               "type": "text"
             },
@@ -591,10 +586,10 @@
               },
               "name": "temp_unit",
               "placement": {
-                "height": 35.78125,
-                "left": 624,
-                "top": 359,
-                "width": 71.578125
+                "height": 35.770835876464844,
+                "left": 766,
+                "top": 429,
+                "width": 71.5625
               },
               "type": "text"
             },
@@ -626,8 +621,8 @@
               "name": "temp icon",
               "placement": {
                 "height": 37.9375,
-                "left": 537,
-                "top": 354,
+                "left": 679,
+                "top": 424,
                 "width": 37.9375
               },
               "type": "icon"
@@ -659,9 +654,9 @@
               },
               "name": "humidity icon",
               "placement": {
-                "height": 50.109375,
-                "left": 283,
-                "top": 146,
+                "height": 50.10416793823242,
+                "left": 373,
+                "top": 161,
                 "width": 37.9375
               },
               "type": "icon"
@@ -694,20 +689,14 @@
               "name": "illuminance icon",
               "placement": {
                 "height": 39,
-                "left": 286,
-                "top": 354,
+                "left": 366,
+                "top": 416,
                 "width": 39
               },
               "type": "icon"
             }
           ],
           "name": "Element 1689674000073",
-          "placement": {
-            "height": 100,
-            "left": 0,
-            "top": 0,
-            "width": 100
-          },
           "type": "frame"
         },
         "showAdvancedTypes": false
@@ -863,7 +852,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -878,7 +868,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 31
+        "y": 33
       },
       "id": 14,
       "options": {
@@ -931,7 +921,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 39
+        "y": 41
       },
       "id": 16,
       "options": {
@@ -1101,6 +1091,6 @@
   "timezone": "browser",
   "title": "DNIIT sensors",
   "uid": "ubFKKpdV56465z3",
-  "version": 8,
+  "version": 1,
   "weekStart": ""
 }
