@@ -65,15 +65,54 @@
                   {
                     "title": "Show details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f6_r1"
-                  },
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r2_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
                   {
                     "title": "Show details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f6_r2"
-                  },
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r3_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
                   {
                     "title": "Show details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f6_r3"
-                  },
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "r4_total"
+            },
+            "properties": [
+              {
+                "id": "links",
+                "value": [
                   {
                     "title": "Show details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f6_r4"
@@ -92,7 +131,7 @@
       },
       "id": 2,
       "options": {
-        "inlineEditing": true,
+        "inlineEditing": false,
         "root": {
           "background": {
             "color": {
