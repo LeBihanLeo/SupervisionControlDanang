@@ -10,7 +10,8 @@ CORS(app)
 
 @app.route('/')
 def get_devices():
-    return http_device.fetch_existing_devices()
+    existing_device_list = []
+    return http_device.fetch_all_existing_devices()
 
 @app.route("/add", methods=["POST"], strict_slashes=False)
 def add_articles():

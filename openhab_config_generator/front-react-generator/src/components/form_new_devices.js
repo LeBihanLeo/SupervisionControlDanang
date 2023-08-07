@@ -8,8 +8,8 @@ const Form = (props) => {
     const [id, setId] = useState('')
     const [bearer_token, setBearerToken] = useState('')
 
-    const channelsHTML = []
-    const channels = []
+    var channelsHTML = []
+    var channels = []
     var nb_channel = 0
 
     const insertArticle = () =>{
@@ -36,6 +36,9 @@ const Form = (props) => {
 
       const container = document.getElementById('channels')
       container.innerHTML = ''
+      channelsHTML = []
+      channels = []
+      nb_channel = 0
     }
 
     function myInput(){
@@ -73,8 +76,7 @@ const Form = (props) => {
 
   return (
     <div className="shadow p-4">
-    def __init__(self, device_type, device_location, device_id, bearer_token, device_channel_list):
-
+      <p>Create a new device</p>
         <div>
           <label htmlFor="Type" className="form-label">Type</label>
           <br/>
@@ -125,12 +127,12 @@ const Form = (props) => {
           <br/>
           <label htmlFor="channels" className="form-label">Channels</label>
           <br/>
-          <div id='channels'></div>
           <button onClick={addChannel}>add channel</button>
+          <div id='channels'></div>
 
           <br/>
           <br/>
-          <button onClick={handleSubmit}>Publish article</button>
+          <button onClick={handleSubmit}>Create Device</button>
           
         </div>
               

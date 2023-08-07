@@ -1,8 +1,8 @@
-# Documentation 
+# Documentation
 
 You can find here general documentation about the project. Specific documentation is available in each folder.
 
-## Folders 
+## Folders
 
 - [from_lavirotte](./from_lavirotte) : Documentation provided by Stéphane Lavirotte (University of Nice Sophia Antipolis)
 - [from_zalo](./from_zalo) : Useful documents provided to us using Zalo

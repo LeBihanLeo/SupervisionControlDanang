@@ -76,3 +76,7 @@ It is not possible to automatically import the alerts, so you have to do it manu
      - URL : `https://eombair37drklph.m.pipedream.net`
      - Click on `Test` if you want to try
    - Click on `Save contact point`
+
+## Managing users
+
+[Create users and teams - Grafana documentation](https://grafana.com/tutorials/create-users-and-teams/)
