@@ -3,8 +3,5 @@ Number meteostation_dut_1_illuminance "meteostation_dut_1 illuminance" { channel
 Number meteostation_dut_1_temperature "meteostation_dut_1 temperature" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_temperature_channel", persistence="influxdb" }
 
 
-Number kdjf_lksdgf_lkhdsf_lsfkjgh "kdjf_lksdgf_lkhdsf lsfkjgh" { channel="http:url:device_kdjf_lksdgf_lkhdsf:kdjf_lkhdsf_lksdgf_lsfkjgh_channel", persistence="influxdb" }
 
 
-
-Number type_loc_id_n "type_loc_id n" { channel="http:url:device_type_loc_id:type_id_loc_n_channel", persistence="influxdb" }
