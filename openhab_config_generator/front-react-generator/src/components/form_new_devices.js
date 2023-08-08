@@ -12,9 +12,9 @@ const Form = (props) => {
     var channels = []
     var nb_channel = 0
 
-    const insertArticle = () =>{
-      APIService.InsertArticle({type, location, id, bearer_token, channels})
-      .then((response) => props.insertedArticle(response))
+    const createDevice = () =>{
+      APIService.CreateDevice({type, location, id, bearer_token, channels})
+      .then((response) => console.log(response))
       .catch(error => console.log('error',error))
     }
 
@@ -27,7 +27,7 @@ const Form = (props) => {
       }
 
       console.log(channels)
-      insertArticle()
+      createDevice()
 
       setType('')
       setLocation('')
@@ -39,7 +39,6 @@ const Form = (props) => {
       channelsHTML = []
       channels = []
       nb_channel = 0
-      window.location.reload(false)
     }
 
     function myInput(){

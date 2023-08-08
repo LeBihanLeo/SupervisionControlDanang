@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
+import APIService from './API_post'
+
 
 const Displayer = (props) => {
     const [posts, setPosts] = useState([]);
 
-    function deleteDevice(){
-        console.log("test")
+    const deleteDevice = (type, loc, id) => {
+        console.log(type + " " + loc + " " + id)
+        
+        APIService.DeleteDevice({type, loc, id})
+        .then((response) => console.log(response))
+        .catch(error => console.log('error',error))
     }
 
     useEffect(() => {
@@ -36,7 +42,11 @@ const Displayer = (props) => {
                                 <li className="data" key={i}> - {d.data_name}: {d.data_type}</li>
                             </div>
                         ))}
-                        <button onClick="deleteDevice()">remove device</button>
+                        <button onClick={() => {
+                            deleteDevice(post.device_type, post.device_location, post.device_id);
+                        }}>
+                            remove device
+                        </button>
                     </ul>
                     ))}
                 </div>
