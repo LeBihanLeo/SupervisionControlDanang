@@ -14,7 +14,7 @@ def get_devices():
     return http_device.fetch_all_existing_devices()
 
 @app.route("/add", methods=["POST"], strict_slashes=False)
-def add_articles():
+def add_device():
     channels = []
     for x in request.json['channels']:
         channel = http_device_channel.HttpDeviceChannel(x[0], x[1])
@@ -23,17 +23,13 @@ def add_articles():
     device = http_device.HttpDevice(request.json['type'],request.json['location'],request.json['id'],request.json['bearer_token'],channels)
     device.generate_device()
 
-    #print('type ' + request.json['type'])
-    #print('id ' + request.json['id'])
-    #print('location ' + request.json['location'])
-    #print('token ' + request.json['bearer_token'])
-    #print('channels ' + str(len(request.json['channels'])))
-    #for x in request.json['channels']:
-    #    for y in x:
-    #        print(y)
+    return "200"
 
-
-    return 'ok'
+@app.route("/remove", methods=["POST"], strict_slashes=False)
+def remove_devices():
+    print(request)
+    http_device.delete_http_device(request.json['type'],request.json['loc'],request.json['id'])
+    return "200"
 
 if __name__ == '__main__':
     app.run()
