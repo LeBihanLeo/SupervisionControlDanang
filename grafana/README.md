@@ -5,6 +5,7 @@
 | username | password |
 |----------|----------|
 | admin    | admin    |
+| user     | user     |
 
 ## Manual import of the home dashboard
 

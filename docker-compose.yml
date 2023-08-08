@@ -81,6 +81,7 @@ services:
       - "80:80"
       - "443:443"
       - "0.0.0.0:8443:7000"
+      - "8005:8005"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/www:/usr/share/nginx/html:ro
