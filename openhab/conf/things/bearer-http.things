@@ -1,23 +1,13 @@
-Thing http:url:device [
+Thing http:url:device_meteostation_dut_1 "meteostation_dut_1" [
     baseURL="http://api.vngalaxy.vn/api/uplink/",
     headers="WWW-Authenticate=Basic",
-            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiJlNmY0Yjk1ZTc3N2JkYmRkIiwiYXBwSUQiOiI2IiwiaWF0IjoxNjg3MzM5ODYyfQ.7FZB7rF7rMBjLCnMBKtUKM-TgnEQfTZ5dNOo1ouRKdc",
+            "Authorization=Bearer qefojvnsefivnbsefivbun",
     stateMethod="POST",
     refresh=15
 ] {
     Channels:
-        Type string : sm_paris_1_allJson_channel "sm_paris_1_all_json_channel_channel"
+        Type number : meteostation_1_dut_humidity_channel "meteostation_1_dut_humidity_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.humiditySensor.2" ]
+        Type number : meteostation_1_dut_illuminance_channel "meteostation_1_dut_illuminance_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.illuminanceSensor.4" ]
+        Type number : meteostation_1_dut_temperature_channel "meteostation_1_dut_temperature_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
 }
 
-Thing http:url:device_lum_temp_hum_smartbuilding_2 "lum_temp_hum_smartbuilding_2" [
-    baseURL="http://api.vngalaxy.vn/api/uplink/",
-    headers="WWW-Authenticate=Basic",
-            "Authorization=Bearer ipjbqefivbeqzfpivbezqiu^fvb^qesufvb",
-    stateMethod="POST",
-    refresh=15
-] {
-    Channels:
-        Type number : lum_temp_hum_smartbuilding_2_humidity_channel "lum_temp_hum_smartbuilding_2_humidity_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.humiditySensor.2" ]
-        Type number : lum_temp_hum_smartbuilding_2_illuminance_channel "lum_temp_hum_smartbuilding_2_illuminance_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.illuminanceSensor.4" ]
-        Type number : lum_temp_hum_smartbuilding_2_temperature_channel "lum_temp_hum_smartbuilding_2_temperature_channel" [ stateTransformation="JSONPATH:JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
-}
