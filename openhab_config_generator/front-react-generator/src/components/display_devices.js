@@ -33,11 +33,11 @@ const Displayer = (props) => {
             <div>
                 {posts.length > 0 && (
                 <div>
-                    {posts.map(post => (
+                    {posts.map((post) => (
                     <ul className="device"  id={post.device_type + "_" + post.device_location + "_" + post.device_id}>{post.device_type}
-                        {post.data.map((d,i) => (
+                        {post.data.map((d) => (
                             <div>
-                                <li className="data" key={i}> - {d.data_name}: {d.data_type}</li>
+                                <li className="data" key={d.data_name}> - {d.data_name}: {d.data_type}</li>
                             </div>
                         ))}
                         <button onClick={() => {
