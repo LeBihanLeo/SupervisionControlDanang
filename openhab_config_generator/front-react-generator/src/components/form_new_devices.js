@@ -12,9 +12,9 @@ const Form = (props) => {
     var channels = []
     var nb_channel = 0
 
-    const insertArticle = () =>{
-      APIService.InsertArticle({type, location, id, bearer_token, channels})
-      .then((response) => props.insertedArticle(response))
+    const createDevice = () =>{
+      APIService.CreateDevice({type, location, id, bearer_token, channels})
+      .then((response) => console.log(response))
       .catch(error => console.log('error',error))
     }
 
@@ -27,7 +27,7 @@ const Form = (props) => {
       }
 
       console.log(channels)
-      insertArticle()
+      createDevice()
 
       setType('')
       setLocation('')
@@ -54,9 +54,12 @@ const Form = (props) => {
       const container = document.getElementById('channels')
       container.appendChild(document.createTextNode("channel " + nb_channel + ":   "))
 
+      container.appendChild(document.createElement("BR"))
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
       container.appendChild(channel_name)
+
+      container.appendChild(document.createTextNode("    "))
 
       const channel_json_path = myInput()
       channel_json_path.placeholder = "Enter json path"
@@ -75,67 +78,67 @@ const Form = (props) => {
 
 
   return (
-    <div className="shadow p-4">
-      <p>Create a new device</p>
-        <div>
-          <label htmlFor="Type" className="form-label">Type</label>
-          <br/>
-          <input 
-          type="text"
-          className="form-control" 
-          placeholder ="Enter type"
-          value={type}
-          onChange={(e)=>setType(e.target.value)}
-          required
-          />
-                    <br/>
+    <div className="Displayer">
+        <p>CREATE A NEW DEVICE</p>
+        <div className='BigBox'>
+          <div className='Box'>
+            <label htmlFor="Type" className="form-label">Type</label>
+            <br/>
+            <input 
+              type="text"
+              className="form-control" 
+              placeholder ="Enter type"
+              value={type}
+              onChange={(e)=>setType(e.target.value)}
+              required
+            />
+                      <br/>
 
-          <label htmlFor="location" className="form-label">Location</label>
-          <br/>
-          <input 
-          type="text"
-          className="form-control" 
-          placeholder ="Enter location"
-          value={location}
-          onChange={(e)=>setLocation(e.target.value)}
-          required
-          />
-          <br/>
+            <label htmlFor="location" className="form-label">Location</label>
+            <br/>
+            <input 
+              type="text"
+              className="form-control" 
+              placeholder ="Enter location"
+              value={location}
+              onChange={(e)=>setLocation(e.target.value)}
+              required
+            />
+            <br/>
 
-          <label htmlFor="id" className="form-label">Id</label>
-          <br/>
-          <input 
-          type="text"
-          className="form-control" 
-          placeholder ="Enter id"
-          value={id}
-          onChange={(e)=>setId(e.target.value)}
-          required
-          />
-          <br/>
+            <label htmlFor="id" className="form-label">Id</label>
+            <br/>
+            <input 
+              type="text"
+              className="form-control" 
+              placeholder ="Enter id"
+              value={id}
+              onChange={(e)=>setId(e.target.value)}
+              required
+            />
+            <br/>
 
-          <label htmlFor="bearer_token" className="form-label">Bearer token</label>
-          <br/>
-          <input 
-          type="text"
-          className="form-control" 
-          placeholder ="Enter Bearer token"
-          value={bearer_token}
-          onChange={(e)=>setBearerToken(e.target.value)}
-          required
-          />
-          <br/>
-          <label htmlFor="channels" className="form-label">Channels</label>
-          <br/>
-          <button onClick={addChannel}>add channel</button>
-          <div id='channels'></div>
+            <label htmlFor="bearer_token" className="form-label">Bearer token</label>
+            <br/>
+            <input 
+              type="text"
+              className="form-control" 
+              placeholder ="Enter Bearer token"
+              value={bearer_token}
+              onChange={(e)=>setBearerToken(e.target.value)}
+              required
+            />
+          </div>
+          <div className='Box'>
+            <label htmlFor="channels" className="form-label">Channels    </label>
+            <button onClick={addChannel} id='newChannel'>+</button>
+            <div id='channels'>
 
-          <br/>
-          <br/>
-          <button onClick={handleSubmit}>Create Device</button>
-          
+            </div>
+          </div>
         </div>
-              
+        <br/>
+        <button onClick={handleSubmit}>Create Device</button>   
 
     </div>
   )}

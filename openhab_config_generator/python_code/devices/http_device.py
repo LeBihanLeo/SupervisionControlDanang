@@ -33,7 +33,7 @@ class HttpDevice(Device):
                       + "] {\n" \
                       + "    Channels:\n"
         for device_channel in self.device_channel_list:
-            channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_id, self.device_location)
+            channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_location, self.device_id)
             json_path = device_channel.json_path
             input_data += f"        Type number : {channel_name} \"{channel_name}\" [ stateTransformation=\"JSONPATH:{json_path}\" ]\n"
         input_data += "}\n\n"
@@ -41,8 +41,8 @@ class HttpDevice(Device):
 
     def transform_item_file(self, input_data, device_name):
         for device_channel in self.device_channel_list:
-            channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_id, self.device_location)
-            input_data += f"\nNumber {self.get_device_name()} \"{self.get_device_name()}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}"
+            channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_location, self.device_id)
+            input_data += f"\nNumber {self.get_device_name()}_{device_channel.channel_name} \"{self.get_device_name()} {device_channel.channel_name}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}"
         input_data += "\n"
         return input_data
 
@@ -106,7 +106,7 @@ def fetch_existing_devices(filename, existing_device_list):
 
 def fetch_all_existing_devices():
     existing_device_list = []
-    filenames = ["bearer-http", "test-data"]
+    filenames = ["test-data", "bearer-http"]
     for filename in filenames:
         fetch_existing_devices(filename, existing_device_list)
     return existing_device_list

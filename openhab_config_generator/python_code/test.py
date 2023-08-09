@@ -9,4 +9,4 @@ from devices import http_device
 #
 # print(x.json())
 
-http_device.delete_http_device("prout", "prout", "prout")
+http_device.delete_http_device("kdjf", "lkhdsf", "lksdgf")

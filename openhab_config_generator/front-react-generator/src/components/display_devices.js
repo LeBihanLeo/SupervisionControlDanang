@@ -1,7 +1,17 @@
 import { useState, useEffect } from 'react';
+import APIService from './API_post'
+
 
 const Displayer = (props) => {
     const [posts, setPosts] = useState([]);
+
+    const deleteDevice = (type, loc, id) => {
+        APIService.DeleteDevice({type, loc, id})
+        .then((response) => console.log(response))
+        .catch(error => console.log('error',error))
+
+        document.getElementById(type + "_" + loc + "_" + id).outerHTML = "";
+    }
 
     useEffect(() => {
         fetch('http://127.0.0.1:5000/')
@@ -14,6 +24,7 @@ const Displayer = (props) => {
                 console.log(err.message);
             });
     }, []);
+
     return (
         <div>
             <p>
@@ -21,18 +32,24 @@ const Displayer = (props) => {
             </p>
             <div>
                 {posts.length > 0 && (
-                <ul>
-                    {posts.map(post => (
-                    <ul className="device">{post.device_type}
-                    {post.data.map((d,i) => (
-                        <li className="data" key={i}> - {d.data_name}: {d.data_type}</li>
-                    ))}
+                <div>
+                    {posts.map((post) => (
+                    <ul className="device"  id={post.device_type + "_" + post.device_location + "_" + post.device_id}>{post.device_type}
+                        {post.data.map((d) => (
+                            <div>
+                                <li className="data" key={d.data_name}> - {d.data_name}: {d.data_type}</li>
+                            </div>
+                        ))}
+                        <button onClick={() => {
+                            deleteDevice(post.device_type, post.device_location, post.device_id);
+                        }}>
+                            remove device
+                        </button>
                     </ul>
                     ))}
-                </ul>
+                </div>
                 )}
             </div>
-            <button onClick={() => window.location.reload(false)}>Click to reload!</button>
       </div>
 
     )}
