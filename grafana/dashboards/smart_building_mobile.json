@@ -216,7 +216,7 @@
         },
         "id": 2,
         "options": {
-          "inlineEditing": true,
+          "inlineEditing": false,
           "root": {
             "background": {
               "color": {
