@@ -12,30 +12,26 @@
   margin-right: 4vw;
   color: blue;
   font-weight: bold;
-  font-size: large;
+  font-size: x-large;
   width: 4vw;
-  height: 2vh;
+  height: 4vh;
 }
 
 .TopBar p:hover{
-  font-size: larger;
+  font-size: xx-large;
 }
 
 .App{
   display: inline-flex;
   justify-content: center;
   background-color: rgb(255, 255, 255);
+  opacity: 95%;
   min-height: 70vh;
   height: fit-content;
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 2vw;
-}
-
-/* Styles pour le texte à l'intérieur de la boîte */
-.Box p {
-  color: #000000; /* Couleur du texte */
 }
 
 #display{
@@ -47,9 +43,6 @@
 }
 
 .device{
-  background-color: rgb(235, 235, 235);
-  border: 0.1vh solid #1d1b31;
-  border-radius: 0.5vh;
   padding: 2vh;
   list-style: none;
   margin: 1vh;
@@ -66,4 +59,52 @@
   margin-right: 10vw;
   margin-bottom: 2vw;
   margin-top: 2vw;
+}
+
+.BigBox{
+  display: inline-flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
+  width: fit-content;
+  font-size: large;
+}
+
+.Box{
+  text-align: left;
+  min-width: 10vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+  overflow-y: auto;
+  height: 40vh;
+}
+
+.Displayer{
+  text-align: center;
+  justify-content: center;
+}
+
+#newChannel{
+  border-radius: 100%;
+  font-size:medium;
+}
+
+#newChannel:hover{
+  font-size:large;
+}
+
+label{
+  font-weight: bold;
+  font-size: x-large;
+}
+
+p{
+  font-size: xx-large;
+}
+
+input{
+  border:0;
+  background-color: rgb(202, 202, 202);
 }
