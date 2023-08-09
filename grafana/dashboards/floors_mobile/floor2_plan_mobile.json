@@ -21,7 +21,7 @@
       }
     ]
   },
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 84,
@@ -131,7 +131,7 @@
       },
       "id": 2,
       "options": {
-        "inlineEditing": true,
+        "inlineEditing": false,
         "root": {
           "background": {
             "color": {
@@ -175,7 +175,7 @@
                 },
                 "size": 8,
                 "text": {
-                  "fixed": "Floor 2 mobile"
+                  "fixed": "Floor 2"
                 },
                 "valign": "middle"
               },
@@ -644,7 +644,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Floor plan 2 mobile mobile",
+  "title": "Floor plan 2 mobile",
   "uid": "f2_mobile",
   "version": 5,
   "weekStart": ""
