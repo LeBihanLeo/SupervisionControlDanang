@@ -21,10 +21,10 @@
       }
     ]
   },
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 16,
+  "id": 95,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -210,14 +210,14 @@
         ]
       },
       "gridPos": {
-        "h": 25,
-        "w": 21,
+        "h": 21,
+        "w": 10,
         "x": 0,
         "y": 0
       },
       "id": 2,
       "options": {
-        "inlineEditing": false,
+        "inlineEditing": true,
         "root": {
           "background": {
             "color": {
@@ -226,16 +226,12 @@
             "image": {
               "fixed": "/img/bg/custom/dniit_big.gif"
             },
-            "size": "contain"
+            "size": "fill"
           },
           "border": {
             "color": {
               "fixed": "dark-green"
             }
-          },
-          "constraint": {
-            "horizontal": "left",
-            "vertical": "top"
           },
           "elements": [
             {
@@ -265,15 +261,15 @@
               },
               "connections": [],
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f1",
               "placement": {
-                "height": 43,
-                "left": 652,
-                "top": 688,
-                "width": 202
+                "height": 42.986114501953125,
+                "right": 24,
+                "top": -211.4982452392578,
+                "width": 217.69348473006366
               },
               "type": "metric-value"
             },
@@ -304,15 +300,15 @@
               },
               "connections": [],
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f2",
               "placement": {
-                "height": 43,
-                "left": 651,
-                "top": 628,
-                "width": 204
+                "height": 42.986114501953125,
+                "right": 24,
+                "top": -163.4982452392578,
+                "width": 219.84376525878906
               },
               "type": "metric-value"
             },
@@ -343,15 +339,15 @@
               },
               "connections": [],
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f3",
               "placement": {
-                "height": 43,
-                "left": 652,
-                "top": 571,
-                "width": 203
+                "height": 42.986114501953125,
+                "right": 24,
+                "top": -114.49824523925781,
+                "width": 218.75933648230765
               },
               "type": "metric-value"
             },
@@ -380,16 +376,17 @@
                 },
                 "valign": "middle"
               },
+              "connections": [],
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total _f4",
               "placement": {
-                "height": 43,
-                "left": 652,
-                "top": 514,
-                "width": 202
+                "height": 42.968753814697266,
+                "right": 24,
+                "top": -68.48956489562988,
+                "width": 217.69097900390625
               },
               "type": "metric-value"
             },
@@ -419,15 +416,15 @@
                 "valign": "middle"
               },
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f5",
               "placement": {
-                "height": 43,
-                "left": 652,
-                "top": 457,
-                "width": 204
+                "height": 42.986114501953125,
+                "right": 23,
+                "top": -20.498245239257812,
+                "width": 219.84376525878906
               },
               "type": "metric-value"
             },
@@ -457,15 +454,15 @@
                 "valign": "middle"
               },
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f6",
               "placement": {
-                "height": 43,
-                "left": 652,
-                "top": 399,
-                "width": 202
+                "height": 42.986114501953125,
+                "right": 24,
+                "top": 26.501754760742188,
+                "width": 217.69097900390625
               },
               "type": "metric-value"
             },
@@ -495,15 +492,15 @@
                 "valign": "middle"
               },
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f7",
               "placement": {
-                "height": 43,
-                "left": 652,
-                "top": 342,
-                "width": 203
+                "height": 42.986114501953125,
+                "right": 23,
+                "top": 74.50175476074219,
+                "width": 218.75001525878906
               },
               "type": "metric-value"
             },
@@ -533,15 +530,15 @@
                 "valign": "middle"
               },
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f8",
               "placement": {
-                "height": 44,
-                "left": 651,
-                "top": 284,
-                "width": 203
+                "height": 43.99305725097656,
+                "right": 23,
+                "top": 122.99828338623047,
+                "width": 218.75001525878906
               },
               "type": "metric-value"
             },
@@ -571,26 +568,20 @@
                 "valign": "middle"
               },
               "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
+                "horizontal": "right",
+                "vertical": "center"
               },
               "name": "Total_f9",
               "placement": {
-                "height": 45,
-                "left": 652,
-                "top": 227,
-                "width": 202
+                "height": 44.98263931274414,
+                "right": 24,
+                "top": 170.50349235534668,
+                "width": 217.69097900390625
               },
               "type": "metric-value"
             }
           ],
           "name": "Element 1690790108415",
-          "placement": {
-            "height": 100,
-            "left": 0,
-            "top": 0,
-            "width": 100
-          },
           "type": "frame"
         },
         "showAdvancedTypes": false
@@ -698,6 +689,6 @@
   "timezone": "",
   "title": "Smart Building",
   "uid": "3jnASUq4k",
-  "version": 18,
+  "version": 7,
   "weekStart": ""
 }
