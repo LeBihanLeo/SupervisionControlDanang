@@ -21,7 +21,7 @@
       }
     ]
   },
-  "editable": true,
+  "editable": false,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 94,
@@ -217,7 +217,7 @@
       },
       "id": 2,
       "options": {
-        "inlineEditing": true,
+        "inlineEditing": false,
         "root": {
           "background": {
             "color": {
