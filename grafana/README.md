@@ -38,6 +38,8 @@ Summary: import influxDB datasource then import the home dashboard
 
 ## Manual import of the alerts
 
+There should be only one alert in Grafana : the one that monitors that [InfluxDB](../influxdb/README.md#add-and-manage-alerts) works well, all the others have to be set up in [InfluxDB](../influxdb/README.md#add-and-manage-alerts)
+
 It is not possible to automatically import the alerts, so you have to do it manually : 
 
 1. Open [Grafana (localhost:3000)](http://localhost:3000) or [Grafana (apps.vngalaxy.vn)](https://apps.vngalaxy.vn:3000)
