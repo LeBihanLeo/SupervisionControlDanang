@@ -21,10 +21,10 @@
       }
     ]
   },
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 95,
+  "id": 97,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -217,7 +217,7 @@
       },
       "id": 2,
       "options": {
-        "inlineEditing": false,
+        "inlineEditing": true,
         "root": {
           "background": {
             "color": {
@@ -232,6 +232,10 @@
             "color": {
               "fixed": "dark-green"
             }
+          },
+          "constraint": {
+            "horizontal": "left",
+            "vertical": "top"
           },
           "elements": [
             {
@@ -344,10 +348,10 @@
               },
               "name": "Total_f3",
               "placement": {
-                "height": 42.986114501953125,
+                "height": 42.984375,
                 "right": 24,
-                "top": -114.49824523925781,
-                "width": 218.75933648230765
+                "top": -114.9921875,
+                "width": 218.75
               },
               "type": "metric-value"
             },
@@ -383,10 +387,10 @@
               },
               "name": "Total _f4",
               "placement": {
-                "height": 42.968753814697266,
+                "height": 42.96875,
                 "right": 24,
-                "top": -68.48956489562988,
-                "width": 217.69097900390625
+                "top": -68.984375,
+                "width": 217.6875
               },
               "type": "metric-value"
             },
@@ -421,10 +425,10 @@
               },
               "name": "Total_f5",
               "placement": {
-                "height": 42.986114501953125,
+                "height": 42.984375,
                 "right": 23,
-                "top": -20.498245239257812,
-                "width": 219.84376525878906
+                "top": -19.9921875,
+                "width": 219.84375
               },
               "type": "metric-value"
             },
@@ -459,10 +463,10 @@
               },
               "name": "Total_f6",
               "placement": {
-                "height": 42.986114501953125,
+                "height": 42.984375,
                 "right": 24,
-                "top": 26.501754760742188,
-                "width": 217.69097900390625
+                "top": 27.0078125,
+                "width": 217.6875
               },
               "type": "metric-value"
             },
@@ -497,10 +501,10 @@
               },
               "name": "Total_f7",
               "placement": {
-                "height": 42.986114501953125,
+                "height": 42.984375,
                 "right": 23,
-                "top": 74.50175476074219,
-                "width": 218.75001525878906
+                "top": 75.0078125,
+                "width": 218.75
               },
               "type": "metric-value"
             },
@@ -573,15 +577,339 @@
               },
               "name": "Total_f9",
               "placement": {
-                "height": 44.98263931274414,
+                "height": 44.96875,
                 "right": 24,
-                "top": 170.50349235534668,
-                "width": 217.69097900390625
+                "top": 170.015625,
+                "width": 217.6875
               },
               "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt9",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": 173,
+                "width": 45
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt8",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": 125.5078125,
+                "width": 45
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt7",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": 76.5078125,
+                "width": 45
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt6",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": 29.5078125,
+                "width": 45
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt5",
+              "placement": {
+                "height": 27.986112594604492,
+                "right": 30,
+                "top": -15,
+                "width": 45.000003814697266
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt4",
+              "placement": {
+                "height": 27.986112594604492,
+                "right": 30,
+                "top": -65,
+                "width": 45.000003814697266
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt3",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": -112,
+                "width": 45
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt2",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": -160,
+                "width": 45
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 22,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "right",
+                "vertical": "center"
+              },
+              "name": "watt1",
+              "placement": {
+                "height": 27.984375,
+                "right": 30,
+                "top": -208,
+                "width": 45
+              },
+              "type": "text"
             }
           ],
           "name": "Element 1690790108415",
+          "placement": {
+            "height": 100,
+            "left": 0,
+            "top": 0,
+            "width": 100
+          },
           "type": "frame"
         },
         "showAdvancedTypes": false
@@ -673,7 +1001,7 @@
       "type": "canvas"
     }
   ],
-  "refresh": "",
+  "refresh": false,
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
@@ -682,13 +1010,13 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
-    "to": "now"
+    "from": "2023-08-16T15:08:55.979Z",
+    "to": "2023-08-17T15:08:55.979Z"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Smart Building",
   "uid": "3jnASUq4k",
-  "version": 7,
+  "version": 6,
   "weekStart": ""
 }
