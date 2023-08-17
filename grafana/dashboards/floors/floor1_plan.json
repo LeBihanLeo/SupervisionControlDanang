@@ -24,7 +24,7 @@
   "editable": false,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 93,
+  "id": 98,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -43,7 +43,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -195,41 +196,6 @@
             {
               "background": {
                 "color": {
-                  "fixed": "yellow"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#000000"
-                },
-                "size": 15,
-                "text": {
-                  "fixed": "Total"
-                },
-                "valign": "middle"
-              },
-              "constraint": {
-                "horizontal": "left",
-                "vertical": "top"
-              },
-              "name": "Text_total_floor",
-              "placement": {
-                "height": 29,
-                "left": -1,
-                "top": 26,
-                "width": 70
-              },
-              "type": "text"
-            },
-            {
-              "background": {
-                "color": {
                   "field": "total",
                   "fixed": "#D9D9D9"
                 }
@@ -260,47 +226,11 @@
               "name": "TOTAL",
               "placement": {
                 "height": 29,
-                "left": 67,
+                "left": 47,
                 "top": 26,
-                "width": 70
+                "width": 100
               },
               "type": "metric-value"
-            },
-            {
-              "background": {
-                "color": {
-                  "fixed": "yellow"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#000000"
-                },
-                "size": 15,
-                "text": {
-                  "fixed": "Total"
-                },
-                "valign": "middle"
-              },
-              "connections": [],
-              "constraint": {
-                "horizontal": "center",
-                "vertical": "center"
-              },
-              "name": "r1_total_label",
-              "placement": {
-                "height": 30,
-                "left": 203,
-                "top": -112,
-                "width": 72
-              },
-              "type": "text"
             },
             {
               "background": {
@@ -335,46 +265,11 @@
               "name": "r1_total_value",
               "placement": {
                 "height": 30.25,
-                "left": 136.5625,
-                "top": -112.125,
-                "width": 71.875
+                "left": 159.5625,
+                "top": -112.625,
+                "width": 100
               },
               "type": "metric-value"
-            },
-            {
-              "background": {
-                "color": {
-                  "fixed": "yellow"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#000000"
-                },
-                "size": 15,
-                "text": {
-                  "fixed": "Total"
-                },
-                "valign": "middle"
-              },
-              "constraint": {
-                "horizontal": "center",
-                "vertical": "center"
-              },
-              "name": "r2_total_label",
-              "placement": {
-                "height": 29.4375,
-                "left": -105.0703125,
-                "top": -112.71875,
-                "width": 70.140625
-              },
-              "type": "text"
             },
             {
               "background": {
@@ -408,47 +303,11 @@
               "name": "r2_total_value",
               "placement": {
                 "height": 29.4375,
-                "left": -172.4375,
-                "top": -112.71875,
-                "width": 71.875
+                "left": -170,
+                "top": -112.21875,
+                "width": 100
               },
               "type": "metric-value"
-            },
-            {
-              "background": {
-                "color": {
-                  "fixed": "yellow"
-                }
-              },
-              "border": {
-                "color": {
-                  "fixed": "dark-green"
-                }
-              },
-              "config": {
-                "align": "center",
-                "color": {
-                  "fixed": "#151515"
-                },
-                "size": 15,
-                "text": {
-                  "fixed": "Total"
-                },
-                "valign": "middle"
-              },
-              "connections": [],
-              "constraint": {
-                "horizontal": "center",
-                "vertical": "center"
-              },
-              "name": "r3_total_label",
-              "placement": {
-                "height": 29.4375,
-                "left": -109.0703125,
-                "top": 134.28125,
-                "width": 70.140625
-              },
-              "type": "text"
             },
             {
               "background": {
@@ -483,11 +342,156 @@
               "name": "r3_total_value",
               "placement": {
                 "height": 29.4375,
-                "left": -180.4375,
-                "top": 133.28125,
-                "width": 71.875
+                "left": -170,
+                "top": 132.78125,
+                "width": 100
               },
               "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "field": "r4_total",
+                  "fixed": "#D9D9D9"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 15,
+                "text": {
+                  "field": "r4_total",
+                  "fixed": "",
+                  "mode": "field"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "r4_total_value",
+              "placement": {
+                "height": 29.4375,
+                "left": 159.5625,
+                "top": 132.78125,
+                "width": 94.875
+              },
+              "type": "metric-value"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Watt total",
+              "placement": {
+                "height": 28,
+                "left": 110,
+                "top": 28,
+                "width": 47
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 15,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "left",
+                "vertical": "top"
+              },
+              "name": "Totla",
+              "placement": {
+                "height": 29,
+                "left": -1,
+                "top": 26,
+                "width": 70
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "Watt 1",
+              "placement": {
+                "height": 28,
+                "left": 128.5,
+                "top": 132.78125,
+                "width": 47
+              },
+              "type": "text"
             },
             {
               "background": {
@@ -520,7 +524,7 @@
               "placement": {
                 "height": 29.4375,
                 "left": 220.9296875,
-                "top": 134.28125,
+                "top": 132.78125,
                 "width": 70.140625
               },
               "type": "text"
@@ -528,8 +532,79 @@
             {
               "background": {
                 "color": {
-                  "field": "r4_total",
-                  "fixed": "#D9D9D9"
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#151515"
+                },
+                "size": 15,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "r3_total_label",
+              "placement": {
+                "height": 29.4375,
+                "left": -111.0703125,
+                "top": 132.78125,
+                "width": 70.140625
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "Watt2",
+              "placement": {
+                "height": 28,
+                "left": -200.5,
+                "top": 132.78125,
+                "width": 47
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
                 }
               },
               "border": {
@@ -544,9 +619,43 @@
                 },
                 "size": 15,
                 "text": {
-                  "field": "r4_total",
-                  "fixed": "",
-                  "mode": "field"
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "r1_total_label",
+              "placement": {
+                "height": 30,
+                "left": 220,
+                "top": -112.5,
+                "width": 72
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "W"
                 },
                 "valign": "middle"
               },
@@ -554,14 +663,85 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r4_total_value",
+              "name": "watt3",
+              "placement": {
+                "height": 28,
+                "left": 124.5,
+                "top": -112,
+                "width": 47
+              },
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "yellow"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 15,
+                "text": {
+                  "fixed": "Total"
+                },
+                "valign": "middle"
+              },
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "r2_total_label",
               "placement": {
                 "height": 29.4375,
-                "left": 149.5625,
-                "top": 134.28125,
-                "width": 71.875
+                "left": -111.0703125,
+                "top": -112.21875,
+                "width": 70.140625
               },
-              "type": "metric-value"
+              "type": "text"
+            },
+            {
+              "background": {
+                "color": {
+                  "fixed": "transparent"
+                }
+              },
+              "border": {
+                "color": {
+                  "fixed": "dark-green"
+                }
+              },
+              "config": {
+                "align": "center",
+                "color": {
+                  "fixed": "#000000"
+                },
+                "size": 16,
+                "text": {
+                  "fixed": "W"
+                },
+                "valign": "middle"
+              },
+              "connections": [],
+              "constraint": {
+                "horizontal": "center",
+                "vertical": "center"
+              },
+              "name": "WATT4",
+              "placement": {
+                "height": 28,
+                "left": -200.5,
+                "top": -112.5,
+                "width": 47
+              },
+              "type": "text"
             }
           ],
           "name": "Element 1690881326719",
@@ -642,6 +822,6 @@
   "timezone": "",
   "title": "Floor plan 1",
   "uid": "f1",
-  "version": 12,
+  "version": 6,
   "weekStart": ""
 }
