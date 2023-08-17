@@ -30,7 +30,8 @@ const Displayer = (props) => {
             <p>
                 List of devices
             </p>
-            <div>
+            div>div 
+            <div> 
                 {posts.length > 0 && (
                 <div>
                     {posts.map((post) => (
