@@ -50,6 +50,10 @@ or fresh restart (clean, build, run)
 docker compose down ; docker compose up -d ; bash init.sh
 ```
 
+## FAQ
+
+You can see the Frequently Asqued Questions [here  (./documentation/FAQ.md)](./documentation/FAQ.md)
+
 ## Submodules and different parts of the project
 
 - Folder naming convention : `snake_case`

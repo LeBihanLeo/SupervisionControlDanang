@@ -38,6 +38,8 @@ Summary: import influxDB datasource then import the home dashboard
 
 ## Manual import of the alerts
 
+There should be only one alert in Grafana : the one that monitors that [InfluxDB](../influxdb/README.md#add-and-manage-alerts) works well, all the others have to be set up in [InfluxDB](../influxdb/README.md#add-and-manage-alerts)
+
 It is not possible to automatically import the alerts, so you have to do it manually : 
 
 1. Open [Grafana (localhost:3000)](http://localhost:3000) or [Grafana (apps.vngalaxy.vn)](https://apps.vngalaxy.vn:3000)
@@ -81,3 +83,24 @@ It is not possible to automatically import the alerts, so you have to do it manu
 ## Managing users
 
 [Create users and teams - Grafana documentation](https://grafana.com/tutorials/create-users-and-teams/)
+
+## Forgotten admin password
+
+Source : [](https://community.grafana.com/t/default-admin-password-cant-login/37930/2)
+
+- Open the Grafana bash using this command
+
+```bash
+docker exec -it grafana bash
+```
+
+- Then use this command 
+
+```bash
+grafana-cli admin reset-admin-password new_passwd
+```
+
+## Add Grafana as an App on your Smartphone 
+
+| ![grafana mobile](z4606387072779_0555ad5a25906422f1f5b1a20f3ba8e7.jpg) | ![grafana mobile](z4606387080954_132e7fc61450418135cea1324fce082f.jpg) |
+|------------------------------------------------------------------------|------------------------------------------------------------------------|

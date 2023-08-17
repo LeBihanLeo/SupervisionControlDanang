@@ -1,10 +1,27 @@
 # InfluxDB
 
-## Prerequisites
+## Add and manage alerts 
 
-Windows with Git Bash or linux
+Alerts shoud be sent from this central point and not from [Grafana](../grafana/README.md).
+
+1. Add `CHECKS`
+  - In the left menu click the bell icon (Alerts)
+  - Click on `+ CREATE`
+  - Click on `Threshold Check`
+    1. `DEFINE QUERY`
+      - Use the right field and agregate function
+    2. `CONFIGURE CHECK`
+      - Add thresholds
+2. Add `NOTIFICATION ENDPOINTS`
+3. Add `NOTIFICATION RULES`
+
+You now should have your alerts sent to your Webhook/Slack or other
 
 ## Usage
+
+### Prerequisites
+
+Windows with Git Bash or linux
 
 At the first launch of InfluxDB, openHAB bucket does not exist; we will add it with this script
 
