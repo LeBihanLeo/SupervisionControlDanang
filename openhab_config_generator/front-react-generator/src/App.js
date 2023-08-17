@@ -25,8 +25,8 @@ function App() {
   return (
     <div className="Main">
       <div className="TopBar">
-        <p onClick={goToAdd}>Add</p>
-        <p onClick={goToOverview}>Overview</p>
+        <p class="menuTitle" onClick={goToAdd}>Add</p>
+        <p class="menuTitle" onClick={goToOverview}>Overview</p>
       </div>
 
       <div className="App">

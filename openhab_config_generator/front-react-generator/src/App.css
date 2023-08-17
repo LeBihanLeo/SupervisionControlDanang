@@ -5,20 +5,20 @@
   width: 100vw;
 }
 
-.TopBar p{
+.menuTitle{
   text-align: center;
   margin: auto;
   margin-left: 4vw;
   margin-right: 4vw;
-  color: blue;
+  color: black;
   font-weight: bold;
   font-size: x-large;
   width: 4vw;
   height: 4vh;
 }
 
-.TopBar p:hover{
-  font-size: xx-large;
+.menuTitle:hover{
+  color: blue;
 }
 
 .App{
