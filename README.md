@@ -2,13 +2,26 @@
 
 This project aims to create a system to control and supervise the energy production of renewable energy sources.
 
-## Production URL
+## Table of Contents
+
+- [SupervisionControlDanang](#supervisioncontroldanang)
+  - [Table of Contents](#table-of-contents)
+  - [URL of the online tools and services of the project](#url-of-the-online-tools-and-services-of-the-project)
+  - [Software Architecture](#software-architecture)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Usage](#usage)
+      - [How to run the project](#how-to-run-the-project)
+  - [FAQ](#faq)
+  - [Submodules and different parts of the project](#submodules-and-different-parts-of-the-project)
+    - [Main project](#main-project)
+    - [Device configuration generator](#device-configuration-generator)
+    - [Continuous integration](#continuous-integration)
+    - [Non runnable folders](#non-runnable-folders)
+
+## URL of the online tools and services of the project
 
 [apps.vngalaxy.vn](https://apps.vngalaxy.vn)
-
-## Physical Architecture
-
-![Physical Architecture](./documentation/schemas/HRES%20schema.drawio.svg)
 
 ## Software Architecture
 
@@ -44,12 +57,6 @@ On Linux to run the project (in background)
 docker compose up -d
 ```
 
-or fresh restart (clean, build, run)
-
-```bash
-docker compose down ; docker compose up -d ; bash init.sh
-```
-
 ## FAQ
 
 You can see the Frequently Asqued Questions [here  (./documentation/FAQ.md)](./documentation/FAQ.md)
@@ -74,7 +81,7 @@ You can see the Frequently Asqued Questions [here  (./documentation/FAQ.md)](./d
 
 Folder: [openhab_config_generator](./openhab_config_generator)
 
-| Part                                                         | Is running in docker                                                                | Is automatically set up    |
+| Subfolder                                                         | Is running in docker                                                                | Is automatically set up    |
 |--------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------|
 | [backend](./openhab_config_generator/python_code)            | No, run it manually [see README.md](openhab_config_generator/python_code/README.md) | Yes if python is installed |
 | [frontend](./openhab_config_generator/front-react-generator) | Work In Progress                                                                    | Work In Progress           |
