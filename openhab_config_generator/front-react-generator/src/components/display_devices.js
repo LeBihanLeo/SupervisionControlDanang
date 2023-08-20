@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
-import APIService from './API_post'
+import APIService from './API_post';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import '../App.css';
 
 
 const Displayer = (props) => {
@@ -26,33 +32,43 @@ const Displayer = (props) => {
     }, []);
 
     return (
-        <div>
-            <p>
-                List of devices
-            </p>
-            div>div 
+        <div className='card'>
+            <h3>List of devices</h3>
             <div> 
                 {posts.length > 0 && (
                 <div>
                     {posts.map((post) => (
-                    <ul className="device"  id={post.device_type + "_" + post.device_location + "_" + post.device_id}>{post.device_type}
-                        {post.data.map((d) => (
-                            <div>
-                                <li className="data" key={d.data_name}> - {d.data_name}: {d.data_type}</li>
-                            </div>
-                        ))}
-                        <button onClick={() => {
-                            deleteDevice(post.device_type, post.device_location, post.device_id);
-                        }}>
-                            remove device
-                        </button>
-                    </ul>
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                                >
+                                <Typography>{post.device_type + " " + post.device_location + " " + post.device_id}</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                            <Typography component={'span'}>
+                                <ul className='device'>
+                                    {post.data.map((d) => (
+                                        <div>
+                                            <li key={d.data_name}> - {d.data_name}: {d.data_type}</li>
+                                        </div>
+                                    ))}
+                                </ul>
+                                <button onClick={() => {
+                                    deleteDevice(post.device_type, post.device_location, post.device_id);
+                                }}>
+                                    remove device
+                                </button>
+                            </Typography>
+                            </AccordionDetails>
+                        </Accordion>
                     ))}
                 </div>
                 )}
             </div>
-      </div>
-
-    )}
+        </div>
+    );
+};
 
 export default Displayer;

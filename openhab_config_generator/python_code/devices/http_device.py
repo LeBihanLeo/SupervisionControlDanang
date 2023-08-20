@@ -93,14 +93,13 @@ def fetch_existing_devices(filename, existing_device_list):
     founded_things = re.findall("Thing[^}]+}", data)
     for founded_thing in founded_things:
         device_info = {}
-        thing_channels_type = re.findall("Type \w*", founded_thing)
-        thing_channels_type = [str(device_channel).replace("Type ", "") for device_channel in thing_channels_type]
-        thing_channels = re.findall("\w+_channel", founded_thing)
-        split_channels = [str(channel).split("_") for channel in thing_channels]
+        thing_channels_type = re.findall("Type number : \w+", founded_thing)
+        thing_channels_type = [str(device_channel).replace("Type number : ", "") for device_channel in thing_channels_type]
+        split_channels = [str(channel).split("_") for channel in thing_channels_type]
         device_info["device_type"] = split_channels[0][0]
         device_info["device_location"] = split_channels[0][1]
         device_info["device_id"] = split_channels[0][2]
-        device_info["data"] = [{"data_type": thing_channels_type[i], "data_name": split_channels[i][3]} for i in
+        device_info["data"] = [{"data_type": "number", "data_name": split_channels[i][3]} for i in
                                range(len(thing_channels_type))]
         existing_device_list.append(device_info)
 
