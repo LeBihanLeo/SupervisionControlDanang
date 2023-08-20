@@ -1,0 +1,45 @@
+import "influxdata/influxdb/monitor"
+import "slack"
+import "influxdata/influxdb/secrets"
+import "experimental"
+
+option task = {name: "is AC running", every: 5s, offset: 0s}
+
+slack_endpoint =
+    slack["endpoint"](
+        url: "https://hooks.slack.com/services/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",
+    )
+notification = {
+    _notification_rule_id: "0bb0997b86efc000",
+    _notification_rule_name: "is AC running",
+    _notification_endpoint_id: "0b995a12a747d000",
+    _notification_endpoint_name: "Slack destination",
+}
+statuses = monitor["from"](start: -10s, fn: (r) => r["AC"] == "AC")
+info = statuses |> filter(fn: (r) => r["_level"] == "info")
+all_statuses =
+    info |> filter(fn: (r) => r["_time"] >= experimental["subDuration"](from: now(), d: 5s))
+
+all_statuses
+    |> monitor["notify"](
+        data: notification,
+        endpoint:
+            slack_endpoint(
+                mapFn:
+                    (r) =>
+                        ({
+                            channel: "",
+                            text:
+                                "Notification Rule: ${ r._notification_rule_name } triggered by check: ${ r._check_name }: ${ r._message }
+
+is AC running",
+                            color:
+                                if r["_level"] == "crit" then
+                                    "danger"
+                                else if r["_level"] == "warn" then
+                                    "warning"
+                                else
+                                    "good",
+                        }),
+            ),
+    )

@@ -1,17 +1,19 @@
 # InfluxDB
 
-## Add and manage alerts 
+## Add and manage alerts
 
 Alerts shoud be sent from this central point and not from [Grafana](../grafana/README.md).
 
 1. Add `CHECKS`
-  - In the left menu click the bell icon (Alerts)
-  - Click on `+ CREATE`
-  - Click on `Threshold Check`
-    1. `DEFINE QUERY`
-      - Use the right field and agregate function
-    2. `CONFIGURE CHECK`
-      - Add thresholds
+
+   - In the left menu click the bell icon (Alerts)
+   - Click on `+ CREATE`
+   - Click on `Threshold Check`
+       1. `DEFINE QUERY`
+     - Use the right field and agregate function
+       1. `CONFIGURE CHECK`
+     - Add thresholds
+
 2. Add `NOTIFICATION ENDPOINTS`
 3. Add `NOTIFICATION RULES`
 
