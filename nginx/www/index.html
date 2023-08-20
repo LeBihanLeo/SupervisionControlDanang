@@ -2,72 +2,21 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SCD (SupervisionControlDanang)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .link {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .link:hover {
-            text-decoration: underline;
-        }
-        .running-on {
-            margin-top: 1rem;
-        }
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-        .running-button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #ff9900;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            text-decoration: none;
-        }
-        .blue{
-            background-color: #646ad9;
-        }
-    </style>
+    <title>ECOMAS</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <header>
-        <h1>SupervisionControlDanang</h1>
+        <h1>Energy Consumption Management System</h1>
     </header>
     <div class="container">
         <div class="running-on">
             <p>Running on :</p>
             <div class="button-container">
-                <a class="running-button" href="https://apps.vngalaxy.vn:8086" target="_blank">InfluxDB</a>
-                <a class="running-button" href="https://apps.vngalaxy.vn:3000" target="_blank">Grafana</a>
-                <a class="running-button" href="https://apps.vngalaxy.vn:8443" target="_blank">openHAB</a>
-                <a class="running-button" href="http://apps.vngalaxy.vn:3002" target="_blank">jenkins</a>
+                <a class="running-button" href="https://apps.vngalaxy.vn:8086" target="_blank"><img class="running-icon" src="./ressources/influxdb.ico" alt="InfluxDB Icon"> InfluxDB</a>
+                <a class="running-button" href="https://apps.vngalaxy.vn:3000" target="_blank"><img class="running-icon" src="./ressources/grafana.png" alt="Grafana Icon"> Grafana</a>
+                <a class="running-button" href="https://apps.vngalaxy.vn:8443" target="_blank"><img class="running-icon" src="./ressources/openhab.ico" alt="openHAB Icon"> openHAB</a>
+                <a class="running-button" href="http://apps.vngalaxy.vn:3002" target="_blank"><img class="running-icon" src="./ressources/jenkins.ico" alt="Jenkins Icon"> jenkins</a>
             </div>
             <p>Other services :</p>
             <a class="running-button blue" href="https://myopenhab.org" target="_blank">myopenHAB</a>
