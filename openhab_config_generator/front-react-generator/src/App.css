@@ -19,13 +19,13 @@
 
 .menuTitle:hover{
   color: blue;
+  cursor: pointer;
 }
 
 .App{
   display: inline-flex;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
-  opacity: 95%;
+  background-color: rgb(255 255 255 / 90%);
   min-height: 70vh;
   height: fit-content;
   width: 80vw;
@@ -107,4 +107,17 @@ p{
 input{
   border:0;
   background-color: rgb(202, 202, 202);
+}
+
+.card {
+    background-color: rgb(250, 250, 250);
+    opacity: 100%;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card h3 {
+    text-align: center;
 }
