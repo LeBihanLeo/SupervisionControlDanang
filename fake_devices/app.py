@@ -13,9 +13,9 @@ def get_lights(etage, salle):
 
 def get_air_conditioning(etage, salle):
     ac_id = f"ac_f{etage}_r{salle}"
-    consumption = 500 + 100 * etage  # Simulated consumption in watts
     temperature = 25 + etage  # Simulated temperature in degrees
     state = random.randrange(2) # Simulated state ON/OFF
+    consumption = 500 + 100 * etage if state else 0  # Simulated consumption in watts
     ac = {"id": ac_id, "consumption": consumption, "temperature": temperature, "state": state}
     return ac
 
