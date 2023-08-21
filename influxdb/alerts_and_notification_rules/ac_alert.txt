@@ -1,0 +1,23 @@
+import "influxdata/influxdb/monitor"
+import "influxdata/influxdb/v1"
+
+data =
+    from(bucket: "openhab")
+        |> range(start: -15s)
+        |> filter(fn: (r) => r["_measurement"] =~ /ac_f\d_r\d_state/)
+        //|> hourSelection(start: 19, stop: 7)
+        |> filter(fn: (r) => r["_field"] == "value")
+        |> aggregateWindow(every: 15s, fn: mean, createEmpty: false)
+
+option task = {name: "AC check info", every: 15s, offset: 0s}
+
+check = {
+    _check_id: "0bb098f949c07000",
+    _check_name: "AC check info",
+    _type: "threshold",
+    tags: {AC: "AC"},
+}
+info = (r) => r["value"] > 500.0
+messageFn = (r) => "AC : Check: ${r._check_name} is: ${r._level}}"
+
+data |> v1["fieldsAsCols"]() |> monitor["check"](data: check, messageFn: messageFn, info: info)
