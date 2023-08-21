@@ -3,6 +3,7 @@ import re
 from registered_devices import REGISTERED_DEVICES_CHANNEL_LIST
 from devices.http_device_channel import HttpDeviceChannel
 from file_helper import get_file_data, write_in_file
+import requests
 
 THINGS_FILE_PATH = f"../../openhab/conf/things/bearer-http.things"
 ITEMS_FILE_PATH = f"../../openhab/conf/items/bearer-http.items"
@@ -109,3 +110,22 @@ def fetch_all_existing_devices():
     for filename in filenames:
         fetch_existing_devices(filename, existing_device_list)
     return existing_device_list
+
+# Return a list of dico having information about all channels given by a device with a specific bearer token
+def get_channels_with_bearer_token(bearer_token):
+    headers = {
+        "WWW-Authenticate": "Basic",
+        "Authorization": f"Bearer {bearer_token}"
+               }
+    x = requests.post('http://api.vngalaxy.vn/api/uplink/', headers=headers)
+    data = x.json()
+    channel_json = data["data"][0]["objectJSON"]["data"]
+    correct_keys = []
+
+    # Get key that follow the json schema
+    for channel_key in channel_json:
+        if "value" in channel_json[channel_key]:
+            correct_keys.append(channel_key)
+
+    information_retrieved = [{"key": key, "json_path": f"$.data[0].objectJSON.data[\"{key}\"].value"} for key in correct_keys]
+    return information_retrieved
