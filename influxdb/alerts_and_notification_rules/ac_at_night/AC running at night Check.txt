@@ -8,19 +8,19 @@ data =
     from(bucket: "openhab")
         |> range(start: -15s)
         |> filter(fn: (r) => r["_measurement"] =~ /ac_f\d_r\d_state/)
-//        |> hourSelection(start: 19, stop: 7)
+        |> hourSelection(start: 19, stop: 7)
         |> last()
         |> filter(fn: (r) => r["_value"] == 1)
 
-option task = {name: "AC check info", every: 15s, offset: 0s}
+option task = {name: "AC running at night | Check", every: 15s, offset: 0s}
 
 check = {
     _check_id: "0bb098f949c07000",
-    _check_name: "AC check info",
+    _check_name: "AC running at night | Check",
     _type: "threshold",
     tags: {AC: "AC"},
 }
 info = (r) => r["value"] == 1
-messageFn = (r) => "${r._source_measurement} ON: AC IS RUNNING DURING THE NIGHT"
+messageFn = (r) => "${r._source_measurement} is on"
 
 data |> v1["fieldsAsCols"]() |> monitor["check"](data: check, messageFn: messageFn, info: info)

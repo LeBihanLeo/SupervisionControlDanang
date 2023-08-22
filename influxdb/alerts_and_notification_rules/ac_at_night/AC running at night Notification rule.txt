@@ -3,7 +3,7 @@ import "slack"
 import "influxdata/influxdb/secrets"
 import "experimental"
 
-option task = {name: "is AC running", every: 5s, offset: 0s}
+option task = {name: "AC running at night | Notification rule", every: 5s, offset: 0s}
 
 slack_endpoint =
     slack["endpoint"](
@@ -11,7 +11,7 @@ slack_endpoint =
     )
 notification = {
     _notification_rule_id: "0bb0997b86efc000",
-    _notification_rule_name: "is AC running",
+    _notification_rule_name: "AC running at night | Notification rule",
     _notification_endpoint_id: "0b995a12a747d000",
     _notification_endpoint_name: "Slack destination",
 }
@@ -30,9 +30,8 @@ all_statuses
                         ({
                             channel: "",
                             text:
-                                "Notification Rule: ${ r._notification_rule_name } triggered by check: ${ r._check_name }: ${ r._message }
-
-is AC running",
+                                "Notification Rule: \"${ r._notification_rule_name }\" triggered by check: \"${ r._check_name }\"
+Message : ${ r._message }",
                             color:
                                 if r["_level"] == "crit" then
                                     "danger"
