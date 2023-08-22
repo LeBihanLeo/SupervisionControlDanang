@@ -86,7 +86,8 @@ const Form = (props) => {
         <p>CREATE A NEW DEVICE</p>
         <div className='BigBox'>
           <div className='Box'>
-            <label htmlFor="Type" className="form-label">Type</label>
+            <label htmlFor="Type" className="form-label">Informations</label><br/>
+            Type
             <br/>
             <input 
               type="text"
@@ -96,9 +97,9 @@ const Form = (props) => {
               onChange={(e)=>setType(e.target.value)}
               required
             />
-                      <br/>
+            <br/>
 
-            <label htmlFor="location" className="form-label">Location</label>
+            Location
             <br/>
             <input 
               type="text"
@@ -110,7 +111,7 @@ const Form = (props) => {
             />
             <br/>
 
-            <label htmlFor="id" className="form-label">Id</label>
+            Id
             <br/>
             <input 
               type="text"
@@ -122,7 +123,7 @@ const Form = (props) => {
             />
             <br/>
 
-            <label htmlFor="bearer_token" className="form-label">Bearer token</label>
+            Bearer token
             <br/>
             <input 
               type="text"
