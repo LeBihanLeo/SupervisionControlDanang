@@ -45,3 +45,19 @@ see `.env` file at the root of the project
 ## Info
 
 NOTE: Valid units are nanoseconds (ns), microseconds(us), milliseconds (ms), seconds (s), minutes (m), hours (h), days (d), and weeks (w).
+
+## Alerts
+
+You can either program an alert with GUI or with a script.
+The provided alerts are in script format.
+
+### Implemented alerts
+
+- [AC on at night](./alerts_and_notification_rules/ac_at_night/AC%20running%20at%20night%20Check.txt) + [Notification rule](./alerts_and_notification_rules/ac_at_night/AC%20running%20at%20night%20Notification%20Rule.txt)
+- [Lights on after closing hours](./alerts_and_notification_rules/lights_on_at_night/Lights%20on%20at%20night%20Check.txt) + [Notification rule](./alerts_and_notification_rules/lights_on_at_night/Lights%20on%20at%20night%20Notification%20Rule.txt)
+- [Lights on between 11am and 2pm (lunch break)](./alerts_and_notification_rules/lights_on_at_night/Lights%20on%20during%20midday%20Check.txt) same notification rule as above
+
+### Alerts we could implement with more sensors
+
+- If no presence and AC / light on, alert
+- If air not pure, alert (ppm sensor)

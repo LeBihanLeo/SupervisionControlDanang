@@ -86,15 +86,16 @@
   justify-content: center;
 }
 
-#newChannel{
+img{
+  width: 1vw;
+  height: 1vw;
+}
+
+img:hover{
   border-radius: 100%;
-  font-size:medium;
+  background-color: rgb(221, 221, 221);
+  cursor: pointer;
 }
-
-#newChannel:hover{
-  font-size:large;
-}
-
 label{
   font-weight: bold;
   font-size: x-large;
