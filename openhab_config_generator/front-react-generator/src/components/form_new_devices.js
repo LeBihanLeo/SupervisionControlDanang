@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import APIService from './API_post'
+import { Button } from '@mui/material';
 
 
 const Form = (props) => {
@@ -44,7 +45,6 @@ const Form = (props) => {
     function myInput(){
       const e = document.createElement('input')
       e.type = "text"
-      e.className="form-control" 
       return e
     }
 
@@ -95,69 +95,65 @@ const Form = (props) => {
 
   return (
     <div className='card' id='Displayer'>
-        <p>CREATE A NEW DEVICE</p>
-        <div className='BigBox'>
-          <div className='Box'>
-            <label htmlFor="Type" className="form-label">Informations</label><br/>
-            Type
-            <br/>
-            <input 
-              type="text"
-              className="form-control" 
-              placeholder ="Enter type"
-              value={type}
-              onChange={(e)=>setType(e.target.value)}
-              required
-            />
-            <br/>
+        <p className='title'>CREATE A NEW DEVICE</p>
+            <form className='create-device' onSubmit={handleSubmit}>
+                <div className='device-info'>
+                    <div className='basic-info'>
+                        <h2>Informations</h2>
+                        <label for="type">Type</label>
+                        <input 
+                            id="type"
+                            type="text"
+                            placeholder ="Enter type"
+                            value={type}
+                            onChange={(e)=>setType(e.target.value)}
+                            required
+                            />
 
-            Location
-            <br/>
-            <input 
-              type="text"
-              className="form-control" 
-              placeholder ="Enter location"
-              value={location}
-              onChange={(e)=>setLocation(e.target.value)}
-              required
-            />
-            <br/>
+                        <label for="location">Location</label>
+                        <input 
+                            id="location"
+                            type="text"
+                            placeholder ="Enter type"
+                            value={location}
+                            onChange={(e)=>setLocation(e.target.value)}
+                            required
+                            />
 
-            Id
-            <br/>
-            <input 
-              type="text"
-              className="form-control" 
-              placeholder ="Enter id"
-              value={id}
-              onChange={(e)=>setId(e.target.value)}
-              required
-            />
-            <br/>
+                        <label for="id">Id</label>
+                        <input 
+                            id="id"
+                            type="text"
+                            placeholder ="Enter type"
+                            value={id}
+                            onChange={(e)=>setId(e.target.value)}
+                            required
+                            />
 
-            Bearer token
-            
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Refresh_icon.svg/2048px-Refresh_icon.svg.png" onClick={loadChannel}></img>
-            <br/>
-            <input 
-              type="text"
-              className="form-control" 
-              placeholder ="Enter Bearer token"
-              value={bearer_token}
-              onChange={(e)=>setBearerToken(e.target.value)}
-              required
-            />
-          </div>
-          <div className='Box'>
-            <label htmlFor="channels" className="form-label">Channels    </label>
-            <img src="https://cdn-icons-png.flaticon.com/512/60/60745.png" onClick={addChannel}></img>
-            <div id='channels'>            
-            
-            </div>
-          </div>
-        </div>
+                        <label for="bearer_token">Bearer token</label>
+                        <input 
+                            id="bearer_token"
+                            type="text"
+                            placeholder ="Enter bearer token"
+                            value={bearer_token}
+                            onChange={(e)=>setBearerToken(e.target.value)}
+                            required
+                            />
+                    </div>
+                    <div className='channels-info'>
+                        <h2 className="form-label">Channels</h2>
+                        <img src="https://cdn-icons-png.flaticon.com/512/60/60745.png" onClick={addChannel}></img>
+                        <div id='channels'>            
+                        
+                        </div>
+                    </div>
+                </div>
+                <div className='center-button'>
+                    <Button variant="contained" type='submit'>Create device</Button>
+                </div>
+            </form>
         <br/>
-        <button onClick={handleSubmit}>Create Device</button>   
+           
 
     </div>
   )}

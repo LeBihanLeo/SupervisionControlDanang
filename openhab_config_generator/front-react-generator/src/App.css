@@ -118,8 +118,63 @@ input{
     margin-inline: 10vw;
     margin-block: 1vh;
     width: 60vw;
+    display: flex;
+    flex-direction: column;
 }
 
 .card h3 {
     text-align: center;
+}
+
+.create-device {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.create-device label {
+    font-weight: normal;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    font-size: 20px;
+}
+
+.create-device input {
+    font-size: 20px;
+    padding: 0.5vh;
+}
+
+.create-device Button {
+    font-weight: bold;
+    width: fit-content;
+}
+
+.create-device h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.device-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.basic-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 500;
+    margin-block: 2vh;
+    flex: 0;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
 }
