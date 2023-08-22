@@ -113,19 +113,24 @@ def fetch_all_existing_devices():
 
 # Return a list of dico having information about all channels given by a device with a specific bearer token
 def get_channels_with_bearer_token(bearer_token):
-    headers = {
-        "WWW-Authenticate": "Basic",
-        "Authorization": f"Bearer {bearer_token}"
-               }
-    x = requests.post('http://api.vngalaxy.vn/api/uplink/', headers=headers)
-    data = x.json()
-    channel_json = data["data"][0]["objectJSON"]["data"]
-    correct_keys = []
+    try:
+        headers = {
+            "WWW-Authenticate": "Basic",
+            "Authorization": f"Bearer {bearer_token}"
+        }
+        x = requests.post('http://api.vngalaxy.vn/api/uplink/', headers=headers)
+        
+        data = x.json()
+        channel_json = data["data"][0]["objectJSON"]["data"]
+        correct_keys = []
 
-    # Get key that follow the json schema
-    for channel_key in channel_json:
-        if "value" in channel_json[channel_key]:
-            correct_keys.append(channel_key)
+        # Get key that follow the json schema
+        for channel_key in channel_json:
+            if "value" in channel_json[channel_key]:
+                correct_keys.append(channel_key)
 
-    information_retrieved = [{"key": key, "json_path": f"$.data[0].objectJSON.data[\"{key}\"].value"} for key in correct_keys]
-    return information_retrieved
+        information_retrieved = [{"key": key, "json_path": f"$.data[0].objectJSON.data[\"{key}\"].value"} for key in
+                                 correct_keys]
+        return information_retrieved
+    except:
+        return []
