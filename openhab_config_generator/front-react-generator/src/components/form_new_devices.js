@@ -124,6 +124,8 @@ const Form = (props) => {
             <br/>
 
             Bearer token
+            
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Refresh_icon.svg/2048px-Refresh_icon.svg.png" onClick={loadChannel}></img>
             <br/>
             <input 
               type="text"
@@ -133,13 +135,12 @@ const Form = (props) => {
               onChange={(e)=>setBearerToken(e.target.value)}
               required
             />
-            <button onClick={loadChannel} id='newChannel'>load channel</button>
           </div>
           <div className='Box'>
             <label htmlFor="channels" className="form-label">Channels    </label>
-            <button onClick={addChannel} id='newChannel'>+</button>
-            <div id='channels'>
-
+            <img src="https://cdn-icons-png.flaticon.com/512/60/60745.png" onClick={addChannel}></img>
+            <div id='channels'>            
+            
             </div>
           </div>
         </div>
