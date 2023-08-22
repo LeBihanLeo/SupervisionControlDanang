@@ -2,10 +2,3 @@ Number meteostation_dut_1_humidity "meteostation_dut_1 humidity" { channel="http
 Number meteostation_dut_1_illuminance "meteostation_dut_1 illuminance" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_illuminance_channel", persistence="influxdb" }
 Number meteostation_dut_1_temperature "meteostation_dut_1 temperature" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_temperature_channel", persistence="influxdb" }
 
-
-
-
-
-
-
-
