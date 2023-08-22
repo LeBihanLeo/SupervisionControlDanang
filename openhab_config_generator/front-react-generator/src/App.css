@@ -64,7 +64,6 @@
 .BigBox{
   display: inline-flex;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
   height: fit-content;
   width: fit-content;
   font-size: large;
