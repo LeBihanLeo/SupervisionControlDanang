@@ -68,11 +68,12 @@ const Form = (props) => {
 
       const channel = [channel_name,channel_json_path]
 
-      let del = document.createElement('img');
+      const del = document.createElement('img');
       del.src ='https://cdn-icons-png.flaticon.com/512/535/535246.png';
-      del.addEventListener("onClick", removeChannel(container, channel));
 
       container.appendChild(del)
+
+      del.addEventListener("click", () => {removeChannel(container, channel)});
 
       channelsHTML.push(channel)
       channels.push(['',''])
@@ -85,6 +86,7 @@ const Form = (props) => {
         return c != channel;
       });
       cont.innerHTML = ''
+      nb_channel--
     }
 
     const loadChannel=(event)=>{
