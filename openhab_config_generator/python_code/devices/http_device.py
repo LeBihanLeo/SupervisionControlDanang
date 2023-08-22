@@ -134,3 +134,11 @@ def get_channels_with_bearer_token(bearer_token):
         return information_retrieved
     except:
         return []
+
+# Return True if the device already exist and False otherwise
+def is_existing_device(device_type, device_location, device_id):
+    devices = fetch_all_existing_devices()
+    for device in devices:
+        if device["device_type"] == device_type and device["device_location"] == device_location and device["device_id"] == device_id:
+            return True
+    return False
