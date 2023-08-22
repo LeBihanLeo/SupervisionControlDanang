@@ -119,7 +119,7 @@ def get_channels_with_bearer_token(bearer_token):
             "Authorization": f"Bearer {bearer_token}"
         }
         x = requests.post('http://api.vngalaxy.vn/api/uplink/', headers=headers)
-        
+
         data = x.json()
         channel_json = data["data"][0]["objectJSON"]["data"]
         correct_keys = []
