@@ -75,10 +75,14 @@ const Form = (props) => {
 
     }
 
-
+    const loadChannel=(event)=>{
+      APIService.GetChannels({bearer_token})
+      .then((response) => console.log(response))
+      .catch(error => console.log('error',error))
+    }
 
   return (
-    <div className="Displayer">
+    <div className='card' id='Displayer'>
         <p>CREATE A NEW DEVICE</p>
         <div className='BigBox'>
           <div className='Box'>
@@ -128,6 +132,7 @@ const Form = (props) => {
               onChange={(e)=>setBearerToken(e.target.value)}
               required
             />
+            <button onClick={loadChannel} id='newChannel'>load channel</button>
           </div>
           <div className='Box'>
             <label htmlFor="channels" className="form-label">Channels    </label>

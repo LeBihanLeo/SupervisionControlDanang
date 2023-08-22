@@ -38,8 +38,8 @@ const Displayer = (props) => {
                 {posts.length > 0 && (
                 <div>
                     {posts.map((post) => (
-                        <Accordion>
-                            <AccordionSummary
+                        <Accordion id={post.device_type + "_" + post.device_location + "_" + post.device_id} > 
+                            <AccordionSummary   
                                 expandIcon={<ExpandMoreIcon />}
                                 aria-controls="panel1a-content"
                                 id="panel1a-header"
@@ -51,7 +51,7 @@ const Displayer = (props) => {
                                 <ul className='device'>
                                     {post.data.map((d) => (
                                         <div>
-                                            <li key={d.data_name}> - {d.data_name}: {d.data_type}</li>
+                                            <li key={d.data_name}>- {d.data_name}</li>
                                         </div>
                                     ))}
                                 </ul>

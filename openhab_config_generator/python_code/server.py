@@ -31,5 +31,13 @@ def remove_devices():
     http_device.delete_http_device(request.json['type'],request.json['loc'],request.json['id'])
     return "200"
 
+
+@app.route("/getChannels", methods=["POST"], strict_slashes=False)
+def get_channels_bt():
+    print(request)
+    response = http_device.get_channels_with_bearer_token(request.json['bearer_token'])
+    return response
+
+
 if __name__ == '__main__':
     app.run()
