@@ -52,7 +52,9 @@ const Form = (props) => {
       nb_channel ++
 
       const container = document.getElementById('channels')
+
       if(nb_channel!=1) container.appendChild(document.createElement("HR"))
+      
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
       container.appendChild(channel_name)
@@ -66,10 +68,23 @@ const Form = (props) => {
 
       const channel = [channel_name,channel_json_path]
 
+      let del = document.createElement('img');
+      del.src ='https://cdn-icons-png.flaticon.com/512/535/535246.png';
+      del.addEventListener("onClick", removeChannel(container, channel));
+
+      container.appendChild(del)
+
       channelsHTML.push(channel)
       channels.push(['',''])
-      console.log(channels.length)
+    }
 
+    function removeChannel(cont, channel){
+      console.log("channelsHTML.length")
+      channels.pop()
+      channelsHTML = channelsHTML.filter(function (c) {
+        return c != channel;
+      });
+      cont.innerHTML = ''
     }
 
     const loadChannel=(event)=>{
