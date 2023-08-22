@@ -52,9 +52,7 @@ const Form = (props) => {
       nb_channel ++
 
       const container = document.getElementById('channels')
-      container.appendChild(document.createTextNode("channel " + nb_channel + ":   "))
-
-      container.appendChild(document.createElement("BR"))
+      if(nb_channel!=1) container.appendChild(document.createElement("HR"))
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
       container.appendChild(channel_name)
@@ -65,7 +63,6 @@ const Form = (props) => {
       channel_json_path.placeholder = "Enter json path"
       container.appendChild(channel_json_path)
 
-      container.appendChild(document.createElement("BR"))
 
       const channel = [channel_name,channel_json_path]
 
