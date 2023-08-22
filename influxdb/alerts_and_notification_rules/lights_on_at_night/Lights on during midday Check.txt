@@ -1,0 +1,26 @@
+import "influxdata/influxdb/monitor"
+import "influxdata/influxdb/v1"
+import "timezone"
+
+option location = timezone.location(name: "Asia/Bangkok")
+
+data =
+    from(bucket: "openhab")
+        |> range(start: -15s)
+        |> filter(fn: (r) => r["_measurement"] =~ /lights_f\d_r\d_state/)
+        |> hourSelection(start: 11, stop: 14)
+        |> last()
+        |> filter(fn: (r) => r["_value"] == 1)
+
+option task = {name: "Lights on during midday | Check", every: 15s, offset: 0s}
+
+check = {
+    _check_id: "0bb098f949c07001",
+    _check_name: "Lights on during midday | Check",
+    _type: "threshold",
+    tags: {Light: "Light"},
+}
+info = (r) => r["value"] == 1
+messageFn = (r) => "${r._source_measurement} is on"
+
+data |> v1["fieldsAsCols"]() |> monitor["check"](data: check, messageFn: messageFn, info: info)
