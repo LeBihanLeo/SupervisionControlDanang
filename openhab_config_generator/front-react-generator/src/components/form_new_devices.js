@@ -52,39 +52,48 @@ const Form = (props) => {
       nb_channel ++
 
       const container = document.getElementById('channels')
+      const div = document.createElement("div")
 
-      if(nb_channel!=1) container.appendChild(document.createElement("HR"))
+      if(nb_channel!=1) div.appendChild(document.createElement("HR"))
       
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
-      container.appendChild(channel_name)
+      div.appendChild(channel_name)
 
-      container.appendChild(document.createTextNode("    "))
+      div.appendChild(document.createTextNode("    "))
 
       const channel_json_path = myInput()
       channel_json_path.placeholder = "Enter json path"
-      container.appendChild(channel_json_path)
+      div.appendChild(channel_json_path)
 
 
       const channel = [channel_name,channel_json_path]
 
-      let del = document.createElement('img');
+      const del = document.createElement('img');
       del.src ='https://cdn-icons-png.flaticon.com/512/535/535246.png';
-      del.addEventListener("onClick", removeChannel(container, channel));
 
-      container.appendChild(del)
+      div.appendChild(del)
+
+      del.addEventListener("click", () => {removeChannel(div, channel)});
 
       channelsHTML.push(channel)
       channels.push(['',''])
+
+      container.appendChild(div)
     }
 
     function removeChannel(cont, channel){
-      console.log("channelsHTML.length")
       channels.pop()
       channelsHTML = channelsHTML.filter(function (c) {
         return c != channel;
       });
       cont.innerHTML = ''
+      nb_channel--
+      
+      console.log(channelsHTML.length+ " " + channels.length)
+      for(let x = 0;x<nb_channel;x++){
+        console.log(channelsHTML[x][0].value)
+      }
     }
 
     const loadChannel=(event)=>{

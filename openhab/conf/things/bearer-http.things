@@ -11,9 +11,3 @@ Thing http:url:device_meteostation_dut_1 "meteostation_dut_1" [
         Type number : meteostation_1_dut_temperature_channel "meteostation_1_dut_temperature_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
 }
 
-
-
-
-
-
-
