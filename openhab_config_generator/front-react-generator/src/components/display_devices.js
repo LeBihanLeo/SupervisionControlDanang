@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
 import APIService from './API_post';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import '../App.css';
 import AccordionDevice from './AccordionDevice';
 

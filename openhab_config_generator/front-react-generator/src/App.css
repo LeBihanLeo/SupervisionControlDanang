@@ -178,3 +178,13 @@ input{
     display: flex;
     justify-content: center;
 }
+
+.div-add-channel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.div-add-channel Button {
+    margin-inline: 1vw;
+}

@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import APIService from './API_post'
 import { Button } from '@mui/material';
+import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 
 
 const Form = (props) => {
@@ -151,10 +152,11 @@ const Form = (props) => {
                             />
                     </div>
                     <div className='channels-info'>
-                        <h2 className="form-label">Channels</h2>
-                        <img src="https://cdn-icons-png.flaticon.com/512/60/60745.png" onClick={addChannel}></img>
+                        <div className='div-add-channel'>
+                            <h2 className="form-label">Channels</h2>
+                            <Button variant="outlined" startIcon={<PlaylistAddIcon />} onClick={addChannel}>Add channel</Button>
+                        </div>
                         <div id='channels'>            
-
                         </div>
                     </div>
                 </div>
