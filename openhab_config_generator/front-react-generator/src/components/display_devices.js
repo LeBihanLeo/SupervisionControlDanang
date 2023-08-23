@@ -6,6 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import '../App.css';
+import AccordionDevice from './AccordionDevice';
 
 
 const Displayer = (props) => {
@@ -15,7 +16,6 @@ const Displayer = (props) => {
         APIService.DeleteDevice({type, loc, id})
         .then((response) => console.log(response))
         .catch(error => console.log('error',error))
-
         document.getElementById(type + "_" + loc + "_" + id).outerHTML = "";
     }
 
@@ -37,32 +37,8 @@ const Displayer = (props) => {
             <div> 
                 {posts.length > 0 && (
                 <div>
-                    {posts.map((post) => (
-                        <Accordion id={post.device_type + "_" + post.device_location + "_" + post.device_id} > 
-                            <AccordionSummary   
-                                expandIcon={<ExpandMoreIcon />}
-                                aria-controls="panel1a-content"
-                                id="panel1a-header"
-                                >
-                                <Typography>{post.device_type + " " + post.device_location + " " + post.device_id}</Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                            <Typography component={'span'}>
-                                <ul className='device'>
-                                    {post.data.map((d) => (
-                                        <div>
-                                            <li key={d.data_name}>- {d.data_name}</li>
-                                        </div>
-                                    ))}
-                                </ul>
-                                <button onClick={() => {
-                                    deleteDevice(post.device_type, post.device_location, post.device_id);
-                                }}>
-                                    remove device
-                                </button>
-                            </Typography>
-                            </AccordionDetails>
-                        </Accordion>
+                    {posts.map((post, index) => (
+                        <AccordionDevice key={index} post={post} deleteDevice={deleteDevice} />
                     ))}
                 </div>
                 )}

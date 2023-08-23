@@ -116,7 +116,7 @@ input{
     padding: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-inline: 10vw;
-    margin-block: 1vh;
+    margin-block: 3vh;
     width: 60vw;
     display: flex;
     flex-direction: column;

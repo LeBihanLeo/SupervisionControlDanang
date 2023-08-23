@@ -45,6 +45,7 @@ const Form = (props) => {
     function myInput(){
       const e = document.createElement('input')
       e.type = "text"
+      e.required = true
       return e
     }
 
@@ -109,7 +110,7 @@ const Form = (props) => {
                 <div className='device-info'>
                     <div className='basic-info'>
                         <h2>Informations</h2>
-                        <label for="type">Type</label>
+                        <label htmlFor="type">Type</label>
                         <input 
                             id="type"
                             type="text"
@@ -119,7 +120,7 @@ const Form = (props) => {
                             required
                             />
 
-                        <label for="location">Location</label>
+                        <label htmlFor="location">Location</label>
                         <input 
                             id="location"
                             type="text"
@@ -129,7 +130,7 @@ const Form = (props) => {
                             required
                             />
 
-                        <label for="id">Id</label>
+                        <label htmlFor="id">Id</label>
                         <input 
                             id="id"
                             type="text"
@@ -139,7 +140,7 @@ const Form = (props) => {
                             required
                             />
 
-                        <label for="bearer_token">Bearer token</label>
+                        <label htmlFor="bearer_token">Bearer token</label>
                         <input 
                             id="bearer_token"
                             type="text"
@@ -153,7 +154,7 @@ const Form = (props) => {
                         <h2 className="form-label">Channels</h2>
                         <img src="https://cdn-icons-png.flaticon.com/512/60/60745.png" onClick={addChannel}></img>
                         <div id='channels'>            
-                        
+
                         </div>
                     </div>
                 </div>
