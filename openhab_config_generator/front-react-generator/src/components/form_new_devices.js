@@ -62,6 +62,7 @@ const Form = (props) => {
       const e = document.createElement('input')
       e.type = "text"
       e.required = true
+      e.pattern = "[a-zA-Z0-9]+"
       return e
     }
 
@@ -147,6 +148,7 @@ const Form = (props) => {
                             id="type"
                             type="text"
                             placeholder ="Enter type"
+                            pattern='[a-zA-Z0-9]+'
                             value={type}
                             onChange={(e)=>setType(e.target.value)}
                             required
@@ -157,6 +159,7 @@ const Form = (props) => {
                             id="location"
                             type="text"
                             placeholder ="Enter type"
+                            pattern='[a-zA-Z0-9]+'
                             value={location}
                             onChange={(e)=>setLocation(e.target.value)}
                             required
@@ -167,6 +170,7 @@ const Form = (props) => {
                             id="id"
                             type="text"
                             placeholder ="Enter type"
+                            pattern='[a-zA-Z0-9]+'
                             value={id}
                             onChange={(e)=>setId(e.target.value)}
                             required
@@ -177,6 +181,7 @@ const Form = (props) => {
                             id="bearer_token"
                             type="text"
                             placeholder ="Enter bearer token"
+                            pattern='[a-zA-Z0-9]+'
                             value={bearer_token}
                             onChange={(e)=>setBearerToken(e.target.value)}
                             required
