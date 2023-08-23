@@ -37,14 +37,13 @@ class HttpDevice(Device):
             channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_location, self.device_id)
             json_path = device_channel.json_path
             input_data += f"        Type number : {channel_name} \"{channel_name}\" [ stateTransformation=\"JSONPATH:{json_path}\" ]\n"
-        input_data += "}\n\n"
+        input_data += "}\n"
         return input_data
 
     def transform_item_file(self, input_data, device_name):
         for device_channel in self.device_channel_list:
             channel_name = device_channel.getDeviceChannelFullName(self.device_type, self.device_location, self.device_id)
-            input_data += f"\nNumber {self.get_device_name()}_{device_channel.channel_name} \"{self.get_device_name()} {device_channel.channel_name}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}"
-        input_data += "\n"
+            input_data += f"Number {self.get_device_name()}_{device_channel.channel_name} \"{self.get_device_name()} {device_channel.channel_name}\" {{ channel=\"http:url:device_{device_name}:{channel_name}\", persistence=\"influxdb\" }}\n"
         return input_data
 
 def delete_http_device(device_type, device_location, device_id):
@@ -127,10 +126,9 @@ def get_channels_with_bearer_token(bearer_token):
         # Get key that follow the json schema
         for channel_key in channel_json:
             if "value" in channel_json[channel_key]:
-                formatted_channel_key = channel_key.replace(" ", "")
-                correct_keys.append(formatted_channel_key)
+                correct_keys.append(channel_key)
 
-        information_retrieved = [{"key": key, "json_path": f"$.data[0].objectJSON.data[\"{key}\"].value"} for key in
+        information_retrieved = [{"key": key.replace(" ", ""), "json_path": f"$.data[0].objectJSON.data[\"{key}\"].value"} for key in
                                  correct_keys]
         return information_retrieved
     except:
