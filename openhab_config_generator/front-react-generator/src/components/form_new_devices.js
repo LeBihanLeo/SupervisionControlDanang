@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import APIService from './API_post'
 import { Button } from '@mui/material';
 
+var channelsHTML = []
+var channels = []
+var nb_channel = 0
 
 const Form = (props) => {
     const [type, setType] = useState('')
@@ -9,9 +12,7 @@ const Form = (props) => {
     const [id, setId] = useState('')
     const [bearer_token, setBearerToken] = useState('')
 
-    var channelsHTML = []
-    var channels = []
-    var nb_channel = 0
+
 
     var init = false;
 
@@ -90,6 +91,7 @@ const Form = (props) => {
       channels.push(['',''])
 
       container.appendChild(div)
+      return [channel_name, channel_json_path]
     }
 
     function removeChannel(cont, channel){
@@ -110,7 +112,14 @@ const Form = (props) => {
 
     const loadChannel=(event)=>{
       APIService.GetChannels({bearer_token})
-      .then((response) => console.log(response))
+      .then((response) => {
+        response.forEach(r => {
+            let c = addChannel();
+            c[0].value = r["key"];
+            c[1].value = r["json_path"];
+        });
+        
+      })
       .catch(error => console.log('error',error))
     }
 
@@ -152,6 +161,7 @@ const Form = (props) => {
                             />
 
                         <label htmlFor="bearer_token">Bearer token</label>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Refresh_icon.svg/2048px-Refresh_icon.svg.png" onClick={loadChannel}></img>
                         <input 
                             id="bearer_token"
                             type="text"
