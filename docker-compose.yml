@@ -59,7 +59,18 @@ services:
     restart: always
     networks:
         - scd
-  
+
+  openhabconfiggen:
+    container_name: openhabconfiggen
+    build: ./openhab_config_generator/front-react-generator
+    ports:
+      - "6000:3000"
+      - "6001:6000"
+ #   volumes:
+ #     - ./openhab_config_generator/front-react-generator:/app
+ #   environment:
+ #     - NODE_ENV=development
+
   mqtt:
     container_name: mqtt
     image: eclipse-mosquitto:latest
