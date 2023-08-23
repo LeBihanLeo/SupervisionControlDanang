@@ -62,7 +62,7 @@ const Form = (props) => {
       const e = document.createElement('input')
       e.type = "text"
       e.required = true
-      e.pattern = "[a-zA-Z0-9]+"
+      e.pattern = "^[^_{}]+$"
       return e
     }
 
@@ -181,7 +181,7 @@ const Form = (props) => {
                             id="bearer_token"
                             type="text"
                             placeholder ="Enter bearer token"
-                            pattern='[a-zA-Z0-9]+'
+                            pattern='^(eyJ[a-zA-Z0-9_-]*\.[a-zA-Z0-9_-]*\.[a-zA-Z0-9_-]*)$'
                             value={bearer_token}
                             onChange={(e)=>setBearerToken(e.target.value)}
                             required
