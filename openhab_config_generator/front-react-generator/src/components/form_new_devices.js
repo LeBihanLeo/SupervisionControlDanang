@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import APIService from './API_post'
 import { Button } from '@mui/material';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import SyncIcon from '@mui/icons-material/Sync';
 
 var channelsHTML = []
 var channels = []
@@ -162,7 +163,6 @@ const Form = (props) => {
                             />
 
                         <label htmlFor="bearer_token">Bearer token</label>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Refresh_icon.svg/2048px-Refresh_icon.svg.png" onClick={loadChannel}></img>
                         <input 
                             id="bearer_token"
                             type="text"
@@ -171,11 +171,16 @@ const Form = (props) => {
                             onChange={(e)=>setBearerToken(e.target.value)}
                             required
                             />
+                        <Button variant="outlined" startIcon={<SyncIcon />} onClick={loadChannel}>
+                                Fetch channels
+                        </Button>
                     </div>
                     <div className='channels-info'>
                         <div className='div-add-channel'>
                             <h2 className="form-label">Channels</h2>
-                            <Button variant="outlined" startIcon={<PlaylistAddIcon />} onClick={addChannel}>Add channel</Button>
+                            <Button variant="outlined" startIcon={<PlaylistAddIcon />} onClick={addChannel}>
+                                Add channel
+                            </Button>
                         </div>
                         <div id='channels'>            
                         </div>
