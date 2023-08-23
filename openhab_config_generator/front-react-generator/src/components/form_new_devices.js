@@ -117,17 +117,22 @@ const Form = (props) => {
     }
 
     const loadChannel=(event)=>{
-      APIService.GetChannels({bearer_token})
-      .then((response) => {
-        resetChannels();
-        response.forEach(r => {
-            let c = addChannel();
-            c[0].value = r["key"];
-            c[1].value = r["json_path"];
-        });
-        
-      })
-      .catch(error => console.log('error',error))
+      if(bearer_token!==""){
+        APIService.GetChannels({bearer_token})
+        .then((response) => {
+          if(response.length > 0) resetChannels();
+          response.forEach(r => {
+              let c = addChannel();
+              c[0].value = r["key"];
+              c[1].value = r["json_path"];
+          });
+          
+        })
+        .catch(error => console.log('error',error))
+      }else{
+        alert("The bearer token should not be null")
+      }
+      
     }
 
   return (
