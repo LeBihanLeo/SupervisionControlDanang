@@ -140,7 +140,7 @@ const Form = (props) => {
 
   return (
     <div className='card' id='Displayer'>
-        <p className='title'>CREATE A NEW DEVICE</p>
+        <p className='title'>Create a new device</p>
             <form className='create-device' onSubmit={handleSubmit}>
                 <div className='device-info'>
                     <div className='basic-info'>
