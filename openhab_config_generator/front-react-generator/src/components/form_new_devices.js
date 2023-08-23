@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import { useState, useEffect } from 'react';
 import APIService from './API_post'
 import { Button } from '@mui/material';
 
@@ -12,6 +12,15 @@ const Form = (props) => {
     var channelsHTML = []
     var channels = []
     var nb_channel = 0
+
+    var init = false;
+
+    useEffect(() => {
+      if(init === false){
+        addChannel();
+        init = true;
+      }
+    }, []);
 
     const createDevice = () =>{
       APIService.CreateDevice({type, location, id, bearer_token, channels})
@@ -95,6 +104,8 @@ const Form = (props) => {
       for(let x = 0;x<nb_channel;x++){
         console.log(channelsHTML[x][0].value)
       }
+
+      if(nb_channel===0) addChannel();
     }
 
     const loadChannel=(event)=>{
