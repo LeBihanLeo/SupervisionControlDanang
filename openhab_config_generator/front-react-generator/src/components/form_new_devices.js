@@ -20,6 +20,7 @@ const Form = (props) => {
 
     useEffect(() => {
       if(init === false){
+        resetChannels();
         addChannel();
         init = true;
       }
