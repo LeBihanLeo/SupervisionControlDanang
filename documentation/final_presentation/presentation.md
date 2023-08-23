@@ -39,16 +39,17 @@ General features are usable by everyone on pc and mobile.
 
 - Homepage
 
-#### Grafana
+### Grafana
 
 - Dashboard for each storey
 - General dashboard
 
-#### Alert system via Slack
+### Alert system via Slack
 
 The users can sign in to the Slack workspace of the project to receive alerts and informations about the building.
 
 ---
+
 ## Implemented features - ### Admin tools
 
 Admin tools are provided to the administrators of the system, they are only usable on pc.
@@ -57,7 +58,7 @@ Admin tools are provided to the administrators of the system, they are only usab
   - BR plan (BR = Business Resumption) in case of system failure or any part of the system
   - FAQ
 
-#### Sensors
+### Sensors
 
 - Web portal to import the sensors
 
