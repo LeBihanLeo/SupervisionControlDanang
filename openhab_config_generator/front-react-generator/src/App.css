@@ -189,8 +189,8 @@ input{
     margin-inline: 1vw;
 }
 
-.channels-info{
+#channels {
   overflow-y: scroll;
-  height:40vh;
+  height:28vh;
   padding: 2vh;
 }
