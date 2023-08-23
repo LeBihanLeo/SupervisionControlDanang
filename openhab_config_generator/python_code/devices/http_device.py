@@ -127,7 +127,8 @@ def get_channels_with_bearer_token(bearer_token):
         # Get key that follow the json schema
         for channel_key in channel_json:
             if "value" in channel_json[channel_key]:
-                correct_keys.append(channel_key)
+                formatted_channel_key = channel_key.replace(" ", "")
+                correct_keys.append(formatted_channel_key)
 
         information_retrieved = [{"key": key, "json_path": f"$.data[0].objectJSON.data[\"{key}\"].value"} for key in
                                  correct_keys]
