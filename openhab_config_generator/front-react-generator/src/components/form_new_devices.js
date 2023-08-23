@@ -47,6 +47,10 @@ const Form = (props) => {
       setId('')
       setBearerToken('')
 
+      resetChannels()
+    }
+
+    function resetChannels(){
       const container = document.getElementById('channels')
       container.innerHTML = ''
       channelsHTML = []
@@ -115,6 +119,7 @@ const Form = (props) => {
     const loadChannel=(event)=>{
       APIService.GetChannels({bearer_token})
       .then((response) => {
+        resetChannels();
         response.forEach(r => {
             let c = addChannel();
             c[0].value = r["key"];
