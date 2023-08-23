@@ -20,6 +20,7 @@ const Form = (props) => {
 
     useEffect(() => {
       if(init === false){
+        resetChannels();
         addChannel();
         init = true;
       }
@@ -48,6 +49,7 @@ const Form = (props) => {
       setBearerToken('')
 
       resetChannels()
+      addChannel();
     }
 
     function resetChannels(){
