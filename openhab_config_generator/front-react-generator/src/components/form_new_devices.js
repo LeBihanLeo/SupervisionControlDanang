@@ -48,6 +48,7 @@ const Form = (props) => {
       setBearerToken('')
 
       resetChannels()
+      addChannel();
     }
 
     function resetChannels(){
