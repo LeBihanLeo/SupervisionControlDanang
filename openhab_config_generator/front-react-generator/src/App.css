@@ -188,3 +188,9 @@ input{
 .div-add-channel Button {
     margin-inline: 1vw;
 }
+
+.channels-info{
+  overflow-y: scroll;
+  height:40vh;
+  padding: 2vh;
+}
