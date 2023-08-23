@@ -146,3 +146,5 @@ node_modules/**
 
 # Temporary word files
 **/~$w **
+
+.obsidian/
