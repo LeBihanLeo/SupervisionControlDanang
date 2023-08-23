@@ -4,6 +4,8 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const AccordionDevice = ({post, deleteDevice}) => {
     return (
@@ -24,11 +26,11 @@ const AccordionDevice = ({post, deleteDevice}) => {
                         </div>
                     ))}
                 </ul>
-                <button onClick={() => {
+                <Button variant="contained" startIcon={<DeleteIcon />} color="error" onClick={() => {
                     deleteDevice(post.device_type, post.device_location, post.device_id);
                 }}>
-                    remove device
-                </button>
+                    Delete device
+                </Button>
             </Typography>
             </AccordionDetails>
         </Accordion>

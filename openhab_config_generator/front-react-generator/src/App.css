@@ -194,3 +194,8 @@ input{
   height:28vh;
   padding: 2vh;
 }
+
+ul.device {
+    padding-top: 0vh;
+    margin-top: 0vh;
+}
