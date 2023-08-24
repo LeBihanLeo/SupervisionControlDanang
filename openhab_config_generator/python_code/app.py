@@ -1,12 +1,12 @@
 from flask import Flask
 from flask import request
-from flask_cors import CORS
+#from flask_cors import CORS
 
 from devices import http_device
 from devices import http_device_channel
 
 app = Flask(__name__)
-CORS(app)
+#CORS(app)
 
 @app.route('/')
 def get_devices():
@@ -40,4 +40,4 @@ def get_channels_bt():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run() # Host and Port are provided in the Dockerfile
