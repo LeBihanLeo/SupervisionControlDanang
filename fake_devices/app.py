@@ -31,5 +31,9 @@ def air_conditioning_route(floor, room):
     ac = get_air_conditioning(floor, room)
     return jsonify(ac)
 
+@app.route("/", methods=["GET"])
+def index():
+    return "200"
+
 if __name__ == "__main__":
     app.run() # Host and Port are provided in the Dockerfile
