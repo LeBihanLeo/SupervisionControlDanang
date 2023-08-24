@@ -3,4 +3,3 @@ Number meteostation_dut_1_illuminance "meteostation_dut_1 illuminance" { channel
 Number meteostation_dut_1_temperature "meteostation_dut_1 temperature" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_temperature_channel", persistence="influxdb" }
 
 
-Number a_a_a_a "a_a_a a" { channel="http:url:device_a_a_a:a_a_a_a_channel", persistence="influxdb" }
