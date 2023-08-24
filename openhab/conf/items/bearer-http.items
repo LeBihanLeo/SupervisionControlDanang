@@ -1,5 +1,11 @@
 Number meteostation_dut_1_humidity "meteostation_dut_1 humidity" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_humidity_channel", persistence="influxdb" }
 Number meteostation_dut_1_illuminance "meteostation_dut_1 illuminance" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_illuminance_channel", persistence="influxdb" }
 Number meteostation_dut_1_temperature "meteostation_dut_1 temperature" { channel="http:url:device_meteostation_dut_1:meteostation_1_dut_temperature_channel", persistence="influxdb" }
-
-
+Number S0405_floor4room4_1_Current "S0405_floor4room4_1 Current" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_Current_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_Energy "S0405_floor4room4_1 Energy" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_Energy_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_Frequency "S0405_floor4room4_1 Frequency" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_Frequency_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_GASSMOKE "S0405_floor4room4_1 GASSMOKE" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_GASSMOKE_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_HumiditySensor "S0405_floor4room4_1 HumiditySensor" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_HumiditySensor_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_Power "S0405_floor4room4_1 Power" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_Power_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_TemparetureSensor "S0405_floor4room4_1 TemparetureSensor" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_TemparetureSensor_channel", persistence="influxdb" }
+Number S0405_floor4room4_1_Voltage "S0405_floor4room4_1 Voltage" { channel="http:url:device_S0405_floor4room4_1:S0405_floor4room4_1_Voltage_channel", persistence="influxdb" }

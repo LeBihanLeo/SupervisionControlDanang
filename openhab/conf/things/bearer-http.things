@@ -11,4 +11,20 @@ Thing http:url:device_meteostation_dut_1 "meteostation_dut_1" [
         Type number : meteostation_1_dut_temperature_channel "meteostation_1_dut_temperature_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.temperatureSensor.1" ]
 }
 
-
+Thing http:url:device_S0405_floor4room4_1 "S0405_floor4room4_1" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiI5YzMyMDI2OWU1ZmVhNTBiIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjkyODY1NDg4fQ.JFI1ldoi7blIk3j3REmTSTZGQTsE6H6a5sLbFD2Qc8k",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : S0405_floor4room4_1_Current_channel "S0405_floor4room4_1_Current_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Current\"].value" ]
+        Type number : S0405_floor4room4_1_Energy_channel "S0405_floor4room4_1_Energy_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Energy\"].value" ]
+        Type number : S0405_floor4room4_1_Frequency_channel "S0405_floor4room4_1_Frequency_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Frequency\"].value" ]
+        Type number : S0405_floor4room4_1_GASSMOKE_channel "S0405_floor4room4_1_GASSMOKE_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"GAS/SMOKE\"].value" ]
+        Type number : S0405_floor4room4_1_HumiditySensor_channel "S0405_floor4room4_1_HumiditySensor_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Humidity Sensor\"].value" ]
+        Type number : S0405_floor4room4_1_Power_channel "S0405_floor4room4_1_Power_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Power\"].value" ]
+        Type number : S0405_floor4room4_1_TemparetureSensor_channel "S0405_floor4room4_1_TemparetureSensor_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Tempareture Sensor\"].value" ]
+        Type number : S0405_floor4room4_1_Voltage_channel "S0405_floor4room4_1_Voltage_channel" [ stateTransformation="JSONPATH:$.data[0].objectJSON.data[\"Voltage\"].value" ]
+}
