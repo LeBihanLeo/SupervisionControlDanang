@@ -1,6 +1,6 @@
 
-const adress = 'http://openhabconfiggenapi:8000/'
-
+//const adress = 'http://openhabconfiggenapi:8000'
+const adress = 'http://localhost:8000'
 export default class APIService{
 
 	// Insert an article
@@ -43,13 +43,13 @@ export default class APIService{
 
 	static restartOH = (body) => {
 		return fetch(adress + `/restartopenhab`,{
-      		'method':'POST',
+      		'method':'GET',
       		 headers : {
       		'Content-Type':'application/json'
       },
-      body:JSON.stringify(body)
+      //body:JSON.stringify(body)
     })
-	.then(response => response.json())
+	.then(response => response)
 	.catch(error => console.log(error))
 	}
 

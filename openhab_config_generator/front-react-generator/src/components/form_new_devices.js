@@ -154,7 +154,7 @@ const Form = (props) => {
     }
 
     const restartOpenHab = (event) => {
-      APIService.CreateDevice({})
+      APIService.restartOH({})
       .then((response) => console.log(response))
       .catch(error => console.log('error',error))
     }
