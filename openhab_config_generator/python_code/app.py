@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+import os
 
 from devices import http_device
 from devices import http_device_channel
@@ -36,9 +37,9 @@ def get_channels_bt():
     response = http_device.get_channels_with_bearer_token(request.json['bearer_token'])
     return response
 
-@app.route("/restartopenhab", methode=["POST"], strict_slashes=False)
+@app.route("/restartopenhab", methods=["GET"], strict_slashes=False)
 def restart_openhab():
-    print(request)
+    return str(os.system("docker restart openhab"))
 
 
 
