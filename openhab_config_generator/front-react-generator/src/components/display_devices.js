@@ -16,13 +16,10 @@ const Displayer = (props) => {
     }
 
     useEffect(() => {
-        console.log(adress)
         fetch(adress)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setPosts(data);
-
             })
             .catch((err) => {
                 console.log(err.message);

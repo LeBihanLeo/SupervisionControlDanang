@@ -40,7 +40,6 @@ const Form = (props) => {
         channels[x][1] = channelsHTML[x][1].value
       }
 
-      console.log(channels)
       createDevice()
 
       setType('')
@@ -72,8 +71,6 @@ const Form = (props) => {
 
       const container = document.getElementById('channels')
       const div = document.createElement("div")
-
-      if(nb_channel!=1) div.appendChild(document.createElement("HR"))
       
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
@@ -95,6 +92,8 @@ const Form = (props) => {
       div.appendChild(del)
 
       del.addEventListener("click", () => {removeChannel(div, channel)});
+      
+      div.appendChild(document.createElement("HR"))
 
       channelsHTML.push(channel)
       channels.push(['',''])
@@ -111,13 +110,7 @@ const Form = (props) => {
       cont.innerHTML = ''
       nb_channel--
       
-      console.log(channelsHTML.length+ " " + channels.length)
-      for(let x = 0;x<nb_channel;x++){
-        console.log(channelsHTML[x][0].value)
-      }
-
       if(nb_channel===0) addChannel();
-      
     }
 
     const loadChannel=(event)=>{
