@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import APIService from './API_post'
-import { Button } from '@mui/material';
+import { Button, Tab } from '@mui/material';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import SyncIcon from '@mui/icons-material/Sync';
 
@@ -132,6 +132,12 @@ const Form = (props) => {
       
     }
 
+    const restartOpenHab = (event) => {
+      APIService.CreateDevice({})
+      .then((response) => console.log(response))
+      .catch(error => console.log('error',error))
+    }
+
   return (
     <div className='card' id='Displayer'>
         <p className='title'>Create a new device</p>
@@ -199,6 +205,8 @@ const Form = (props) => {
                 </div>
                 <div className='center-button'>
                     <Button variant="contained" type='submit'>Create device</Button>
+                    <Tab/>
+                    <Button variant="contained" onClick={restartOpenHab}>Restart OpenHab</Button>
                 </div>
             </form>
         <br/>
