@@ -21,10 +21,10 @@
       }
     ]
   },
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 100,
+  "id": 102,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -65,7 +65,7 @@
                 "value": [
                   {
                     "title": "Show details",
-                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r1"
+                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
                   }
                 ]
               }
@@ -82,7 +82,7 @@
                 "value": [
                   {
                     "title": "Show details",
-                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r2"
+                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
                   }
                 ]
               }
@@ -99,7 +99,7 @@
                 "value": [
                   {
                     "title": "Show details",
-                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r3"
+                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
                   }
                 ]
               }
@@ -331,10 +331,10 @@
               },
               "name": "Watt 1",
               "placement": {
-                "height": 28.99147605895996,
-                "left": 151.50140953063965,
+                "height": 28.984375,
+                "left": 136.5078125,
                 "top": 130.37639331817627,
-                "width": 46.9886360168457
+                "width": 46.984375
               },
               "type": "text"
             },
@@ -404,7 +404,7 @@
               "name": "Watt2",
               "placement": {
                 "height": 29,
-                "left": -199.9971866607666,
+                "left": -221,
                 "top": 132,
                 "width": 46.9886360168457
               },
@@ -475,7 +475,7 @@
               "name": "watt3",
               "placement": {
                 "height": 28.99147605895996,
-                "left": 165.50140953063965,
+                "left": 145,
                 "top": -125.62360668182373,
                 "width": 46.9886360168457
               },
@@ -546,7 +546,7 @@
               "name": "WATT4",
               "placement": {
                 "height": 28.99147605895996,
-                "left": -203.997186660767,
+                "left": -225,
                 "top": -111.5014295578003,
                 "width": 46.9886360168457
               },
@@ -815,13 +815,13 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
-    "to": "now"
+    "from": "2023-08-23T17:03:14.605Z",
+    "to": "2023-08-24T17:03:14.605Z"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Floor plan 1",
   "uid": "f1",
-  "version": 18,
+  "version": 2,
   "weekStart": ""
 }
