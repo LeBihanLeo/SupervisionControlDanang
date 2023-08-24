@@ -3,6 +3,7 @@ import APIService from './API_post';
 import '../App.css';
 import AccordionDevice from './AccordionDevice';
 
+const adress = 'http://127.0.0.1:5000/'
 
 const Displayer = (props) => {
     const [posts, setPosts] = useState([]);
@@ -15,11 +16,13 @@ const Displayer = (props) => {
     }
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/')
+        console.log(adress)
+        fetch(adress)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
                 setPosts(data);
+
             })
             .catch((err) => {
                 console.log(err.message);

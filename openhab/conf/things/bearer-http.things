@@ -12,3 +12,13 @@ Thing http:url:device_meteostation_dut_1 "meteostation_dut_1" [
 }
 
 
+Thing http:url:device_a_a_a "a_a_a" [
+    baseURL="http://api.vngalaxy.vn/api/uplink/",
+    headers="WWW-Authenticate=Basic",
+            "Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXZFVUkiOiI5ODViOTRmMDEzODU5ZjEyIiwiYXBwSUQiOiIzIiwiaWF0IjoxNjkyNTkxNzI5fQ.txtjeI0UFMktFaEh_AbHO0swu-Ldov8Db3THpqVEQfI",
+    stateMethod="POST",
+    refresh=15
+] {
+    Channels:
+        Type number : a_a_a_a_channel "a_a_a_a_channel" [ stateTransformation="JSONPATH:a" ]
+}

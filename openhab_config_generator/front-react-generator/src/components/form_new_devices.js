@@ -64,7 +64,6 @@ const Form = (props) => {
       const e = document.createElement('input')
       e.type = "text"
       e.required = true
-      e.pattern = "^[^_{}]+$"
       return e
     }
 
@@ -78,6 +77,7 @@ const Form = (props) => {
       
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
+      channel_name.pattern = "^[a-zA-Z0-9]+$";
       div.appendChild(channel_name)
 
       div.appendChild(document.createTextNode("    "))
@@ -183,7 +183,7 @@ const Form = (props) => {
                             id="bearer_token"
                             type="text"
                             placeholder ="Enter bearer token"
-                            pattern='^(eyJ[a-zA-Z0-9_-]*\.[a-zA-Z0-9_-]*\.[a-zA-Z0-9_-]*)$'
+                            pattern="^(eyJ[a-zA-Z0-9_\-]*\.[a-zA-Z0-9_\-]*\.[a-zA-Z0-9_\-]*)$"
                             value={bearer_token}
                             onChange={(e)=>setBearerToken(e.target.value)}
                             required
