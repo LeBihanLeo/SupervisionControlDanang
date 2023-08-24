@@ -247,7 +247,7 @@
       "type": "gauge"
     }
   ],
-  "refresh": false,
+  "refresh": "10s",
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
