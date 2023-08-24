@@ -1,12 +1,11 @@
 from flask import Flask
 from flask import request
-#from flask_cors import CORS
+import os
 
 from devices import http_device
 from devices import http_device_channel
 
 app = Flask(__name__)
-#CORS(app)
 
 @app.route('/')
 def get_devices():
@@ -37,6 +36,11 @@ def get_channels_bt():
     print(request)
     response = http_device.get_channels_with_bearer_token(request.json['bearer_token'])
     return response
+
+@app.route("/restartopenhab", methods=["GET"], strict_slashes=False)
+def restart_openhab():
+    return str(os.system("docker restart openhab"))
+
 
 
 if __name__ == '__main__':

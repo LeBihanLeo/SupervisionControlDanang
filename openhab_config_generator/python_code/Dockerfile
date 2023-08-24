@@ -1,4 +1,4 @@
-FROM python:3.10.9
+FROM python:3.10.9-alpine
 
 WORKDIR /app
 
@@ -11,5 +11,7 @@ COPY registered_devices.py /app/registered_devices.py
 # Installation des dépendances, y compris Flask
 RUN pip install flask
 RUN pip install requests
+RUN apk update && apk add docker-cli
+#docker restart openhab
 
 CMD ["python", "-m", "flask", "run", "--host=0.0.0.0" , "--port=5000"]

@@ -46,7 +46,7 @@ services:
     build: ./openhab_config_generator/front-react-generator
     container_name: openhabconfiggen
     ports:
-      - "0.0.0.0:7000:3000"
+      - "0.0.0.0:9000:3000"
 
   openhabconfiggenapi:
     container_name: openhabconfiggenapi
@@ -54,7 +54,9 @@ services:
     ports:
       - "8000:5000"
     volumes:
+      - ./openhab_config_generator/python_code:/app
       - ./openhab/conf:/openhab/conf
+      - /var/run/docker.sock:/var/run/docker.sock
   openhab:
     image: openhab/openhab:3.4.4
     container_name: openhab
