@@ -3,7 +3,8 @@ import APIService from './API_post';
 import '../App.css';
 import AccordionDevice from './AccordionDevice';
 
-const adress = 'http://openhabconfiggenapi:8000'
+//const adress = 'http://openhabconfiggenapi:8000'
+const adress = 'http://localhost:8000'
 
 const Displayer = (props) => {
     const [posts, setPosts] = useState([]);
