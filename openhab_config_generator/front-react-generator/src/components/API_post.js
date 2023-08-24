@@ -1,5 +1,5 @@
 
-const adress = 'http://127.0.0.1:5000/'
+const adress = 'http://openhabconfiggenapi:8000/'
 
 export default class APIService{
 
@@ -42,7 +42,7 @@ export default class APIService{
 
 
 	static restartOH = (body) => {
-		return fetch(adress + `/restart`,{
+		return fetch(adress + `/restartopenhab`,{
       		'method':'POST',
       		 headers : {
       		'Content-Type':'application/json'
