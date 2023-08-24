@@ -77,7 +77,7 @@ const Form = (props) => {
       
       const channel_name = myInput()
       channel_name.placeholder = "Enter name"
-      channel_name.pattern = "^[a-zA-Z0-9]+$";
+      channel_name.pattern = "^[a-zA-Z0-9\s]+$";
       div.appendChild(channel_name)
 
       div.appendChild(document.createTextNode("    "))
@@ -117,6 +117,7 @@ const Form = (props) => {
       }
 
       if(nb_channel===0) addChannel();
+      
     }
 
     const loadChannel=(event)=>{
