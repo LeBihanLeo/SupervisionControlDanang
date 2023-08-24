@@ -1,7 +1,7 @@
 .Main{
   background-image: url("./assets/back-image.jpg");
   background-size: cover; 
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   padding-top: 5vh;
 }
@@ -193,4 +193,13 @@ input{
   overflow-y: scroll;
   height:28vh;
   padding: 2vh;
+}
+
+ul.device {
+    padding-top: 0vh;
+    margin-top: 0vh;
+}
+
+.basic-info Button {
+    margin-top: 0.5vh;
 }
