@@ -1,9 +1,11 @@
 
+const adress = 'http://127.0.0.1:5000/'
+
 export default class APIService{
 
 	// Insert an article
 	static CreateDevice = (body) => {
-		return fetch(`http://localhost:5000/add`,{
+		return fetch(adress + `/add`,{
       		'method':'POST',
       		 headers : {
       		'Content-Type':'application/json'
@@ -15,7 +17,7 @@ export default class APIService{
 	}
 
 	static DeleteDevice = (body) => {
-		return fetch(`http://localhost:5000/remove`,{
+		return fetch(adress + `/remove`,{
       		'method':'POST',
       		 headers : {
       		'Content-Type':'application/json'
@@ -27,7 +29,7 @@ export default class APIService{
 	}
 
 	static GetChannels = (body) => {
-		return fetch(`http://localhost:5000/getChannels`,{
+		return fetch(adress + `/getChannels`,{
       		'method':'POST',
       		 headers : {
       		'Content-Type':'application/json'
