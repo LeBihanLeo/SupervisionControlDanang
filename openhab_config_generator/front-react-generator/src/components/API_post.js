@@ -1,6 +1,8 @@
 
 //const adress = 'http://openhabconfiggenapi:8000'
-const adress = 'http://localhost:8000'
+//const adress = 'http://localhost:8000'
+const adress = 'http://' + window.location.hostname + ':8000'
+
 export default class APIService{
 
 	// Insert an article
