@@ -12,10 +12,10 @@
                 'Grafana': [3000, 'https:', 'resources/grafana.png'],
                 'openHAB': [8443, 'https:', 'resources/openhab.ico'],
                 'Jenkins': [3002, 'http:', 'resources/jenkins.ico'],
-                'ECoMaS helper': [7000, 'http:', 'resources/gear.png'],
+                'ECoMaS helper': [9000, 'http:', 'resources/gear.png'],
             };
 
-            const buttonContainer = document.getElementById('docker-services');
+            let buttonContainer = document.getElementById('docker-services');
             for (const id in links) {
                 const link = document.createElement('a');
                 link.className = 'service-button';
@@ -29,6 +29,23 @@
                 link.appendChild(icon);
 
                 link.appendChild(document.createTextNode(' ' + id));
+
+                buttonContainer.appendChild(link);
+            }
+
+            const APIs = {
+                'ECoMaS helper API': [8000, 'http:'],
+                'fake device API': [5000, 'http:'],
+            };
+
+            buttonContainer = document.getElementById('api-docker-services');
+            for (const id in APIs) {
+                const link = document.createElement('a');
+                link.className = 'service-button';
+                link.href = APIs[id][1] + '//' + window.location.hostname + ':' + APIs[id][0];
+                link.target = '_blank';
+
+                link.appendChild(document.createTextNode(id));
 
                 buttonContainer.appendChild(link);
             }
@@ -113,6 +130,8 @@
     <p id="running-on"></p>
     <div class="main-content">
         <div class="button-container" id="docker-services"></div>
+        <p>APIs:</p>
+        <div class="button-container" id="api-docker-services"></div>
         <p>Other services:</p>
         <div class="button-container">
             <a class="service-button blue" href="https://myopenhab.org" target="_blank">
