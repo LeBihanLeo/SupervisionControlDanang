@@ -36,6 +36,11 @@ def get_channels_bt():
     response = http_device.get_channels_with_bearer_token(request.json['bearer_token'])
     return response
 
+@app.route("/restartopenhab", methode=["POST"], strict_slashes=False)
+def restart_openhab():
+    print(request)
+
+
 
 if __name__ == '__main__':
     app.run() # Host and Port are provided in the Dockerfile
