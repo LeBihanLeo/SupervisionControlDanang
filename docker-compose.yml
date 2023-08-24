@@ -46,13 +46,13 @@ services:
     build: ./openhab_config_generator/front-react-generator
     container_name: openhabconfiggen
     ports:
-      - "7000:3000"
+      - "0.0.0.0:7000:3000"
 
   openhabconfiggenapi:
     container_name: openhabconfiggenapi
     build: ./openhab_config_generator/python_code
     ports:
-      - "8000:8000"
+      - "0.0.0.0:8000:8000"
     volumes:
       - ./fake_devices/app.py:/app/app.py
   openhab:
