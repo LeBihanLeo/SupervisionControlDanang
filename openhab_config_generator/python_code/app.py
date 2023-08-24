@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-from flask_cors import CORS
+#from flask_cors import CORS
 
 from devices import http_device
 from devices import http_device_channel

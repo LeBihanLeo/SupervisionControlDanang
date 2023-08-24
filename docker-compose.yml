@@ -52,9 +52,9 @@ services:
     container_name: openhabconfiggenapi
     build: ./openhab_config_generator/python_code
     ports:
-      - "0.0.0.0:8000:8000"
+      - "8000:5000"
     volumes:
-      - ./fake_devices/app.py:/app/app.py
+      - ./openhab/conf:/openhab/conf
   openhab:
     image: openhab/openhab:3.4.4
     container_name: openhab
