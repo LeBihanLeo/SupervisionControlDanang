@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 104,
+  "id": 106,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -64,7 +64,7 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
+                    "title": "Room 1 details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f1_r1"
                   }
                 ]
@@ -81,7 +81,7 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
+                    "title": "Room 2 details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f1_r2"
                   }
                 ]
@@ -98,7 +98,7 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
+                    "title": "Room 3 details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f1_r3"
                   }
                 ]
@@ -115,7 +115,7 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
+                    "title": "Room 4 details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
                   }
                 ]
@@ -370,7 +370,7 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r2_total_label",
+              "name": "_r3_total_label",
               "placement": {
                 "height": 13.75,
                 "left": -26.25,
@@ -398,7 +398,7 @@
                 },
                 "size": 8,
                 "text": {
-                  "field": "r2_total",
+                  "field": "r3_total",
                   "fixed": "",
                   "mode": "field"
                 },
@@ -408,10 +408,10 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r2_total_value",
+              "name": "_r3_total_value",
               "placement": {
                 "height": 13.75,
-                "left": -58.625,
+                "left": -56,
                 "top": -41.875,
                 "width": 31.25
               },
@@ -444,7 +444,7 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r3_total_label",
+              "name": "_r4_total_label",
               "placement": {
                 "height": 13.75,
                 "left": 80.75,
@@ -472,7 +472,7 @@
                 },
                 "size": 8,
                 "text": {
-                  "field": "r3_total",
+                  "field": "r4_total",
                   "fixed": "",
                   "mode": "field"
                 },
@@ -483,7 +483,7 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r3_total_value",
+              "name": "_r4_total_value",
               "placement": {
                 "height": 13.75,
                 "left": 50.375,
@@ -519,7 +519,7 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r4_total_label",
+              "name": "_r2_total_label",
               "placement": {
                 "height": 13.75,
                 "left": -26.25,
@@ -547,7 +547,7 @@
                 },
                 "size": 8,
                 "text": {
-                  "field": "r4_total",
+                  "field": "r2_total",
                   "fixed": "",
                   "mode": "field"
                 },
@@ -557,10 +557,10 @@
                 "horizontal": "center",
                 "vertical": "center"
               },
-              "name": "r4_total_value",
+              "name": "_r2_total_value",
               "placement": {
                 "height": 13.75,
-                "left": -58.625,
+                "left": -56.625,
                 "top": 27.125,
                 "width": 31.25
               },
@@ -647,6 +647,6 @@
   "timezone": "",
   "title": "Floor plan 1 mobile",
   "uid": "f1_mobile",
-  "version": 5,
+  "version": 4,
   "weekStart": ""
 }
