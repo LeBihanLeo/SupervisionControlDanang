@@ -46,7 +46,7 @@ services:
     build: ./openhab_config_generator/front-react-generator
     container_name: openhabconfiggen
     ports:
-      - "0.0.0.0:9000:3000"
+      - "127.0.0.1:9000:3000"
     env_file:
       - .env
     volumes:
