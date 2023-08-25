@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 102,
+  "id": 105,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -64,8 +64,8 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
-                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
+                    "title": "Room 1 details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r1"
                   }
                 ]
               }
@@ -81,8 +81,8 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
-                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
+                    "title": "Room 2 details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r2"
                   }
                 ]
               }
@@ -98,8 +98,8 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
-                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
+                    "title": "Room 3 details",
+                    "url": "https://apps.vngalaxy.vn:3000/d/f1_r3"
                   }
                 ]
               }
@@ -115,7 +115,7 @@
                 "id": "links",
                 "value": [
                   {
-                    "title": "Show details",
+                    "title": "Room 4 details",
                     "url": "https://apps.vngalaxy.vn:3000/d/f1_r4"
                   }
                 ]
@@ -585,8 +585,8 @@
               "name": "r4_total_value",
               "placement": {
                 "height": 28.99147605895996,
-                "left": 192.9957275390625,
-                "top": 130.37639331817627,
+                "left": 199.9957275390625,
+                "top": -125.62360668182373,
                 "width": 50
               },
               "type": "metric-value"
@@ -624,8 +624,8 @@
               "name": "r3_total_value",
               "placement": {
                 "height": 29,
-                "left": -165.50286865234375,
-                "top": 132,
+                "left": -169.50286865234375,
+                "top": -111.5014295578003,
                 "width": 50
               },
               "type": "metric-value"
@@ -699,8 +699,8 @@
               "name": "r1_total_value",
               "placement": {
                 "height": 28.99147605895996,
-                "left": 199.9957275390625,
-                "top": -125.62360668182373,
+                "left": 192.9957275390625,
+                "top": 130.37639331817627,
                 "width": 50
               },
               "type": "metric-value"
@@ -737,8 +737,8 @@
               "name": "r2_total_value",
               "placement": {
                 "height": 28.99147605895996,
-                "left": -169.50286865234375,
-                "top": -111.5014295578003,
+                "left": -165.50286865234375,
+                "top": 132,
                 "width": 50
               },
               "type": "metric-value"
@@ -822,6 +822,6 @@
   "timezone": "",
   "title": "Floor plan 1",
   "uid": "f1",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
