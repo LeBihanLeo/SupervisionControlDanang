@@ -21,10 +21,10 @@
       }
     ]
   },
-  "editable": false,
+  "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 84,
+  "id": 104,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -43,7 +43,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -372,7 +373,7 @@
               "name": "r2_total_label",
               "placement": {
                 "height": 13.75,
-                "left": -27.25,
+                "left": -26.25,
                 "top": -41.875,
                 "width": 30.5
               },
@@ -521,7 +522,7 @@
               "name": "r4_total_label",
               "placement": {
                 "height": 13.75,
-                "left": -27.25,
+                "left": -26.25,
                 "top": 27.125,
                 "width": 30.5
               },
@@ -559,9 +560,9 @@
               "name": "r4_total_value",
               "placement": {
                 "height": 13.75,
-                "left": -61.61458396911621,
+                "left": -58.625,
                 "top": 27.125,
-                "width": 31.229167938232422
+                "width": 31.25
               },
               "type": "metric-value"
             }
@@ -628,7 +629,7 @@
       "type": "canvas"
     }
   ],
-  "refresh": false,
+  "refresh": "",
   "revision": 1,
   "schemaVersion": 38,
   "style": "dark",
