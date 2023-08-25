@@ -615,13 +615,15 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "continuous-YlRd"
+            "mode": "continuous-GrYlRd"
           },
           "custom": {
             "fillOpacity": 70,
             "lineWidth": 1
           },
           "mappings": [],
+          "max": 249,
+          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -634,13 +636,14 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "ppm"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 7,
-        "w": 9,
+        "w": 10,
         "x": 8,
         "y": 15
       },
@@ -689,6 +692,6 @@
   "timezone": "",
   "title": "Floor 4 Room 4",
   "uid": "f4_r4",
-  "version": 2,
+  "version": 3,
   "weekStart": ""
 }
