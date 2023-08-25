@@ -411,7 +411,7 @@
               "name": "r2_total_value",
               "placement": {
                 "height": 13.75,
-                "left": -58.625,
+                "left": -56,
                 "top": -41.875,
                 "width": 31.25
               },
@@ -560,7 +560,7 @@
               "name": "r4_total_value",
               "placement": {
                 "height": 13.75,
-                "left": -58.625,
+                "left": -56.625,
                 "top": 27.125,
                 "width": 31.25
               },
