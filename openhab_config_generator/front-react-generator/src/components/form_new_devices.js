@@ -1,8 +1,16 @@
 import { useState, useEffect } from 'react';
 import APIService from './API_post'
-import { Button } from '@mui/material';
+import { Button, Tab } from '@mui/material';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import SyncIcon from '@mui/icons-material/Sync';
+
+import * as React from 'react';
+
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 var channelsHTML = []
 var channels = []
@@ -14,7 +22,20 @@ const Form = (props) => {
     const [id, setId] = useState('')
     const [bearer_token, setBearerToken] = useState('')
 
+    const [open, setOpen] = React.useState(false);
 
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+    const handleCloseAgree = () => {
+      setOpen(false);
+      restartOpenHab();
+    };
 
     var init = false;
 
@@ -132,6 +153,12 @@ const Form = (props) => {
       
     }
 
+    const restartOpenHab = (event) => {
+      APIService.restartOH({})
+      .then((response) => console.log(response))
+      .catch(error => console.log('error',error))
+    }
+
   return (
     <div className='card' id='Displayer'>
         <p className='title'>Create a new device</p>
@@ -199,6 +226,30 @@ const Form = (props) => {
                 </div>
                 <div className='center-button'>
                     <Button variant="contained" type='submit'>Create device</Button>
+                    <Tab/>
+                    <Button variant="contained" onClick={handleClickOpen}>Restart OpenHab</Button>
+                    <Dialog
+                      open={open}
+                      onClose={handleClose}
+                      aria-labelledby="alert-dialog-title"
+                      aria-describedby="alert-dialog-description"
+                    >
+                      <DialogTitle id="alert-dialog-title">
+                        {"Restarting openHAB ?"}
+                      </DialogTitle>
+                      <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                          Restarting openHAB can take a several minutes.
+                          Are you sure to continue?
+                        </DialogContentText>
+                      </DialogContent>
+                      <DialogActions>
+                        <Button onClick={handleClose}>Disagree</Button>
+                        <Button onClick={handleCloseAgree} autoFocus>
+                          Agree
+                        </Button>
+                      </DialogActions>
+                    </Dialog>
                 </div>
             </form>
         <br/>

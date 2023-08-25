@@ -1,5 +1,7 @@
 
-const adress = 'http://127.0.0.1:5000/'
+//const adress = 'http://openhabconfiggenapi:8000'
+//const adress = 'http://localhost:8000'
+const adress = 'http://' + window.location.hostname + ':8000'
 
 export default class APIService{
 
@@ -37,6 +39,19 @@ export default class APIService{
       body:JSON.stringify(body)
     })
 	.then(response => response.json())
+	.catch(error => console.log(error))
+	}
+
+
+	static restartOH = (body) => {
+		return fetch(adress + `/restartopenhab`,{
+      		'method':'GET',
+      		 headers : {
+      		'Content-Type':'application/json'
+      },
+      //body:JSON.stringify(body)
+    })
+	.then(response => response)
 	.catch(error => console.log(error))
 	}
 

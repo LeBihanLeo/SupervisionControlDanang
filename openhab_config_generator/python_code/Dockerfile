@@ -10,6 +10,7 @@ COPY registered_devices.py /app/registered_devices.py
 
 # Installation des dépendances, y compris Flask
 RUN pip install flask
+RUN pip install flask_cors
 RUN pip install requests
 RUN apk update && apk add docker-cli
 #docker restart openhab
