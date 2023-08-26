@@ -51,6 +51,7 @@ services:
       - .env
     volumes:
       - ./openhab_config_generator/front-react-generator/src:/app/src
+      - ./openhab_config_generator/front-react-generator/package.json:/app/package.json
     networks:
       - scd
 
